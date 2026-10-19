@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import { SvelteSet } from 'svelte/reactivity';
+	import GardenStage from '#lib/components/GardenStage.svelte';
 	import Icon from '#lib/components/Icon.svelte';
 	import Modal from '#lib/components/Modal.svelte';
 	import MonthStrip from '#lib/components/MonthStrip.svelte';
@@ -121,8 +122,8 @@
 
 {#snippet actions(where: string)}
 	<div class="actions {where}">
-		{#if gardenItem}
-			<p class="in-garden"><Icon name="check" size={20} />{t.plant.inGarden}</p>
+		{#if gardenItem && plant}
+			<GardenStage {plant} item={gardenItem} />
 			<button type="button" class="btn btn-secondary btn-block" onclick={remove}>{t.plant.removeFromGarden}</button>
 		{:else}
 			<button type="button" class="btn btn-primary btn-block" onclick={add}>
@@ -504,17 +505,6 @@
 	.actions {
 		display: grid;
 		gap: 10px;
-	}
-	.in-garden {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 8px;
-		min-height: 56px;
-		border-radius: 999px;
-		background: var(--ink);
-		color: var(--lime);
-		font-weight: 700;
 	}
 	.reminded {
 		font-size: 0.875rem;

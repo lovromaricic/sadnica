@@ -5,13 +5,11 @@
 	import { plantsById, rules } from '#lib/data/index.ts';
 	import type { Plant } from '#lib/data/schema.ts';
 	import { t } from '#lib/i18n/hr.ts';
-	import { getSeasonStatus, isInSeason } from '#lib/season.ts';
+	import { STAGE_PROGRESS, nextStage, nextStepText } from '#lib/garden.ts';
 	import { store } from '#lib/store.svelte.ts';
-	import { STAGES, type GardenItem, type Stage } from '#lib/storage.ts';
+	import type { GardenItem } from '#lib/storage.ts';
 	import { generateTasks, weekKey } from '#lib/tasks.ts';
 	import { today } from '#lib/today.ts';
-
-	const STAGE_PROGRESS: Record<Stage, number> = { toPlant: 8, sown: 35, growing: 68, ready: 100 };
 
 	const region = $derived(store.state.region);
 	const items = $derived(
@@ -30,23 +28,6 @@
 	const tasks = $derived(generateTasks(store.state.garden, plantsById, region, today, rules, doneIds));
 	const doneCount = $derived(tasks.filter((task) => store.state.tasksDone[`${week}:${task.id}`]).length);
 
-	function nextLine(item: GardenItem, plant: Plant): string {
-		const season = getSeasonStatus(plant, region, today, rules);
-		switch (item.stage) {
-			case 'toPlant':
-				return isInSeason(season)
-					? t.garden.next.toPlantNow(season.end!.getMonth() + 1)
-					: t.garden.next.toPlantLater(season.nextMonth ?? 0);
-			case 'sown':
-				return t.garden.next.sown;
-			case 'growing':
-				return t.garden.next.growing(plant.harvest[region]?.[0]?.from);
-			case 'ready':
-				return t.garden.next.ready;
-		}
-	}
-
-	const nextStage = (stage: Stage) => STAGES[STAGES.indexOf(stage) + 1] as Stage | undefined;
 </script>
 
 <svelte:head>
@@ -110,7 +91,7 @@
 								<span style:width="{STAGE_PROGRESS[item.stage]}%"></span>
 							</div>
 							<p class="sr-only">{t.garden.progress(t.garden.stages[item.stage])}</p>
-							<p class="next">{nextLine(item, plant)}</p>
+							<p class="next">{nextStepText(item.stage, plant, region, today, rules)}</p>
 							{#if next}
 								<button type="button" class="advance" onclick={() => store.advanceStage(plant.id)}>
 									<Icon name="arrowUp" size={18} />

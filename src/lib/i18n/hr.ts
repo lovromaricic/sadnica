@@ -169,6 +169,8 @@ export const t = {
 		emptyCta: 'Odaberi prvu biljku',
 		stages: { toPlant: 'Za posaditi', sown: 'Posijano', growing: 'Raste', ready: 'Spremno za berbu' },
 		advance: (next: string) => `Označi: ${next}`,
+		undo: (previous: string) => `Vrati na: ${previous}`,
+		stageTitle: 'U tvom vrtu',
 		progress: (stage: string) => `Faza: ${stage}`,
 		next: {
 			toPlantNow: (m: number) => `Sljedeće: posadi do kraja ${MONTHS_GEN[m - 1]}`,
