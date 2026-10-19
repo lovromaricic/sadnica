@@ -4,7 +4,7 @@
   "name": "Origano",
   "forms": { "nom": "origano", "gen": "origana", "acc": "origano", "plural": false },
   "latin": "Origanum vulgare",
-  "aliases": ["origano", "mravinac", "vranilovka", "mažuran", "oregano"],
+  "aliases": ["origano", "mravinac", "vranilovka", "oregano"],
   "category": "herb",
   "difficulty": "easy",
   "sun": "full",

@@ -61,7 +61,7 @@ describe('date text', () => {
 	it('says planted for trees and gives years to first fruit', () => {
 		const tree = item('sown', { toPlant: '2026-10-01', sown: '2026-10-19' });
 		expect(stageDateText(tree, today, P('jabuka'))).toBe('Posađeno 19. listopada');
-		expect(harvestText(tree, P('jabuka'), 'continental', today)).toBe('Prvi plodovi za oko 3 godine');
+		expect(harvestText(tree, P('jabuka'), 'continental', today)).toBe('Prva berba za oko 3 godine');
 		expect(stageLabel('sown', P('jabuka'))).toBe('Posađeno');
 		expect(stageLabel('ready', P('neven'))).toBe('U cvatu');
 		expect(harvestText(tree, P('neven'), 'continental', today)).toBe('Cvatnja oko lipnja iduće godine');

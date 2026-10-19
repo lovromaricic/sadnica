@@ -103,7 +103,7 @@ export const t = {
 		untilSentence: (m: number) => `Posadi do kraja ${MONTHS_GEN[m - 1]}`,
 		bloom: (from: number, to: number) =>
 			from === to ? `cvate u ${MONTHS_LOC[from - 1]}` : `cvate od ${MONTHS_GEN[from - 1]} do ${MONTHS_GEN[to - 1]}`,
-		firstFruit: (years: number) => `prvi plodovi za oko ${pluralYears(years)}`,
+		firstFruit: (years: number) => `prva berba za oko ${pluralYears(years)}`,
 		harvest: (from: number, to: number) =>
 			from === to ? `berba u ${MONTHS_LOC[from - 1]}` : `berba od ${MONTHS_GEN[from - 1]} do ${MONTHS_GEN[to - 1]}`,
 		withCover: 'samo uz pokrov',
@@ -203,7 +203,7 @@ export const t = {
 		},
 		harvestAround: (m: number, nextYear: boolean) => `Berba oko ${MONTHS_GEN[m - 1]}${nextYear ? ' iduće godine' : ''}`,
 		bloomAround: (m: number, nextYear: boolean) => `Cvatnja oko ${MONTHS_GEN[m - 1]}${nextYear ? ' iduće godine' : ''}`,
-		firstFruitIn: (years: number) => `Prvi plodovi za oko ${pluralYears(years)}`,
+		firstFruitIn: (years: number) => `Prva berba za oko ${pluralYears(years)}`,
 		readyFlower: 'U cvatu',
 		/** Trees and bushes are planted, not sown. */
 		planted: 'Posađeno',
@@ -219,7 +219,7 @@ export const t = {
 			sown: 'Sljedeće: drži zemlju blago vlažnom dok ne nikne',
 			growing: (from?: number) => (from ? `Sljedeće: berba od ${MONTHS_GEN[from - 1]}` : 'Sljedeće: zalijevaj i plijevi'),
 			growingFlower: (from?: number) => (from ? `Sljedeće: cvatnja od ${MONTHS_GEN[from - 1]}` : 'Sljedeće: zalijevaj i plijevi'),
-			growingPerennial: 'Sljedeće: zalijevaj, plijevi i strpi se do prvih plodova',
+			growingPerennial: 'Sljedeće: zalijevaj, plijevi i strpi se do prve berbe',
 			ready: 'Uberi i uživaj'
 		},
 		tasks: {

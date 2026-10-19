@@ -17,7 +17,7 @@
     "Za oprašivanje je dobro imati dvije različite sorte u blizini."
   ],
   "spacingTip": "patuljaste sorte stanu i u manji vrt.",
-  "containers": { "ok": true, "minPotCm": 50, "note": "Samo patuljaste sorte na slaboj podlozi." },
+  "containers": { "ok": false, "note": "Za balkon je prevelika. Patuljaste sorte postoje, ali traže iskustvo." },
   "summary": "Najčešće voće u vrtu. Uz dvije sorte za oprašivanje rađa godinama.",
   "weeklyTip": "Prve dvije godine otkini cvjetove, stablo će brže ojačati.",
   "illustration": { "kind": "fruit", "fill": "#E85A4F", "stroke": "#7E1F18", "bg": "#FAD9CC" },
