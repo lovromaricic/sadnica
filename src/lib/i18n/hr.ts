@@ -68,7 +68,12 @@ export const t = {
 			none: { label: 'Još ništa', sub: 'Samo istražujem' }
 		},
 		experienceQ: 'Koliko znaš o vrtlarenju?',
-		experience: { never: 'Nikad nisam sadio', little: 'Malo sam probao', basics: 'Znam osnove' },
+		// Short, gender-neutral labels; the hint carries the detail.
+		experience: {
+			never: { label: 'Prvi put', sub: 'Još nemam iskustva' },
+			little: { label: 'Malo iskustva', sub: 'Par biljaka na balkonu ili u vrtu' },
+			basics: { label: 'Znam osnove', sub: 'Već imam vrt ili gredicu' }
+		},
 		cta: 'Pokaži mi što sada saditi',
 		save: 'Spremi promjene',
 		next: 'Dalje',

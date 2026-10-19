@@ -34,6 +34,13 @@
 		none: { icon: 'compass', bg: 'var(--lilac)' }
 	};
 
+	/** The icon grows with experience: seed, sprout, plant. */
+	const EXPERIENCE_STYLE: Record<Experience, { icon: IconName; bg: string }> = {
+		never: { icon: 'seed', bg: 'var(--apricot)' },
+		little: { icon: 'sprout', bg: 'var(--peach)' },
+		basics: { icon: 'plant', bg: 'var(--pink)' }
+	};
+
 	function finish(e?: SubmitEvent) {
 		e?.preventDefault();
 		store.completeOnboarding({
@@ -113,10 +120,21 @@
 {#snippet experienceQuestion()}
 	<fieldset class="q">
 		<legend><h2>{t.onboarding.experienceQ}</h2></legend>
-		<div class="pills">
+		<div class="places levels">
 			{#each EXPERIENCES as x (x)}
-				<button type="button" class="pill" aria-pressed={experience === x} onclick={() => (experience = x)}>
-					{t.onboarding.experience[x]}
+				<button
+					type="button"
+					class="place"
+					style:--tile={EXPERIENCE_STYLE[x].bg}
+					aria-pressed={experience === x}
+					onclick={() => (experience = x)}
+				>
+					<span class="place-icon"><Icon name={EXPERIENCE_STYLE[x].icon} size={26} /></span>
+					<span class="place-text">
+						<strong>{t.onboarding.experience[x].label}</strong>
+						<span>{t.onboarding.experience[x].sub}</span>
+					</span>
+					<span class="tick" aria-hidden="true"><Icon name="check" size={16} /></span>
 				</button>
 			{/each}
 		</div>
@@ -348,24 +366,6 @@
 		color: var(--lime);
 	}
 
-	.pills {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 10px;
-	}
-	.pill {
-		min-height: 52px;
-		padding: 0 22px;
-		border-radius: 999px;
-		border: 2px solid var(--ink);
-		background: transparent;
-		font-weight: 700;
-	}
-	.pill[aria-pressed='true'] {
-		background: var(--ink);
-		color: var(--white);
-	}
-
 	.dots {
 		display: flex;
 		gap: 6px;
@@ -415,6 +415,16 @@
 		}
 		.places {
 			grid-template-columns: 1fr 1fr;
+		}
+		/* Experience: one row of three, same tiles as the place question. */
+		.places.levels {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+		.levels .place {
+			min-height: 168px;
+		}
+		.levels .place-text span {
+			font-size: 0.875rem;
 		}
 		.place {
 			align-items: flex-start;
