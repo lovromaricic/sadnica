@@ -15,7 +15,7 @@ na hrvatskom, radi bez računa i bez interneta, a sve što upišeš ostaje samo 
 - **Danas**: preporuka tjedna za tvoje mjesto i doba godine, što još stigneš posaditi i što dolazi
   uskoro. Upozorava na mraz prema stvarnoj prognozi (Open-Meteo).
 - **Biljke**: katalog od 85 biljaka (povrće, začinsko bilje, voće, cvijeće) s pretragom i filtrima,
-  među njima "Za balkon", "Lako" i "Sigurno za ljubimce".
+  među njima "Za balkon", "Lako za početnike" i "Sigurno za ljubimce".
 - **Stranica biljke**: kada sijati i brati u tvojoj regiji, koraci sadnje, česti problemi, dobri i
   loši susjedi te upozorenje ako je biljka otrovna za pse i mačke.
 - **Razmak i dubina**: animirani crtež sadnje, odozgo i sa strane, izrađen iz podataka svake biljke.
