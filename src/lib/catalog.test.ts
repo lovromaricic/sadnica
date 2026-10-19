@@ -21,7 +21,7 @@ describe('filterCatalog', () => {
 		const both = ids(['balcony', 'season']);
 		expect(both).toEqual(expect.arrayContaining(['cesnjak', 'luk-ljutika']));
 		expect(both.every((id) => pot(id) && ids(['season']).includes(id))).toBe(true);
-		expect(ids(['season'])).toContain('bob');
+		expect(ids(['season'])).toContain('jabuka');
 		expect(ids(['balcony'], 'bob')).toEqual([]);
 		expect(ids(['balcony'], 'cesnjak')).toEqual(['cesnjak']);
 	});

@@ -52,7 +52,7 @@ Then the other vegetables and herbs, then fruit and flowers.
 ## Known simplifications
 
 - Only two climate regions. Mountain areas (Lika, Gorski kotar) and the warmest coast differ by weeks.
-- Broad bean (bob) is sown in October inland because the original design said so; autumn sowing is
-  risky in cold winters, and February to March may be the safer advice.
+- Broad bean (bob) is sown in February to April inland and in autumn on the coast. The original design
+  had it sown in October in Zagreb, but autumn-sown broad beans often do not survive inland winters.
 - For lemon, mandarin and olive inland, the "sowing" window means putting the pot outside in spring.
 - Typical first-frost dates are in `data/rules.json` (inland: around late October; coast: December).

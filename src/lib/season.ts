@@ -160,6 +160,8 @@ export function recommend(items: PlantWithSeason[], place?: Place): PlantWithSea
 		.sort(
 			(a, b) =>
 				(pots ? Number(potFriendly(b.plant)) - Number(potFriendly(a.plant)) : 0) ||
+				// Trees and bushes are a long project; quick crops come first in "this week" lists.
+				Number(!!a.plant.perennial) - Number(!!b.plant.perennial) ||
 				Number(a.season.needsCover) - Number(b.season.needsCover) ||
 				// Plants in their prime come before ones you can only just still sow ("Još stigneš").
 				Number(a.season.status === 'late') - Number(b.season.status === 'late') ||

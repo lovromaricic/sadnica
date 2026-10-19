@@ -15,8 +15,13 @@ describe('getSeasonStatus: October in Zagreb (design sample)', () => {
 	const date = d(2026, 10, 19);
 	const status = (id: string) => getSeasonStatus(P(id), 'continental', date, rules);
 
-	it('garlic, shallot and broad bean are ideal now', () => {
-		for (const id of ['cesnjak', 'luk-ljutika', 'bob']) expect(status(id).status).toBe('now');
+	it('garlic, shallot and onion sets are ideal now', () => {
+		for (const id of ['cesnjak', 'luk-ljutika', 'crveni-luk']) expect(status(id).status).toBe('now');
+	});
+
+	it('broad bean waits for February inland but is sown now on the coast', () => {
+		expect(status('bob')).toMatchObject({ status: 'upcoming', nextMonth: 2 });
+		expect(getSeasonStatus(P('bob'), 'adriatic', date, rules).status).toBe('now');
 	});
 
 	it('lamb’s lettuce and spinach only with cover', () => {
@@ -135,12 +140,20 @@ describe('isFrostNear', () => {
 describe('recommend', () => {
 	const items = withSeason(plants, 'continental', d(2026, 10, 19), rules);
 
-	it('puts garlic first and cover-only plants last', () => {
+	it('puts garlic first and cover-only plants last among annuals', () => {
 		const ids = recommend(items).map((i) => i.plant.id);
 		expect(ids[0]).toBe('cesnjak');
-		expect(ids.slice(0, 3).sort()).toEqual(['bob', 'cesnjak', 'luk-ljutika']);
-		expect(ids.slice(-2).sort()).toEqual(['matovilac', 'spinat']);
+		expect(ids.slice(0, 3).sort()).toEqual(['cesnjak', 'crveni-luk', 'luk-ljutika']);
+		const annuals = recommend(items).filter((i) => !i.plant.perennial).map((i) => i.plant.id);
+		expect(annuals.slice(-2).sort()).toEqual(['matovilac', 'spinat']);
 		expect(ids).not.toContain('rajcica');
+	});
+
+	it('puts trees and bushes after every annual plant', () => {
+		const list = recommend(items);
+		const perennial = list.map((i) => !!i.plant.perennial);
+		expect(perennial.indexOf(true)).toBeGreaterThan(perennial.lastIndexOf(false));
+		expect(list.slice(1, 5).some((i) => i.plant.perennial)).toBe(false);
 	});
 
 	it('puts plants in their prime before ones that only just still fit', () => {
@@ -159,7 +172,8 @@ describe('recommend', () => {
 
 	it('lists upcoming plants soonest first', () => {
 		const ids = upcoming(items).map((i) => i.plant.id);
-		expect(ids[0]).toBe('rajcica');
+		// Broad bean and tomato both start in February; broad bean ranks first for beginners.
+		expect(ids.slice(0, 2)).toEqual(['bob', 'rajcica']);
 		expect(ids).toEqual(expect.arrayContaining(['mrkva', 'bosiljak']));
 	});
 });
@@ -174,15 +188,15 @@ describe('recommend for balcony gardeners', () => {
 		// Every pot plant comes before every plant that does not suit a pot.
 		expect(pots.indexOf(false)).toBeGreaterThan(pots.lastIndexOf(true));
 		expect(list[0]).toBe('cesnjak');
-		// Broad bean does not suit a pot, so it drops below the cover-only lamb's lettuce and spinach.
-		expect(list.indexOf('bob')).toBeGreaterThan(list.indexOf('spinat'));
+		// An apple tree does not suit a pot, so it drops below the cover-only lamb's lettuce and spinach.
+		expect(list.indexOf('jabuka')).toBeGreaterThan(list.indexOf('spinat'));
 	});
 
 	it('keeps the usual order for every other place', () => {
 		for (const place of ['garden', 'unsure', undefined] as const) {
 			expect(ids(place)).toEqual(ids());
 		}
-		expect(ids().indexOf('bob')).toBeLessThan(ids().indexOf('matovilac'));
+		expect(ids().indexOf('crveni-luk')).toBeLessThan(ids().indexOf('matovilac'));
 	});
 
 	it('treats plants without container data as not for pots', () => {
@@ -192,7 +206,8 @@ describe('recommend for balcony gardeners', () => {
 	});
 
 	it('never makes a plant that does not suit a pot the hero', () => {
-		const onlyBob = withSeason([P('bob')], 'continental', d(2026, 10, 19), rules);
+		// On the coast broad bean is sown in October.
+		const onlyBob = withSeason([P('bob')], 'adriatic', d(2026, 10, 19), rules);
 		expect(heroPick(recommend(onlyBob, 'balcony'), 'balcony')).toBeUndefined();
 		expect(heroPick(recommend(onlyBob, 'garden'), 'garden')?.plant.id).toBe('bob');
 		expect(heroPick(recommend(items, 'balcony'), 'balcony')?.plant.id).toBe('cesnjak');

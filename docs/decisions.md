@@ -34,7 +34,7 @@ Spec gaps and the simplest choice made for each. Review and overrule freely.
 - **Recommendation order**: plants that need cover go last; then easy before medium before hard; then
   the window that closes soonest; then the optional
   per-plant `rank` field; then name. `rank` was added because several plants share the same window
-  end (garlic, shallot and broad bean all close at the end of November) and the design leads with garlic.
+  end (garlic, shallot and onion sets all close at the end of November) and the design leads with garlic.
 - **Frost alert** shows from `frostAlertDays` (21) days before the typical first frost until the end of
   the frost window in `data/rules.json`. Coastal frost is set to December to mid January.
 - "samo uz pokrov" replaces the timing line for `needsCover` plants while frost is near.
@@ -75,7 +75,7 @@ beginner most often plants something that cannot work, so that case earns the qu
   pot plant beats a cover-free one that needs a bed). The hero is the first pick only if it suits a
   pot; otherwise there is no hero and the text says nothing fits a pot now, and the other plants stay
   in the list below. "Vidi sve u sezoni" counts and opens in-season pot plants (`?filtri=season,balcony`).
-  In October in Zagreb this moves broad bean (not for pots) from third to last; garlic stays the hero.
+  (Broad bean, the original example of a non-pot plant here, is now sown inland only in spring.)
 - **Plant page**: for a pot-friendly plant the Razmak tile becomes "Lonac · Ø 20 cm" and its modal says
   "Treba ti lonac promjera barem 20 cm." plus the plant's note, with a generic drainage tip. For a plant
   marked `ok: false`, a short peach note sits above the tiles ("Nije za lonac." + the plant's note).
@@ -255,3 +255,11 @@ beginner most often plants something that cannot work, so that case earns the qu
 - All plant data still ships in one chunk (about 39 KB gzipped). Load per page if it grows a lot.
 - Vitest's persistent module cache (`fsModuleCache`) is off: it served a stale plant list to tests
   after new data files were added.
+
+## Broad bean inland
+
+- The design's October sample listed broad bean as "ideal now" in Zagreb. After content review it is
+  sown inland in February to April only (autumn-sown plants often die in inland winters); the coast
+  keeps autumn sowing. In October in Zagreb it now shows under "Uskoro" (veljača).
+- Recommendations rank trees and bushes after all annual plants, so "I još ovo stigneš" suggests
+  quick crops (it had started listing a quince tree); they still appear in "Vidi sve u sezoni".
