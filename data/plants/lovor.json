@@ -38,6 +38,7 @@
     { "title": "Ljepljivi listovi i crna prevlaka", "signs": "Na listovima je ljepljiva tvar i čađ.", "fix": "Štitaste uši. Obriši ih krpom namočenom u sapunicu." },
     { "title": "Smeđi listovi nakon zime", "signs": "Listovi posmeđe.", "fix": "Smrzavanje. Na kontinentu ga zimi drži unutra." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Listovi.", "signs": "Povraćanje i proljev." },
   "neighbours": {
     "good": [],
     "bad": []

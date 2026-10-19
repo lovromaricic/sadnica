@@ -45,6 +45,7 @@
     { "title": "Crna mrlja na dnu ploda", "signs": "Plod ima tamnu, udubljenu mrlju na dnu.", "fix": "Uzrok je neredovito zalijevanje. Zalijevaj redovito i podjednako, a zemlju prekrij malčem." },
     { "title": "Plodovi pucaju", "signs": "Zreli plodovi napuknu.", "fix": "Događa se kad nakon suše padne jaka kiša. Zalijevaj redovito i beri čim plodovi dozriju." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Listovi, stabljika i zeleni plodovi. Zreli plodovi nisu opasni.", "signs": "Povraćanje, proljev i pospanost." },
   "neighbours": {
     "good": ["Bosiljak", "Češnjak", "Mrkva", "Neven"],
     "bad": ["Krumpir", "Komorač", "Kupus"]

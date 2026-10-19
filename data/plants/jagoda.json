@@ -38,6 +38,7 @@
     { "title": "Sivi, pljesnivi plodovi", "signs": "Plodovi trunu i prekrije ih siva plijesan.", "fix": "Siva plijesan, nakon kiše. Uklanjaj trule plodove i stavi slamu ispod biljaka." },
     { "title": "Izgrizeni plodovi", "signs": "Rupe u plodovima.", "fix": "Puževi ili ptice. Skupljaj puževe navečer, a nasad prekrij mrežom." }
   ],
+  "pets": { "safe": true },
   "neighbours": {
     "good": ["Češnjak", "Špinat", "Luk"],
     "bad": ["Kupus"]

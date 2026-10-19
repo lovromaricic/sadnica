@@ -39,6 +39,7 @@
     { "title": "Iz sredine raste cvjetna stabljika", "signs": "Čvrsta stabljika se zavija i na vrhu ima pupoljak.", "fix": "Odlomi je čim se zavije, tako snaga ide u glavicu. Mlade stabljike su jestive." },
     { "title": "Glavice su sitne", "signs": "Pri vađenju su glavice male, a zupci tanki.", "fix": "Iduće jeseni sadi najveće zupce, na sunčano mjesto, 10 cm razmaka. Ne sadi češnjak na isto mjesto dvije godine zaredom." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "serious", "part": "Cijela biljka, sirova i kuhana, osobito lukovica.", "signs": "Povraćanje, proljev, slabost i blijede desni. Oštećenje krvi može se pokazati tek nakon nekoliko dana." },
   "neighbours": {
     "good": ["Mrkva", "Rajčica", "Jagoda", "Cikla"],
     "bad": ["Grah", "Grašak", "Bob"]

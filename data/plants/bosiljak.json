@@ -45,6 +45,7 @@
     { "title": "Biljka cvjeta", "signs": "Na vrhovima izrastu klasovi s cvjetićima.", "fix": "Otkini cvjetove čim se pojave, biljka će dati više listova." },
     { "title": "Vene iako je zemlja vlažna", "signs": "Listovi vise, a stabljika pri dnu tamni.", "fix": "Previše vode. Pusti da se gornji sloj zemlje osuši prije zalijevanja. Lonac mora imati rupe." }
   ],
+  "pets": { "safe": true },
   "neighbours": {
     "good": ["Rajčica", "Paprika", "Krastavac"],
     "bad": ["Kadulja", "Ružmarin"]

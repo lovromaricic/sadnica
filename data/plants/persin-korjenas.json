@@ -36,6 +36,7 @@
     { "title": "Ne niče", "signs": "Nakon tri tjedna nema ničega.", "fix": "Peršin niče sporo, i do četiri tjedna. Drži zemlju stalno vlažnom." },
     { "title": "Račvast korijen", "signs": "Korijen ima više krakova.", "fix": "Kamenje ili svježi gnoj u zemlji. Prekopaj duboko i ne gnoji prije sjetve." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Listovi, u većim količinama.", "signs": "Osjetljivost kože na sunce i nadražaj oko usta." },
   "neighbours": {
     "good": ["Rajčica", "Luk"],
     "bad": ["Salata"]

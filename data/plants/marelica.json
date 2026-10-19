@@ -38,6 +38,7 @@
     { "title": "Nema plodova", "signs": "Stablo cvjeta, ali ne rađa.", "fix": "Proljetni mraz uništio je cvjetove. Biraj kasnije sorte i zaštićeno mjesto." },
     { "title": "Grane se naglo osuše", "signs": "Cijela grana uvene usred ljeta.", "fix": "Apopleksija marelice. Izreži suhu granu do zdravog drva." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Koštice, listovi i grančice. Meso ploda nije opasno.", "signs": "Povraćanje, a u većim količinama otežano disanje. Koštice mogu začepiti crijeva." },
   "neighbours": {
     "good": ["Neven", "Vlasac"],
     "bad": []

@@ -36,6 +36,7 @@
     { "title": "Lukovice nestaju", "signs": "U proljeće nema cvjetova.", "fix": "Voluharice. Sadi lukovice u košaricu od žice." },
     { "title": "Iduće godine slabo cvatu", "signs": "Cvjetovi su sitni ili ih nema.", "fix": "Mnoge sorte nakon prve godine slabije cvatu. Listove ostavi da požute, a svake jeseni dosadi nove lukovice." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Najviše lukovica, manje listovi i cvijet.", "signs": "Povraćanje, slinjenje i proljev." },
   "neighbours": {
     "good": ["Narcis"],
     "bad": []

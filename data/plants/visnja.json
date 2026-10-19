@@ -38,6 +38,7 @@
     { "title": "Grane se suše nakon cvatnje", "signs": "Cvjetovi i mladice uvenu i posmeđe.", "fix": "Monilija. Izreži suhe grane do zdravog drva." },
     { "title": "Rupice na listovima", "signs": "Listovi izgledaju kao izbušeni.", "fix": "Šupljikavost lista. Ukloni otpalo lišće u jesen." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Koštice, listovi i grančice. Meso ploda nije opasno.", "signs": "Povraćanje, a u većim količinama otežano disanje. Koštice mogu začepiti crijeva." },
   "neighbours": {
     "good": ["Neven", "Vlasac"],
     "bad": []

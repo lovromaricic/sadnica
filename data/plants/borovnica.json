@@ -38,6 +38,7 @@
     { "title": "Žuti listovi sa zelenim žilama", "signs": "Listovi požute, a žile ostaju zelene.", "fix": "Zemlja nije dovoljno kisela. Presadi u supstrat za borovnice i zalijevaj kišnicom." },
     { "title": "Ptice pojedu bobice", "signs": "Bobice nestaju prije berbe.", "fix": "Prekrij grm mrežom kad bobice počnu plaviti." }
   ],
+  "pets": { "safe": true },
   "neighbours": {
     "good": [],
     "bad": []

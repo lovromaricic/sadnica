@@ -36,6 +36,7 @@
     { "title": "Biljka trune", "signs": "Donje grane su smeđe i meke.", "fix": "Previše vode. Sadi na ocjedito mjesto i zalijevaj rijetko." },
     { "title": "Ogoljele grane", "signs": "Grm je odozdo gol.", "fix": "Orezuj svakog proljeća, nikad do golog drva." }
   ],
+  "pets": { "safe": true },
   "neighbours": {
     "good": ["Kupus", "Mrkva", "Ružmarin"],
     "bad": ["Krastavac"]

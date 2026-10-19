@@ -36,6 +36,7 @@
     { "title": "Brzo cvjeta", "signs": "Biljka odmah tjera cvijet.", "fix": "Vrućina i suša. Zalijevaj redovito i sij češće." },
     { "title": "Lisne uši", "signs": "Sitni kukci na vrhovima.", "fix": "Isperi ih mlazom vode." }
   ],
+  "pets": { "safe": true },
   "neighbours": {
     "good": ["Krastavac", "Kupus", "Salata"],
     "bad": ["Mrkva"]

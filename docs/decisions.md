@@ -263,3 +263,14 @@ beginner most often plants something that cannot work, so that case earns the qu
   keeps autumn sowing. In October in Zagreb it now shows under "Uskoro" (veljača).
 - Recommendations rank trees and bushes after all annual plants, so "I još ovo stigneš" suggests
   quick crops (it had started listing a quince tree); they still appear in "Vidi sve u sezoni".
+
+## Pets
+
+- Optional `pets` per plant, after the ASPCA toxic plant list: either `{ safe: true }` (listed as
+  non-toxic) or `{ dogs, cats, severity: mild | serious, part, signs }`. 28 plants carry a risk
+  (onion family, grapes and daffodil are serious), 15 are marked safe, the rest are unchecked.
+- Plant page: a chip under the Latin name ("Otrovno za pse i mačke", or the softer "Može naškoditi
+  psima i mačkama" for mild risks) opening a popup with the dangerous parts, the signs of poisoning,
+  "contact a vet" advice and the source. Safe and unchecked plants show nothing.
+- Catalogue: "Sigurno za ljubimce" shows only plants marked safe, never unchecked ones, because a
+  wrong "safe" is worse than no label.

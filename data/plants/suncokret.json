@@ -36,6 +36,7 @@
     { "title": "Puževi pojedu klijance", "signs": "Mlade biljke nestanu.", "fix": "Skupljaj puževe navečer ili sij u lončiće pa presadi." },
     { "title": "Biljka se prelomi", "signs": "Stabljika pukne na vjetru.", "fix": "Priveži je uz kolac." }
   ],
+  "pets": { "safe": true },
   "neighbours": {
     "good": ["Krastavac", "Kukuruz"],
     "bad": ["Krumpir"]

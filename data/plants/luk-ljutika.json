@@ -39,6 +39,7 @@
     { "title": "Ptice izvlače lukovice", "signs": "Netom posađene lukovice leže na zemlji.", "fix": "Vrati ih u zemlju. Dok se ne ukorijene, prekrij gredicu mrežom ili agrilom." },
     { "title": "Cvjetne stabljike", "signs": "Iz sredine izraste stabljika s pupoljkom.", "fix": "Odlomi je, inače lukovice ostaju sitne." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "serious", "part": "Cijela biljka, sirova i kuhana, osobito lukovica.", "signs": "Povraćanje, proljev, slabost i blijede desni. Oštećenje krvi može se pokazati tek nakon nekoliko dana." },
   "neighbours": {
     "good": ["Mrkva", "Cikla", "Salata", "Rajčica"],
     "bad": ["Grah", "Grašak", "Bob"]

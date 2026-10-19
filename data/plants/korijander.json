@@ -36,6 +36,7 @@
     { "title": "Odmah cvjeta", "signs": "Biljka je mala, a već cvjeta.", "fix": "Vrućina i dug dan. Sij u proljeće i krajem ljeta, u polusjeni." },
     { "title": "Ne niče", "signs": "Sjeme ne niče.", "fix": "Lagano zgnječi sjemenke prije sjetve i drži zemlju vlažnom." }
   ],
+  "pets": { "safe": true },
   "neighbours": {
     "good": ["Grah", "Grašak"],
     "bad": ["Komorač"]

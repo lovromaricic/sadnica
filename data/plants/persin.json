@@ -37,6 +37,7 @@
     { "title": "Ne niče", "signs": "Nakon tri tjedna nema ničega.", "fix": "Peršin niče sporo. Drži zemlju vlažnom i pričekaj još tjedan-dva." },
     { "title": "Žuti listovi", "signs": "Listovi žute.", "fix": "Previše vode ili premalo hrane. Pusti zemlju da se malo prosuši i dodaj kompost." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Cijela biljka, u većim količinama.", "signs": "Osjetljivost kože na sunce i nadražaj oko usta." },
   "neighbours": {
     "good": ["Rajčica", "Šparoga"],
     "bad": ["Salata", "Mrkva"]

@@ -39,6 +39,7 @@
     { "title": "Krumpirova zlatica", "signs": "Narančasto-crne ličinke i prugasti kornjaši jedu lišće.", "fix": "Pregledaj biljke svakih par dana i skupljaj kornjaše i jajašca s naličja listova." },
     { "title": "Tamne mrlje i propadanje lišća", "signs": "Listovi dobiju tamne mrlje i venu, najčešće nakon kiše.", "fix": "Plamenjača. Otkini zahvaćeno lišće. Kad se proširi, pokosi i odnesi cimu, a gomolje izvadi nakon dva tjedna." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Listovi, stabljika te zeleni ili proklijali gomolji. Kuhani krumpir nije opasan.", "signs": "Povraćanje, proljev i pospanost." },
   "neighbours": {
     "good": ["Bob", "Grah", "Kupus"],
     "bad": ["Rajčica", "Krastavac", "Tikvica"]

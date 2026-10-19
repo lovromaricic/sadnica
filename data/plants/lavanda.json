@@ -36,6 +36,7 @@
     { "title": "Grm ogoli i odrveni", "signs": "Sredina je gola i drvenasta.", "fix": "Nije orezivana. Orezuj svake godine nakon cvatnje." },
     { "title": "Biljka trune", "signs": "Donje grane posmeđe.", "fix": "Previše vlage. Sadi na ocjedito mjesto." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Cijela biljka, u većim količinama.", "signs": "Mučnina, povraćanje i gubitak apetita." },
   "neighbours": {
     "good": ["Ružmarin", "Kadulja"],
     "bad": []

@@ -36,6 +36,7 @@
     { "title": "Crne lisne uši", "signs": "Naličje listova puno crnih uši.", "fix": "Otkini zahvaćene listove. Dragoljub privlači uši i tako štiti povrće." },
     { "title": "Puno lišća, malo cvjetova", "signs": "Biljka je bujna, a cvjetova nema.", "fix": "Zemlja je prebogata. Ne gnoji ga." }
   ],
+  "pets": { "safe": true },
   "neighbours": {
     "good": ["Krastavac", "Tikvica", "Rajčica"],
     "bad": []

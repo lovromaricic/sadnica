@@ -121,6 +121,7 @@ export const t = {
 		filters: {
 			season: 'Sada u sezoni',
 			balcony: 'Za balkon',
+			pets: 'Sigurno za ljubimce',
 			easy: 'Lako za početnike',
 			veg: 'Povrće',
 			herb: 'Začinsko bilje',
@@ -264,6 +265,18 @@ export const t = {
 			return `${n < 0 ? '−' : ''}${Math.abs(n)} °C`;
 		},
 		source: 'Prognoza: Open-Meteo'
+	},
+	pets: {
+		label: {
+			serious: { both: 'Otrovno za pse i mačke', dogs: 'Otrovno za pse', cats: 'Otrovno za mačke' },
+			mild: { both: 'Može naškoditi psima i mačkama', dogs: 'Može naškoditi psima', cats: 'Može naškoditi mačkama' }
+		},
+		title: 'Ljubimci',
+		part: 'Opasno',
+		signs: 'Znakovi trovanja',
+		advice: 'Ne daj ljubimcima da je jedu. Ako sumnjaš da je ljubimac pojeo biljku, odmah se javi veterinaru.',
+		source: 'podaci prema popisu otrovnih biljaka ASPCA. Nisu zamjena za savjet veterinara.',
+		explain: (label: string) => `${label}. Objasni.`
 	},
 	problems: {
 		title: 'Što nije u redu?',

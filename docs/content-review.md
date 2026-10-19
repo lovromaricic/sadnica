@@ -29,7 +29,9 @@ It cannot judge whether the advice is right. That is the review.
    safe and doable by a beginner.
 5. **Neighbours.** Good and bad companions. Names must match catalogue plant names to be linked.
 6. **Perennials.** `perennial.yearsToFirstHarvest` for trees, bushes, asparagus and artichoke.
-7. **Language.** Croatian grammar and the name forms in `forms` (nominative, genitive, accusative,
+7. **Pets.** `pets` follows the ASPCA toxic plant list: check each risk and each `safe: true`. Only
+   mark a plant safe when a reliable source says so; leave it out when unsure.
+8. **Language.** Croatian grammar and the name forms in `forms` (nominative, genitive, accusative,
    plural). Text never addresses the reader with a gendered past tense ("posadio/posadila").
 
 ## Already corrected

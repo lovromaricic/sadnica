@@ -37,6 +37,7 @@
     { "title": "Narančaste točkice na listovima", "signs": "Listovi imaju sitne narančaste mrlje.", "fix": "To je hrđa. Otkini zahvaćene listove i ne sadi poriluk pregusto." },
     { "title": "Tanke stabljike", "signs": "Poriluk ostaje tanak.", "fix": "Treba mu hrane i vode. Pospi kompost i zalijevaj u suši." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "serious", "part": "Cijela biljka, sirova i kuhana, osobito lukovica.", "signs": "Povraćanje, proljev, slabost i blijede desni. Oštećenje krvi može se pokazati tek nakon nekoliko dana." },
   "neighbours": {
     "good": ["Mrkva", "Celer", "Rajčica"],
     "bad": ["Grah", "Grašak"]

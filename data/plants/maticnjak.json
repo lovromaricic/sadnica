@@ -36,6 +36,7 @@
     { "title": "Sam se zasije posvuda", "signs": "Mlade biljke niču po vrtu.", "fix": "Odreži cvjetove prije nego sjeme sazrije." },
     { "title": "Bijela prevlaka na listovima", "signs": "Listovi izgledaju kao posuti brašnom.", "fix": "Pepelnica krajem ljeta. Odreži biljku do zemlje, izrast će nova." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Cijela biljka.", "signs": "Povraćanje i proljev." },
   "neighbours": {
     "good": ["Rajčica", "Tikvica"],
     "bad": []

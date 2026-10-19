@@ -37,6 +37,7 @@
     { "title": "Narančaste mrlje na listovima", "signs": "Na naličju listova su narančaste točke.", "fix": "Hrđa. Odreži zahvaćene stabljike do zemlje, izrast će zdrave." },
     { "title": "Širi se po vrtu", "signs": "Metvica niče posvuda.", "fix": "Iskopaj izdanke i ubuduće je drži u loncu." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Cijela biljka, u većim količinama.", "signs": "Povraćanje i proljev." },
   "neighbours": {
     "good": ["Kupus", "Rajčica"],
     "bad": []

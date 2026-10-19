@@ -36,6 +36,7 @@
     { "title": "Ne niče", "signs": "Sjeme ne niče.", "fix": "Posijano preduboko. Sjeme samo pritisni na površinu." },
     { "title": "Lisne uši", "signs": "Sitni kukci na stabljikama.", "fix": "Isperi ih mlazom vode." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Cijela biljka, osobito ako je jedu dulje vrijeme.", "signs": "Povraćanje, proljev i nadražaj kože." },
   "neighbours": {
     "good": ["Kupus", "Luk"],
     "bad": []

@@ -39,6 +39,7 @@
     { "title": "Crvi u trešnjama", "signs": "U plodovima su bijele ličinke.", "fix": "Trešnjina muha. Beri na vrijeme i postavi žute ljepljive ploče u svibnju." },
     { "title": "Plodovi pucaju", "signs": "Zreli plodovi napuknu nakon kiše.", "fix": "Biraj sorte otporne na pucanje i beri čim dozriju." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Koštice, listovi i grančice. Meso ploda nije opasno.", "signs": "Povraćanje, a u većim količinama otežano disanje. Koštice mogu začepiti crijeva." },
   "neighbours": {
     "good": ["Neven", "Vlasac"],
     "bad": []

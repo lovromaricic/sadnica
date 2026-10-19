@@ -36,6 +36,7 @@
     { "title": "Bijela prevlaka na listovima", "signs": "Listovi izgledaju kao posuti brašnom.", "fix": "Pepelnica krajem ljeta. Zalijevaj uz korijen i ne sadi pregusto." },
     { "title": "Puževi", "signs": "Izgrizeni mladi listovi.", "fix": "Skupljaj ih navečer." }
   ],
+  "pets": { "safe": true },
   "neighbours": {
     "good": ["Rajčica", "Tikvica"],
     "bad": []

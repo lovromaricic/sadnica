@@ -85,6 +85,27 @@ export const plantSchema = z
 		sow: z.record(regionSchema, z.array(sowWindowSchema)),
 		harvest: z.record(regionSchema, z.array(harvestWindowSchema)),
 		steps: z.array(z.object({ title: z.string().min(1), text: z.string().min(1) })).min(1),
+		/**
+		 * Dogs and cats, after the ASPCA toxic plant list. Either the details of the risk, or
+		 * `{ safe: true }` when the list names it non-toxic. Missing means not checked: the app then
+		 * shows no warning, but the plant is not offered as pet-safe either.
+		 */
+		pets: z
+			.union([
+				z.object({ safe: z.literal(true) }).strict(),
+				z
+					.object({
+						dogs: z.boolean(),
+						cats: z.boolean(),
+						severity: z.enum(['mild', 'serious']),
+						/** Which parts are dangerous. */
+						part: z.string().min(1),
+						/** What poisoning looks like. */
+						signs: z.string().min(1)
+					})
+					.strict()
+			])
+			.optional(),
 		/** Common beginner problems: how to recognise them and what to do. */
 		problems: z
 			.array(z.object({ title: z.string().min(1), signs: z.string().min(1), fix: z.string().min(1) }))

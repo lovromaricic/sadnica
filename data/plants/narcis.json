@@ -36,6 +36,7 @@
     { "title": "Samo listovi, bez cvjetova", "signs": "Busen ima lišće, ali ne cvate.", "fix": "Lukovice su pregusto. Kad listovi požute, iskopaj ih, razdvoji i odmah ponovno posadi." },
     { "title": "Lukovice trunu", "signs": "Lukovice su meke.", "fix": "Previše vlage. Sadi na ocjedito mjesto." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "serious", "part": "Cijela biljka, najviše lukovica.", "signs": "Povraćanje, slinjenje i proljev. Veće količine mogu izazvati grčeve i probleme sa srcem." },
   "neighbours": {
     "good": ["Tulipan"],
     "bad": []

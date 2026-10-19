@@ -39,6 +39,7 @@
     { "title": "Plodovi se ne zacrne do kraja", "signs": "Dio bobica ostaje crven.", "fix": "Vrućina ili grinje. Zalijevaj u suši i izreži stare izboje." },
     { "title": "Kupina se širi", "signs": "Izdanci niču posvuda.", "fix": "Iskopaj ih redovito ili ograniči gredicu." }
   ],
+  "pets": { "safe": true },
   "neighbours": {
     "good": ["Neven"],
     "bad": []

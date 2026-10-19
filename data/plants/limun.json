@@ -38,6 +38,7 @@
     { "title": "Žuti listovi", "signs": "Listovi žute, žile ostaju zelene.", "fix": "Manjak željeza. Koristi gnojivo za citruse i zalijevaj kišnicom." },
     { "title": "Lišće otpada zimi", "signs": "U kući gubi lišće.", "fix": "Pretoplo i premalo svjetla. Drži ga na hladnijem i svjetlijem mjestu." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Kora ploda i listovi.", "signs": "Povraćanje, proljev i nadražaj kože." },
   "neighbours": {
     "good": ["Neven", "Vlasac"],
     "bad": []

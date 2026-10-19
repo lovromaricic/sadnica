@@ -38,6 +38,7 @@
     { "title": "Cvjetna stabljika", "signs": "Iz sredine izraste debela stabljika s pupoljkom.", "fix": "Odlomi je, inače glavica ostaje sitna." },
     { "title": "Lukovice trunu", "signs": "Glavice su meke, a listovi žute.", "fix": "Previše vlage. Sadi na mjesto gdje se voda ne zadržava i zalijevaj samo u suši." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "serious", "part": "Cijela biljka, sirova i kuhana, osobito lukovica.", "signs": "Povraćanje, proljev, slabost i blijede desni. Oštećenje krvi može se pokazati tek nakon nekoliko dana." },
   "neighbours": {
     "good": ["Mrkva", "Cikla", "Salata", "Rajčica"],
     "bad": ["Grah", "Grašak", "Bob"]

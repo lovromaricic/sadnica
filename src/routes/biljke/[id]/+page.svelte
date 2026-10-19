@@ -5,6 +5,7 @@
 	import { SvelteSet } from 'svelte/reactivity';
 	import GardenLog from '#lib/components/GardenLog.svelte';
 	import { stageLabel } from '#lib/garden.ts';
+	import { petLabel, petRisk } from '#lib/pets.ts';
 	import GardenStage from '#lib/components/GardenStage.svelte';
 	import Icon from '#lib/components/Icon.svelte';
 	import Modal from '#lib/components/Modal.svelte';
@@ -119,6 +120,10 @@
 	const inGardenPlants = $derived(gardenPlants());
 	const gardenNb = $derived(plant ? gardenNeighbours(plant, inGardenPlants) : { bad: [], good: [] });
 
+	/** Dogs and cats: a chip under the name, explained in the same kind of popup as the facts. */
+	const pet = $derived(plant ? petRisk(plant) : null);
+	let petOpen = $state(false);
+
 	/** Back to the tab this page was opened from: real Back when we just came from it, so scroll is kept. */
 	const backHref = $derived(navContext.tabHref ?? resolve('/biljke'));
 	function goBack(e: MouseEvent) {
@@ -198,6 +203,11 @@
 			<div class="hero-text">
 				<h1>{plant.name}</h1>
 				{#if plant.latin}<p class="latin">{plant.latin}</p>{/if}
+				{#if pet}
+					<button type="button" class="pet-chip" class:serious={pet.severity === 'serious'} aria-haspopup="dialog" onclick={() => (petOpen = true)}>
+						<Icon name="paw" size={16} />{petLabel(pet)}<span class="pet-i" aria-hidden="true">i</span>
+					</button>
+				{/if}
 				<p class="summary">{plant.summary}</p>
 			</div>
 			{@render actions('desktop-only')}
@@ -309,6 +319,14 @@
 		</div>
 	</div>
 
+	{#if pet}
+		<Modal bind:open={petOpen} label={t.pets.title} value={petLabel(pet)} color="var(--lilac)" tip={t.pets.source}>
+			<p><strong>{t.pets.part}:</strong> {pet.part}</p>
+			<p><strong>{t.pets.signs}:</strong> {pet.signs}</p>
+			<p>{t.pets.advice}</p>
+		</Modal>
+	{/if}
+
 	{#if openFact && modalContent}
 		<Modal
 			bind:open={modalOpen}
@@ -379,6 +397,39 @@
 	.latin {
 		font-style: italic;
 		color: var(--muted-2);
+	}
+	.pet-chip {
+		justify-self: start;
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		min-height: 44px;
+		margin-top: 2px;
+		padding: 0 8px 0 14px;
+		border: 2px solid var(--lilac-ink);
+		border-radius: 999px;
+		background: var(--white);
+		color: var(--lilac-ink);
+		font-weight: 700;
+		font-size: 0.9375rem;
+		text-align: left;
+	}
+	.pet-chip.serious {
+		background: var(--lilac-ink);
+		color: var(--white);
+	}
+	.pet-i {
+		display: grid;
+		place-items: center;
+		width: 24px;
+		height: 24px;
+		flex: none;
+		border-radius: 50%;
+		background: var(--lilac);
+		color: var(--lilac-ink);
+		font-family: var(--font-head);
+		font-weight: 800;
+		font-size: 0.8125rem;
 	}
 	.summary {
 		font-size: 1.0625rem;

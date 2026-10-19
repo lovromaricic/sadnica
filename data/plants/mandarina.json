@@ -38,6 +38,7 @@
     { "title": "Ljepljivi listovi", "signs": "Listovi su ljepljivi i prekriveni čađom.", "fix": "Štitaste uši. Obriši ih krpom sa sapunicom." },
     { "title": "Plodovi otpadaju", "signs": "Mali plodovi otpadaju u ljeto.", "fix": "Dio otpadne prirodno. Ako otpada puno, zalijevaj redovito." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Kora ploda i listovi.", "signs": "Povraćanje, proljev i nadražaj kože." },
   "neighbours": {
     "good": ["Neven", "Vlasac"],
     "bad": []

@@ -1,9 +1,10 @@
 import type { Plant } from './data/schema';
 import { matchesQuery } from './search';
+import { petSafe } from './pets';
 import { isInSeason, potFriendly, type PlantWithSeason } from './season';
 import type { Place } from './storage';
 
-export const FILTERS = ['season', 'balcony', 'easy', 'veg', 'herb', 'flower', 'fruit'] as const;
+export const FILTERS = ['season', 'balcony', 'pets', 'easy', 'veg', 'herb', 'flower', 'fruit'] as const;
 export type FilterKey = (typeof FILTERS)[number];
 const CATEGORIES: Plant['category'][] = ['veg', 'herb', 'flower', 'fruit'];
 
@@ -33,6 +34,8 @@ export function filterCatalog(items: PlantWithSeason[], query: string, active: R
 			(!active.has('season') || isInSeason(season)) &&
 			(!active.has('easy') || plant.difficulty === 'easy') &&
 			(!active.has('balcony') || potFriendly(plant)) &&
+			// Only plants marked non-toxic, never unchecked ones.
+			(!active.has('pets') || petSafe(plant)) &&
 			(cats.length === 0 || cats.includes(plant.category))
 	);
 }

@@ -38,6 +38,7 @@
     { "title": "Plodovi otpadaju nezreli", "signs": "Male smokve otpadaju.", "fix": "Suša ili mlado stablo. Zalijevaj u suši, s godinama prestaje." },
     { "title": "Smrzne se zimi", "signs": "Grane su u proljeće suhe.", "fix": "Na kontinentu izreži suho, a stablo će potjerati iz korijena. Sljedeće zime ga zaštiti." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Listovi i mliječni sok.", "signs": "Nadražaj kože i usta, povraćanje." },
   "neighbours": {
     "good": ["Neven", "Vlasac"],
     "bad": []

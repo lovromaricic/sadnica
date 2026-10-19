@@ -36,6 +36,7 @@
     { "title": "Listovi smeđe i otpadaju", "signs": "Grm se suši odozdo.", "fix": "Najčešće previše vode ili smrznuto korijenje. Zalijevaj rjeđe, zimi zaštiti." },
     { "title": "Ne preživi zimu", "signs": "U proljeće je suh.", "fix": "Na kontinentu ga uzgajaj u loncu i zimi unesi na hladno, svijetlo mjesto." }
   ],
+  "pets": { "safe": true },
   "neighbours": {
     "good": ["Kupus", "Mrkva", "Kadulja"],
     "bad": []

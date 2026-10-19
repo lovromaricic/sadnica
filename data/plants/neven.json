@@ -36,6 +36,7 @@
     { "title": "Bijela prevlaka na listovima", "signs": "Listovi kao posuti brašnom.", "fix": "Pepelnica krajem ljeta. Otkini najgore listove." },
     { "title": "Lisne uši", "signs": "Crne uši na pupovima.", "fix": "Isperi ih mlazom vode. Neven ih privlači, pa štiti povrće." }
   ],
+  "pets": { "safe": true },
   "neighbours": {
     "good": ["Rajčica", "Tikvica", "Kupus"],
     "bad": []

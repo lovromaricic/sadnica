@@ -38,6 +38,7 @@
     { "title": "Crvljive šljive", "signs": "U plodu su ličinke.", "fix": "Šljivin savijač. Uklanjaj otpale plodove." },
     { "title": "Plodovi se smežuraju i ne dozriju", "signs": "Plodovi su deformirani.", "fix": "Rogač šljive. Uklanjaj zahvaćene plodove i baci ih u otpad, ne u kompost." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Koštice, listovi i grančice. Meso ploda nije opasno.", "signs": "Povraćanje, a u većim količinama otežano disanje. Koštice mogu začepiti crijeva." },
   "neighbours": {
     "good": ["Neven", "Vlasac"],
     "bad": []

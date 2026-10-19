@@ -36,6 +36,7 @@
     { "title": "Grm ogoli", "signs": "Sredina je drvenasta i gola.", "fix": "Biljka je stara. Svakog ljeta je skrati, a nakon par godina posadi novu." },
     { "title": "Trune", "signs": "Biljka propada nakon kiše.", "fix": "Previše vlage. Sadi na ocjedito mjesto." }
   ],
+  "pets": { "safe": true },
   "neighbours": {
     "good": ["Kupus", "Rajčica"],
     "bad": []

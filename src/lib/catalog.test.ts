@@ -26,6 +26,15 @@ describe('filterCatalog', () => {
 		expect(ids(['balcony'], 'cesnjak')).toEqual(['cesnjak']);
 	});
 
+	it('"Sigurno za ljubimce" keeps only plants marked safe, never toxic or unchecked ones', () => {
+		const safe = ids(['pets']);
+		expect(safe).toEqual(expect.arrayContaining(['bosiljak', 'jagoda', 'suncokret']));
+		expect(safe.every((id) => plants.find((p) => p.id === id)?.pets && 'safe' in plants.find((p) => p.id === id)!.pets!)).toBe(true);
+		for (const toxic of ['cesnjak', 'narcis', 'vinova-loza', 'rajcica']) expect(safe).not.toContain(toxic);
+		// Unchecked plants (no pet data) are not offered as safe either.
+		expect(safe).not.toContain('bob');
+	});
+
 	it('shows everything without filters', () => {
 		expect(ids([])).toHaveLength(plants.length);
 	});

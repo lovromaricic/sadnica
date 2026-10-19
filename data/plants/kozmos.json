@@ -36,6 +36,7 @@
     { "title": "Malo cvjetova", "signs": "Biljka je bujna, a cvjetova malo.", "fix": "Prebogata zemlja. Ne gnoji ga." },
     { "title": "Polegne", "signs": "Visoke biljke polegnu.", "fix": "Podupri ih štapom ili sij gušće da se podupiru." }
   ],
+  "pets": { "safe": true },
   "neighbours": {
     "good": ["Tikvica", "Rajčica"],
     "bad": []

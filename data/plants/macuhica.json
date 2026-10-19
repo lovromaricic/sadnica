@@ -36,6 +36,7 @@
     { "title": "Biljke se razvuku", "signs": "Duge, slabe stabljike.", "fix": "Premalo svjetla ili prevruće. Premjesti posudu na svjetlije, svježije mjesto." },
     { "title": "Trune zimi", "signs": "Biljke propadnu u mokroj zimi.", "fix": "Posuda mora imati rupe, a zemlja ne smije biti mokra." }
   ],
+  "pets": { "safe": true },
   "neighbours": {
     "good": ["Salata", "Luk"],
     "bad": []

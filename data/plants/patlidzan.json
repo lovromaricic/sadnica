@@ -36,6 +36,7 @@
     { "title": "Rupice u listovima", "signs": "Sitne okrugle rupice.", "fix": "Buhači. Prekrij mlade biljke agrilom i zalijevaj redovito." },
     { "title": "Cvjetovi otpadaju", "signs": "Biljka cvjeta, ali nema plodova.", "fix": "Prehladno noću. Patlidžan treba vruće ljeto, na kontinentu mu je potrebno najtoplije mjesto." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Listovi i stabljika.", "signs": "Povraćanje i proljev." },
   "neighbours": {
     "good": ["Grah", "Bosiljak"],
     "bad": ["Krumpir"]

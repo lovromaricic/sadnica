@@ -36,6 +36,7 @@
     { "title": "Slab miris", "signs": "Listovi gotovo ne mirišu.", "fix": "Premalo sunca ili previše vode. Presadi ga na sunčanije, suše mjesto." },
     { "title": "Biljka se razvuče", "signs": "Duge, tanke stabljike.", "fix": "Premalo svjetla. Skrati je i presadi na sunce." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Cijela biljka.", "signs": "Povraćanje i proljev." },
   "neighbours": {
     "good": ["Paprika", "Rajčica"],
     "bad": []

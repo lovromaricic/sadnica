@@ -38,6 +38,7 @@
     { "title": "Listovi se kovrčaju i crvene", "signs": "U proljeće su listovi naborani, crveni i otpadaju.", "fix": "Kovrčavost lista. Krajem zime, prije pupanja, poprskaj bakrom." },
     { "title": "Plodovi trunu na stablu", "signs": "Plodovi dobiju smeđe mrlje i trunu.", "fix": "Monilija. Uklanjaj trule plodove." }
   ],
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Koštice, listovi i grančice. Meso ploda nije opasno.", "signs": "Povraćanje, a u većim količinama otežano disanje. Koštice mogu začepiti crijeva." },
   "neighbours": {
     "good": ["Neven", "Vlasac"],
     "bad": []
