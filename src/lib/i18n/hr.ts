@@ -387,6 +387,8 @@ export const t = {
 		pickText: 'Svaka biljka treba drugačije sunca, pa prvo odaberi jednu.',
 		fromGarden: 'Iz tvog vrta',
 		allPlants: 'Sve biljke',
+		searchLabel: 'Traži biljku',
+		noMatch: 'Nema takve biljke. Isprobaj drugi naziv.',
 
 		// Intro
 		introTitle: 'Koliko sunca ima tvoje mjesto?',

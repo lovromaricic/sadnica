@@ -2,7 +2,9 @@
 	import { plants, plantsById } from '../../data';
 	import type { Plant } from '../../data/schema';
 	import { t } from '../../i18n/hr';
+	import { matchesQuery } from '../../search';
 	import { store } from '../../store.svelte';
+	import Icon from '../Icon.svelte';
 	import PlantArt from '../PlantArt.svelte';
 
 	let { onPick }: { onPick: (plant: Plant) => void } = $props();
@@ -11,6 +13,11 @@
 		store.state.garden.map((g) => plantsById.get(g.plantId)).filter((p): p is Plant => !!p)
 	);
 	const others = $derived(plants.filter((p) => !garden.includes(p)));
+
+	// Same search as the catalogue: case, diacritics and synonyms ("paradajz") all match.
+	let query = $state('');
+	const gardenHits = $derived(garden.filter((p) => matchesQuery(p, query)));
+	const otherHits = $derived(others.filter((p) => matchesQuery(p, query)));
 </script>
 
 {#snippet list(items: Plant[])}
@@ -29,12 +36,22 @@
 
 <h1>{t.sun.pickTitle}</h1>
 <p class="lead">{t.sun.pickText}</p>
-{#if garden.length}
+<label class="search">
+	<span class="sr-only">{t.sun.searchLabel}</span>
+	<Icon name="search" size={20} />
+	<input type="search" bind:value={query} placeholder={t.catalog.searchPlaceholder} autocomplete="off" />
+</label>
+{#if gardenHits.length}
 	<h2>{t.sun.fromGarden}</h2>
-	{@render list(garden)}
+	{@render list(gardenHits)}
 {/if}
-<h2>{t.sun.allPlants}</h2>
-{@render list(others)}
+{#if otherHits.length}
+	<h2>{t.sun.allPlants}</h2>
+	{@render list(otherHits)}
+{/if}
+{#if !gardenHits.length && !otherHits.length}
+	<p class="empty" role="status">{t.sun.noMatch}</p>
+{/if}
 
 <style>
 	h1 {
@@ -44,6 +61,33 @@
 		margin: 8px 0 20px;
 		color: var(--muted-2);
 		font-size: 1.0625rem;
+	}
+	.search {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		min-height: 56px;
+		margin-bottom: 4px;
+		padding: 0 20px;
+		border-radius: 999px;
+		background: var(--white);
+		border: 2px solid var(--border);
+	}
+	.search:focus-within {
+		border-color: var(--ink);
+	}
+	.search input {
+		flex: 1;
+		min-width: 0;
+		min-height: 52px;
+		border: 0;
+		outline: 0;
+		background: transparent;
+		font-size: 1.0625rem;
+	}
+	.empty {
+		margin-top: 16px;
+		color: var(--muted);
 	}
 	h2 {
 		font-size: 1.125rem;
