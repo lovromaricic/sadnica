@@ -215,3 +215,11 @@ beginner most often plants something that cannot work, so that case earns the qu
 - Removing a plant that has notes asks first, since the notes go with it.
 - Long notes can outgrow a QR code. The QR now uses the low error-correction level (most capacity)
   and, if it still does not fit, Postavke says so and points to sharing the link or a backup file.
+
+## Common problems ("Što nije u redu?")
+
+- Optional per-plant `problems: [{ title, signs, fix }]` in the plant data, three per seed plant,
+  validated by the schema and marked unreviewed with the rest of the content. Shown on the plant page
+  as native `<details>` rows (keyboard and screen-reader friendly without extra code).
+- Not searchable from the catalogue yet; matching problem titles in search was left out to keep
+  plant search predictable.

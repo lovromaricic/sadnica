@@ -34,6 +34,11 @@
     { "title": "Drži vlažno", "text": "Mrkva niče dva do tri tjedna. Sve to vrijeme zemlja ne smije presušiti." },
     { "title": "Prorijedi", "text": "Kad su biljčice visoke kao prst, ostavi jednu na svakih 5 cm." }
   ],
+  "problems": [
+    { "title": "Mrkva ne niče", "signs": "Prošla su tri tjedna, a ništa nije niknulo.", "fix": "Sjeme se vjerojatno osušilo. Posij ponovno i drži brazdu stalno vlažnom, npr. prekrij je na nekoliko dana daskom." },
+    { "title": "Krivi ili račvasti korijeni", "signs": "Mrkve imaju više krakova ili su savijene.", "fix": "U zemlji je bilo kamenja ili svježeg gnoja. Zemlju dobro usitni i ne gnoji je prije sjetve." },
+    { "title": "Tamni hodnici u korijenu", "signs": "U mrkvi su smeđi tuneli.", "fix": "To je mrkvina muha. Prekrij gredicu agrilom odmah nakon sjetve i prorjeđuj navečer." }
+  ],
   "neighbours": {
     "good": ["Luk", "Češnjak", "Luk ljutika", "Rajčica"],
     "bad": ["Kopar", "Peršin"]

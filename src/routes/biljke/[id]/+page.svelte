@@ -9,6 +9,7 @@
 	import Modal from '#lib/components/Modal.svelte';
 	import MonthStrip from '#lib/components/MonthStrip.svelte';
 	import PlantArt from '#lib/components/PlantArt.svelte';
+	import PlantProblems from '#lib/components/PlantProblems.svelte';
 	import { findCity } from '#lib/cities.ts';
 	import { explanations, plants, plantsById, rules } from '#lib/data/index.ts';
 	import { t } from '#lib/i18n/hr.ts';
@@ -253,6 +254,8 @@
 					{/each}
 				</ol>
 			</section>
+
+			<PlantProblems {plant} />
 
 			{#if gardenItem}
 				<GardenLog plantId={plant.id} item={gardenItem} />

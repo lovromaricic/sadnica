@@ -34,6 +34,11 @@
     { "title": "Posadi plitko", "text": "Utisni lukovicu u zemlju tako da joj vrh malo viri. Razmak 15 cm, redovi 25 cm." },
     { "title": "Malo zalij i pusti", "text": "Zalij jednom nakon sadnje. Dalje zalijevaj samo kad je dugo suho." }
   ],
+  "problems": [
+    { "title": "Lukovice trunu", "signs": "Lukovice su meke i smeđe, a listovi venu.", "fix": "Previše vode. Zalijevaj rjeđe i sadi na mjesto gdje se voda ne zadržava." },
+    { "title": "Ptice izvlače lukovice", "signs": "Netom posađene lukovice leže na zemlji.", "fix": "Vrati ih u zemlju. Dok se ne ukorijene, prekrij gredicu mrežom ili agrilom." },
+    { "title": "Cvjetne stabljike", "signs": "Iz sredine izraste stabljika s pupoljkom.", "fix": "Odlomi je, inače lukovice ostaju sitne." }
+  ],
   "neighbours": {
     "good": ["Mrkva", "Cikla", "Salata", "Rajčica"],
     "bad": ["Grah", "Grašak", "Bob"]

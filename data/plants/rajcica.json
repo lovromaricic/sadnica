@@ -40,6 +40,11 @@
     { "title": "Posadi duboko", "text": "Presadnicu ukopaj malo dublje nego što je bila u lončiću i odmah uz nju zabij kolac." },
     { "title": "Zalijevaj uz korijen", "text": "Zalijevaj zemlju, ne listove. Ljeti svaki dan ili svaki drugi dan." }
   ],
+  "problems": [
+    { "title": "Smeđe mrlje na lišću i plodovima", "signs": "Listovi dobiju tamne mrlje, plodovi smeđe pjege, najčešće nakon kišnih dana.", "fix": "To je plamenjača. Otkini zahvaćene listove, zalijevaj samo zemlju, a ne lišće. Iduće godine sadi rajčicu na drugo mjesto." },
+    { "title": "Crna mrlja na dnu ploda", "signs": "Plod ima tamnu, udubljenu mrlju na dnu.", "fix": "Uzrok je neredovito zalijevanje. Zalijevaj redovito i podjednako, a zemlju prekrij malčem." },
+    { "title": "Plodovi pucaju", "signs": "Zreli plodovi napuknu.", "fix": "Događa se kad nakon suše padne jaka kiša. Zalijevaj redovito i beri čim plodovi dozriju." }
+  ],
   "neighbours": {
     "good": ["Bosiljak", "Češnjak", "Mrkva", "Neven"],
     "bad": ["Krumpir", "Komorač", "Kupus"]

@@ -34,6 +34,11 @@
     { "title": "Prorijedi", "text": "Kad biljke imaju dva do tri lista, ostavi jednu na svakih 10 cm." },
     { "title": "Zaštiti od mraza", "text": "U kasnu jesen prekrij gredicu agrilom, a beri vanjske listove." }
   ],
+  "problems": [
+    { "title": "Brzo ide u cvijet", "signs": "Iz sredine izraste visoka stabljika, a listovi ostaju sitni.", "fix": "Špinat ne voli dugi dan i vrućinu. Sij ga u rano proljeće ili kasno ljeto i beri na vrijeme." },
+    { "title": "Žuti listovi", "signs": "Stariji, donji listovi žute.", "fix": "Manjak hrane ili previše vode. Pospi kompost i pazi da zemlja ne bude mokra." },
+    { "title": "Rupice ili hodnici u listovima", "signs": "Sitne rupice ili svijetli tuneli unutar lista.", "fix": "Otkini zahvaćene listove. Gredicu prekrij agrilom da kukci ne dođu do biljaka." }
+  ],
   "neighbours": {
     "good": ["Mrkva", "Rotkvica", "Bob", "Jagoda"],
     "bad": ["Cikla", "Blitva"]

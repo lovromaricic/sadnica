@@ -76,6 +76,10 @@ export const plantSchema = z
 		sow: z.record(regionSchema, z.array(sowWindowSchema)),
 		harvest: z.record(regionSchema, z.array(harvestWindowSchema)),
 		steps: z.array(z.object({ title: z.string().min(1), text: z.string().min(1) })).min(1),
+		/** Common beginner problems: how to recognise them and what to do. */
+		problems: z
+			.array(z.object({ title: z.string().min(1), signs: z.string().min(1), fix: z.string().min(1) }))
+			.optional(),
 		neighbours: z.object({ good: z.array(z.string()), bad: z.array(z.string()) })
 	})
 	.strict();

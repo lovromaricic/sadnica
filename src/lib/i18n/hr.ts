@@ -234,6 +234,12 @@ export const t = {
 		description: (name: string) => `Prema ${APP_NAME}, sada je dobro vrijeme za sadnju: ${name}. Datumi su okvirni.`
 	},
 
+	problems: {
+		title: 'Što nije u redu?',
+		lead: 'Najčešći problemi i kako ih riješiti. Dodirni problem za savjet.',
+		signs: 'Kako prepoznati',
+		fix: 'Što napraviti'
+	},
 	log: {
 		title: 'Bilješke i berba',
 		text: 'Zapiši što se događa s biljkom i koliko je ubrano. Ostaje samo na ovom uređaju.',

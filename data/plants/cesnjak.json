@@ -34,6 +34,11 @@
     { "title": "Posadi vrhom prema gore", "text": "Zabodi zubac oko 5 cm duboko, šiljatim vrhom prema gore. Razmak 10 cm, redovi 25 cm." },
     { "title": "Prekrij malčem", "text": "Pospi sloj slame ili suhog lišća debeo nekoliko centimetara. Štiti od smrzavanja i korova." }
   ],
+  "problems": [
+    { "title": "Žuti vrhovi listova u proljeće", "signs": "Vrhovi listova požute, a biljka inače raste.", "fix": "Najčešće je to suša ili manjak hrane. Zalij ako je zemlja suha i pospi malo komposta oko biljaka." },
+    { "title": "Iz sredine raste cvjetna stabljika", "signs": "Čvrsta stabljika se zavija i na vrhu ima pupoljak.", "fix": "Odlomi je čim se zavije, tako snaga ide u glavicu. Mlade stabljike su jestive." },
+    { "title": "Glavice su sitne", "signs": "Pri vađenju su glavice male, a zupci tanki.", "fix": "Iduće jeseni sadi najveće zupce, na sunčano mjesto, 10 cm razmaka. Ne sadi češnjak na isto mjesto dvije godine zaredom." }
+  ],
   "neighbours": {
     "good": ["Mrkva", "Rajčica", "Jagoda", "Cikla"],
     "bad": ["Grah", "Grašak", "Bob"]

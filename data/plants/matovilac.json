@@ -34,6 +34,11 @@
     { "title": "Lagano zalij", "text": "Zalij nježnim mlazom da ne ispereš sjeme. Drži zemlju vlažnom dok ne nikne." },
     { "title": "Prekrij agrilom", "text": "Kad zahladi, prebaci preko gredice agril (bijelo vrtno platno) i rubove pritisni kamenjem." }
   ],
+  "problems": [
+    { "title": "Sjeme ne niče", "signs": "Prošla su tri tjedna, a gredica je prazna.", "fix": "Sjeme treba vlagu i svježije vrijeme. Posij ponovno i drži zemlju vlažnom, a ljeti sij u polusjeni." },
+    { "title": "Lišće su pojeli puževi", "signs": "Rupe u listovima i sjajni tragovi na zemlji.", "fix": "Pregledaj gredicu navečer i skupljaj puževe. Pomaže i traka pijeska ili pepela oko gredice." },
+    { "title": "Biljke cvjetaju", "signs": "U proljeće izraste stabljika s cvjetićima.", "fix": "To je kraj sezone. Uberi što je ostalo jer listovi postaju gorki." }
+  ],
   "neighbours": {
     "good": ["Luk", "Luk ljutika", "Špinat", "Mrkva"],
     "bad": []

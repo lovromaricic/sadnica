@@ -40,6 +40,11 @@
     { "title": "Presadi van", "text": "Kad prođe opasnost od mraza, posadi ga u vrt ili veći lonac, 25 cm razmaka." },
     { "title": "Beri vrhove", "text": "Otkidaj gornje listove iznad para listova. Cvjetove odmah otkini." }
   ],
+  "problems": [
+    { "title": "Listovi potamne", "signs": "Listovi dobiju tamne ili crne mrlje.", "fix": "Hladnoća. Bosiljak ne podnosi noći hladnije od 10 °C, pa lonac unesi unutra ili ga prekrij." },
+    { "title": "Biljka cvjeta", "signs": "Na vrhovima izrastu klasovi s cvjetićima.", "fix": "Otkini cvjetove čim se pojave, biljka će dati više listova." },
+    { "title": "Vene iako je zemlja vlažna", "signs": "Listovi vise, a stabljika pri dnu tamni.", "fix": "Previše vode. Pusti da se gornji sloj zemlje osuši prije zalijevanja. Lonac mora imati rupe." }
+  ],
   "neighbours": {
     "good": ["Rajčica", "Paprika", "Krastavac"],
     "bad": ["Kadulja", "Ružmarin"]

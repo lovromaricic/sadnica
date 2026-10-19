@@ -34,6 +34,11 @@
     { "title": "Posadi 5 cm duboko", "text": "Sjemenke stavi 5 cm duboko i 15 cm jednu od druge, u dva reda udaljena 25 cm." },
     { "title": "Podupri kad naraste", "text": "U proljeće uz red zabodi nekoliko kolaca i provuci špagu da se biljke ne prevrnu." }
   ],
+  "problems": [
+    { "title": "Crne lisne uši na vrhovima", "signs": "Vrhovi biljke prekriveni su sitnim crnim kukcima.", "fix": "Otkini vrhove biljke kad se pojave prve mahune. Uši tada ostaju bez mekih listova kojima se hrane." },
+    { "title": "Biljke se prevrću", "signs": "Visoke biljke polegnu nakon vjetra ili kiše.", "fix": "Uz red zabodi nekoliko kolaca i provuci špagu s obje strane." },
+    { "title": "Cvjeta, ali nema mahuna", "signs": "Cvjetovi otpadaju, a mahune se ne razvijaju.", "fix": "Najčešće zbog suše ili vrućine. Dok cvjeta, zalij obilno jednom tjedno." }
+  ],
   "neighbours": {
     "good": ["Krumpir", "Kukuruz", "Salata", "Špinat"],
     "bad": ["Češnjak", "Luk", "Luk ljutika"]
