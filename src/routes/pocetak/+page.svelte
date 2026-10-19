@@ -7,7 +7,8 @@
 	import PlantArt from '#lib/components/PlantArt.svelte';
 	import { CITY_NAMES, regionForCity } from '#lib/cities.ts';
 	import { plantsById } from '#lib/data/index.ts';
-	import { REGIONS, type Region } from '#lib/data/schema.ts';
+	import { REGIONS } from '#lib/data/regions.ts';
+	import type { Region } from '#lib/data/schema.ts';
 	import { t } from '#lib/i18n/hr.ts';
 	import { store } from '#lib/store.svelte.ts';
 	import { EXPERIENCES, PLACES, type Place } from '#lib/storage.ts';
@@ -246,6 +247,10 @@
 	}
 	.field:focus-within {
 		border-color: var(--ink);
+	}
+	.field:has(input:focus-visible) {
+		outline: 3px solid var(--focus);
+		outline-offset: 3px;
 	}
 	.field input {
 		flex: 1;

@@ -149,6 +149,10 @@
 	.search:focus-within {
 		border-color: var(--ink);
 	}
+	.search:has(input:focus-visible) {
+		outline: 3px solid var(--focus);
+		outline-offset: 3px;
+	}
 	.search input {
 		flex: 1;
 		min-width: 0;

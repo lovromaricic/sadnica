@@ -161,11 +161,10 @@
 							class="fact"
 							style:background={FACT_COLORS[f]}
 							aria-haspopup="dialog"
-							aria-label="{t.plant.facts[f]}: {factValue(f)}. {t.plant.explain(t.plant.facts[f])}"
 							onclick={() => showFact(f)}
 						>
 							<span class="i" aria-hidden="true">i</span>
-							<span class="fact-label">{t.plant.facts[f]}</span>
+							<span class="fact-label">{t.plant.facts[f]}<span class="sr-only">:</span></span>
 							<span class="fact-value">{factValue(f)}</span>
 						</button>
 					</li>
@@ -474,6 +473,16 @@
 	}
 	.nb a {
 		text-underline-offset: 3px;
+	}
+	/* The whole chip is the touch target, at least 44px tall. */
+	.nb:has(a) {
+		position: relative;
+	}
+	.nb a::after {
+		content: '';
+		position: absolute;
+		inset: -2px 0;
+		border-radius: 999px;
 	}
 	.good {
 		background: var(--white);

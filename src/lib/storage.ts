@@ -1,5 +1,6 @@
 import { STORAGE_KEY } from './config';
-import { REGIONS, type Region } from './data/schema';
+import { REGIONS } from './data/regions';
+import type { Region } from './data/schema';
 import type { Experience } from './season';
 
 export type Place = 'ground' | 'raised' | 'balcony' | 'none';

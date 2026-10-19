@@ -126,7 +126,6 @@ export const t = {
 		coverBadge: 'Samo uz pokrov',
 		offBadge: 'Nije sezona',
 		facts: { difficulty: 'Težina', sun: 'Sunce', water: 'Voda', spacing: 'Razmak' },
-		explain: (label: string) => `Objasni: ${label}`,
 		difficulty: { easy: 'Lako', medium: 'Srednje', hard: 'Zahtjevno' },
 		sun: { full: 'Puno sunca', partial: 'Polusjena', shade: 'Hlad' },
 		water: { low: 'Malo', medium: 'Umjereno', high: 'Puno' },

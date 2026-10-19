@@ -1,6 +1,7 @@
 import { z } from 'zod';
+import { REGIONS } from './regions';
 
-export const REGIONS = ['continental', 'adriatic'] as const;
+export { REGIONS };
 export const regionSchema = z.enum(REGIONS);
 export type Region = z.infer<typeof regionSchema>;
 

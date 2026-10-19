@@ -23,6 +23,7 @@
 	let dialog = $state<HTMLDivElement>();
 	let returnFocus: HTMLElement | null = null;
 	const titleId = `modal-${Math.random().toString(36).slice(2, 8)}`;
+	const labelId = `${titleId}-label`;
 
 	$effect(() => {
 		if (!open) return;
@@ -51,7 +52,8 @@
 		const focusable = [...dialog.querySelectorAll<HTMLElement>('button, a[href], input, [tabindex]:not([tabindex="-1"])')];
 		const first = focusable[0];
 		const last = focusable[focusable.length - 1];
-		if (e.shiftKey && document.activeElement === first) {
+		// The dialog itself takes focus when its text is clicked; Shift+Tab from there must not leave.
+		if (e.shiftKey && (document.activeElement === first || document.activeElement === dialog)) {
 			e.preventDefault();
 			last.focus();
 		} else if (!e.shiftKey && document.activeElement === last) {
@@ -64,10 +66,10 @@
 {#if open}
 	<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions (Esc closes; the overlay is a mouse convenience) -->
 	<div class="overlay" onclick={(e) => e.target === e.currentTarget && close()}>
-		<div class="dialog" role="dialog" aria-modal="true" aria-labelledby={titleId} bind:this={dialog} {onkeydown} tabindex="-1">
+		<div class="dialog" role="dialog" aria-modal="true" aria-labelledby="{labelId} {titleId}" bind:this={dialog} {onkeydown} tabindex="-1">
 			<header style:background={color}>
 				<div>
-					<p class="label">{label}</p>
+					<p class="label" id={labelId}>{label}</p>
 					<h2 id={titleId}>{value}</h2>
 				</div>
 				<button type="button" class="icon-btn" aria-label={t.plant.close} onclick={close}>
