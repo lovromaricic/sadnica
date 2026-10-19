@@ -1,7 +1,12 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import { MediaQuery } from 'svelte/reactivity';
 	import { t } from '../../i18n/hr';
 	import Icon from '../Icon.svelte';
+	import QrCode from '../QrCode.svelte';
+
+	const desktop = new MediaQuery('min-width: 900px');
+	const url = $derived(desktop.current ? new URL(resolve('/sunce'), window.location.origin).href : '');
 </script>
 
 <aside class="sun-widget" aria-labelledby="sun-widget-title">
@@ -16,6 +21,12 @@
 		<span class="mobile">{t.sun.widgetCta}</span>
 		<span class="desktop">{t.sun.widgetCtaDesktop}</span>
 	</a>
+	{#if url}
+		<figure class="qr-box">
+			<QrCode {url} size={88} label={t.sun.qrLabel(url)} />
+			<figcaption>{t.sun.qrCaption}</figcaption>
+		</figure>
+	{/if}
 </aside>
 
 <style>
@@ -65,9 +76,25 @@
 	.desktop {
 		display: none;
 	}
+	.qr-box {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin: 0;
+		padding: 6px 14px 6px 6px;
+		border-radius: 18px;
+		background: var(--white);
+	}
+	figcaption {
+		max-width: 9ch;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		line-height: 1.25;
+		color: var(--muted-2);
+	}
 	@media (min-width: 900px) {
 		.sun-widget {
-			grid-template-columns: auto 1fr auto;
+			grid-template-columns: auto 1fr auto auto;
 			align-items: center;
 			padding: 18px 22px;
 		}

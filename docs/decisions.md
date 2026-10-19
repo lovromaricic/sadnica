@@ -107,5 +107,8 @@ Spec gaps and the simplest choice made for each. Review and overrule freely.
   `sunVerdict` strings were needed.
 - "Što ovdje uspijeva bolje" lists up to 3 plants whose sun need equals the measured level, then ones
   needing less; with the current 8 seed plants that is often fewer than 3, and none for full shade.
-- Not built: the QR code for opening the check on a phone (marked optional), and the design-review
-  "show other outcome" toggle (as instructed).
+- **QR code** (desktop only): in the Danas widget (opens `/sunce`) and on the desktop manual screen
+  (opens `/sunce?plant=<id>`). It encodes the address the desktop is using, so in development open
+  the desktop page via the Network address (`npm run dev:phone`), not `localhost`, or the phone
+  cannot reach it. The encoder (`qrcode-generator`, no dependencies) loads only when a code is shown.
+- Not built: the design-review "show other outcome" toggle (as instructed).

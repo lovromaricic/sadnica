@@ -216,6 +216,10 @@ export const t = {
 		widgetTextDesktop: 'Odaberi biljku i odgovori na jedno pitanje. Na mobitelu to možeš provjeriti i kamerom.',
 		widgetCta: 'Provjeri kamerom',
 		widgetCtaDesktop: 'Provjeri sunce',
+		qrCaption: 'Ili skeniraj mobitelom',
+		qrTitle: 'Otvori na mobitelu',
+		qrText: 'Skeniraj kod mobitelom i provjeri sunce kamerom, na samom mjestu.',
+		qrLabel: (url: string) => `QR kod koji otvara ${url}`,
 
 		// Plant picker
 		pickTitle: 'Za koju biljku provjeravaš?',

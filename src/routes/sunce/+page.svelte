@@ -162,7 +162,11 @@
 		{:else if step === 'calibrate'}
 			<SunCalibrate onContinue={openCamera} onSkip={openCamera} />
 		{:else if step === 'manual'}
-			<SunManual {reason} onAnswer={answer} />
+			<SunManual
+				{reason}
+				qrUrl={new URL(`${resolve('/sunce')}?plant=${plant.id}`, window.location.origin).href}
+				onAnswer={answer}
+			/>
 		{:else if step === 'result'}
 			<SunResult
 				{plant}
