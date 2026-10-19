@@ -14,10 +14,10 @@
   "spacingText": "4 m",
   "spacingExplanation": [
     "Stabla sadi 4 m jedno od drugog.",
-    "Višnja je manja od trešnje i sama se oprašuje."
+    "Višnja je manja od trešnje. Većina sorti se sama oprašuje, maraska treba oprašivača."
   ],
   "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
-  "summary": "Kiselkasti plodovi za sokove i kolače. Manje stablo koje se samo oprašuje.",
+  "summary": "Kiselkasti plodovi za sokove i kolače. Manje stablo, većina sorti se sama oprašuje.",
   "weeklyTip": "Višnja rađa na prošlogodišnjim granama, orezuj nakon berbe.",
   "illustration": { "kind": "fruit", "fill": "#8E1B1B", "stroke": "#4A0808", "bg": "#FAD9CC" },
   "sow": {

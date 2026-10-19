@@ -42,6 +42,32 @@ windows (lavanda inland in autumn, mandarina on the coast in autumn), a better c
 were in "signs" instead of "fix". Apple tree, grapevine and artichoke are no longer balcony plants.
 This does not replace the expert review.
 
+A second, deeper read (three reviewers by category) then fixed:
+
+- **Safety**: daffodil bulbs are poisonous and can be mistaken for onions; tulip bulbs harm cats and
+  dogs; buy true bay laurel (Laurus nobilis), not the poisonous cherry laurel sold as "lovor".
+- **Fixes that could do harm**: potato blight (wait two weeks before lifting), grapevine mildew
+  (sulphur and copper), asparagus (short harvest in the first cutting year), beetroot boron deficiency,
+  olive fly (bait traps), apricot frost (avoid frost pockets; a south wall makes bloom earlier).
+- **Dates**: tomato and eggplant inland harvest into October; overwintered spinach harvested from
+  March; cabbage and broccoli got their planting-out windows; early coastal potatoes from May; spring
+  planting inland for peach, apricot and kiwi; frost-tender marigolds and cosmos no earlier than May
+  inland (or indoors); basil outdoors on the coast from May; no autumn calendula sowing inland;
+  autumn herb windows marked as nursery plants; cherry, fig and chamomile seasons widened.
+- **Accuracy**: raspberry summer vs autumn varieties and their pruning, black currant pruning, peach
+  pruned in spring, satsuma (Citrus unshiu) for the Neretva mandarin, maraska needs a pollinator,
+  marigolds only suppress nematodes when planted densely, tulips decline after the first year, sweet
+  corn row spacing, and watering advice for pots in summer and winter.
+
+Judgment calls left as they are (for the expert to decide):
+
+- Companion planting follows common folk lists; much of it is not well proven.
+- "Polusjena" means 3–5 hours of sun, so it matches the app's sun check (6 or more hours is full sun),
+  although some sources say 3–6.
+- Trees inland: bare-root planting is really March, April is for potted plants.
+- Olive inland is shown with a harvest window although the fruit rarely ripens in a pot (the summary
+  says so).
+
 ## Suggested order
 
 Start with what beginners plant most and what the app recommends first in each season:

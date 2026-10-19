@@ -35,8 +35,8 @@
     { "title": "Orezuj zimi", "text": "Svake zime skrati prošlogodišnje rozgve na nekoliko pupova." }
   ],
   "problems": [
-    { "title": "Bijela prevlaka na bobicama", "signs": "Bobice i listovi kao posuti brašnom.", "fix": "Pepelnica. Prorijedi lišće oko grozdova i biraj otporne sorte." },
-    { "title": "Uljaste mrlje na listovima", "signs": "Žute mrlje na licu lista, bijela prevlaka na naličju.", "fix": "Plamenjača, nakon kiše. Otkini zahvaćeno lišće i ne sadi pregusto." }
+    { "title": "Bijela prevlaka na bobicama", "signs": "Bobice i listovi kao posuti brašnom.", "fix": "Pepelnica. Prorijedi lišće oko grozdova i prskaj sumporom od početka rasta. Biraj otporne sorte." },
+    { "title": "Uljaste mrlje na listovima", "signs": "Žute mrlje na licu lista, bijela prevlaka na naličju.", "fix": "Plamenjača, nakon kiše. Prije kišnih razdoblja prskaj bakrom i otkini zahvaćeno lišće." }
   ],
   "neighbours": {
     "good": ["Neven", "Vlasac"],

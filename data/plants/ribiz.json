@@ -18,7 +18,7 @@
   ],
   "containers": { "ok": true, "minPotCm": 40 },
   "summary": "Crveni, crni ili bijeli. Otporan grm koji rađa i u polusjeni.",
-  "weeklyTip": "Najviše rađaju dvogodišnje i trogodišnje grane, starije izreži.",
+  "weeklyTip": "Grane starije od tri godine izreži zimi, mlađe grane bolje rađaju.",
   "illustration": { "kind": "berry", "fill": "#C62828", "stroke": "#6A1010", "bg": "#FFD9DE" },
   "sow": {
     "continental": [{ "from": 10, "to": 11 }, { "from": 3, "to": 4 }],

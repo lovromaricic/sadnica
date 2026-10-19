@@ -20,8 +20,8 @@
   "weeklyTip": "Prekrij mlade biljke agrilom, leptir kupusar tada ne može na njih.",
   "illustration": { "kind": "cabbage", "fill": "#B7DB8F", "stroke": "#3F6E2A", "bg": "#C9EEDB" },
   "sow": {
-    "continental": [{ "from": 3, "to": 4, "note": "Sjetva u lončiće." }, { "from": 5, "to": 6, "note": "Presadnice van." }],
-    "adriatic": [{ "from": 2, "to": 3, "note": "Sjetva u lončiće." }, { "from": 8, "to": 9, "note": "Jesenska sadnja presadnica." }]
+    "continental": [{ "from": 3, "to": 4, "note": "Sjetva u lončiće." }, { "from": 4, "to": 6, "note": "Presadnice van." }],
+    "adriatic": [{ "from": 2, "to": 3, "note": "Sjetva u lončiće." }, { "from": 3, "to": 4, "note": "Presadnice van." }, { "from": 8, "to": 9, "note": "Jesenska sadnja presadnica." }]
   },
   "harvest": {
     "continental": [{ "from": 7, "to": 11 }],

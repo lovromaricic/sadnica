@@ -26,8 +26,8 @@
       { "from": 5, "to": 6 }
     ],
     "adriatic": [
-      { "from": 3, "to": 3, "note": "Sije se u zatvorenom, na prozoru." },
-      { "from": 4, "to": 6 }
+      { "from": 3, "to": 4, "note": "Sije se u zatvorenom, na prozoru." },
+      { "from": 5, "to": 6 }
     ]
   },
   "harvest": {

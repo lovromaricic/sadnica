@@ -23,7 +23,7 @@
     "adriatic": [{ "from": 2, "to": 2, "note": "Sjetva u zatvorenom, na toplom i svijetlom mjestu." }, { "from": 4, "to": 5, "note": "Presadnice van kad noći postanu tople." }]
   },
   "harvest": {
-    "continental": [{ "from": 8, "to": 9 }],
+    "continental": [{ "from": 8, "to": 10 }],
     "adriatic": [{ "from": 7, "to": 10 }]
   },
   "steps": [

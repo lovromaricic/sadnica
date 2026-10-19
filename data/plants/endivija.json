@@ -14,10 +14,10 @@
     "Presadnice sadi 30 cm jednu od druge.",
     "Endivija se široko raširi."
   ],
-  "spacingTip": "tjedan prije berbe poveži listove da sredina pobijeli i bude manje gorka.",
+  "spacingTip": "dva tjedna prije berbe poveži listove da sredina pobijeli i bude manje gorka.",
   "containers": { "ok": true, "minPotCm": 25 },
   "summary": "Jesenska salata, kovrčava ili široka. Malo gorka, ali hrskava.",
-  "weeklyTip": "Poveži listove gumicom tjedan dana prije berbe, sredina pobijeli.",
+  "weeklyTip": "Poveži listove gumicom dva tjedna prije berbe, sredina pobijeli.",
   "illustration": { "kind": "rosette", "fill": "#9CCB5E", "stroke": "#3C6420", "bg": "#FFEFB5" },
   "sow": {
     "continental": [{ "from": 6, "to": 7 }],

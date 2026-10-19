@@ -15,7 +15,7 @@
     "U skupinama od desetak lukovica izgledaju najljepše."
   ],
   "containers": { "ok": true, "minPotCm": 20 },
-  "summary": "Lukovice posadiš u jesen, a u proljeće dobiješ šarenilo. Najlakši proljetni cvijet.",
+  "summary": "Lukovice posadiš u jesen, a u proljeće dobiješ šarenilo. Lako za početnika.",
   "weeklyTip": "Lukovicu posadi tri puta dublje od njezine visine.",
   "illustration": { "kind": "flower", "fill": "#E53935", "stroke": "#7A1010", "bg": "#FFD9DE" },
   "sow": {
@@ -27,14 +27,14 @@
     "adriatic": [{ "from": 3, "to": 4 }]
   },
   "steps": [
-    { "title": "Kupi zdrave lukovice", "text": "Čvrste, bez plijesni." },
+    { "title": "Kupi zdrave lukovice", "text": "Čvrste, bez plijesni. Lukovice nisu jestive i štetne su za mačke i pse." },
     { "title": "Posadi duboko", "text": "Oko 15 cm, vrhom prema gore." },
     { "title": "Ostavi ih na miru", "text": "Zimi ne trebaju ništa." },
     { "title": "Nakon cvatnje", "text": "Odreži cvijet, a listove ostavi dok ne požute." }
   ],
   "problems": [
     { "title": "Lukovice nestaju", "signs": "U proljeće nema cvjetova.", "fix": "Voluharice. Sadi lukovice u košaricu od žice." },
-    { "title": "Iduće godine slabo cvatu", "signs": "Cvjetovi su sitni ili ih nema.", "fix": "Listovi su odrezani prerano. Ostavi ih da požute." }
+    { "title": "Iduće godine slabo cvatu", "signs": "Cvjetovi su sitni ili ih nema.", "fix": "Mnoge sorte nakon prve godine slabije cvatu. Listove ostavi da požute, a svake jeseni dosadi nove lukovice." }
   ],
   "neighbours": {
     "good": ["Narcis"],

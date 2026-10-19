@@ -45,13 +45,13 @@
       "label": "Malo",
       "paragraphs": [
         "Zalij tek kad je gornjih 2 do 3 cm zemlje suho. Stavi prst u zemlju: ako je vlažna, ne zalijevaj.",
-        "Zimi često uopće ne treba zalijevati."
+        "Zimi zalijevaj rijetko, ali biljke u loncu pod krovom zalij kad se zemlja posve osuši."
       ],
       "tip": "previše vlage je veći problem od suše za ove biljke."
     },
     "medium": {
       "label": "Umjereno",
-      "paragraphs": ["Zalij kad se gornji sloj osuši, ljeti obično jednom do dvaput tjedno. Zemlja treba biti blago vlažna, ne mokra."],
+      "paragraphs": ["Zalij kad se gornji sloj osuši. Ljeti je to u vrtu jednom do dvaput tjedno, a u loncu i svaki dan. Zemlja treba biti blago vlažna, ne mokra."],
       "tip": "u kišnim tjednima preskoči zalijevanje."
     },
     "high": {

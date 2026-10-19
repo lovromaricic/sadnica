@@ -22,7 +22,7 @@
   "weeklyTip": "Kivi beri prije mraza i ostavi da dozrije u kući.",
   "illustration": { "kind": "fruit", "fill": "#8D6E4A", "stroke": "#4A361E", "bg": "#FFE2C2" },
   "sow": {
-    "continental": [{ "from": 10, "to": 11, "note": "Sadnice u posudi." }, { "from": 3, "to": 4 }],
+    "continental": [{ "from": 4, "to": 5, "note": "Sadnice u posudi." }],
     "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice u posudi." }, { "from": 2, "to": 3 }]
   },
   "harvest": {

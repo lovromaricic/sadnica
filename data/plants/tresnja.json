@@ -26,7 +26,7 @@
     "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice golog korijena." }, { "from": 2, "to": 3 }]
   },
   "harvest": {
-    "continental": [{ "from": 6, "to": 6 }],
+    "continental": [{ "from": 6, "to": 7 }],
     "adriatic": [{ "from": 5, "to": 6 }]
   },
   "steps": [

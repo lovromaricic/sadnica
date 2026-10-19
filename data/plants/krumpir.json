@@ -26,7 +26,7 @@
   },
   "harvest": {
     "continental": [{ "from": 7, "to": 9 }],
-    "adriatic": [{ "from": 6, "to": 8 }]
+    "adriatic": [{ "from": 5, "to": 8 }]
   },
   "steps": [
     { "title": "Proklijaj gomolje", "text": "Dva tjedna prije sadnje drži ih na svijetlom, hladnijem mjestu." },
@@ -37,7 +37,7 @@
   "problems": [
     { "title": "Zeleni gomolji", "signs": "Gomolji su pozelenjeli.", "fix": "Bili su na svjetlu. Zagrći bolje. Zelene dijelove ne jedi." },
     { "title": "Krumpirova zlatica", "signs": "Narančasto-crne ličinke i prugasti kornjaši jedu lišće.", "fix": "Pregledaj biljke svakih par dana i skupljaj kornjaše i jajašca s naličja listova." },
-    { "title": "Tamne mrlje i propadanje lišća", "signs": "Listovi dobiju tamne mrlje i venu, najčešće nakon kiše.", "fix": "Plamenjača. Otkini zahvaćeno lišće, a kad se proširi, pokosi cimu i izvadi gomolje." }
+    { "title": "Tamne mrlje i propadanje lišća", "signs": "Listovi dobiju tamne mrlje i venu, najčešće nakon kiše.", "fix": "Plamenjača. Otkini zahvaćeno lišće. Kad se proširi, pokosi i odnesi cimu, a gomolje izvadi nakon dva tjedna." }
   ],
   "neighbours": {
     "good": ["Bob", "Grah", "Kupus"],

@@ -15,12 +15,12 @@
     "Niska je i gusta, lijepo obrubi gredicu."
   ],
   "containers": { "ok": true, "minPotCm": 15 },
-  "summary": "Niski cvijet koji tjera štetnike iz tla. Sadi ga uz rajčicu i krumpir.",
-  "weeklyTip": "Posadi kadifu između povrća, njezino korijenje tjera nematode iz tla.",
+  "summary": "Niski, šareni cvijet do mraza. Sadi ga uz rajčicu i krumpir.",
+  "weeklyTip": "Kadifa gusto posađena cijelo ljeto smanjuje broj nematoda u tlu.",
   "illustration": { "kind": "flower", "fill": "#E65100", "stroke": "#7A2A00", "bg": "#FAD9CC" },
   "sow": {
-    "continental": [{ "from": 4, "to": 5 }],
-    "adriatic": [{ "from": 3, "to": 5 }]
+    "continental": [{ "from": 4, "to": 4, "note": "Sije se u zatvorenom, na prozoru." }, { "from": 5, "to": 5 }],
+    "adriatic": [{ "from": 3, "to": 3, "note": "Sije se u zatvorenom, na prozoru." }, { "from": 4, "to": 5 }]
   },
   "harvest": {
     "continental": [{ "from": 6, "to": 10 }],

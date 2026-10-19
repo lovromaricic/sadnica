@@ -20,7 +20,7 @@
   "illustration": { "kind": "sprig", "fill": "#5E8F6A", "stroke": "#2A4A33", "bg": "#D3E9FF" },
   "sow": {
     "continental": [{ "from": 4, "to": 5, "note": "Sadnice iz rasadnika." }],
-    "adriatic": [{ "from": 3, "to": 4, "note": "Sadnice iz rasadnika." }, { "from": 10, "to": 11 }]
+    "adriatic": [{ "from": 3, "to": 4, "note": "Sadnice iz rasadnika." }, { "from": 10, "to": 11, "note": "Sadnice iz rasadnika." }]
   },
   "harvest": {
     "continental": [{ "from": 1, "to": 12 }],

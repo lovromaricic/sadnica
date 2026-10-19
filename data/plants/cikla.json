@@ -35,7 +35,7 @@
   ],
   "problems": [
     { "title": "Korijen je sitan", "signs": "Ostaje mali i tvrd.", "fix": "Pregusto. Prorijedi na 10 cm i zalijevaj u suši." },
-    { "title": "Crne pjege u korijenu", "signs": "Unutra se vide tamne točke.", "fix": "Manjak bora u tlu. Dodaj kompost, a iduće godine sadi na drugo mjesto." }
+    { "title": "Crne pjege u korijenu", "signs": "Unutra se vide tamne točke.", "fix": "Manjak bora, češći u suši i na vapnenastom tlu. Zalijevaj redovito i dodaj kompost." }
   ],
   "neighbours": {
     "good": ["Luk", "Salata", "Kupus"],

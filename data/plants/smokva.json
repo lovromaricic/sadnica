@@ -25,8 +25,8 @@
     "adriatic": [{ "from": 11, "to": 12 }, { "from": 2, "to": 3 }]
   },
   "harvest": {
-    "continental": [{ "from": 8, "to": 9 }],
-    "adriatic": [{ "from": 7, "to": 10 }]
+    "continental": [{ "from": 8, "to": 10 }],
+    "adriatic": [{ "from": 6, "to": 10 }]
   },
   "steps": [
     { "title": "Kupi sadnicu u rasadniku", "text": "Jednogodišnja ili dvogodišnja sadnica, zdravog korijena." },

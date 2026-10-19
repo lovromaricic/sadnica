@@ -17,7 +17,7 @@
     "Na kontinentu raste u posudi."
   ],
   "containers": { "ok": true, "minPotCm": 40, "note": "Na kontinentu u loncu, zimi na hladnom i svijetlom." },
-  "summary": "Simbol obale, živi stoljećima. Na kontinentu raste kao ukras u posudi.",
+  "summary": "Simbol obale, živi stoljećima. Na kontinentu raste kao ukras u posudi, a plodovi tamo rijetko dozriju.",
   "weeklyTip": "Maslina ne voli mokre noge, zalijevaj tek kad se zemlja osuši.",
   "illustration": { "kind": "fruit", "fill": "#6B7A3A", "stroke": "#33401A", "bg": "#C9EEDB" },
   "sow": {
@@ -35,7 +35,7 @@
     { "title": "Orezuj u proljeće", "text": "Otvori krošnju da u nju ulazi svjetlo." }
   ],
   "problems": [
-    { "title": "Crvljivi plodovi", "signs": "Plodovi imaju rupice i otpadaju.", "fix": "Maslinina muha. Postavi žute ljepljive ploče ljeti." },
+    { "title": "Crvljivi plodovi", "signs": "Plodovi imaju rupice i otpadaju.", "fix": "Maslinina muha. Od srpnja objesi lovke s mamcem i beri malo ranije." },
     { "title": "Okrugle mrlje na listovima", "signs": "Tamne okrugle mrlje, listovi otpadaju.", "fix": "Paunovo oko. Prorijedi krošnju i ukloni otpalo lišće." }
   ],
   "neighbours": {

@@ -19,7 +19,7 @@
   "weeklyTip": "Otkidaj precvale cvjetove, cvast će do mraza.",
   "illustration": { "kind": "flower", "fill": "#F57C00", "stroke": "#8A3A00", "bg": "#FFE2C2" },
   "sow": {
-    "continental": [{ "from": 3, "to": 5 }, { "from": 9, "to": 9 }],
+    "continental": [{ "from": 3, "to": 5 }],
     "adriatic": [{ "from": 2, "to": 4 }, { "from": 9, "to": 10 }]
   },
   "harvest": {
@@ -27,7 +27,7 @@
     "adriatic": [{ "from": 4, "to": 11 }]
   },
   "steps": [
-    { "title": "Posij izravno", "text": "Sjemenke 1 cm duboko, u proljeće ili ranu jesen." },
+    { "title": "Posij izravno", "text": "Sjemenke 1 cm duboko, u proljeće. Na obali i u ranu jesen." },
     { "title": "Prorijedi", "text": "Ostavi biljku na 25 cm." },
     { "title": "Otkidaj precvale cvjetove", "text": "Biljka tada stvara nove pupove." },
     { "title": "Ostavi nekoliko za sjeme", "text": "Sam će se zasijati iduće godine." }

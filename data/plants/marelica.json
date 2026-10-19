@@ -18,10 +18,10 @@
   ],
   "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
   "summary": "Rano cvjeta, pa je proljetni mraz najveći rizik. Na zaštićenom mjestu obilno rađa.",
-  "weeklyTip": "Sadi je uz južni zid, gdje cvjetove manje pogađa mraz.",
+  "weeklyTip": "Sadi je na povišeno mjesto, ne u udolinu gdje se skuplja hladan zrak.",
   "illustration": { "kind": "fruit", "fill": "#F6B042", "stroke": "#8A5A0A", "bg": "#FFEFB5" },
   "sow": {
-    "continental": [{ "from": 10, "to": 11, "note": "Sadnice golog korijena." }, { "from": 3, "to": 4 }],
+    "continental": [{ "from": 3, "to": 4, "note": "Na kontinentu je sigurnija proljetna sadnja." }],
     "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice golog korijena." }, { "from": 2, "to": 3 }]
   },
   "harvest": {

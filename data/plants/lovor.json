@@ -22,16 +22,16 @@
   "illustration": { "kind": "leaf", "fill": "#2E6B3A", "stroke": "#163A1E", "bg": "#C9EEDB" },
   "sow": {
     "continental": [{ "from": 4, "to": 5, "note": "Sadnice iz rasadnika." }],
-    "adriatic": [{ "from": 3, "to": 4, "note": "Sadnice iz rasadnika." }, { "from": 10, "to": 11 }]
+    "adriatic": [{ "from": 3, "to": 4, "note": "Sadnice iz rasadnika." }, { "from": 10, "to": 11, "note": "Sadnice iz rasadnika." }]
   },
   "harvest": {
     "continental": [{ "from": 1, "to": 12 }],
     "adriatic": [{ "from": 1, "to": 12 }]
   },
   "steps": [
-    { "title": "Kupi sadnicu", "text": "Lovor iz sjemena raste godinama." },
+    { "title": "Kupi sadnicu", "text": "Iz sjemena raste godinama. Pazi da kupiš pravi lovor (Laurus nobilis), a ne otrovnu lovorvišnju koja se često prodaje za živicu." },
     { "title": "Posadi ili presadi u lonac", "text": "Na obali u vrt, na kontinentu u lonac." },
-    { "title": "Zalijevaj umjereno", "text": "U loncu češće ljeti." },
+    { "title": "Zalijevaj rijetko", "text": "Kad se zemlja osuši. U loncu ljeti češće." },
     { "title": "Beri listove", "text": "Kad grm ojača, beri po potrebi cijele godine." }
   ],
   "problems": [

@@ -21,7 +21,7 @@
   "weeklyTip": "Prskanje bakrom krajem zime štiti od kovrčavosti lista.",
   "illustration": { "kind": "fruit", "fill": "#F4A261", "stroke": "#8A4A1A", "bg": "#FFE2C2" },
   "sow": {
-    "continental": [{ "from": 10, "to": 11, "note": "Sadnice golog korijena." }, { "from": 3, "to": 4 }],
+    "continental": [{ "from": 3, "to": 4, "note": "Na kontinentu je sigurnija proljetna sadnja." }],
     "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice golog korijena." }, { "from": 2, "to": 3 }]
   },
   "harvest": {
@@ -32,7 +32,7 @@
     { "title": "Kupi sadnicu u rasadniku", "text": "Jednogodišnja ili dvogodišnja sadnica, zdravog korijena." },
     { "title": "Iskopaj široku jamu", "text": "Jama 60 × 60 cm, a zemlju pomiješaj s kompostom." },
     { "title": "Posadi uz kolac", "text": "Mjesto cijepljenja mora ostati iznad zemlje. Sadnicu priveži uz kolac i obilno zalij." },
-    { "title": "Orezuj svake godine", "text": "Breskva rađa na jednogodišnjim granama, pa joj treba jače orezivanje." }
+    { "title": "Orezuj svake godine", "text": "U proljeće, pred cvatnju. Breskva rađa na prošlogodišnjim granama, pa joj treba jače orezivanje." }
   ],
   "problems": [
     { "title": "Listovi se kovrčaju i crvene", "signs": "U proljeće su listovi naborani, crveni i otpadaju.", "fix": "Kovrčavost lista. Krajem zime, prije pupanja, poprskaj bakrom." },

@@ -3,7 +3,7 @@
   "id": "mandarina",
   "name": "Mandarina",
   "forms": { "nom": "mandarina", "gen": "mandarine", "acc": "mandarinu", "plural": false },
-  "latin": "Citrus reticulata",
+  "latin": "Citrus unshiu",
   "aliases": ["mandarina", "mandarine", "tangerine"],
   "category": "fruit",
   "difficulty": "medium",
@@ -17,7 +17,7 @@
     "Na kontinentu raste u posudi."
   ],
   "containers": { "ok": true, "minPotCm": 40, "note": "Na kontinentu samo u loncu, zimi unutra." },
-  "summary": "Najotporniji citrus. U dolini Neretve raste u vrtovima, na kontinentu u posudi.",
+  "summary": "Najotporniji od uobičajenih citrusa. U dolini Neretve raste u vrtovima, na kontinentu u posudi.",
   "weeklyTip": "Mandarina podnosi kratki lagani mraz, ali mlado stablo zaštiti agrilom.",
   "illustration": { "kind": "fruit", "fill": "#F39C12", "stroke": "#8A4A0A", "bg": "#FFE2C2" },
   "sow": {
@@ -36,7 +36,7 @@
   ],
   "problems": [
     { "title": "Ljepljivi listovi", "signs": "Listovi su ljepljivi i prekriveni čađom.", "fix": "Štitaste uši. Obriši ih krpom sa sapunicom." },
-    { "title": "Plodovi otpadaju", "signs": "Mali plodovi otpadaju u ljeto.", "fix": "Suša. Zalijevaj redovito." }
+    { "title": "Plodovi otpadaju", "signs": "Mali plodovi otpadaju u ljeto.", "fix": "Dio otpadne prirodno. Ako otpada puno, zalijevaj redovito." }
   ],
   "neighbours": {
     "good": ["Neven", "Vlasac"],

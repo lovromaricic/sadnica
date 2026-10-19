@@ -20,7 +20,7 @@
   "weeklyTip": "Beri cvat dok su pupoljci zbijeni i tamnozeleni, prije nego požute.",
   "illustration": { "kind": "cabbage", "fill": "#5C9E4A", "stroke": "#244F1C", "bg": "#C9EEDB" },
   "sow": {
-    "continental": [{ "from": 3, "to": 4, "note": "Sjetva u lončiće." }, { "from": 7, "to": 7, "note": "Za jesensku berbu." }],
+    "continental": [{ "from": 3, "to": 4, "note": "Sjetva u lončiće." }, { "from": 4, "to": 5, "note": "Presadnice van." }, { "from": 7, "to": 7, "note": "Za jesensku berbu." }],
     "adriatic": [{ "from": 2, "to": 3 }, { "from": 8, "to": 9 }]
   },
   "harvest": {

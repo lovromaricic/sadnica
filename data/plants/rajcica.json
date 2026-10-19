@@ -31,7 +31,7 @@
     ]
   },
   "harvest": {
-    "continental": [{ "from": 7, "to": 9 }],
+    "continental": [{ "from": 7, "to": 10 }],
     "adriatic": [{ "from": 6, "to": 10 }]
   },
   "steps": [

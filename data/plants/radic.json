@@ -33,7 +33,7 @@
     { "title": "Beri glavice", "text": "Beri od rujna do prvih jačih mrazova." }
   ],
   "problems": [
-    { "title": "Ne stvara glavicu", "signs": "Listovi se šire u stranu, a glavica se ne zatvara.", "fix": "Posijano prerano ili pregusto. Sij u srpnju i prorijedi na vrijeme." },
+    { "title": "Ne stvara glavicu", "signs": "Listovi se šire u stranu, a glavica se ne zatvara.", "fix": "Posijano prerano ili pregusto. Ne sij prije lipnja i prorijedi na vrijeme." },
     { "title": "Puževi", "signs": "Izgrizeni listovi.", "fix": "Skupljaj ih navečer i drži gredicu bez korova." }
   ],
   "neighbours": {
