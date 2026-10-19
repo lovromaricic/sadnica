@@ -234,6 +234,14 @@ export const t = {
 		description: (name: string) => `Prema ${APP_NAME}, sada je dobro vrijeme za sadnju: ${name}. Datumi su okvirni.`
 	},
 
+	calendar: {
+		title: 'Kalendar vrta',
+		text: 'Što te čeka idućih 12 mjeseci, za tvoje mjesto.',
+		caption: 'Mjeseci sadnje i berbe za biljke u tvom vrtu, od ovog mjeseca nadalje',
+		plant: 'Biljka',
+		cell: (month: string, sow: boolean, harvest: boolean) =>
+			`${month}: ${[sow && 'sadnja', harvest && 'berba'].filter(Boolean).join(' i ') || 'ništa'}`
+	},
 	companions: {
 		badTitle: 'Pazi, loš susjed u vrtu',
 		badText: (acc: string, list: string) => `Ne sadi ${acc} uz: ${list}. Neka budu na različitim gredicama.`,

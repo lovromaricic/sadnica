@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import GardenCalendar from '#lib/components/GardenCalendar.svelte';
 	import Icon from '#lib/components/Icon.svelte';
 	import PlantArt from '#lib/components/PlantArt.svelte';
 	import { plantsById, rules } from '#lib/data/index.ts';
@@ -120,6 +121,8 @@
 				</li>
 			</ul>
 		</section>
+
+		<GardenCalendar plants={items.map((x) => x.plant)} {region} month={today.getMonth() + 1} />
 
 		<a class="transfer-link" href="{resolve('/postavke')}#prijenos">
 			<Icon name="phone" size={18} />{t.settings.gardenLink}

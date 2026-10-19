@@ -199,3 +199,10 @@ beginner most often plants something that cannot work, so that case earns the qu
   u gredici", a note about good neighbours, and an "u vrtu" tag on neighbour pills that are in the
   garden; this works before the plant is added, for planning), and on Moj vrt cards ("Ne uz: …").
 - All three add buttons go through one `addToGarden()` so they warn the same way.
+
+## Garden calendar
+
+- Moj vrt shows "Kalendar vrta": one row per garden plant, the next 12 months starting with the
+  current one (forward-looking rather than January to December), sowing (S) and harvest (B) months
+  for the user's region. Phones put the plant name above its months; desktop puts it on the left.
+- It is a real table restyled as a grid, so explicit table roles keep it readable for screen readers.
