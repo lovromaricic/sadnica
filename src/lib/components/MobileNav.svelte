@@ -6,6 +6,7 @@
 	import Icon from './Icon.svelte';
 </script>
 
+<div class="nav-fade" aria-hidden="true"></div>
 <nav class="mobile-nav" aria-label={t.nav.main}>
 	{#each NAV_ITEMS as item (item.href)}
 		{@const active = isActive(item.href, page.route.id)}
@@ -17,12 +18,25 @@
 </nav>
 
 <style>
+	/* Content fades out under the bar instead of scrolling visibly around the pill. */
+	.nav-fade {
+		position: fixed;
+		z-index: 19;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: calc(var(--nav-bottom) + 72px);
+		background: linear-gradient(to bottom, rgb(246 248 244 / 0), var(--ground) 55%);
+		pointer-events: none;
+	}
 	.mobile-nav {
 		position: fixed;
 		z-index: 20;
 		left: 50%;
-		bottom: calc(16px + env(safe-area-inset-bottom));
-		transform: translateX(-50%);
+		/* Just above the iPhone home indicator; 16px on devices without one. */
+		bottom: var(--nav-bottom);
+		transform: translate3d(-50%, 0, 0);
+		touch-action: manipulation;
 		display: flex;
 		gap: 4px;
 		padding: 6px;
@@ -60,6 +74,7 @@
 		border-radius: 999px;
 	}
 	@media (min-width: 900px) {
+		.nav-fade,
 		.mobile-nav {
 			display: none;
 		}

@@ -27,7 +27,7 @@
 		z-index: 40;
 		left: var(--gutter);
 		right: var(--gutter);
-		bottom: calc(96px + env(safe-area-inset-bottom));
+		bottom: calc(var(--nav-bottom) + 76px);
 		display: flex;
 		justify-content: center;
 		pointer-events: none;

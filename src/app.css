@@ -34,7 +34,10 @@
 	--r-xl: 40px;
 	--gutter: 16px;
 	--max: 1240px;
-	--nav-space: 104px;
+	/* Bottom nav offset: above the iPhone home indicator, 16px elsewhere. */
+	--nav-bottom: max(16px, env(safe-area-inset-bottom));
+	/* Room at the end of each page so the last item clears the bottom nav. */
+	--nav-space: calc(var(--nav-bottom) + 96px);
 }
 
 *,
@@ -239,7 +242,7 @@ svg {
 	width: 100%;
 	max-width: var(--max);
 	margin: 0 auto;
-	padding: 20px var(--gutter) calc(var(--nav-space) + env(safe-area-inset-bottom));
+	padding: 20px var(--gutter) var(--nav-space);
 }
 
 @media (min-width: 900px) {

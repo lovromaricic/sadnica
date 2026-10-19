@@ -28,12 +28,24 @@
 	$effect(() => {
 		if (!open) return;
 		returnFocus = document.activeElement as HTMLElement | null;
-		const prevOverflow = document.body.style.overflow;
-		document.body.style.overflow = 'hidden';
+		// Phones scroll the content area (see +layout.svelte), desktop scrolls the window.
+		const area = document.querySelector<HTMLElement>('[data-scroller]');
+		const areaScrolls = !!area && getComputedStyle(area).overflowY === 'auto';
+		const scrollY = window.scrollY;
+		const body = document.body.style;
+		const prev = { position: body.position, top: body.top, width: body.width, overflow: body.overflow };
+		const prevArea = area?.style.overflowY ?? '';
+		if (areaScrolls) area!.style.overflowY = 'hidden';
+		// iOS ignores overflow:hidden on body, so pin it in place instead.
+		else Object.assign(body, { position: 'fixed', top: `-${scrollY}px`, width: '100%', overflow: 'hidden' });
 		tick().then(() => dialog?.querySelector<HTMLElement>('[data-autofocus]')?.focus());
 		return () => {
-			document.body.style.overflow = prevOverflow;
-			returnFocus?.focus();
+			if (areaScrolls) area!.style.overflowY = prevArea;
+			else {
+				Object.assign(body, prev);
+				window.scrollTo(0, scrollY);
+			}
+			returnFocus?.focus({ preventScroll: true });
 		};
 	});
 
@@ -98,7 +110,9 @@
 		display: grid;
 		place-items: end center;
 		padding: 12px;
+		padding-bottom: max(12px, env(safe-area-inset-bottom));
 		background: rgb(20 32 26 / 0.45);
+		overscroll-behavior: contain;
 		animation: fade 0.2s ease;
 	}
 	.dialog {
@@ -106,6 +120,7 @@
 		max-width: 480px;
 		max-height: calc(100dvh - 24px);
 		overflow: auto;
+		overscroll-behavior: contain;
 		border-radius: var(--r-xl);
 		background: var(--white);
 		animation: up 0.25s ease;
