@@ -4,8 +4,8 @@
 	import { NAV_ITEMS, isActive } from '../nav';
 	import { navContext } from '../navContext.svelte';
 	import { t } from '../i18n/hr';
-	import { store } from '../store.svelte';
 	import Icon from './Icon.svelte';
+	import LocationPill from './LocationPill.svelte';
 	import Logo from './Logo.svelte';
 </script>
 
@@ -20,10 +20,7 @@
 			</a>
 		{/each}
 	</nav>
-	<a class="location" href={resolve('/pocetak')} aria-label={t.locationLabel(store.state.city)}>
-		<Icon name="pin" size={18} />
-		{store.state.city}
-	</a>
+	<div class="location"><LocationPill /></div>
 </header>
 
 <style>
@@ -72,18 +69,5 @@
 	}
 	.location {
 		justify-self: end;
-		display: inline-flex;
-		align-items: center;
-		gap: 8px;
-		min-height: 48px;
-		padding: 0 20px;
-		border-radius: 999px;
-		background: var(--white);
-		border: 1px solid var(--border);
-		text-decoration: none;
-		font-weight: 700;
-	}
-	.location:hover {
-		border-color: var(--ink);
 	}
 </style>

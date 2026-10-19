@@ -81,6 +81,10 @@ Spec gaps and the simplest choice made for each. Review and overrule freely.
 
 ## Smaller choices
 
+- **Phone header**: Danas, Biljke and Moj vrt start with the logo and the location pill (which opens
+  the location screen), since phones have no top header. It scrolls away with the content; plant
+  pages and the sun check keep their own top bars.
+
 - **Tabs and plant pages**: a plant page belongs to the tab it was opened from (Moj vrt, Danas or
   Biljke; a fresh load or shared link counts as Biljke). That tab stays highlighted, and the back arrow
   returns to it: a real browser Back when the tab was the previous page (keeps scroll), otherwise a

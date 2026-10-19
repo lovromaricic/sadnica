@@ -4,6 +4,7 @@
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import DesktopHeader from '#lib/components/DesktopHeader.svelte';
+	import MobileHeader from '#lib/components/MobileHeader.svelte';
 	import MobileNav from '#lib/components/MobileNav.svelte';
 	import OfflineBanner from '#lib/components/OfflineBanner.svelte';
 	import Toast from '#lib/components/Toast.svelte';
@@ -15,6 +16,8 @@
 
 	const onOnboarding = $derived(page.route.id === '/pocetak');
 	const firstRun = $derived(!store.state.onboarded);
+	/** Danas, Biljke and Moj vrt get the phone header; detail pages have their own top bar. */
+	const isTabPage = $derived(['/', '/biljke', '/moj-vrt'].includes(page.route.id ?? ''));
 
 	$effect(() => {
 		if (firstRun && !onOnboarding) goto(resolve('/pocetak'), { replace: true });
@@ -43,6 +46,9 @@
 
 	{#if !firstRun || onOnboarding}
 		<main class="scroller" bind:this={scroller} data-scroller>
+			{#if !firstRun && isTabPage}
+				<MobileHeader />
+			{/if}
 			{@render children()}
 		</main>
 	{/if}
