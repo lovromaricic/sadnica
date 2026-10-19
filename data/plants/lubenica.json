@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "lubenica",
+  "name": "Lubenica",
+  "forms": { "nom": "lubenica", "gen": "lubenice", "acc": "lubenicu", "plural": false },
+  "latin": "Citrullus lanatus",
+  "aliases": ["lubenica", "lubenice", "watermelon"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "150 cm",
+  "spacingExplanation": [
+    "Biljke sadi metar i pol jednu od druge.",
+    "Vriježe se šire po zemlji."
+  ],
+  "containers": { "ok": false },
+  "summary": "Treba dugo i vruće ljeto. Na obali lako, na kontinentu na najtoplijem mjestu.",
+  "weeklyTip": "Lubenica je zrela kad se suši vitica najbliža plodu, a zvuk pri kucanju je šupalj.",
+  "illustration": { "kind": "fruit", "fill": "#3E8E41", "stroke": "#1C4A20", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 5, "to": 5 }],
+    "adriatic": [{ "from": 4, "to": 5 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 8, "to": 9 }],
+    "adriatic": [{ "from": 7, "to": 9 }]
+  },
+  "steps": [
+    { "title": "Kupi presadnice", "text": "Ili posij kad se zemlja dobro ugrije." },
+    { "title": "Posadi na sunce", "text": "Na najtoplije mjesto u vrtu." },
+    { "title": "Zalijevaj dok rastu plodovi", "text": "Kad plodovi dozrijevaju, zalijevaj manje, bit će slađi." },
+    { "title": "Beri zrele", "text": "Vitica uz plod je suha, a donja strana ploda žuta." }
+  ],
+  "problems": [
+    { "title": "Plodovi ostaju sitni", "signs": "Lubenice ne narastu.", "fix": "Prehladno ljeto ili premalo sunca. Ostavi samo dva do tri ploda po biljci." },
+    { "title": "Bijela prevlaka na listovima", "signs": "Pepelnica.", "fix": "Otkini zahvaćene listove i zalijevaj uz korijen." }
+  ],
+  "neighbours": {
+    "good": ["Kukuruz", "Rotkvica"],
+    "bad": ["Krumpir"]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "articoka",
+  "name": "Artičoka",
+  "forms": { "nom": "artičoka", "gen": "artičoke", "acc": "artičoku", "plural": false },
+  "latin": "Cynara cardunculus var. scolymus",
+  "aliases": ["artičoka", "articoka", "artičok", "artichoke"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 2 },
+  "spacingText": "100 cm",
+  "spacingExplanation": [
+    "Biljke sadi metar jednu od druge.",
+    "Artičoka je velika trajnica, raste do metar i pol."
+  ],
+  "containers": { "ok": true, "minPotCm": 50, "note": "U vrlo velikom loncu, zimi na zaštićenom mjestu." },
+  "summary": "Velika, lijepa trajnica. Na obali raste godinama, na kontinentu treba zimsku zaštitu.",
+  "weeklyTip": "Beri pupove dok su zatvoreni i čvrsti.",
+  "illustration": { "kind": "cabbage", "fill": "#8FAE8A", "stroke": "#3E5A3A", "bg": "#E6DBFF" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5 }],
+    "adriatic": [{ "from": 3, "to": 4 }, { "from": 10, "to": 11 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 7 }],
+    "adriatic": [{ "from": 4, "to": 6 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu", "text": "Najlakše je s mladom biljkom iz rasadnika." },
+    { "title": "Posadi na sunce", "text": "U dobro ocijeđenu zemlju, metar razmaka." },
+    { "title": "Zaštiti zimi", "text": "Na kontinentu prekrij korijen debelim slojem slame i lišća." },
+    { "title": "Beri pupove", "text": "Odreži ih s komadom stabljike dok su zatvoreni." }
+  ],
+  "problems": [
+    { "title": "Biljka ne preživi zimu", "signs": "U proljeće nema novih listova.", "fix": "Prehladno ili mokro zimi. Na kontinentu je dobro prekrij ili uzgajaj u loncu." },
+    { "title": "Lisne uši na pupovima", "signs": "Pupovi su puni sitnih kukaca.", "fix": "Isperi ih mlazom vode." }
+  ],
+  "neighbours": {
+    "good": ["Grašak", "Salata"],
+    "bad": []
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "grasak",
+  "name": "Grašak",
+  "forms": { "nom": "grašak", "gen": "graška", "acc": "grašak", "plural": false },
+  "latin": "Pisum sativum",
+  "aliases": ["grašak", "grasak", "graškić", "peas"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "rank": 6,
+  "spacingText": "5 cm",
+  "spacingExplanation": [
+    "Sjemenke sij 5 cm jednu od druge, u dvostruke redove.",
+    "Gusti redovi se međusobno podupiru."
+  ],
+  "spacingTip": "uz red zabodi granje ili mrežu, grašak se penje viticama.",
+  "containers": { "ok": true, "minPotCm": 25, "note": "Uz mrežicu, u dubljem koritu." },
+  "summary": "Jedan od prvih usjeva u proljeće. Podnosi hladnoću i obogaćuje zemlju.",
+  "weeklyTip": "Posij ga čim se zemlja odmrzne, grašak voli svježe vrijeme.",
+  "illustration": { "kind": "pod", "fill": "#8FCB6B", "stroke": "#2F5E2A", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 11, "to": 12 }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 5, "to": 6 }],
+    "adriatic": [{ "from": 4, "to": 5 }]
+  },
+  "steps": [
+    { "title": "Posij rano", "text": "Sjemenke 3 cm duboko, 5 cm razmaka." },
+    { "title": "Postavi potporu", "text": "Granje ili mreža visine metar." },
+    { "title": "Zalijevaj u cvatnji", "text": "Kad cvjeta, zemlja ne smije presušiti." },
+    { "title": "Beri mlade mahune", "text": "Beri redovito, biljka daje nove." }
+  ],
+  "problems": [
+    { "title": "Bijela prevlaka na listovima", "signs": "Listovi kao posuti brašnom.", "fix": "Pepelnica, obično krajem sezone. Sij ranije." },
+    { "title": "Ptice kljucaju sjeme", "signs": "Sjemenke su iskopane.", "fix": "Prekrij gredicu agrilom dok grašak ne nikne." }
+  ],
+  "neighbours": {
+    "good": ["Mrkva", "Krastavac", "Kukuruz"],
+    "bad": ["Luk", "Češnjak", "Poriluk"]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "bundeva",
+  "name": "Bundeva",
+  "forms": { "nom": "bundeva", "gen": "bundeve", "acc": "bundevu", "plural": false },
+  "latin": "Cucurbita maxima",
+  "aliases": ["bundeva", "buča", "tikva", "pumpkin"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "150 cm",
+  "spacingExplanation": [
+    "Biljke sadi metar i pol jednu od druge.",
+    "Vriježe se puze nekoliko metara."
+  ],
+  "containers": { "ok": false, "note": "Treba puno prostora za vriježe." },
+  "summary": "Velike plodove za jesen i zimu. Treba prostora, ali gotovo ništa drugo.",
+  "weeklyTip": "Ispod ploda stavi dasku ili slamu da ne trune na vlažnoj zemlji.",
+  "illustration": { "kind": "pumpkin", "fill": "#F28B30", "stroke": "#9A4A0C", "bg": "#FFE2C2" },
+  "sow": {
+    "continental": [{ "from": 5, "to": 5 }],
+    "adriatic": [{ "from": 4, "to": 5 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 9, "to": 10 }],
+    "adriatic": [{ "from": 9, "to": 10 }]
+  },
+  "steps": [
+    { "title": "Posij u kompost", "text": "Dvije sjemenke na mjesto, 3 cm duboko." },
+    { "title": "Ostavi mjesta", "text": "Vriježe se šire u svim smjerovima." },
+    { "title": "Zalijevaj u suši", "text": "Uz korijen, ne po lišću." },
+    { "title": "Beri prije mraza", "text": "Kad peteljka odrveni, a kora otvrdne." }
+  ],
+  "problems": [
+    { "title": "Bijela prevlaka na listovima", "signs": "Listovi kao posuti brašnom.", "fix": "Pepelnica krajem ljeta. Plodovima uglavnom ne šteti." },
+    { "title": "Plodovi trunu", "signs": "Donja strana ploda trune.", "fix": "Stavi dasku ili slamu ispod ploda." }
+  ],
+  "neighbours": {
+    "good": ["Kukuruz", "Grah"],
+    "bad": ["Krumpir"]
+  }
+}

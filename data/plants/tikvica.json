@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "tikvica",
+  "name": "Tikvica",
+  "forms": { "nom": "tikvica", "gen": "tikvice", "acc": "tikvicu", "plural": false },
+  "latin": "Cucurbita pepo",
+  "aliases": ["tikvica", "tikvice", "cukina", "zucchini", "courgette"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "high",
+  "rank": 11,
+  "spacingText": "100 cm",
+  "spacingExplanation": [
+    "Biljke sadi metar jednu od druge.",
+    "Jedna tikvica zauzme cijeli kvadratni metar."
+  ],
+  "spacingTip": "dvije biljke su dovoljne za cijelu obitelj.",
+  "containers": { "ok": true, "minPotCm": 45, "note": "Treba velika posuda, barem 45 litara." },
+  "summary": "Jedna od najrodnijih biljaka u vrtu. Dvije biljke hrane cijelu obitelj cijelo ljeto.",
+  "weeklyTip": "Beri tikvice dugačke 15 do 20 cm, veće su vodenaste.",
+  "illustration": { "kind": "cucumber", "fill": "#3E7D3A", "stroke": "#1C3F1A", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 5, "to": 6 }],
+    "adriatic": [{ "from": 4, "to": 6 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 9 }],
+    "adriatic": [{ "from": 6, "to": 10 }]
+  },
+  "steps": [
+    { "title": "Posij dvije sjemenke", "text": "Na svako mjesto 2 cm duboko, kasnije ostavi jaču biljku." },
+    { "title": "Dodaj kompost", "text": "Tikvica voli hranjivu zemlju." },
+    { "title": "Zalijevaj uz korijen", "text": "Ne kvasi lišće, lakše oboli." },
+    { "title": "Beri često", "text": "Svakih nekoliko dana, dok su plodovi mladi." }
+  ],
+  "problems": [
+    { "title": "Plodovi trunu na vrhu", "signs": "Mladi plodovi omekšaju i trunu od vrha.", "fix": "Cvijet nije oprašen ili je previše vlage. Uberi trule plodove, sljedeći će biti dobri." },
+    { "title": "Bijela prevlaka na listovima", "signs": "Listovi izgledaju kao posuti brašnom.", "fix": "Pepelnica, obično krajem ljeta. Otkini najgore listove." }
+  ],
+  "neighbours": {
+    "good": ["Kukuruz", "Grah", "Neven"],
+    "bad": ["Krumpir"]
+  }
+}

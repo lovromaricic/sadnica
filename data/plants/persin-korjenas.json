@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "persin-korjenas",
+  "name": "Peršin korjenaš",
+  "forms": { "nom": "peršin korjenaš", "gen": "peršina korjenaša", "acc": "peršin korjenaš", "plural": false },
+  "latin": "Petroselinum crispum var. tuberosum",
+  "aliases": ["peršin korijen", "korijen peršina", "root parsley"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "8 cm",
+  "spacingExplanation": [
+    "Biljke prorijedi na 8 cm, redove drži 25 cm.",
+    "Korijen raste u dubinu i treba mjesta oko sebe."
+  ],
+  "containers": { "ok": false, "note": "Korijen treba duboku, rahlu zemlju u gredici." },
+  "summary": "Korijen za juhe i variva, a listovi kao začin. Sporo niče, ali je poslije lak.",
+  "weeklyTip": "Peršin niče i do četiri tjedna. Ne gubi strpljenje i drži zemlju vlažnom.",
+  "illustration": { "kind": "root", "fill": "#F1E3C4", "stroke": "#7A6038", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 2, "to": 3 }, { "from": 9, "to": 10 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 9, "to": 11 }],
+    "adriatic": [{ "from": 8, "to": 12 }]
+  },
+  "steps": [
+    { "title": "Usitni zemlju", "text": "Prekopaj duboko i makni kamenje." },
+    { "title": "Posij 1 cm duboko", "text": "U redove 25 cm." },
+    { "title": "Drži vlažno dok ne nikne", "text": "Može potrajati i četiri tjedna." },
+    { "title": "Prorijedi i beri u jesen", "text": "Prorijedi na 8 cm, a korijen vadi od rujna." }
+  ],
+  "problems": [
+    { "title": "Ne niče", "signs": "Nakon tri tjedna nema ničega.", "fix": "Peršin niče sporo, i do četiri tjedna. Drži zemlju stalno vlažnom." },
+    { "title": "Račvast korijen", "signs": "Korijen ima više krakova.", "fix": "Kamenje ili svježi gnoj u zemlji. Prekopaj duboko i ne gnoji prije sjetve." }
+  ],
+  "neighbours": {
+    "good": ["Rajčica", "Luk"],
+    "bad": ["Salata"]
+  }
+}

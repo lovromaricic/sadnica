@@ -21,6 +21,9 @@ export default defineConfig(({ mode }) => ({
 		watch: { ignored: ['**/build/**'] }
 	},
 	test: {
-		include: ['src/**/*.test.ts']
+		include: ['src/**/*.test.ts'],
+		// The persistent module cache does not notice new data/plants/*.json files picked up by
+		// import.meta.glob, so tests would silently run against the old plant list.
+		fsModuleCache: false
 	}
 }));

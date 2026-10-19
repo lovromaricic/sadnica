@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "krastavac",
+  "name": "Krastavac",
+  "forms": { "nom": "krastavac", "gen": "krastavca", "acc": "krastavac", "plural": false },
+  "latin": "Cucumis sativus",
+  "aliases": ["krastavac", "krastavci", "kukumar", "cucumber"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "high",
+  "rank": 12,
+  "spacingText": "40 cm",
+  "spacingExplanation": [
+    "Biljke sadi 40 cm jednu od druge uz mrežu ili kolce.",
+    "Penjući krastavac zauzme manje mjesta i manje obolijeva."
+  ],
+  "spacingTip": "pusti ga da se penje po mreži, plodovi su čišći.",
+  "containers": { "ok": true, "minPotCm": 30, "note": "U velikom loncu uz mrežu ili štap." },
+  "summary": "Brzo raste i obilno rađa ako ima vode i sunca. Najbolji je penjući uz mrežu.",
+  "weeklyTip": "Beri krastavce svaki dan ili dva, biljka tada daje nove.",
+  "illustration": { "kind": "cucumber", "fill": "#5FA84E", "stroke": "#25541E", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 5, "to": 6 }],
+    "adriatic": [{ "from": 4, "to": 6 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 7, "to": 9 }],
+    "adriatic": [{ "from": 6, "to": 9 }]
+  },
+  "steps": [
+    { "title": "Posij izravno ili kupi presadnice", "text": "Po dvije sjemenke 2 cm duboko, kad se zemlja ugrije." },
+    { "title": "Postavi mrežu", "text": "Uz red zabodi kolce i razapni mrežu." },
+    { "title": "Zalijevaj obilno", "text": "Krastavac ne smije presušiti, zalijevaj uz korijen." },
+    { "title": "Beri mlade plodove", "text": "Prerasli plodovi su gorki i zaustavljaju rast novih." }
+  ],
+  "problems": [
+    { "title": "Bijela prevlaka na listovima", "signs": "Listovi izgledaju kao posuti brašnom.", "fix": "Pepelnica. Otkini zahvaćene listove i zalijevaj ujutro, uz korijen." },
+    { "title": "Gorki plodovi", "signs": "Krastavci su gorki.", "fix": "Suša ili velike razlike u temperaturi. Zalijevaj redovito." }
+  ],
+  "neighbours": {
+    "good": ["Grah", "Kopar", "Salata"],
+    "bad": ["Krumpir"]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "reviewed": false,
+  "id": "kupus",
+  "name": "Kupus",
+  "forms": { "nom": "kupus", "gen": "kupusa", "acc": "kupus", "plural": false },
+  "latin": "Brassica oleracea var. capitata",
+  "aliases": ["kupus", "zelje", "glavati kupus", "cabbage"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "high",
+  "spacingText": "50 cm",
+  "spacingExplanation": [
+    "Presadnice sadi 50 cm jednu od druge, redove 60 cm.",
+    "Glavica se raširi više nego što misliš."
+  ],
+  "spacingTip": "između biljaka posij salatu, uberi je prije nego kupus zatreba mjesto.",
+  "containers": { "ok": false, "note": "Treba puno mjesta i vode, bolje u gredici." },
+  "summary": "Velike glavice za salatu i kiseljenje. Traži vodu i hranu, ali dugo traje.",
+  "weeklyTip": "Prekrij mlade biljke agrilom, leptir kupusar tada ne može na njih.",
+  "illustration": { "kind": "cabbage", "fill": "#B7DB8F", "stroke": "#3F6E2A", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 4, "note": "Sjetva u lončiće." }, { "from": 5, "to": 6, "note": "Presadnice van." }],
+    "adriatic": [{ "from": 2, "to": 3, "note": "Sjetva u lončiće." }, { "from": 8, "to": 9, "note": "Jesenska sadnja presadnica." }]
+  },
+  "harvest": {
+    "continental": [{ "from": 7, "to": 11 }],
+    "adriatic": [{ "from": 5, "to": 7 }, { "from": 11, "to": 3 }]
+  },
+  "steps": [
+    { "title": "Kupi ili uzgoji presadnice", "text": "Presadnice s četiri do šest listova su spremne za sadnju." },
+    { "title": "Posadi do prvih listova", "text": "Presadnicu ukopaj malo dublje nego što je bila u lončiću." },
+    { "title": "Zalijevaj i prihranjuj", "text": "Kupus traži puno vode i kompost oko biljke." },
+    { "title": "Beri čvrste glavice", "text": "Odreži glavicu nožem kad je čvrsta na dodir." }
+  ],
+  "problems": [
+    { "title": "Gusjenice u listovima", "signs": "Rupe u listovima i zelene gusjenice.", "fix": "Leptir kupusar. Prekrij biljke agrilom ili mrežom i ručno skupljaj gusjenice." },
+    { "title": "Glavica puca", "signs": "Zrela glavica napukne.", "fix": "Nakon jake kiše ili obilnog zalijevanja poslije suše. Beri čim je glavica čvrsta." }
+  ],
+  "neighbours": {
+    "good": ["Celer", "Luk", "Salata", "Kopar"],
+    "bad": ["Rajčica", "Jagoda"]
+  }
+}

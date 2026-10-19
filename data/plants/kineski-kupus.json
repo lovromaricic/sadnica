@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "kineski-kupus",
+  "name": "Kineski kupus",
+  "forms": { "nom": "kineski kupus", "gen": "kineskog kupusa", "acc": "kineski kupus", "plural": false },
+  "latin": "Brassica rapa subsp. pekinensis",
+  "aliases": ["kineski kupus", "pak choi", "pekinški kupus", "napa"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "partial",
+  "water": "high",
+  "spacingText": "30 cm",
+  "spacingExplanation": [
+    "Biljke drži 30 cm jednu od druge.",
+    "Glavice brzo rastu i trebaju prostora."
+  ],
+  "containers": { "ok": true, "minPotCm": 30 },
+  "summary": "Brzi kupus za kasno ljeto i jesen. Nježniji od običnog kupusa.",
+  "weeklyTip": "Sij ga tek krajem srpnja, u proljeće prebrzo ide u cvijet.",
+  "illustration": { "kind": "cabbage", "fill": "#D7EBA8", "stroke": "#4C6B2A", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 7, "to": 8 }],
+    "adriatic": [{ "from": 8, "to": 9 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 9, "to": 11 }],
+    "adriatic": [{ "from": 10, "to": 12 }]
+  },
+  "steps": [
+    { "title": "Posij krajem ljeta", "text": "Sjemenke 1 cm duboko, u redove 30 cm." },
+    { "title": "Prorijedi", "text": "Ostavi biljku na svakih 30 cm." },
+    { "title": "Drži vlažno", "text": "Kineski kupus traži puno vode." },
+    { "title": "Beri cijelu glavicu", "text": "Odreži je pri dnu kad je čvrsta." }
+  ],
+  "problems": [
+    { "title": "Ide u cvijet", "signs": "Glavica se ne stvara, izraste stabljika.", "fix": "Posijano prerano. Sij krajem srpnja ili u kolovozu." },
+    { "title": "Rupice u listovima", "signs": "Sitne rupice.", "fix": "Buhači. Prekrij agrilom i zalijevaj redovito." }
+  ],
+  "neighbours": {
+    "good": ["Luk", "Celer", "Salata"],
+    "bad": ["Rajčica"]
+  }
+}

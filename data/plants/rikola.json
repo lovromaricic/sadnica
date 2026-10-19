@@ -1,0 +1,44 @@
+{
+  "reviewed": false,
+  "id": "rikola",
+  "name": "Rikola",
+  "forms": { "nom": "rikola", "gen": "rikole", "acc": "rikolu", "plural": false },
+  "latin": "Eruca sativa",
+  "aliases": ["rikola", "rukola", "rokula", "riga", "arugula"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "partial",
+  "water": "medium",
+  "spacingText": "10 cm",
+  "spacingExplanation": [
+    "Sij u redove 15 cm, a biljke prorijedi na 10 cm.",
+    "Gusto posijana rikola daje sitnije, nježnije listove."
+  ],
+  "spacingTip": "beri vanjske listove, sredina nastavlja rasti.",
+  "containers": { "ok": true, "minPotCm": 15, "note": "Uspijeva i u plitkom koritu na balkonu." },
+  "summary": "Najbrže lisnato povrće: prve listove bereš za tri do četiri tjedna.",
+  "weeklyTip": "Rikola ljeti brzo cvjeta, zato je sij u proljeće i jesen.",
+  "illustration": { "kind": "leaf", "fill": "#5E9E3E", "stroke": "#264F18", "bg": "#D3E9FF" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 5 }, { "from": 8, "to": 10 }],
+    "adriatic": [{ "from": 2, "to": 5 }, { "from": 9, "to": 11 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 4, "to": 6 }, { "from": 9, "to": 11 }],
+    "adriatic": [{ "from": 3, "to": 6 }, { "from": 10, "to": 1 }]
+  },
+  "steps": [
+    { "title": "Posij plitko", "text": "Sjeme pospi u brazdice duboke 1 cm." },
+    { "title": "Drži vlažno", "text": "Nikne za nekoliko dana ako je zemlja vlažna." },
+    { "title": "Prorijedi", "text": "Ostavi biljku na svakih 10 cm. Počupane biljčice pojedi." },
+    { "title": "Beri listove", "text": "Reži vanjske listove, a srce ostavi." }
+  ],
+  "problems": [
+    { "title": "Rupice u listovima", "signs": "Sitne okrugle rupice, a po listovima skaču sitni kornjaši.", "fix": "To su buhači. Prekrij rikolu agrilom i zalijevaj redovito, ne vole vlagu." },
+    { "title": "Ljuti, tvrdi listovi", "signs": "Listovi su jako ljuti i tvrdi.", "fix": "Prevruće je ili suho. Beri mlade listove i sij u svježijem dijelu godine." }
+  ],
+  "neighbours": {
+    "good": ["Salata", "Špinat", "Luk"],
+    "bad": []
+  }
+}

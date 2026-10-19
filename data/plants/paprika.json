@@ -1,0 +1,44 @@
+{
+  "reviewed": false,
+  "id": "paprika",
+  "name": "Paprika",
+  "forms": { "nom": "paprika", "gen": "paprike", "acc": "papriku", "plural": false },
+  "latin": "Capsicum annuum",
+  "aliases": ["paprika", "babura", "slatka paprika", "bell pepper"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "40 cm",
+  "spacingExplanation": [
+    "Presadnice sadi 40 cm jednu od druge, redove 60 cm.",
+    "Biljke se granaju i trebaju zraka."
+  ],
+  "spacingTip": "kolac uz biljku spriječit će da se pod plodovima prelomi.",
+  "containers": { "ok": true, "minPotCm": 25, "note": "Lijepo uspijeva u loncu na sunčanom balkonu." },
+  "summary": "Voli toplinu i sunce. Iz jedne presadnice ubereš desetak plodova.",
+  "weeklyTip": "Za početak kupi presadnice u svibnju, sjetva paprike je spora.",
+  "illustration": { "kind": "pepper", "fill": "#E8503A", "stroke": "#8A2216", "bg": "#FFD9DE" },
+  "sow": {
+    "continental": [{ "from": 2, "to": 3, "note": "Sjetva u zatvorenom, na toplom i svijetlom mjestu." }, { "from": 5, "to": 5, "note": "Presadnice van nakon zadnjeg mraza." }],
+    "adriatic": [{ "from": 2, "to": 2, "note": "Sjetva u zatvorenom, na toplom i svijetlom mjestu." }, { "from": 4, "to": 5, "note": "Presadnice van kad noći postanu tople." }]
+  },
+  "harvest": {
+    "continental": [{ "from": 7, "to": 10 }],
+    "adriatic": [{ "from": 7, "to": 10 }]
+  },
+  "steps": [
+    { "title": "Kupi ili uzgoji presadnice", "text": "Zdrava presadnica je zbijena i tamnozelena." },
+    { "title": "Posadi na toplo", "text": "Tek kad noći postanu tople, 40 cm razmaka." },
+    { "title": "Zalijevaj uz korijen", "text": "Redovito, ali ne prekomjerno." },
+    { "title": "Beri zelenu ili crvenu", "text": "Paprika je jestiva zelena, a crvena je slađa." }
+  ],
+  "problems": [
+    { "title": "Cvjetovi otpadaju", "signs": "Biljka cvjeta, ali plodova nema.", "fix": "Prevruće ili presuho. Zalijevaj redovito i malčiraj zemlju." },
+    { "title": "Svijetla mrlja na plodu", "signs": "Plod ima mekanu, svijetlu mrlju.", "fix": "Opeklina od sunca. Ne kidaj lišće koje zasjenjuje plodove." }
+  ],
+  "neighbours": {
+    "good": ["Bosiljak", "Rajčica", "Luk"],
+    "bad": ["Komorač"]
+  }
+}

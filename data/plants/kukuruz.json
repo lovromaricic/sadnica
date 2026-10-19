@@ -1,0 +1,44 @@
+{
+  "reviewed": false,
+  "id": "kukuruz",
+  "name": "Kukuruz šećerac",
+  "forms": { "nom": "kukuruz šećerac", "gen": "kukuruza šećerca", "acc": "kukuruz šećerac", "plural": false },
+  "latin": "Zea mays var. saccharata",
+  "aliases": ["kukuruz", "kukuruz šećerac", "šećerac", "corn", "sweet corn"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "30 cm",
+  "spacingExplanation": [
+    "Sij u blok od nekoliko kraćih redova, 30 cm razmaka.",
+    "Kukuruz se oprašuje vjetrom, pa u bloku bolje rađa nego u jednom dugom redu."
+  ],
+  "spacingTip": "blok od barem četiri reda puno bolje rađa od jednog reda.",
+  "containers": { "ok": false, "note": "Treba prostor i oprašivanje u skupini." },
+  "summary": "Slatki klipovi za kuhanje i roštilj. Sadi ga u blok, ne u jedan red.",
+  "weeklyTip": "Klip je zreo kad su svilene niti smeđe, a zrno pusti mliječni sok.",
+  "illustration": { "kind": "corn", "fill": "#F6CF4A", "stroke": "#8A6A0A", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 5, "to": 6 }],
+    "adriatic": [{ "from": 4, "to": 6 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 7, "to": 9 }],
+    "adriatic": [{ "from": 7, "to": 9 }]
+  },
+  "steps": [
+    { "title": "Posij u blok", "text": "Sjemenke 4 cm duboko, u nekoliko kratkih redova." },
+    { "title": "Okopaj i zagrći", "text": "Kad je visok koljeno, nagrni malo zemlje oko stabljika." },
+    { "title": "Zalijevaj u metličanju", "text": "Kad se pojave metlice i svila, treba najviše vode." },
+    { "title": "Beri na vrijeme", "text": "Kad je svila smeđa, a zrno mliječno." }
+  ],
+  "problems": [
+    { "title": "Klipovi nisu puni", "signs": "Zrna nedostaju na klipu.", "fix": "Slabo oprašivanje. Sij u blok, a ne u jedan red." },
+    { "title": "Ptice kljucaju sjeme", "signs": "Sjemenke su iskopane.", "fix": "Prekrij gredicu agrilom dok ne nikne." }
+  ],
+  "neighbours": {
+    "good": ["Grah", "Bundeva", "Tikvica"],
+    "bad": ["Rajčica"]
+  }
+}

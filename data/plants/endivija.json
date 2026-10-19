@@ -1,0 +1,44 @@
+{
+  "reviewed": false,
+  "id": "endivija",
+  "name": "Endivija",
+  "forms": { "nom": "endivija", "gen": "endivije", "acc": "endiviju", "plural": false },
+  "latin": "Cichorium endivia",
+  "aliases": ["endivija", "eskarola", "kovrčava salata", "endive"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "partial",
+  "water": "medium",
+  "spacingText": "30 cm",
+  "spacingExplanation": [
+    "Presadnice sadi 30 cm jednu od druge.",
+    "Endivija se široko raširi."
+  ],
+  "spacingTip": "tjedan prije berbe poveži listove da sredina pobijeli i bude manje gorka.",
+  "containers": { "ok": true, "minPotCm": 25 },
+  "summary": "Jesenska salata, kovrčava ili široka. Malo gorka, ali hrskava.",
+  "weeklyTip": "Poveži listove gumicom tjedan dana prije berbe, sredina pobijeli.",
+  "illustration": { "kind": "rosette", "fill": "#9CCB5E", "stroke": "#3C6420", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 6, "to": 7 }],
+    "adriatic": [{ "from": 7, "to": 8 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 9, "to": 11 }],
+    "adriatic": [{ "from": 10, "to": 1 }]
+  },
+  "steps": [
+    { "title": "Posij u lončiće", "text": "Sjetva u lipnju ili srpnju, po dvije sjemenke u lončić." },
+    { "title": "Presadi na 30 cm", "text": "Kad biljčice imaju četiri lista, posadi ih van." },
+    { "title": "Zalijevaj redovito", "text": "U vrućini svaki drugi dan." },
+    { "title": "Izbijeli i beri", "text": "Poveži listove kad su suhi, a beri za tjedan do dva." }
+  ],
+  "problems": [
+    { "title": "Truljenje sredine", "signs": "Unutarnji listovi trunu.", "fix": "Poveži listove samo kad su suhi i ne drži ih povezane predugo." },
+    { "title": "Ide u cvijet", "signs": "Izraste stabljika.", "fix": "Posijano prerano. Sij od lipnja nadalje." }
+  ],
+  "neighbours": {
+    "good": ["Mrkva", "Luk"],
+    "bad": []
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "ljuta-paprika",
+  "name": "Ljuta paprika",
+  "forms": { "nom": "ljuta paprika", "gen": "ljute paprike", "acc": "ljutu papriku", "plural": false },
+  "latin": "Capsicum annuum",
+  "aliases": ["ljuta paprika", "feferon", "feferoni", "čili", "chili"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "40 cm",
+  "spacingExplanation": [
+    "Presadnice sadi 40 cm jednu od druge.",
+    "Biljka je manja od slatke paprike, ali daje puno plodova."
+  ],
+  "containers": { "ok": true, "minPotCm": 20, "note": "Odlična za balkon, jedna biljka po loncu." },
+  "summary": "Mala biljka puna ljutih plodova. Savršena za balkon.",
+  "weeklyTip": "Što je biljka više na suncu, to su plodovi ljući.",
+  "illustration": { "kind": "pepper", "fill": "#D7261E", "stroke": "#7A120D", "bg": "#FAD9CC" },
+  "sow": {
+    "continental": [{ "from": 2, "to": 3, "note": "Sjetva u zatvorenom, na toplom i svijetlom mjestu." }, { "from": 5, "to": 5, "note": "Presadnice van nakon zadnjeg mraza." }],
+    "adriatic": [{ "from": 2, "to": 2, "note": "Sjetva u zatvorenom, na toplom i svijetlom mjestu." }, { "from": 4, "to": 5, "note": "Presadnice van kad noći postanu tople." }]
+  },
+  "harvest": {
+    "continental": [{ "from": 7, "to": 10 }],
+    "adriatic": [{ "from": 7, "to": 11 }]
+  },
+  "steps": [
+    { "title": "Kupi presadnice", "text": "Ili ih uzgoji iz sjemena u veljači." },
+    { "title": "Posadi na sunce", "text": "U vrt ili lonac kad noći postanu tople." },
+    { "title": "Zalijevaj umjereno", "text": "Pusti da se gornji sloj zemlje osuši." },
+    { "title": "Beri redovito", "text": "Što više bereš, više novih plodova." }
+  ],
+  "problems": [
+    { "title": "Mali broj plodova", "signs": "Biljka je velika, a plodova malo.", "fix": "Previše gnoja. Ljutoj paprici dovoljno je malo komposta." },
+    { "title": "Lisne uši", "signs": "Ljepljivi listovi i sitni kukci.", "fix": "Isperi ih mlazom vode ili otkini zahvaćene vrhove." }
+  ],
+  "neighbours": {
+    "good": ["Bosiljak", "Rajčica", "Luk"],
+    "bad": ["Komorač"]
+  }
+}

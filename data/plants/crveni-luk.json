@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "crveni-luk",
+  "name": "Crveni luk",
+  "forms": { "nom": "crveni luk", "gen": "crvenog luka", "acc": "crveni luk", "plural": false },
+  "latin": "Allium cepa",
+  "aliases": ["luk", "crveni luk", "kapula", "arpadžik", "onion"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "low",
+  "rank": 4,
+  "spacingText": "10 cm",
+  "spacingExplanation": [
+    "Lukovice (arpadžik) sadi oko 10 cm jednu od druge, u redove 25 cm.",
+    "Svaka sitna lukovica naraste u jednu veliku glavicu."
+  ],
+  "spacingTip": "arpadžik je najlakši način: sitne lukovice samo utisneš u zemlju.",
+  "containers": { "ok": true, "minPotCm": 25, "note": "U širem loncu ili koritu stane desetak lukovica." },
+  "summary": "Iz sitnih lukovica (arpadžika) do ljeta naraste pravi luk. Ne traži gotovo nikakvu brigu.",
+  "weeklyTip": "Arpadžik posadi tako da mu vrh malo viri iz zemlje.",
+  "illustration": { "kind": "bulb", "fill": "#C8545E", "stroke": "#6B1E2A", "bg": "#FAD9CC" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11, "note": "Zimski arpadžik." }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 10, "to": 11 }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 8 }],
+    "adriatic": [{ "from": 5, "to": 7 }]
+  },
+  "steps": [
+    { "title": "Kupi arpadžik", "text": "Sitne lukovice za sadnju kupiš u poljoapoteci ili na placu. Uzmi čvrste i suhe." },
+    { "title": "Pripremi gredicu", "text": "Rahla zemlja na sunčanom mjestu. Ne stavljaj svježi gnoj, luk ga ne voli." },
+    { "title": "Utisni lukovice", "text": "Razmak 10 cm, redovi 25 cm. Vrh lukovice neka malo viri iz zemlje." },
+    { "title": "Zalijevaj rijetko", "text": "Samo u dužoj suši. Kad listovi polegnu, prestani zalijevati, luk je zreo." }
+  ],
+  "problems": [
+    { "title": "Cvjetna stabljika", "signs": "Iz sredine izraste debela stabljika s pupoljkom.", "fix": "Odlomi je, inače glavica ostaje sitna." },
+    { "title": "Lukovice trunu", "signs": "Glavice su meke, a listovi žute.", "fix": "Previše vlage. Sadi na mjesto gdje se voda ne zadržava i zalijevaj samo u suši." }
+  ],
+  "neighbours": {
+    "good": ["Mrkva", "Cikla", "Salata", "Rajčica"],
+    "bad": ["Grah", "Grašak", "Bob"]
+  }
+}

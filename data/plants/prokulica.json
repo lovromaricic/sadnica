@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "prokulica",
+  "name": "Prokulica",
+  "forms": { "nom": "prokulica", "gen": "prokulice", "acc": "prokulicu", "plural": false },
+  "latin": "Brassica oleracea var. gemmifera",
+  "aliases": ["prokulica", "kelj pupčar", "brussels sprouts"],
+  "category": "veg",
+  "difficulty": "hard",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "60 cm",
+  "spacingExplanation": [
+    "Biljke drži 60 cm jednu od druge.",
+    "Narastu visoko i trebaju potporu."
+  ],
+  "containers": { "ok": false },
+  "summary": "Male glavice duž visoke stabljike. Dugo raste, a bere se zimi.",
+  "weeklyTip": "Početkom jeseni otkini vrh biljke, glavice će brže narasti.",
+  "illustration": { "kind": "cabbage", "fill": "#7FB05A", "stroke": "#2F5A22", "bg": "#D3E9FF" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5 }],
+    "adriatic": [{ "from": 5, "to": 6 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 10, "to": 2 }],
+    "adriatic": [{ "from": 11, "to": 2 }]
+  },
+  "steps": [
+    { "title": "Kupi presadnice", "text": "Sadi ih u svibnju." },
+    { "title": "Posadi na 60 cm", "text": "Čvrsto ih utisni u zemlju." },
+    { "title": "Podupri visoke biljke", "text": "Zabij kolac uz svaku biljku." },
+    { "title": "Beri odozdo", "text": "Beri glavice od dna stabljike prema vrhu." }
+  ],
+  "problems": [
+    { "title": "Rastresite glavice", "signs": "Glavice su meke i otvorene.", "fix": "Zemlja je prerahla ili je bilo previše dušika. Čvrsto utisni biljke i ne pretjeruj s gnojem." },
+    { "title": "Biljka se prevrne", "signs": "Visoka stabljika polegne.", "fix": "Podupri je kolcem." }
+  ],
+  "neighbours": {
+    "good": ["Celer", "Luk", "Salata", "Kopar"],
+    "bad": ["Rajčica", "Jagoda"]
+  }
+}

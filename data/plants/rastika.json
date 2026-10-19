@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "rastika",
+  "name": "Raštika",
+  "forms": { "nom": "raštika", "gen": "raštike", "acc": "raštiku", "plural": false },
+  "latin": "Brassica oleracea var. acephala",
+  "aliases": ["raštika", "rastika", "raštan", "zelje", "kale"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "40 cm",
+  "spacingExplanation": [
+    "Biljke drži 40 cm jednu od druge.",
+    "Raste u visinu, a listove bereš odozdo."
+  ],
+  "containers": { "ok": true, "minPotCm": 30, "note": "U većem loncu daje listove mjesecima." },
+  "summary": "Dalmatinsko zelje bez glavice. Bereš listove mjesecima, od jeseni do proljeća.",
+  "weeklyTip": "Beri donje listove, vrh ostavi da biljka raste dalje.",
+  "illustration": { "kind": "leaf", "fill": "#3F7A4A", "stroke": "#1D3F24", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 6 }],
+    "adriatic": [{ "from": 8, "to": 10 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 9, "to": 2 }],
+    "adriatic": [{ "from": 10, "to": 4 }]
+  },
+  "steps": [
+    { "title": "Posij ili kupi presadnice", "text": "Na obali sadnja u jesen, na kontinentu u proljeće." },
+    { "title": "Posadi na 40 cm", "text": "Zalij nakon sadnje." },
+    { "title": "Zalijevaj u suši", "text": "Inače je otporna i skromna." },
+    { "title": "Beri donje listove", "text": "Biljka daje nove listove cijelu sezonu." }
+  ],
+  "problems": [
+    { "title": "Gusjenice", "signs": "Rupe u listovima.", "fix": "Skupljaj gusjenice i prekrij biljke mrežom." },
+    { "title": "Lisne uši", "signs": "Sivkaste uši na mladim listovima.", "fix": "Isperi ih jakim mlazom vode." }
+  ],
+  "neighbours": {
+    "good": ["Luk", "Celer", "Krumpir"],
+    "bad": ["Rajčica"]
+  }
+}

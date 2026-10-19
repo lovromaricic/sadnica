@@ -1,0 +1,44 @@
+{
+  "reviewed": false,
+  "id": "cvjetaca",
+  "name": "Cvjetača",
+  "forms": { "nom": "cvjetača", "gen": "cvjetače", "acc": "cvjetaču", "plural": false },
+  "latin": "Brassica oleracea var. botrytis",
+  "aliases": ["cvjetača", "karfiol", "karfiola", "cauliflower"],
+  "category": "veg",
+  "difficulty": "hard",
+  "sun": "full",
+  "water": "high",
+  "spacingText": "50 cm",
+  "spacingExplanation": [
+    "Presadnice sadi 50 cm jednu od druge.",
+    "Treba prostora i ravnomjernu vlagu."
+  ],
+  "spacingTip": "kad se pojavi bijeli cvat, preklopi preko njega nekoliko listova da ostane bijel.",
+  "containers": { "ok": false, "note": "Osjetljiva na sušu, bolje u gredici." },
+  "summary": "Zahtjevnija od kupusa: treba ravnomjernu vlagu i hranu. Nagrada je bijela glavica.",
+  "weeklyTip": "Preklopi listove preko cvata, sunce ga inače požuti.",
+  "illustration": { "kind": "cabbage", "fill": "#F3EEDC", "stroke": "#6E6A3A", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5 }, { "from": 6, "to": 7 }],
+    "adriatic": [{ "from": 2, "to": 3 }, { "from": 8, "to": 9 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 7, "to": 8 }, { "from": 9, "to": 11 }],
+    "adriatic": [{ "from": 5, "to": 6 }, { "from": 11, "to": 2 }]
+  },
+  "steps": [
+    { "title": "Kupi presadnice", "text": "Najsigurnije za početak." },
+    { "title": "Posadi na 50 cm", "text": "U zemlju bogatu kompostom." },
+    { "title": "Ne daj joj da presuši", "text": "Cvjetača u suši stvori sitan, rastresit cvat." },
+    { "title": "Zaštiti i beri cvat", "text": "Preklopi listove preko cvata i beri kad je čvrst." }
+  ],
+  "problems": [
+    { "title": "Sitan cvat", "signs": "Cvat ostane malen, veličine šake.", "fix": "Suša ili manjak hrane u mladosti. Zalijevaj redovito od sadnje." },
+    { "title": "Cvat požuti", "signs": "Glavica je žućkasta.", "fix": "Sunce. Preklopi listove preko cvata." }
+  ],
+  "neighbours": {
+    "good": ["Celer", "Luk", "Salata", "Kopar"],
+    "bad": ["Rajčica", "Jagoda"]
+  }
+}

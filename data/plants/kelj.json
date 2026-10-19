@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "kelj",
+  "name": "Kelj",
+  "forms": { "nom": "kelj", "gen": "kelja", "acc": "kelj", "plural": false },
+  "latin": "Brassica oleracea var. sabauda",
+  "aliases": ["kelj", "kelj glavati", "savoy"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "45 cm",
+  "spacingExplanation": [
+    "Presadnice sadi 45 cm jednu od druge.",
+    "Kovrčave glavice se šire."
+  ],
+  "containers": { "ok": false },
+  "summary": "Kovrčavi zimski kupus. Mraz mu ne smeta, čak postaje slađi.",
+  "weeklyTip": "Kelj možeš ostaviti u vrtu i brati ga po potrebi cijelu zimu.",
+  "illustration": { "kind": "cabbage", "fill": "#8CBF6A", "stroke": "#2F5A22", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 5, "to": 6 }],
+    "adriatic": [{ "from": 7, "to": 8 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 10, "to": 2 }],
+    "adriatic": [{ "from": 11, "to": 3 }]
+  },
+  "steps": [
+    { "title": "Kupi presadnice", "text": "U lipnju za zimsku berbu." },
+    { "title": "Posadi na 45 cm", "text": "U zemlju s kompostom." },
+    { "title": "Zalijevaj ljeti", "text": "Dok su biljke mlade." },
+    { "title": "Beri po potrebi", "text": "Od listopada do kraja zime." }
+  ],
+  "problems": [
+    { "title": "Gusjenice", "signs": "Rupe u listovima.", "fix": "Prekrij agrilom ljeti i skupljaj gusjenice." },
+    { "title": "Lisne uši", "signs": "Sivkaste uši na naličju listova.", "fix": "Isperi ih jakim mlazom vode ili otkini zahvaćene listove." }
+  ],
+  "neighbours": {
+    "good": ["Celer", "Luk", "Salata", "Kopar"],
+    "bad": ["Rajčica", "Jagoda"]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "mahune",
+  "name": "Mahune",
+  "forms": { "nom": "mahune", "gen": "mahuna", "acc": "mahune", "plural": true },
+  "latin": "Phaseolus vulgaris",
+  "aliases": ["mahune", "mahunar", "zeleni grah", "boranija", "green beans"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "rank": 10,
+  "spacingText": "10 cm",
+  "spacingExplanation": [
+    "Niske mahune sij 10 cm jednu od druge, u redove 40 cm.",
+    "Visoke mahune sij uz kolce, po nekoliko sjemenki oko svakog."
+  ],
+  "spacingTip": "niske ne trebaju potporu, a visoke daju više na istoj površini.",
+  "containers": { "ok": true, "minPotCm": 25, "note": "Niske sorte uspijevaju u koritu." },
+  "summary": "Brzo niču i obilno rađaju. Bereš ih cijelo ljeto.",
+  "weeklyTip": "Ne sij prije svibnja, sjeme u hladnoj zemlji trune.",
+  "illustration": { "kind": "pod", "fill": "#5FA84E", "stroke": "#25541E", "bg": "#D3E9FF" },
+  "sow": {
+    "continental": [{ "from": 5, "to": 7 }],
+    "adriatic": [{ "from": 4, "to": 7 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 7, "to": 9 }],
+    "adriatic": [{ "from": 6, "to": 10 }]
+  },
+  "steps": [
+    { "title": "Posij u toplu zemlju", "text": "Sjemenke 3 cm duboko." },
+    { "title": "Postavi kolce za visoke", "text": "Niske ne trebaju potporu." },
+    { "title": "Zalijevaj u cvatnji", "text": "Bez vode cvjetovi otpadaju." },
+    { "title": "Beri mlade mahune", "text": "Svaki drugi dan, dok su sočne." }
+  ],
+  "problems": [
+    { "title": "Sjeme ne niče", "signs": "Prošla su dva tjedna, a niklo nije ništa.", "fix": "Zemlja je bila prehladna i sjeme je istrunulo. Posij ponovno kad zatopli." },
+    { "title": "Crne lisne uši", "signs": "Vrhovi su puni crnih kukaca.", "fix": "Isperi ih mlazom vode ili otkini zahvaćene vrhove." }
+  ],
+  "neighbours": {
+    "good": ["Mrkva", "Krastavac", "Kukuruz"],
+    "bad": ["Luk", "Češnjak", "Poriluk"]
+  }
+}

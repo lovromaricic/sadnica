@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "radic",
+  "name": "Radič",
+  "forms": { "nom": "radič", "gen": "radiča", "acc": "radič", "plural": false },
+  "latin": "Cichorium intybus",
+  "aliases": ["radič", "radic", "cikorija", "crveni radič", "chicory"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "25 cm",
+  "spacingExplanation": [
+    "Biljke drži 25 cm jednu od druge, redove 30 cm.",
+    "Glavice radiča trebaju prostora da se zatvore."
+  ],
+  "containers": { "ok": true, "minPotCm": 25, "note": "Uspijeva u dubljem koritu." },
+  "summary": "Gorkasto lisnato povrće za jesen i zimu. Podnosi hladnoću bolje od salate.",
+  "weeklyTip": "Gorčina se ublaži ako ga nakon branja držiš sat vremena u hladnoj vodi.",
+  "illustration": { "kind": "rosette", "fill": "#A8324A", "stroke": "#55121F", "bg": "#E6DBFF" },
+  "sow": {
+    "continental": [{ "from": 6, "to": 7 }],
+    "adriatic": [{ "from": 7, "to": 8 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 9, "to": 12 }],
+    "adriatic": [{ "from": 10, "to": 2 }]
+  },
+  "steps": [
+    { "title": "Posij ljeti", "text": "Sij u lipnju i srpnju u brazdice duboke 1 cm." },
+    { "title": "Prorijedi", "text": "Ostavi biljku na svakih 25 cm." },
+    { "title": "Zalijevaj ljeti", "text": "Dok su biljke mlade, zemlja ne smije presušiti." },
+    { "title": "Beri glavice", "text": "Beri od rujna do prvih jačih mrazova." }
+  ],
+  "problems": [
+    { "title": "Ne stvara glavicu", "signs": "Listovi rastu raširen, glavica se ne zatvara.", "fix": "Posijano prerano ili pregusto. Sij u srpnju i prorijedi na vrijeme." },
+    { "title": "Puževi", "signs": "Izgrizeni listovi.", "fix": "Skupljaj ih navečer i drži gredicu bez korova." }
+  ],
+  "neighbours": {
+    "good": ["Mrkva", "Luk"],
+    "bad": []
+  }
+}

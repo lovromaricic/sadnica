@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "rotkvica",
+  "name": "Rotkvica",
+  "forms": { "nom": "rotkvica", "gen": "rotkvice", "acc": "rotkvicu", "plural": false },
+  "latin": "Raphanus sativus",
+  "aliases": ["rotkvica", "rotkvice", "rodkvica", "radish"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "rank": 5,
+  "spacingText": "5 cm",
+  "spacingExplanation": [
+    "Sij u redove 15 cm, a biljčice prorijedi na 5 cm.",
+    "Pregusto posijane rotkvice ne stvore gomolj."
+  ],
+  "spacingTip": "prorijedi čim niknu, inače ostaju tanke.",
+  "containers": { "ok": true, "minPotCm": 15, "note": "Uspijeva u svakom loncu dubljem od 15 cm." },
+  "summary": "Najbrže povrće: od sjetve do berbe samo tri do četiri tjedna. Savršeno za prvi pokušaj.",
+  "weeklyTip": "Sij malo svakih dva tjedna, pa imaš rotkvice stalno.",
+  "illustration": { "kind": "root", "fill": "#E04E6A", "stroke": "#8A1E36", "bg": "#FFD9DE" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 5 }, { "from": 8, "to": 9 }],
+    "adriatic": [{ "from": 2, "to": 4 }, { "from": 9, "to": 11 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 4, "to": 6 }, { "from": 9, "to": 10 }],
+    "adriatic": [{ "from": 3, "to": 5 }, { "from": 10, "to": 12 }]
+  },
+  "steps": [
+    { "title": "Posij 1 cm duboko", "text": "Sjemenke pospi u brazdice, 15 cm razmaka." },
+    { "title": "Drži vlažno", "text": "Niknu za nekoliko dana." },
+    { "title": "Prorijedi na 5 cm", "text": "Čim niknu, ostavi jednu na svakih 5 cm." },
+    { "title": "Beri na vrijeme", "text": "Kad su veličine trešnje. Kasnije postaju šuplje." }
+  ],
+  "problems": [
+    { "title": "Šuplje ili drvenaste rotkvice", "signs": "Gomolj je spužvast ili tvrd.", "fix": "Ubrane prekasno ili je bilo suho. Beri čim dosegnu veličinu trešnje i zalijevaj redovito." },
+    { "title": "Nema gomolja, samo listovi", "signs": "Rastu samo listovi.", "fix": "Pregusto ili premalo sunca. Prorijedi i sij na sunčano mjesto." }
+  ],
+  "neighbours": {
+    "good": ["Salata", "Mrkva", "Špinat"],
+    "bad": []
+  }
+}

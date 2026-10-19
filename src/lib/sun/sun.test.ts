@@ -67,8 +67,10 @@ describe('verdict', () => {
 
 describe('betterPlants', () => {
 	it('suggests plants that fit the measured sun, never the checked plant', () => {
-		const ids = betterPlants(plants, 'partial', 'rajcica').map((p) => p.id);
-		expect(ids.sort()).toEqual(['matovilac', 'spinat']);
+		const partial = betterPlants(plants, 'partial', 'rajcica');
+		expect(partial).toHaveLength(3);
+		// Exact matches for the measured sun come first, easy ones before harder.
+		expect(partial.every((p) => p.sun === 'partial' && p.difficulty === 'easy')).toBe(true);
 		expect(betterPlants(plants, 'full', 'cesnjak')).toHaveLength(3);
 		expect(betterPlants(plants, 'full', 'cesnjak').map((p) => p.id)).not.toContain('cesnjak');
 		expect(betterPlants(plants, 'shade', 'rajcica')).toEqual([]);

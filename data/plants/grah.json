@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "grah",
+  "name": "Grah",
+  "forms": { "nom": "grah", "gen": "graha", "acc": "grah", "plural": false },
+  "latin": "Phaseolus vulgaris",
+  "aliases": ["grah", "grah zrnaš", "grah tetovac", "pasulj", "beans"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "10 cm",
+  "spacingExplanation": [
+    "Sij 10 cm jedan od drugog, u redove 50 cm.",
+    "Visoki grah sij oko kolaca, četiri do pet zrna oko svakog."
+  ],
+  "containers": { "ok": false },
+  "summary": "Grah za suho zrno, za variva preko zime. Bere se kad se mahune osuše.",
+  "weeklyTip": "Ostavi mahune da se osuše na biljci, pa ih beri po suhom vremenu.",
+  "illustration": { "kind": "pod", "fill": "#C9A86A", "stroke": "#6E5228", "bg": "#FFE2C2" },
+  "sow": {
+    "continental": [{ "from": 5, "to": 6 }],
+    "adriatic": [{ "from": 4, "to": 6 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 8, "to": 10 }],
+    "adriatic": [{ "from": 8, "to": 10 }]
+  },
+  "steps": [
+    { "title": "Posij u toplu zemlju", "text": "Sjemenke 4 cm duboko." },
+    { "title": "Postavi kolce", "text": "Za visoke sorte, visine dva metra." },
+    { "title": "Zalijevaj u cvatnji", "text": "Kasnije manje." },
+    { "title": "Beri suhe mahune", "text": "Kad mahune šuškaju, zrno je zrelo." }
+  ],
+  "problems": [
+    { "title": "Žižak u zrnu", "signs": "U suhom zrnu su rupice.", "fix": "Zrno nakon berbe drži tri dana u zamrzivaču, pa ga spremi u zatvorenu staklenku." },
+    { "title": "Crne lisne uši", "signs": "Vrhovi su puni crnih kukaca.", "fix": "Isperi ih mlazom vode." }
+  ],
+  "neighbours": {
+    "good": ["Kukuruz", "Bundeva", "Krastavac"],
+    "bad": ["Luk", "Češnjak", "Poriluk"]
+  }
+}

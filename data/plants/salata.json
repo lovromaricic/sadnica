@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "salata",
+  "name": "Salata",
+  "forms": { "nom": "salata", "gen": "salate", "acc": "salatu", "plural": false },
+  "latin": "Lactuca sativa",
+  "aliases": ["salata", "zelena salata", "glavatica", "kristalka", "lettuce"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "partial",
+  "water": "medium",
+  "rank": 7,
+  "spacingText": "25 cm",
+  "spacingExplanation": [
+    "Glavatice sadi 25 cm jednu od druge.",
+    "Za rezanu salatu sij gušće i beri mlade listove."
+  ],
+  "spacingTip": "sij malo svakih dva do tri tjedna, pa imaš salatu cijelu sezonu.",
+  "containers": { "ok": true, "minPotCm": 20, "note": "Jedna glavatica po loncu ili više njih u koritu." },
+  "summary": "Brzo raste i lako uspijeva. Bereš je već mjesec i pol nakon sadnje.",
+  "weeklyTip": "Zalijevaj ujutro, a ne navečer, pa će puževi imati manje prilike.",
+  "illustration": { "kind": "rosette", "fill": "#A6D86E", "stroke": "#3C6B1F", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 5 }, { "from": 8, "to": 9 }],
+    "adriatic": [{ "from": 2, "to": 4 }, { "from": 9, "to": 11 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 5, "to": 7 }, { "from": 10, "to": 11 }],
+    "adriatic": [{ "from": 4, "to": 6 }, { "from": 11, "to": 2 }]
+  },
+  "steps": [
+    { "title": "Posij ili kupi presadnice", "text": "Presadnice su najbrži početak. Sjeme sij plitko, samo ga pospi zemljom." },
+    { "title": "Posadi plitko", "text": "Srce presadnice mora ostati iznad zemlje, inače trune." },
+    { "title": "Drži vlažno", "text": "Zalijevaj redovito, salata ne voli sušu." },
+    { "title": "Beri na vrijeme", "text": "Beri cijelu glavicu ili vanjske listove prije nego izraste stabljika." }
+  ],
+  "problems": [
+    { "title": "Puževi", "signs": "Rupe u listovima i sjajni tragovi.", "fix": "Skupljaj ih navečer i oko gredice pospi pijesak ili pepeo." },
+    { "title": "Ide u cvijet", "signs": "Iz sredine raste visoka stabljika, listovi postaju gorki.", "fix": "Ljeti je prevruće. Sij u proljeće i jesen, a ljeti u polusjeni." }
+  ],
+  "neighbours": {
+    "good": ["Mrkva", "Rotkvica", "Luk", "Krastavac"],
+    "bad": ["Peršin"]
+  }
+}

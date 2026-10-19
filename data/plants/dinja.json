@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "dinja",
+  "name": "Dinja",
+  "forms": { "nom": "dinja", "gen": "dinje", "acc": "dinju", "plural": false },
+  "latin": "Cucumis melo",
+  "aliases": ["dinja", "dinje", "melon", "cantaloupe"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "100 cm",
+  "spacingExplanation": [
+    "Biljke sadi metar jednu od druge.",
+    "Vriježe se šire po zemlji."
+  ],
+  "containers": { "ok": false },
+  "summary": "Slatka i mirisna, ali treba toplinu. Na kontinentu je sadi uz topli zid.",
+  "weeklyTip": "Dinja je zrela kad zamiriše i lako se odvoji od peteljke.",
+  "illustration": { "kind": "fruit", "fill": "#E9C46A", "stroke": "#8A6A1A", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 5, "to": 5 }],
+    "adriatic": [{ "from": 4, "to": 5 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 8, "to": 9 }],
+    "adriatic": [{ "from": 7, "to": 9 }]
+  },
+  "steps": [
+    { "title": "Kupi presadnice", "text": "Sadi ih tek kad noći postanu tople." },
+    { "title": "Posadi na sunce", "text": "Na najtoplije, zaštićeno mjesto." },
+    { "title": "Otkini vrh vriježe", "text": "Kad ima pet do šest listova, biljka će se granati i ranije roditi." },
+    { "title": "Beri po mirisu", "text": "Zrela dinja zamiriše i sama se odvaja." }
+  ],
+  "problems": [
+    { "title": "Plodovi pucaju", "signs": "Zreli plodovi napuknu.", "fix": "Previše vode pri dozrijevanju. Smanji zalijevanje kad plodovi narastu." },
+    { "title": "Bijela prevlaka na listovima", "signs": "Pepelnica.", "fix": "Otkini zahvaćene listove." }
+  ],
+  "neighbours": {
+    "good": ["Kukuruz", "Rotkvica"],
+    "bad": ["Krumpir"]
+  }
+}

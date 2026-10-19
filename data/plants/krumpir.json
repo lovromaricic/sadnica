@@ -1,0 +1,46 @@
+{
+  "reviewed": false,
+  "id": "krumpir",
+  "name": "Krumpir",
+  "forms": { "nom": "krumpir", "gen": "krumpira", "acc": "krumpir", "plural": false },
+  "latin": "Solanum tuberosum",
+  "aliases": ["krumpir", "krompir", "kumpir", "potato"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "rank": 8,
+  "spacingText": "35 cm",
+  "spacingExplanation": [
+    "Gomolje sadi 35 cm jedan od drugog, u redove 60 cm.",
+    "Između redova treba mjesta za zagrtanje."
+  ],
+  "spacingTip": "zagrći biljke dva puta, gomolji ne smiju biti na svjetlu.",
+  "containers": { "ok": true, "minPotCm": 40, "note": "U velikoj vreći ili kanti od 40 litara." },
+  "summary": "Posadiš gomolj, a ispod zemlje naraste cijelo gnijezdo novih.",
+  "weeklyTip": "Gomolje prije sadnje drži dva tjedna na svijetlom mjestu da proklijaju.",
+  "illustration": { "kind": "tuber", "fill": "#D9B07A", "stroke": "#6E4A22", "bg": "#FFE2C2" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5 }],
+    "adriatic": [{ "from": 2, "to": 4 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 7, "to": 9 }],
+    "adriatic": [{ "from": 6, "to": 8 }]
+  },
+  "steps": [
+    { "title": "Proklijaj gomolje", "text": "Dva tjedna prije sadnje drži ih na svijetlom, hladnijem mjestu." },
+    { "title": "Posadi 10 cm duboko", "text": "Klicama prema gore, 35 cm razmaka." },
+    { "title": "Zagrći", "text": "Kad su biljke visoke 20 cm, nagrni zemlju oko njih. Ponovi nakon tri tjedna." },
+    { "title": "Vadi kad lišće uvene", "text": "Pričekaj da se cima osuši, pa vadi vilama." }
+  ],
+  "problems": [
+    { "title": "Zeleni gomolji", "signs": "Gomolji su pozelenjeli.", "fix": "Bili su na svjetlu. Zagrći bolje. Zelene dijelove ne jedi." },
+    { "title": "Krumpirova zlatica", "signs": "Narančasto-crne ličinke i prugasti kornjaši jedu lišće.", "fix": "Pregledaj biljke svakih par dana i skupljaj kornjaše i jajašca s naličja listova." },
+    { "title": "Tamne mrlje i propadanje lišća", "signs": "Listovi dobiju tamne mrlje i venu, najčešće nakon kiše.", "fix": "Plamenjača. Otkini zahvaćeno lišće, a kad se proširi, pokosi cimu i izvadi gomolje." }
+  ],
+  "neighbours": {
+    "good": ["Bob", "Grah", "Kupus"],
+    "bad": ["Rajčica", "Krastavac", "Tikvica"]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "reviewed": false,
+  "id": "poriluk",
+  "name": "Poriluk",
+  "forms": { "nom": "poriluk", "gen": "poriluka", "acc": "poriluk", "plural": false },
+  "latin": "Allium porrum",
+  "aliases": ["poriluk", "porluk", "prasa", "leek"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "15 cm",
+  "spacingExplanation": [
+    "Presadnice sadi 15 cm jednu od druge, u redove 30 cm.",
+    "Bijeli dio raste ispod zemlje, pa ga treba duboko posaditi."
+  ],
+  "spacingTip": "što dublje posadiš, to je duži bijeli dio.",
+  "containers": { "ok": true, "minPotCm": 30, "note": "Treba dubok lonac, barem 30 cm." },
+  "summary": "Dugo raste, ali je otporan na hladnoću. Bereš ga od jeseni do kasne zime.",
+  "weeklyTip": "Presadnicu spusti u rupu duboku 15 cm i samo je zalij, ne zatrpavaj.",
+  "illustration": { "kind": "stalk", "fill": "#EEF4E0", "stroke": "#4C6B3A", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 4, "note": "Sjetva u lončiće." }, { "from": 5, "to": 6, "note": "Presađivanje van." }],
+    "adriatic": [{ "from": 2, "to": 3, "note": "Sjetva u lončiće." }, { "from": 4, "to": 6, "note": "Presađivanje van." }]
+  },
+  "harvest": {
+    "continental": [{ "from": 9, "to": 2 }],
+    "adriatic": [{ "from": 10, "to": 3 }]
+  },
+  "steps": [
+    { "title": "Posij ili kupi presadnice", "text": "Najlakše je kupiti presadnice debljine olovke." },
+    { "title": "Napravi duboke rupe", "text": "Štapom napravi rupe duboke oko 15 cm, 15 cm jednu od druge." },
+    { "title": "Spusti presadnicu i zalij", "text": "Presadnicu spusti u rupu i zalij. Voda će sama nanijeti malo zemlje." },
+    { "title": "Zagrći ljeti", "text": "Tijekom ljeta nagrni zemlju oko stabljika, bijeli dio bit će duži." }
+  ],
+  "problems": [
+    { "title": "Narančaste točkice na listovima", "signs": "Listovi imaju sitne narančaste mrlje.", "fix": "To je hrđa. Otkini zahvaćene listove i ne sadi poriluk pregusto." },
+    { "title": "Tanke stabljike", "signs": "Poriluk ostaje tanak.", "fix": "Treba mu hrane i vode. Pospi kompost i zalijevaj u suši." }
+  ],
+  "neighbours": {
+    "good": ["Mrkva", "Celer", "Rajčica"],
+    "bad": ["Grah", "Grašak"]
+  }
+}

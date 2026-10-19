@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "blitva",
+  "name": "Blitva",
+  "forms": { "nom": "blitva", "gen": "blitve", "acc": "blitvu", "plural": false },
+  "latin": "Beta vulgaris var. cicla",
+  "aliases": ["blitva", "mangold", "chard"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "partial",
+  "water": "medium",
+  "rank": 9,
+  "spacingText": "30 cm",
+  "spacingExplanation": [
+    "Biljke drži 30 cm jednu od druge.",
+    "Blitva naraste velika i bereš je mjesecima, pa joj treba mjesta."
+  ],
+  "spacingTip": "beri vanjske listove, a srce ostavi da raste dalje.",
+  "containers": { "ok": true, "minPotCm": 30, "note": "U većem loncu daje listove cijelo ljeto." },
+  "summary": "Jedna sjetva, berba cijelo ljeto i jesen. Podnosi i vrućinu i hladnoću.",
+  "weeklyTip": "Ne beri više od trećine listova odjednom.",
+  "illustration": { "kind": "leaf", "fill": "#3E8E41", "stroke": "#1E4A20", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 7 }],
+    "adriatic": [{ "from": 3, "to": 5 }, { "from": 8, "to": 9 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 11 }],
+    "adriatic": [{ "from": 5, "to": 12 }]
+  },
+  "steps": [
+    { "title": "Posij 2 cm duboko", "text": "Sjemenke stavi 2 cm duboko, u redove 30 cm." },
+    { "title": "Prorijedi", "text": "Iz svakog sjemena nikne nekoliko biljčica. Ostavi najjaču na svakih 30 cm." },
+    { "title": "Zalijevaj u suši", "text": "Blitva podnosi vrućinu, ali u suši daje tvrđe listove." },
+    { "title": "Beri vanjske listove", "text": "Odreži ih pri dnu. Biljka daje nove do mraza." }
+  ],
+  "problems": [
+    { "title": "Mrlje na listovima", "signs": "Okrugle smeđe mrlje s crvenim rubom.", "fix": "Otkini zahvaćene listove i zalijevaj zemlju, a ne lišće." },
+    { "title": "Ide u cvijet", "signs": "Iz sredine raste visoka stabljika.", "fix": "Iščupaj biljku i posij novu." }
+  ],
+  "neighbours": {
+    "good": ["Luk", "Salata", "Grah"],
+    "bad": ["Špinat"]
+  }
+}

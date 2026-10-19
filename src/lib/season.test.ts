@@ -143,6 +143,13 @@ describe('recommend', () => {
 		expect(ids).not.toContain('rajcica');
 	});
 
+	it('puts plants in their prime before ones that only just still fit', () => {
+		// Rocket's window ends this month ("Još stigneš"); garlic is in its prime until the end of November.
+		const ids = recommend(items).map((i) => i.plant.id);
+		expect(ids.indexOf('cesnjak')).toBeLessThan(ids.indexOf('rikola'));
+		expect(getSeasonStatus(P('rikola'), 'continental', d(2026, 10, 19), rules).status).toBe('late');
+	});
+
 	it('puts easy plants before harder ones, even when those close sooner', () => {
 		// May: basil (easy) is in season, carrot and tomato (medium) too, tomato closes soonest.
 		const may = recommend(withSeason(plants, 'continental', d(2026, 5, 10), rules)).map((i) => i.plant.id);
@@ -162,8 +169,13 @@ describe('recommend for balcony gardeners', () => {
 	const ids = (place?: Parameters<typeof recommend>[1]) => recommend(items, place).map((i) => i.plant.id);
 
 	it('puts pot-friendly plants first, even before cover-free ones', () => {
+		const list = ids('balcony');
+		const pots = list.map((id) => P(id).containers?.ok === true);
+		// Every pot plant comes before every plant that does not suit a pot.
+		expect(pots.indexOf(false)).toBeGreaterThan(pots.lastIndexOf(true));
+		expect(list[0]).toBe('cesnjak');
 		// Broad bean does not suit a pot, so it drops below the cover-only lamb's lettuce and spinach.
-		expect(ids('balcony')).toEqual(['cesnjak', 'luk-ljutika', 'spinat', 'matovilac', 'bob']);
+		expect(list.indexOf('bob')).toBeGreaterThan(list.indexOf('spinat'));
 	});
 
 	it('keeps the usual order for every other place', () => {

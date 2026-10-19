@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "pastrnjak",
+  "name": "Pastrnjak",
+  "forms": { "nom": "pastrnjak", "gen": "pastrnjaka", "acc": "pastrnjak", "plural": false },
+  "latin": "Pastinaca sativa",
+  "aliases": ["pastrnjak", "pastrnak", "pastinaka", "parsnip"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "10 cm",
+  "spacingExplanation": [
+    "Prorijedi na 10 cm, redove drži 30 cm.",
+    "Korijen je dug i debeo pa treba prostora."
+  ],
+  "containers": { "ok": false, "note": "Korijen je predug za lonac." },
+  "summary": "Slatki bijeli korijen. Mraz ga čini još slađim, pa ga beri zimi.",
+  "weeklyTip": "Uvijek sij svježe sjeme, staro slabo niče.",
+  "illustration": { "kind": "root", "fill": "#F1E6C8", "stroke": "#7A6A3A", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 10, "to": 2 }],
+    "adriatic": [{ "from": 11, "to": 2 }]
+  },
+  "steps": [
+    { "title": "Prekopaj duboko", "text": "Korijen raste do 30 cm duboko." },
+    { "title": "Posij 1-2 cm duboko", "text": "Sij gušće, jer ne nikne svako sjeme." },
+    { "title": "Prorijedi", "text": "Ostavi biljku na svakih 10 cm." },
+    { "title": "Beri nakon mraza", "text": "Korijen može ostati u zemlji cijelu zimu." }
+  ],
+  "problems": [
+    { "title": "Slabo niče", "signs": "Niklo je samo nekoliko biljaka.", "fix": "Sjeme brzo stari. Kupi svježe i sij gušće." },
+    { "title": "Tamne mrlje na vrhu korijena", "signs": "Gornji dio korijena trune.", "fix": "Ne ozljeđuj korijen pri okopavanju i sadi svake godine na drugo mjesto." }
+  ],
+  "neighbours": {
+    "good": ["Luk", "Rotkvica"],
+    "bad": []
+  }
+}

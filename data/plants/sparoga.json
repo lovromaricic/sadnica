@@ -1,0 +1,46 @@
+{
+  "reviewed": false,
+  "id": "sparoga",
+  "name": "Šparoga",
+  "forms": { "nom": "šparoga", "gen": "šparoge", "acc": "šparogu", "plural": false },
+  "latin": "Asparagus officinalis",
+  "aliases": ["šparoga", "šparoge", "sparoga", "asparagus"],
+  "category": "veg",
+  "difficulty": "hard",
+  "sun": "full",
+  "water": "low",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 3 },
+  "spacingText": "40 cm",
+  "spacingExplanation": [
+    "Korijene (rizome) sadi 40 cm jedan od drugog, u redove 1 m.",
+    "Gredica traje 15 do 20 godina, pa joj odredi stalno mjesto."
+  ],
+  "spacingTip": "prve dvije godine ne beri, biljka mora ojačati.",
+  "containers": { "ok": false, "note": "Trajna biljka za gredicu." },
+  "summary": "Posadiš jednom, bereš 15 godina. Prve dvije godine treba strpljenja.",
+  "weeklyTip": "Šparoge se beru u proljeće, kad izbojci dosegnu 20 cm.",
+  "illustration": { "kind": "stalk", "fill": "#8FBF6A", "stroke": "#35592A", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 4, "to": 5 }],
+    "adriatic": [{ "from": 3, "to": 5 }]
+  },
+  "steps": [
+    { "title": "Kupi rizome", "text": "Jednogodišnje korijene kupiš u rasadniku." },
+    { "title": "Posadi u jarak", "text": "Jarak dubok 20 cm, korijen raširi i lagano zatrpaj." },
+    { "title": "Pusti da raste", "text": "Prve dvije godine ne beri, neka biljka ojača." },
+    { "title": "Beri treće godine", "text": "Režu se mladi izbojci u proljeće, šest do osam tjedana." }
+  ],
+  "problems": [
+    { "title": "Tanki izbojci", "signs": "Šparoge su tanke kao olovka.", "fix": "Biljka je preslaba ili je prerano brana. Godinu dana ne beri i prihrani kompostom." },
+    { "title": "Korov preraste gredicu", "signs": "Gredicu zaraste trava.", "fix": "Malčiraj slamom, a korov čupaj rukom da ne ozlijediš korijenje." }
+  ],
+  "neighbours": {
+    "good": ["Rajčica", "Peršin", "Bosiljak"],
+    "bad": ["Luk", "Češnjak"]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "reviewed": false,
+  "id": "celer",
+  "name": "Celer",
+  "forms": { "nom": "celer", "gen": "celera", "acc": "celer", "plural": false },
+  "latin": "Apium graveolens",
+  "aliases": ["celer", "celer gomoljaš", "zeler", "celery"],
+  "category": "veg",
+  "difficulty": "hard",
+  "sun": "full",
+  "water": "high",
+  "spacingText": "35 cm",
+  "spacingExplanation": [
+    "Presadnice sadi 35 cm jednu od druge.",
+    "Gomolj se širi i treba prostora."
+  ],
+  "spacingTip": "ne sadi ga preduboko, gomolj mora biti napola iznad zemlje.",
+  "containers": { "ok": false, "note": "Treba puno vode i prostora, bolje u gredici." },
+  "summary": "Zahtjevniji: dugo raste i traži puno vode. Nagrada je mirisni gomolj za cijelu zimu.",
+  "weeklyTip": "Kupi presadnice, sjetva celera je spora i zahtjevna.",
+  "illustration": { "kind": "tuber", "fill": "#E3E8C9", "stroke": "#5A6B33", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 2, "to": 3, "note": "Sjetva u zatvorenom." }, { "from": 5, "to": 6, "note": "Presađivanje van." }],
+    "adriatic": [{ "from": 2, "to": 3, "note": "Sjetva u zatvorenom." }, { "from": 4, "to": 5, "note": "Presađivanje van." }]
+  },
+  "harvest": {
+    "continental": [{ "from": 9, "to": 11 }],
+    "adriatic": [{ "from": 9, "to": 12 }]
+  },
+  "steps": [
+    { "title": "Kupi presadnice", "text": "Zdrave presadnice imaju tamnozelene listove." },
+    { "title": "Posadi plitko", "text": "Gomolj mora ostati napola iznad zemlje." },
+    { "title": "Zalijevaj obilno", "text": "Celer ne smije presušiti, osobito ljeti." },
+    { "title": "Makni bočne listove", "text": "Krajem ljeta otkini donje listove i bočne izdanke." }
+  ],
+  "problems": [
+    { "title": "Sitan gomolj", "signs": "Gomolj ostaje mali.", "fix": "Premalo vode ili hrane. Zalijevaj redovito i prihrani kompostom." },
+    { "title": "Pjege na listovima", "signs": "Smeđe mrlje na lišću.", "fix": "Otkini zahvaćene listove i ne kvasi lišće pri zalijevanju." }
+  ],
+  "neighbours": {
+    "good": ["Poriluk", "Kupus", "Rajčica"],
+    "bad": ["Krumpir"]
+  }
+}

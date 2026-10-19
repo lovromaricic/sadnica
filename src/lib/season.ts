@@ -161,6 +161,8 @@ export function recommend(items: PlantWithSeason[], place?: Place): PlantWithSea
 			(a, b) =>
 				(pots ? Number(potFriendly(b.plant)) - Number(potFriendly(a.plant)) : 0) ||
 				Number(a.season.needsCover) - Number(b.season.needsCover) ||
+				// Plants in their prime come before ones you can only just still sow ("Još stigneš").
+				Number(a.season.status === 'late') - Number(b.season.status === 'late') ||
 				DIFFICULTY_ORDER[a.plant.difficulty] - DIFFICULTY_ORDER[b.plant.difficulty] ||
 				(a.season.daysLeft ?? 0) - (b.season.daysLeft ?? 0) ||
 				(a.plant.rank ?? 100) - (b.plant.rank ?? 100) ||

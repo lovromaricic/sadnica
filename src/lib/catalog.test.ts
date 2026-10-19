@@ -7,12 +7,20 @@ const items = withSeason(plants, 'continental', new Date(2026, 9, 19), rules);
 const ids = (active: FilterKey[], query = '') => filterCatalog(items, query, new Set(active)).map((i) => i.plant.id).sort();
 
 describe('filterCatalog', () => {
+	const pot = (id: string) => plants.find((p) => p.id === id)?.containers?.ok === true;
+
 	it('"Za balkon" keeps only plants that suit a pot', () => {
-		expect(ids(['balcony'])).toEqual(['bosiljak', 'cesnjak', 'luk-ljutika', 'matovilac', 'mrkva', 'rajcica', 'spinat']);
+		const balcony = ids(['balcony']);
+		expect(balcony.length).toBeGreaterThan(0);
+		expect(balcony.every(pot)).toBe(true);
+		expect(balcony).toEqual(expect.arrayContaining(['bosiljak', 'cesnjak', 'rajcica']));
+		expect(balcony).not.toContain('bob');
 	});
 
 	it('combines "Za balkon" with season and search as AND', () => {
-		expect(ids(['balcony', 'season'])).toEqual(['cesnjak', 'luk-ljutika', 'matovilac', 'spinat']);
+		const both = ids(['balcony', 'season']);
+		expect(both).toEqual(expect.arrayContaining(['cesnjak', 'luk-ljutika']));
+		expect(both.every((id) => pot(id) && ids(['season']).includes(id))).toBe(true);
 		expect(ids(['season'])).toContain('bob');
 		expect(ids(['balcony'], 'bob')).toEqual([]);
 		expect(ids(['balcony'], 'cesnjak')).toEqual(['cesnjak']);

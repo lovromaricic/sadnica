@@ -1,0 +1,44 @@
+{
+  "reviewed": false,
+  "id": "brokula",
+  "name": "Brokula",
+  "forms": { "nom": "brokula", "gen": "brokule", "acc": "brokulu", "plural": false },
+  "latin": "Brassica oleracea var. italica",
+  "aliases": ["brokula", "brokoli", "broccoli"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "high",
+  "spacingText": "45 cm",
+  "spacingExplanation": [
+    "Presadnice sadi 45 cm jednu od druge.",
+    "Biljka je velika, a cvat raste u sredini."
+  ],
+  "spacingTip": "kad odrežeš glavni cvat, iz pazuha listova narastu manji.",
+  "containers": { "ok": true, "minPotCm": 40, "note": "Jedna biljka u velikom loncu." },
+  "summary": "Bereš zelene cvjetove prije nego procvjetaju. Nakon glavnog cvata rastu još manji.",
+  "weeklyTip": "Beri cvat dok su pupoljci zbijeni i tamnozeleni, prije nego požute.",
+  "illustration": { "kind": "cabbage", "fill": "#5C9E4A", "stroke": "#244F1C", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 4, "note": "Sjetva u lončiće." }, { "from": 7, "to": 7, "note": "Za jesensku berbu." }],
+    "adriatic": [{ "from": 2, "to": 3 }, { "from": 8, "to": 9 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 7 }, { "from": 9, "to": 11 }],
+    "adriatic": [{ "from": 5, "to": 6 }, { "from": 11, "to": 2 }]
+  },
+  "steps": [
+    { "title": "Kupi ili uzgoji presadnice", "text": "Sadi ih s četiri do šest listova." },
+    { "title": "Posadi na 45 cm", "text": "Zalij odmah nakon sadnje." },
+    { "title": "Zalijevaj redovito", "text": "U suši brokula prebrzo procvjeta." },
+    { "title": "Beri cvat", "text": "Odreži glavni cvat s komadom stabljike." }
+  ],
+  "problems": [
+    { "title": "Cvat žuti i cvjeta", "signs": "Pupoljci se otvaraju u žute cvjetiće.", "fix": "Ubrano prekasno ili je bilo prevruće. Beri ranije i zalijevaj u suši." },
+    { "title": "Gusjenice", "signs": "Rupe u listovima.", "fix": "Prekrij biljke agrilom ili mrežom i ručno skupljaj gusjenice." }
+  ],
+  "neighbours": {
+    "good": ["Celer", "Luk", "Salata", "Kopar"],
+    "bad": ["Rajčica", "Jagoda"]
+  }
+}

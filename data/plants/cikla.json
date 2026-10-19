@@ -1,0 +1,44 @@
+{
+  "reviewed": false,
+  "id": "cikla",
+  "name": "Cikla",
+  "forms": { "nom": "cikla", "gen": "cikle", "acc": "ciklu", "plural": false },
+  "latin": "Beta vulgaris",
+  "aliases": ["cikla", "crvena repa", "cvekla", "beetroot"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "10 cm",
+  "spacingExplanation": [
+    "Biljke prorijedi na 10 cm, redove drži 25 cm.",
+    "Iz jednog sjemena nikne nekoliko biljčica, pa je prorjeđivanje obavezno."
+  ],
+  "spacingTip": "mlade listove koje počupaš možeš pojesti kao salatu.",
+  "containers": { "ok": true, "minPotCm": 25, "note": "Treba lonac dubok barem 25 cm." },
+  "summary": "Slatki korijen i jestivi listovi. Lako raste i dobro se čuva.",
+  "weeklyTip": "Prije sjetve namoči sjeme preko noći, brže će niknuti.",
+  "illustration": { "kind": "root", "fill": "#8E1F4C", "stroke": "#4A0F26", "bg": "#E6DBFF" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 6 }],
+    "adriatic": [{ "from": 3, "to": 5 }, { "from": 8, "to": 9 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 7, "to": 10 }],
+    "adriatic": [{ "from": 6, "to": 11 }]
+  },
+  "steps": [
+    { "title": "Namoči sjeme", "text": "Ostavi ga preko noći u mlakoj vodi." },
+    { "title": "Posij 2 cm duboko", "text": "U redove 25 cm." },
+    { "title": "Prorijedi na 10 cm", "text": "Ostavi najjaču biljčicu na svakih 10 cm." },
+    { "title": "Beri kad je korijen veličine šake", "text": "Veći korijeni postaju drvenasti." }
+  ],
+  "problems": [
+    { "title": "Korijen je sitan", "signs": "Ostaje mali i tvrd.", "fix": "Pregusto. Prorijedi na 10 cm i zalijevaj u suši." },
+    { "title": "Crne pjege u korijenu", "signs": "Unutra se vide tamne točke.", "fix": "Manjak bora u tlu. Dodaj kompost, a iduće godine sadi na drugo mjesto." }
+  ],
+  "neighbours": {
+    "good": ["Luk", "Salata", "Kupus"],
+    "bad": ["Špinat"]
+  }
+}

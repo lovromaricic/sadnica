@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "patlidzan",
+  "name": "Patlidžan",
+  "forms": { "nom": "patlidžan", "gen": "patlidžana", "acc": "patlidžan", "plural": false },
+  "latin": "Solanum melongena",
+  "aliases": ["patlidžan", "patlidzan", "melancana", "modri patlidžan", "eggplant", "aubergine"],
+  "category": "veg",
+  "difficulty": "hard",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "50 cm",
+  "spacingExplanation": [
+    "Presadnice sadi 50 cm jednu od druge.",
+    "Biljka je široka i treba toplinu sa svih strana."
+  ],
+  "containers": { "ok": true, "minPotCm": 30, "note": "U crnoj posudi na suncu korijen je topliji, što patlidžan voli." },
+  "summary": "Najosjetljiviji na hladnoću od svih ljetnih biljaka. Treba vruće ljeto i puno sunca.",
+  "weeklyTip": "Kupi presadnice, a sadi ih tek kad noći budu iznad 12 °C.",
+  "illustration": { "kind": "cucumber", "fill": "#5B2A6E", "stroke": "#2A1036", "bg": "#E6DBFF" },
+  "sow": {
+    "continental": [{ "from": 2, "to": 3, "note": "Sjetva u zatvorenom, na toplom i svijetlom mjestu." }, { "from": 5, "to": 5, "note": "Presadnice van nakon zadnjeg mraza." }],
+    "adriatic": [{ "from": 2, "to": 2, "note": "Sjetva u zatvorenom, na toplom i svijetlom mjestu." }, { "from": 4, "to": 5, "note": "Presadnice van kad noći postanu tople." }]
+  },
+  "harvest": {
+    "continental": [{ "from": 8, "to": 9 }],
+    "adriatic": [{ "from": 7, "to": 10 }]
+  },
+  "steps": [
+    { "title": "Kupi presadnice", "text": "Sadi ih kasnije od rajčice, kad je baš toplo." },
+    { "title": "Posadi na najtoplije mjesto", "text": "Uz južni zid ili u zaštićen kut." },
+    { "title": "Zalijevaj redovito", "text": "Zemlja treba biti blago vlažna." },
+    { "title": "Beri sjajne plodove", "text": "Kad koža izgubi sjaj, plod je prezreo." }
+  ],
+  "problems": [
+    { "title": "Rupice u listovima", "signs": "Sitne okrugle rupice.", "fix": "Buhači. Prekrij mlade biljke agrilom i zalijevaj redovito." },
+    { "title": "Cvjetovi otpadaju", "signs": "Biljka cvjeta, ali nema plodova.", "fix": "Prehladno noću. Patlidžan treba vruće ljeto, na kontinentu mu je potrebno najtoplije mjesto." }
+  ],
+  "neighbours": {
+    "good": ["Grah", "Bosiljak"],
+    "bad": ["Krumpir"]
+  }
+}
