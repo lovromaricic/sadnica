@@ -170,8 +170,8 @@ export function recommend(items: PlantWithSeason[], place?: Place): PlantWithSea
 
 /** The plant of the week: the first pick, but never one that does not suit a pot for balcony gardeners. */
 export function heroPick(picks: PlantWithSeason[], place?: Place): PlantWithSeason | undefined {
-	const first = picks[0];
-	return first && (place !== 'balcony' || potFriendly(first.plant)) ? first : undefined;
+	// Trees and bushes are a long project, not "this week's" pick for a beginner.
+	return picks.find((p) => !p.plant.perennial && (place !== 'balcony' || potFriendly(p.plant)));
 }
 
 /** Plants whose next window opens soon, soonest first. */

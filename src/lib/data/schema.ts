@@ -34,7 +34,11 @@ export const containersSchema = z
 	.refine((c) => c.ok || c.minPotCm === undefined, { message: 'minPotCm only makes sense when ok is true', path: ['minPotCm'] });
 export type Containers = z.infer<typeof containersSchema>;
 
-export const ILLUSTRATION_KINDS = ['bulb', 'pod', 'rosette', 'leaf', 'tomato', 'root'] as const;
+export const ILLUSTRATION_KINDS = [
+	'bulb', 'pod', 'rosette', 'leaf', 'tomato', 'root',
+	'pepper', 'cucumber', 'pumpkin', 'cabbage', 'berry', 'strawberry',
+	'fruit', 'flower', 'sprig', 'corn', 'tuber', 'stalk'
+] as const;
 
 export const plantSchema = z
 	.object({
@@ -63,6 +67,11 @@ export const plantSchema = z
 		spacingText: z.string().min(1),
 		spacingExplanation: z.array(z.string()).min(1),
 		spacingTip: z.string().optional(),
+		/**
+		 * Trees, bushes and long-lived herbs: planted once, first harvest after some years.
+		 * They are never the Danas hero and get "prvi plodovi za oko N godine" instead of a month.
+		 */
+		perennial: z.object({ yearsToFirstHarvest: z.number().int().min(1).max(10) }).optional(),
 		/** Missing means we do not know yet; the app then treats the plant as not for pots. */
 		containers: containersSchema.optional(),
 		summary: z.string().min(1),

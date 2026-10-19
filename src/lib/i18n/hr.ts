@@ -101,6 +101,9 @@ export const t = {
 	timing: {
 		until: (m: number) => `do kraja ${MONTHS_GEN[m - 1]}`,
 		untilSentence: (m: number) => `Posadi do kraja ${MONTHS_GEN[m - 1]}`,
+		bloom: (from: number, to: number) =>
+			from === to ? `cvate u ${MONTHS_LOC[from - 1]}` : `cvate od ${MONTHS_GEN[from - 1]} do ${MONTHS_GEN[to - 1]}`,
+		firstFruit: (years: number) => `prvi plodovi za oko ${pluralYears(years)}`,
 		harvest: (from: number, to: number) =>
 			from === to ? `berba u ${MONTHS_LOC[from - 1]}` : `berba od ${MONTHS_GEN[from - 1]} do ${MONTHS_GEN[to - 1]}`,
 		withCover: 'samo uz pokrov',
@@ -156,9 +159,10 @@ export const t = {
 		whenTitle: (cityLoc: string | undefined, city: string) => (cityLoc ? `Kada, u ${cityLoc}` : `Kada, za mjesto ${city}`),
 		legendSow: 'Sadnja ili sjetva',
 		legendHarvest: 'Berba',
+		legendBloom: 'Cvatnja',
 		currentMonth: 'Ovaj mjesec',
-		monthCell: (month: string, sow: boolean, harvest: boolean) =>
-			`${month}: ${[sow && 'sadnja', harvest && 'berba'].filter(Boolean).join(' i ') || 'ništa'}`,
+		monthCell: (month: string, sow: boolean, harvest: boolean, flower = false) =>
+			`${month}: ${[sow && 'sadnja', harvest && (flower ? 'cvatnja' : 'berba')].filter(Boolean).join(' i ') || 'ništa'}`,
 		todayPerfect: (m: number) => `Danas je ${MONTHS[m - 1]}, savršeno vrijeme.`,
 		todayLate: (m: number, end: number) => `Danas je ${MONTHS[m - 1]}. Stigneš još do kraja ${MONTHS_GEN[end - 1]}.`,
 		todayCover: (m: number) => `Danas je ${MONTHS[m - 1]}. Sada samo uz pokrov od agrila.`,
@@ -198,6 +202,9 @@ export const t = {
 			ready: (day: string) => `Spremno od ${day}`
 		},
 		harvestAround: (m: number, nextYear: boolean) => `Berba oko ${MONTHS_GEN[m - 1]}${nextYear ? ' iduće godine' : ''}`,
+		bloomAround: (m: number, nextYear: boolean) => `Cvatnja oko ${MONTHS_GEN[m - 1]}${nextYear ? ' iduće godine' : ''}`,
+		firstFruitIn: (years: number) => `Prvi plodovi za oko ${pluralYears(years)}`,
+		readyFlower: 'U cvatu',
 		changeDate: 'Promijeni datum',
 		dateLabel: (stage: string) => `Datum, faza: ${stage}`,
 		dateDone: 'Spremi datum',
@@ -208,6 +215,8 @@ export const t = {
 			toPlantLater: (m: number) => `Sljedeće: sadnja ${m ? `u ${MONTHS_LOC[m - 1]}` : 'kad dođe sezona'}`,
 			sown: 'Sljedeće: drži zemlju blago vlažnom dok ne nikne',
 			growing: (from?: number) => (from ? `Sljedeće: berba od ${MONTHS_GEN[from - 1]}` : 'Sljedeće: zalijevaj i plijevi'),
+			growingFlower: (from?: number) => (from ? `Sljedeće: cvatnja od ${MONTHS_GEN[from - 1]}` : 'Sljedeće: zalijevaj i plijevi'),
+			growingPerennial: 'Sljedeće: zalijevaj, plijevi i strpi se do prvih plodova',
 			ready: 'Uberi i uživaj'
 		},
 		tasks: {
@@ -280,8 +289,8 @@ export const t = {
 		text: 'Što te čeka idućih 12 mjeseci, za tvoje mjesto.',
 		caption: 'Mjeseci sadnje i berbe za biljke u tvom vrtu, od ovog mjeseca nadalje',
 		plant: 'Biljka',
-		cell: (month: string, sow: boolean, harvest: boolean) =>
-			`${month}: ${[sow && 'sadnja', harvest && 'berba'].filter(Boolean).join(' i ') || 'ništa'}`
+		cell: (month: string, sow: boolean, harvest: boolean, flower = false) =>
+			`${month}: ${[sow && 'sadnja', harvest && (flower ? 'cvatnja' : 'berba')].filter(Boolean).join(' i ') || 'ništa'}`
 	},
 	companions: {
 		badTitle: 'Pazi, loš susjed u vrtu',
@@ -445,6 +454,15 @@ export const t = {
 		hourBar: (sunny: number) => `Sunčani sati između 8 i 16 sati: ${sunny} od 9`
 	}
 };
+
+/** "1 godinu", "2 godine", "5 godina" (accusative after "za"). */
+export function pluralYears(n: number): string {
+	const mod10 = n % 10;
+	const mod100 = n % 100;
+	if (mod10 === 1 && mod100 !== 11) return `${n} godinu`;
+	if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return `${n} godine`;
+	return `${n} godina`;
+}
 
 /** 1 sat, 2-4 sata, else sati (with the 11-14 exception). */
 export function pluralHours(n: number): string {

@@ -4,6 +4,7 @@
 	import { resolve } from '$app/paths';
 	import { SvelteSet } from 'svelte/reactivity';
 	import GardenLog from '#lib/components/GardenLog.svelte';
+	import { stageLabel } from '#lib/garden.ts';
 	import GardenStage from '#lib/components/GardenStage.svelte';
 	import Icon from '#lib/components/Icon.svelte';
 	import Modal from '#lib/components/Modal.svelte';
@@ -97,7 +98,7 @@
 	const badge = $derived.by(() => {
 		if (!season) return '';
 		// Once it is in the ground, the garden stage matters more than the planting season.
-		if (gardenItem && gardenItem.stage !== 'toPlant') return t.plant.gardenBadge(t.garden.stages[gardenItem.stage]);
+		if (gardenItem && gardenItem.stage !== 'toPlant') return t.plant.gardenBadge(stageLabel(gardenItem.stage, plant!));
 		if (season.status === 'now') return t.plant.canPlant;
 		if (season.status === 'late') return season.needsCover ? t.plant.coverBadge : t.plant.lateBadge;
 		return t.plant.offBadge;

@@ -51,7 +51,9 @@ export function generateTasks(
 		if (plantTaskShown) tasks.push({ id: plantId, plantId: plant.id, text: plantText });
 		if (item.stage === 'toPlant') continue;
 
-		if (item.stage === 'ready' || (item.stage === 'growing' && isHarvestMonth(plant.harvest[region], month))) {
+		const harvests = plant.category !== 'flower';
+		const harvestNow = item.stage === 'ready' || (item.stage === 'growing' && !plant.perennial && isHarvestMonth(plant.harvest[region], month));
+		if (harvests && harvestNow) {
 			tasks.push({ id: `harvest:${plant.id}`, plantId: plant.id, text: t.garden.tasks.harvest(acc) });
 		}
 		if (frostNear && hasCoverWindow && item.stage !== 'ready' && !(plantTaskShown && season.needsCover)) {

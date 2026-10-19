@@ -21,6 +21,8 @@ export function nextStepText(stage: Stage, plant: Plant, region: Region, date: D
 		case 'sown':
 			return t.garden.next.sown;
 		case 'growing':
+			if (plant.perennial) return t.garden.next.growingPerennial;
+			if (plant.category === 'flower') return t.garden.next.growingFlower(plant.harvest[region]?.[0]?.from);
 			return t.garden.next.growing(plant.harvest[region]?.[0]?.from);
 		case 'ready':
 			return t.garden.next.ready;
@@ -70,11 +72,25 @@ export function stageDateText(item: GardenItem, today: Date): string | null {
 	return day ? t.garden.stageDate[item.stage](formatDay(parseDay(day), today.getFullYear())) : null;
 }
 
-/** "Berba oko lipnja" once something is in the ground and not yet ready. */
+/** Flowers use their harvest windows as flowering months. */
+export const isFlower = (plant: Plant) => plant.category === 'flower';
+
+/** Stage name for a plant: a ready flower is "U cvatu" rather than "Spremno za berbu". */
+export function stageLabel(stage: Stage, plant: Plant): string {
+	return stage === 'ready' && isFlower(plant) ? t.garden.readyFlower : t.garden.stages[stage];
+}
+
+/**
+ * "Berba oko lipnja" (or "Cvatnja oko lipnja", or "Prvi plodovi za oko 3 godine" for trees)
+ * once something is in the ground and not yet ready.
+ */
 export function harvestText(item: GardenItem, plant: Plant, region: Region, today: Date): string | null {
 	if (item.stage !== 'sown' && item.stage !== 'growing') return null;
+	if (plant.perennial) return t.garden.firstFruitIn(plant.perennial.yearsToFirstHarvest);
 	const sownDay = item.stageDates.sown ?? item.stageDates.growing;
 	if (!sownDay) return null;
 	const estimate = harvestEstimate(plant, region, parseDay(sownDay));
-	return estimate ? t.garden.harvestAround(estimate.month, estimate.year > today.getFullYear()) : null;
+	if (!estimate) return null;
+	const nextYear = estimate.year > today.getFullYear();
+	return isFlower(plant) ? t.garden.bloomAround(estimate.month, nextYear) : t.garden.harvestAround(estimate.month, nextYear);
 }

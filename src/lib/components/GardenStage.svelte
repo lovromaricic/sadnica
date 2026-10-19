@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { rules } from '../data';
 	import type { Plant } from '../data/schema';
-	import { STAGE_PROGRESS, harvestText, isoDay, nextStage, nextStepText, previousStage, stageDateText } from '../garden';
+	import { STAGE_PROGRESS, harvestText, stageLabel, isoDay, nextStage, nextStepText, previousStage, stageDateText } from '../garden';
 	import { STAGES } from '../storage';
 	import { t } from '../i18n/hr';
 	import { store } from '../store.svelte';
@@ -14,7 +14,7 @@
 
 	const next = $derived(nextStage(item.stage));
 	const previous = $derived(previousStage(item.stage));
-	const stageName = $derived(t.garden.stages[item.stage]);
+	const stageName = $derived(stageLabel(item.stage, plant));
 	const dated = $derived(stageDateText(item, today));
 	const harvest = $derived(harvestText(item, plant, store.state.region, today));
 
@@ -71,12 +71,12 @@
 	<div class="buttons">
 		{#if next}
 			<button type="button" class="advance" onclick={() => store.setStage(plant.id, next)}>
-				<Icon name="arrowUp" size={18} />{t.garden.advance(t.garden.stages[next])}
+				<Icon name="arrowUp" size={18} />{t.garden.advance(stageLabel(next, plant))}
 			</button>
 		{/if}
 		{#if previous}
 			<button type="button" class="undo" onclick={() => store.setStage(plant.id, previous)}>
-				{t.garden.undo(t.garden.stages[previous])}
+				{t.garden.undo(stageLabel(previous, plant))}
 			</button>
 		{/if}
 	</div>

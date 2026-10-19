@@ -16,7 +16,10 @@ export function heroReason(plant: Plant, region: Region, season: SeasonInfo): st
 	const parts: string[] = [];
 	const harvest = plant.harvest[region]?.[0];
 	const until = t.timing.untilSentence(season.end!.getMonth() + 1);
-	parts.push(harvest ? `${until}, ${t.timing.harvest(harvest.from, harvest.to)}.` : `${until}.`);
+	const after = plant.perennial
+		? t.timing.firstFruit(plant.perennial.yearsToFirstHarvest)
+		: harvest && (plant.category === 'flower' ? t.timing.bloom(harvest.from, harvest.to) : t.timing.harvest(harvest.from, harvest.to));
+	parts.push(after ? `${until}, ${after}.` : `${until}.`);
 	if (plant.difficulty === 'easy') parts.push(t.today.easyLine);
 	return parts.join(' ');
 }

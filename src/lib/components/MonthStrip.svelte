@@ -4,6 +4,9 @@
 	import { isHarvestMonth, isSowMonth } from '../season';
 
 	let { plant, region, month }: { plant: Plant; region: Region; month: number } = $props();
+	/** Flowers show flowering months (C, Cvatnja) where vegetables show harvest (B, Berba). */
+	const flower = $derived(plant.category === 'flower');
+	const mark = $derived(flower ? 'C' : 'B');
 </script>
 
 <ol class="months">
@@ -11,17 +14,17 @@
 		{@const m = i + 1}
 		{@const sow = isSowMonth(plant.sow[region], m)}
 		{@const harvest = isHarvestMonth(plant.harvest[region], m)}
-		<li class:current={m === month} aria-label={t.plant.monthCell(MONTHS[i], sow, harvest)} aria-current={m === month ? 'date' : undefined}>
+		<li class:current={m === month} aria-label={t.plant.monthCell(MONTHS[i], sow, harvest, flower)} aria-current={m === month ? 'date' : undefined}>
 			<span class="marker" aria-hidden="true"></span>
 			<span class="name" aria-hidden="true">{short}</span>
 			<span class="cell sow" class:on={sow} aria-hidden="true">{sow ? 'S' : ''}</span>
-			<span class="cell harvest" class:on={harvest} aria-hidden="true">{harvest ? 'B' : ''}</span>
+			<span class="cell harvest" class:on={harvest} aria-hidden="true">{harvest ? mark : ''}</span>
 		</li>
 	{/each}
 </ol>
 <ul class="legend">
 	<li><span class="dot sow-dot">S</span>{t.plant.legendSow}</li>
-	<li><span class="dot harvest-dot">B</span>{t.plant.legendHarvest}</li>
+	<li><span class="dot harvest-dot">{mark}</span>{flower ? t.plant.legendBloom : t.plant.legendHarvest}</li>
 </ul>
 
 <style>

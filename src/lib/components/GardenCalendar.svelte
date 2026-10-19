@@ -39,10 +39,10 @@
 					</th>
 					{#each row.cells as cell, i (cell.month)}
 						<td role="cell" class:current={i === 0}>
-							<span class="sr-only">{t.calendar.cell(MONTHS[cell.month - 1], cell.sow, cell.harvest)}</span>
+							<span class="sr-only">{t.calendar.cell(MONTHS[cell.month - 1], cell.sow, cell.harvest, row.plant.category === 'flower')}</span>
 							<span class="cell" aria-hidden="true">
 								<span class="half sow" class:on={cell.sow}>{cell.sow ? 'S' : ''}</span>
-								<span class="half harvest" class:on={cell.harvest}>{cell.harvest ? 'B' : ''}</span>
+								<span class="half harvest" class:on={cell.harvest}>{cell.harvest ? (row.plant.category === 'flower' ? 'C' : 'B') : ''}</span>
 							</span>
 						</td>
 					{/each}
@@ -53,6 +53,7 @@
 	<ul class="legend">
 		<li><span class="dot sow-dot">S</span>{t.plant.legendSow}</li>
 		<li><span class="dot harvest-dot">B</span>{t.plant.legendHarvest}</li>
+		{#if plants.some((p) => p.category === 'flower')}<li><span class="dot harvest-dot">C</span>{t.plant.legendBloom}</li>{/if}
 	</ul>
 </section>
 

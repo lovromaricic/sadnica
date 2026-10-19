@@ -7,7 +7,7 @@
 	import type { Plant } from '#lib/data/schema.ts';
 	import { t } from '#lib/i18n/hr.ts';
 	import { gardenNeighbours, listNames } from '#lib/companions.ts';
-	import { STAGE_PROGRESS, harvestText, nextStage, nextStepText, stageDateText } from '#lib/garden.ts';
+	import { STAGE_PROGRESS, harvestText, stageLabel, nextStage, nextStepText, stageDateText } from '#lib/garden.ts';
 	import { store } from '#lib/store.svelte.ts';
 	import type { GardenItem } from '#lib/storage.ts';
 	import { generateTasks, weekKey } from '#lib/tasks.ts';
@@ -89,14 +89,14 @@
 					<li class="card">
 						<div class="card-art" style:background={plant.illustration.bg}>
 							<PlantArt art={plant.illustration} size={84} />
-							<span class="stage stage-{item.stage}">{t.garden.stages[item.stage]}</span>
+							<span class="stage stage-{item.stage}">{stageLabel(item.stage, plant)}</span>
 						</div>
 						<div class="card-body">
 							<a class="card-link" href={resolve('/biljke/[id]', { id: plant.id })}>{plant.name}</a>
 							<div class="bar" aria-hidden="true">
 								<span style:width="{STAGE_PROGRESS[item.stage]}%"></span>
 							</div>
-							<p class="sr-only">{t.garden.progress(t.garden.stages[item.stage])}</p>
+							<p class="sr-only">{t.garden.progress(stageLabel(item.stage, plant))}</p>
 							{#if dated || harvest}
 								<p class="dates">
 									{#if dated}<span>{dated}</span>{/if}
@@ -109,7 +109,7 @@
 							{#if next}
 								<button type="button" class="advance" onclick={() => store.advanceStage(plant.id)}>
 									<Icon name="arrowUp" size={18} />
-									{t.garden.advance(t.garden.stages[next])}
+									{t.garden.advance(stageLabel(next, plant))}
 								</button>
 							{/if}
 						</div>
