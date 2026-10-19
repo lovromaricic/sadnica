@@ -18,7 +18,7 @@
   "spacingTip": "niske ne trebaju potporu, a visoke daju više na istoj površini.",
   "containers": { "ok": true, "minPotCm": 25, "note": "Niske sorte uspijevaju u koritu." },
   "summary": "Brzo niču i obilno rađaju. Bereš ih cijelo ljeto.",
-  "weeklyTip": "Ne sij prije svibnja, sjeme u hladnoj zemlji trune.",
+  "weeklyTip": "Ne sij dok se zemlja ne ugrije, na kontinentu ne prije svibnja. Sjeme u hladnoj zemlji trune.",
   "illustration": { "kind": "pod", "fill": "#5FA84E", "stroke": "#25541E", "bg": "#D3E9FF" },
   "sow": {
     "continental": [{ "from": 5, "to": 7 }],

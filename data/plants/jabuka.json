@@ -11,7 +11,7 @@
   "water": "medium",
   "rank": 300,
   "perennial": { "yearsToFirstHarvest": 3 },
-  "spacingText": "4 m",
+  "spacingText": "3–4 m",
   "spacingExplanation": [
     "Stabla na slabijoj podlozi sadi 3 do 4 m jedno od drugog.",
     "Za oprašivanje je dobro imati dvije različite sorte u blizini."
@@ -36,7 +36,7 @@
     { "title": "Orezuj zimi", "text": "Svake zime prorijedi krošnju da u nju ulazi svjetlo." }
   ],
   "problems": [
-    { "title": "Crvljive jabuke", "signs": "U plodu je hodnik i ličinka.", "fix": "Jabučni savijač. Uklanjaj otpale plodove i oko debla stavi traku s ljepilom." },
+    { "title": "Crvljive jabuke", "signs": "U plodu je hodnik i ličinka.", "fix": "Jabučni savijač. Uklanjaj otpale plodove, a ljeti oko debla omotaj traku valovitog kartona. Svaka dva tjedna je skini i uništi." },
     { "title": "Tamne mrlje na listovima i plodovima", "signs": "Listovi i plodovi imaju tamne krastave mrlje.", "fix": "Krastavost. Pograbi i ukloni otpalo lišće u jesen i biraj otporne sorte." }
   ],
   "neighbours": {

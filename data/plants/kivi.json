@@ -22,8 +22,8 @@
   "weeklyTip": "Kivi beri prije mraza i ostavi da dozrije u kući.",
   "illustration": { "kind": "fruit", "fill": "#8D6E4A", "stroke": "#4A361E", "bg": "#FFE2C2" },
   "sow": {
-    "continental": [{ "from": 10, "to": 11, "note": "Sadnice golog korijena." }, { "from": 3, "to": 4 }],
-    "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice golog korijena." }, { "from": 2, "to": 3 }]
+    "continental": [{ "from": 10, "to": 11, "note": "Sadnice u posudi." }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice u posudi." }, { "from": 2, "to": 3 }]
   },
   "harvest": {
     "continental": [{ "from": 10, "to": 11 }],
@@ -32,7 +32,7 @@
   "steps": [
     { "title": "Kupi sadnicu u rasadniku", "text": "Jednogodišnja ili dvogodišnja sadnica, zdravog korijena." },
     { "title": "Iskopaj široku jamu", "text": "Jama 60 × 60 cm, a zemlju pomiješaj s kompostom." },
-    { "title": "Posadi uz kolac", "text": "Mjesto cijepljenja mora ostati iznad zemlje. Sadnicu priveži uz kolac i obilno zalij." },
+    { "title": "Posadi uz kolac", "text": "Posadi na istu dubinu kao u posudi, priveži uz kolac i obilno zalij." },
     { "title": "Vodi uz pergolu", "text": "Glavni izboj veži uz čvrstu pergolu ili žicu." }
   ],
   "problems": [

@@ -34,7 +34,7 @@
   ],
   "problems": [
     { "title": "Plodovi ostaju sitni", "signs": "Lubenice ne narastu.", "fix": "Prehladno ljeto ili premalo sunca. Ostavi samo dva do tri ploda po biljci." },
-    { "title": "Bijela prevlaka na listovima", "signs": "Pepelnica.", "fix": "Otkini zahvaćene listove i zalijevaj uz korijen." }
+    { "title": "Bijela prevlaka na listovima", "signs": "Listovi izgledaju kao posuti brašnom.", "fix": "Pepelnica. Otkini zahvaćene listove i zalijevaj uz korijen." }
   ],
   "neighbours": {
     "good": ["Kukuruz", "Rotkvica"],

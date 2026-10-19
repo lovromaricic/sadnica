@@ -17,11 +17,11 @@
   ],
   "spacingTip": "između dvostrukih redova ostavi stazu da možeš brati.",
   "containers": { "ok": false, "note": "Bob naraste do metra visine i treba duboku zemlju, pa u loncu slabo rodi." },
-  "summary": "Krupne sjemenke koje lako niknu. Prezime u zemlji i u proljeće daju prve mahune.",
+  "summary": "Krupne sjemenke koje lako niknu. Na obali se sije u jesen, a na kontinentu je jesenska sjetva rizična, pa je sigurnija u veljači i ožujku.",
   "weeklyTip": "Namoči sjemenke preko noći u mlakoj vodi, brže će niknuti.",
   "illustration": { "kind": "pod", "fill": "#8CC66B", "stroke": "#2F5E2A", "bg": "#C9EEDB" },
   "sow": {
-    "continental": [{ "from": 10, "to": 11 }, { "from": 2, "to": 3 }],
+    "continental": [{ "from": 10, "to": 11, "note": "Samo u blažim zimama; sigurnije je posijati u veljači i ožujku." }, { "from": 2, "to": 3 }],
     "adriatic": [{ "from": 10, "to": 12 }, { "from": 1, "to": 2 }]
   },
   "harvest": {

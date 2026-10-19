@@ -22,7 +22,7 @@
   "illustration": { "kind": "fruit", "fill": "#F39C12", "stroke": "#8A4A0A", "bg": "#FFE2C2" },
   "sow": {
     "continental": [{ "from": 4, "to": 5, "note": "Iznesi lonac van kad prođu mrazevi." }],
-    "adriatic": [{ "from": 3, "to": 4 }, { "from": 10, "to": 11 }]
+    "adriatic": [{ "from": 3, "to": 5 }]
   },
   "harvest": {
     "continental": [{ "from": 10, "to": 12 }],

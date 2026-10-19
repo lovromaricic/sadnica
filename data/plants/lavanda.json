@@ -19,7 +19,7 @@
   "weeklyTip": "Nakon cvatnje je orezi, ali nikad do golog drva.",
   "illustration": { "kind": "sprig", "fill": "#9575CD", "stroke": "#4A2A7A", "bg": "#E6DBFF" },
   "sow": {
-    "continental": [{ "from": 4, "to": 5, "note": "Sadnice iz rasadnika." }, { "from": 9, "to": 10 }],
+    "continental": [{ "from": 4, "to": 5, "note": "Sadnice iz rasadnika." }],
     "adriatic": [{ "from": 3, "to": 4, "note": "Sadnice iz rasadnika." }, { "from": 10, "to": 11 }]
   },
   "harvest": {
@@ -28,7 +28,7 @@
   },
   "steps": [
     { "title": "Kupi sadnicu", "text": "Iz sjemena raste sporo." },
-    { "title": "Posadi na sunce", "text": "U propusnu, i kamenitu zemlju." },
+    { "title": "Posadi na sunce", "text": "U propusnu, čak i kamenitu zemlju." },
     { "title": "Zalijevaj rijetko", "text": "Previše vode joj škodi." },
     { "title": "Orezuj nakon cvatnje", "text": "Skrati za trećinu, do zelenih listova." }
   ],

@@ -34,7 +34,7 @@
   ],
   "problems": [
     { "title": "Plodovi pucaju", "signs": "Zreli plodovi napuknu.", "fix": "Previše vode pri dozrijevanju. Smanji zalijevanje kad plodovi narastu." },
-    { "title": "Bijela prevlaka na listovima", "signs": "Pepelnica.", "fix": "Otkini zahvaćene listove." }
+    { "title": "Bijela prevlaka na listovima", "signs": "Listovi izgledaju kao posuti brašnom.", "fix": "Pepelnica. Otkini zahvaćene listove." }
   ],
   "neighbours": {
     "good": ["Kukuruz", "Rotkvica"],

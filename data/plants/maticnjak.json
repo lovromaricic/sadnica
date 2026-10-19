@@ -34,7 +34,7 @@
   ],
   "problems": [
     { "title": "Sam se zasije posvuda", "signs": "Mlade biljke niču po vrtu.", "fix": "Odreži cvjetove prije nego sjeme sazrije." },
-    { "title": "Bijela prevlaka na listovima", "signs": "Pepelnica krajem ljeta.", "fix": "Odreži biljku do zemlje, izrast će nova." }
+    { "title": "Bijela prevlaka na listovima", "signs": "Listovi izgledaju kao posuti brašnom.", "fix": "Pepelnica krajem ljeta. Odreži biljku do zemlje, izrast će nova." }
   ],
   "neighbours": {
     "good": ["Rajčica", "Tikvica"],

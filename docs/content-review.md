@@ -32,6 +32,16 @@ It cannot judge whether the advice is right. That is the review.
 7. **Language.** Croatian grammar and the name forms in `forms` (nominative, genitive, accusative,
    plural). Text never addresses the reader with a gendered past tense ("posadio/posadila").
 
+## Already corrected
+
+An automated read of all 85 files (October 2026) fixed: gendered phrasing (peršin, rajčica), grammar
+(bundeva, radič, rikola, kadulja, lavanda, timijan), spacing that contradicted its explanation
+(ogrozd, ribiz), grafting steps on plants that are not grafted (smokva, maslina, kivi), risky planting
+windows (lavanda inland in autumn, mandarina on the coast in autumn), a better codling-moth fix
+(jabuka), no burning advice (šljiva), frost protection for lemon on the coast, and disease names that
+were in "signs" instead of "fix". Apple tree, grapevine and artichoke are no longer balcony plants.
+This does not replace the expert review.
+
 ## Suggested order
 
 Start with what beginners plant most and what the app recommends first in each season:

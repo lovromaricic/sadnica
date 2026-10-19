@@ -13,7 +13,7 @@
   "perennial": { "yearsToFirstHarvest": 2 },
   "spacingText": "120 cm",
   "spacingExplanation": [
-    "Grmove drži metar i pol jedan od drugog.",
+    "Grmove drži oko 120 cm jedan od drugog.",
     "Ogrozd je trnovit, ostavi prostor za berbu."
   ],
   "containers": { "ok": true, "minPotCm": 40 },

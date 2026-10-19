@@ -33,7 +33,7 @@
     { "title": "Reži cvjetove", "text": "Za vazu, biljka tada stvara nove." }
   ],
   "problems": [
-    { "title": "Bijela prevlaka na listovima", "signs": "Pepelnica krajem ljeta.", "fix": "Zalijevaj uz korijen i ne sadi pregusto." },
+    { "title": "Bijela prevlaka na listovima", "signs": "Listovi izgledaju kao posuti brašnom.", "fix": "Pepelnica krajem ljeta. Zalijevaj uz korijen i ne sadi pregusto." },
     { "title": "Puževi", "signs": "Izgrizeni mladi listovi.", "fix": "Skupljaj ih navečer." }
   ],
   "neighbours": {

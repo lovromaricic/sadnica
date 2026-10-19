@@ -36,7 +36,7 @@
   ],
   "problems": [
     { "title": "Crvljive šljive", "signs": "U plodu su ličinke.", "fix": "Šljivin savijač. Uklanjaj otpale plodove." },
-    { "title": "Plodovi se smežuraju i ne dozriju", "signs": "Plodovi su deformirani.", "fix": "Rogač šljive. Uklanjaj i spali zahvaćene plodove." }
+    { "title": "Plodovi se smežuraju i ne dozriju", "signs": "Plodovi su deformirani.", "fix": "Rogač šljive. Uklanjaj zahvaćene plodove i baci ih u otpad, ne u kompost." }
   ],
   "neighbours": {
     "good": ["Neven", "Vlasac"],

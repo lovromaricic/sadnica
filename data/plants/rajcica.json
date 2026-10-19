@@ -18,7 +18,7 @@
   "spacingTip": "uz svaku biljku odmah pri sadnji zabij kolac, kasnije ćeš oštetiti korijen.",
   "containers": { "ok": true, "minPotCm": 40, "note": "Odaberi niske ili cherry sorte. Lonac neka ima barem 20 litara zemlje." },
   "summary": "Najdraže ljetno povrće. Traži sunce, redovito zalijevanje i kolac uz koji raste.",
-  "weeklyTip": "Ako ti je ovo prvo ljeto, kupi gotove presadnice u svibnju umjesto da siješ sam.",
+  "weeklyTip": "Ako ti je ovo prvo ljeto, kupi gotove presadnice u svibnju umjesto sjetve.",
   "illustration": { "kind": "tomato", "fill": "#E8503A", "stroke": "#8A2216", "bg": "#FFD9DE" },
   "sow": {
     "continental": [
