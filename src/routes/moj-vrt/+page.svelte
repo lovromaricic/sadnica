@@ -84,7 +84,7 @@
 				{#each items as { item, plant } (plant.id)}
 					{@const next = nextStage(item.stage)}
 					{@const badNb = gardenNeighbours(plant, items.map((x) => x.plant)).bad}
-					{@const dated = stageDateText(item, today)}
+					{@const dated = stageDateText(item, today, plant)}
 					{@const harvest = harvestText(item, plant, region, today)}
 					<li class="card">
 						<div class="card-art" style:background={plant.illustration.bg}>

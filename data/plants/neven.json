@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "neven",
+  "name": "Neven",
+  "forms": { "nom": "neven", "gen": "nevena", "acc": "neven", "plural": false },
+  "latin": "Calendula officinalis",
+  "aliases": ["neven", "calendula", "marigold"],
+  "category": "flower",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "low",
+  "spacingText": "25 cm",
+  "spacingExplanation": [
+    "Biljke prorijedi na 25 cm.",
+    "Neven se razgrana i cvate cijelu sezonu."
+  ],
+  "containers": { "ok": true, "minPotCm": 20 },
+  "summary": "Narančasti cvjetovi od proljeća do mraza. Privlači korisne kukce, a latice su jestive.",
+  "weeklyTip": "Otkidaj precvale cvjetove, cvast će do mraza.",
+  "illustration": { "kind": "flower", "fill": "#F57C00", "stroke": "#8A3A00", "bg": "#FFE2C2" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 5 }, { "from": 9, "to": 9 }],
+    "adriatic": [{ "from": 2, "to": 4 }, { "from": 9, "to": 10 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 10 }],
+    "adriatic": [{ "from": 4, "to": 11 }]
+  },
+  "steps": [
+    { "title": "Posij izravno", "text": "Sjemenke 1 cm duboko, u proljeće ili ranu jesen." },
+    { "title": "Prorijedi", "text": "Ostavi biljku na 25 cm." },
+    { "title": "Otkidaj precvale cvjetove", "text": "Biljka tada stvara nove pupove." },
+    { "title": "Ostavi nekoliko za sjeme", "text": "Sam će se zasijati iduće godine." }
+  ],
+  "problems": [
+    { "title": "Bijela prevlaka na listovima", "signs": "Listovi kao posuti brašnom.", "fix": "Pepelnica krajem ljeta. Otkini najgore listove." },
+    { "title": "Lisne uši", "signs": "Crne uši na pupovima.", "fix": "Isperi ih mlazom vode. Neven ih privlači, pa štiti povrće." }
+  ],
+  "neighbours": {
+    "good": ["Rajčica", "Tikvica", "Kupus"],
+    "bad": []
+  }
+}

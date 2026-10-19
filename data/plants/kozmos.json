@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "kozmos",
+  "name": "Kozmos",
+  "forms": { "nom": "kozmos", "gen": "kozmosa", "acc": "kozmos", "plural": false },
+  "latin": "Cosmos bipinnatus",
+  "aliases": ["kozmos", "kosmos", "cosmos"],
+  "category": "flower",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "low",
+  "spacingText": "30 cm",
+  "spacingExplanation": [
+    "Biljke drži 30 cm jednu od druge.",
+    "Naraste visok i prozračan."
+  ],
+  "containers": { "ok": true, "minPotCm": 25 },
+  "summary": "Lagani, prozračni cvjetovi do mraza. Ne treba gotovo nikakvu brigu.",
+  "weeklyTip": "Ne gnoji ga, u siromašnoj zemlji cvate najljepše.",
+  "illustration": { "kind": "flower", "fill": "#F48FB1", "stroke": "#8A2A50", "bg": "#E6DBFF" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5 }],
+    "adriatic": [{ "from": 3, "to": 5 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 7, "to": 10 }],
+    "adriatic": [{ "from": 6, "to": 11 }]
+  },
+  "steps": [
+    { "title": "Posij izravno", "text": "Nakon mraza, 1 cm duboko." },
+    { "title": "Prorijedi", "text": "Ostavi biljku na 30 cm." },
+    { "title": "Ne gnoji", "text": "Inače daje lišće umjesto cvjetova." },
+    { "title": "Otkidaj precvale cvjetove", "text": "Cvate do mraza." }
+  ],
+  "problems": [
+    { "title": "Malo cvjetova", "signs": "Biljka je bujna, a cvjetova malo.", "fix": "Prebogata zemlja. Ne gnoji ga." },
+    { "title": "Polegne", "signs": "Visoke biljke polegnu.", "fix": "Podupri ih štapom ili sij gušće da se podupiru." }
+  ],
+  "neighbours": {
+    "good": ["Tikvica", "Rajčica"],
+    "bad": []
+  }
+}

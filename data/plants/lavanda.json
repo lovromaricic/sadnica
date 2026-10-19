@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "lavanda",
+  "name": "Lavanda",
+  "forms": { "nom": "lavanda", "gen": "lavande", "acc": "lavandu", "plural": false },
+  "latin": "Lavandula angustifolia",
+  "aliases": ["lavanda", "levanda", "lavender"],
+  "category": "flower",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "low",
+  "spacingText": "40 cm",
+  "spacingExplanation": [
+    "Sadnice drži 40 cm jednu od druge.",
+    "Lavanda naraste u okrugli grm."
+  ],
+  "containers": { "ok": true, "minPotCm": 30, "note": "U loncu s dobrom drenažom." },
+  "summary": "Mirisni mediteranski grm. Voli sunce i suho, a pčele ga obožavaju.",
+  "weeklyTip": "Nakon cvatnje je orezi, ali nikad do golog drva.",
+  "illustration": { "kind": "sprig", "fill": "#9575CD", "stroke": "#4A2A7A", "bg": "#E6DBFF" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5, "note": "Sadnice iz rasadnika." }, { "from": 9, "to": 10 }],
+    "adriatic": [{ "from": 3, "to": 4, "note": "Sadnice iz rasadnika." }, { "from": 10, "to": 11 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 7 }],
+    "adriatic": [{ "from": 5, "to": 7 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu", "text": "Iz sjemena raste sporo." },
+    { "title": "Posadi na sunce", "text": "U propusnu, i kamenitu zemlju." },
+    { "title": "Zalijevaj rijetko", "text": "Previše vode joj škodi." },
+    { "title": "Orezuj nakon cvatnje", "text": "Skrati za trećinu, do zelenih listova." }
+  ],
+  "problems": [
+    { "title": "Grm ogoli i odrveni", "signs": "Sredina je gola i drvenasta.", "fix": "Nije orezivana. Orezuj svake godine nakon cvatnje." },
+    { "title": "Biljka trune", "signs": "Donje grane posmeđe.", "fix": "Previše vlage. Sadi na ocjedito mjesto." }
+  ],
+  "neighbours": {
+    "good": ["Ružmarin", "Kadulja"],
+    "bad": []
+  }
+}

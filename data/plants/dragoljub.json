@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "dragoljub",
+  "name": "Dragoljub",
+  "forms": { "nom": "dragoljub", "gen": "dragoljuba", "acc": "dragoljub", "plural": false },
+  "latin": "Tropaeolum majus",
+  "aliases": ["dragoljub", "kapucin", "kapucinka", "nasturtium"],
+  "category": "flower",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "low",
+  "spacingText": "30 cm",
+  "spacingExplanation": [
+    "Biljke drži 30 cm jednu od druge.",
+    "Penjuće sorte šire se metar i više."
+  ],
+  "containers": { "ok": true, "minPotCm": 20, "note": "Lijep u visećim posudama." },
+  "summary": "Jestivi cvjetovi i listovi ljutkastog okusa. Raste i u siromašnoj zemlji.",
+  "weeklyTip": "Ne gnoji ga, u bogatoj zemlji daje lišće umjesto cvjetova.",
+  "illustration": { "kind": "flower", "fill": "#E53935", "stroke": "#7A1010", "bg": "#FFD9DE" },
+  "sow": {
+    "continental": [{ "from": 5, "to": 6 }],
+    "adriatic": [{ "from": 4, "to": 5 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 10 }],
+    "adriatic": [{ "from": 5, "to": 11 }]
+  },
+  "steps": [
+    { "title": "Posij izravno", "text": "Krupne sjemenke 2 cm duboko, nakon mraza." },
+    { "title": "Ne gnoji", "text": "U siromašnoj zemlji najljepše cvate." },
+    { "title": "Zalijevaj u suši", "text": "Inače je skroman." },
+    { "title": "Beri cvjetove", "text": "Za salatu, ujutro kad su svježi." }
+  ],
+  "problems": [
+    { "title": "Crne lisne uši", "signs": "Naličje listova puno crnih uši.", "fix": "Otkini zahvaćene listove. Dragoljub privlači uši i tako štiti povrće." },
+    { "title": "Puno lišća, malo cvjetova", "signs": "Biljka je bujna, a cvjetova nema.", "fix": "Zemlja je prebogata. Ne gnoji ga." }
+  ],
+  "neighbours": {
+    "good": ["Krastavac", "Tikvica", "Rajčica"],
+    "bad": []
+  }
+}

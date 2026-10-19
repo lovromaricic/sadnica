@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "suncokret",
+  "name": "Suncokret",
+  "forms": { "nom": "suncokret", "gen": "suncokreta", "acc": "suncokret", "plural": false },
+  "latin": "Helianthus annuus",
+  "aliases": ["suncokret", "sunflower"],
+  "category": "flower",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "40 cm",
+  "spacingExplanation": [
+    "Biljke drži 40 cm jednu od druge.",
+    "Visoke sorte narastu i preko dva metra."
+  ],
+  "containers": { "ok": true, "minPotCm": 30, "note": "Patuljaste sorte za lonac." },
+  "summary": "Divovski cvijet koji prati sunce. Djeca ga obožavaju, a ptice zimi jedu sjemenke.",
+  "weeklyTip": "Visoke sorte priveži uz kolac prije ljetnih oluja.",
+  "illustration": { "kind": "flower", "fill": "#FBC02D", "stroke": "#7A5A00", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5 }],
+    "adriatic": [{ "from": 3, "to": 5 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 7, "to": 9 }],
+    "adriatic": [{ "from": 6, "to": 9 }]
+  },
+  "steps": [
+    { "title": "Posij izravno", "text": "Sjemenke 3 cm duboko, nakon mraza." },
+    { "title": "Zaštiti od puževa", "text": "Mlade biljke su im omiljene." },
+    { "title": "Podupri visoke biljke", "text": "Kolac uz stabljiku." },
+    { "title": "Ostavi glave pticama", "text": "Ili ih odreži kad posmeđe i osuši sjemenke." }
+  ],
+  "problems": [
+    { "title": "Puževi pojedu klijance", "signs": "Mlade biljke nestanu.", "fix": "Skupljaj puževe navečer ili sij u lončiće pa presadi." },
+    { "title": "Biljka se prelomi", "signs": "Stabljika pukne na vjetru.", "fix": "Priveži je uz kolac." }
+  ],
+  "neighbours": {
+    "good": ["Krastavac", "Kukuruz"],
+    "bad": ["Krumpir"]
+  }
+}

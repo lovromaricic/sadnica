@@ -35,5 +35,5 @@ npm run icons      # regenerate static/icons
 
 ## Content status
 
-All gardening text is generated placeholder content and marked `"reviewed": false`. It must be checked
-by a person before publishing.
+All gardening text (85 plants) is generated placeholder content and marked `"reviewed": false`. It
+must be checked by a person before publishing. `npm run validate` lists how many files are unreviewed.

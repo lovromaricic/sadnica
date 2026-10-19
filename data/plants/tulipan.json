@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "tulipan",
+  "name": "Tulipan",
+  "forms": { "nom": "tulipan", "gen": "tulipana", "acc": "tulipan", "plural": false },
+  "latin": "Tulipa",
+  "aliases": ["tulipan", "tulipani", "lala", "tulip"],
+  "category": "flower",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "low",
+  "spacingText": "10 cm",
+  "spacingExplanation": [
+    "Lukovice sadi 10 cm jednu od druge.",
+    "U skupinama od desetak lukovica izgledaju najljepše."
+  ],
+  "containers": { "ok": true, "minPotCm": 20 },
+  "summary": "Lukovice posadiš u jesen, a u proljeće dobiješ šarenilo. Najlakši proljetni cvijet.",
+  "weeklyTip": "Lukovicu posadi tri puta dublje od njezine visine.",
+  "illustration": { "kind": "flower", "fill": "#E53935", "stroke": "#7A1010", "bg": "#FFD9DE" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11 }],
+    "adriatic": [{ "from": 11, "to": 12 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 4, "to": 5 }],
+    "adriatic": [{ "from": 3, "to": 4 }]
+  },
+  "steps": [
+    { "title": "Kupi zdrave lukovice", "text": "Čvrste, bez plijesni." },
+    { "title": "Posadi duboko", "text": "Oko 15 cm, vrhom prema gore." },
+    { "title": "Ostavi ih na miru", "text": "Zimi ne trebaju ništa." },
+    { "title": "Nakon cvatnje", "text": "Odreži cvijet, a listove ostavi dok ne požute." }
+  ],
+  "problems": [
+    { "title": "Lukovice nestaju", "signs": "U proljeće nema cvjetova.", "fix": "Voluharice. Sadi lukovice u košaricu od žice." },
+    { "title": "Iduće godine slabo cvatu", "signs": "Cvjetovi su sitni ili ih nema.", "fix": "Listovi su odrezani prerano. Ostavi ih da požute." }
+  ],
+  "neighbours": {
+    "good": ["Narcis"],
+    "bad": []
+  }
+}

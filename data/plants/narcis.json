@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "narcis",
+  "name": "Narcis",
+  "forms": { "nom": "narcis", "gen": "narcisa", "acc": "narcis", "plural": false },
+  "latin": "Narcissus",
+  "aliases": ["narcis", "narcisi", "sunovrat", "daffodil"],
+  "category": "flower",
+  "difficulty": "easy",
+  "sun": "partial",
+  "water": "low",
+  "spacingText": "15 cm",
+  "spacingExplanation": [
+    "Lukovice sadi 15 cm jednu od druge.",
+    "Svake godine se množe i šire u busen."
+  ],
+  "containers": { "ok": true, "minPotCm": 20 },
+  "summary": "Prvi žuti cvjetovi u proljeće. Lukovice se množe i cvatu godinama.",
+  "weeklyTip": "Nakon cvatnje ne reži listove dok ne požute, lukovica tada skuplja snagu.",
+  "illustration": { "kind": "flower", "fill": "#FDD835", "stroke": "#8A7000", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 9, "to": 10 }],
+    "adriatic": [{ "from": 10, "to": 11 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 2, "to": 4 }]
+  },
+  "steps": [
+    { "title": "Kupi lukovice", "text": "U rujnu ili listopadu." },
+    { "title": "Posadi duboko", "text": "Oko 15 cm, vrhom prema gore." },
+    { "title": "Pusti da zimuju", "text": "Ne trebaju zalijevanje ni zaštitu." },
+    { "title": "Nakon cvatnje", "text": "Odreži cvijet, listove ostavi." }
+  ],
+  "problems": [
+    { "title": "Samo listovi, bez cvjetova", "signs": "Busen ima lišće, ali ne cvate.", "fix": "Lukovice su pregusto. U ljeto ih iskopaj, razdvoji i ponovno posadi." },
+    { "title": "Lukovice trunu", "signs": "Lukovice su meke.", "fix": "Previše vlage. Sadi na ocjedito mjesto." }
+  ],
+  "neighbours": {
+    "good": ["Tulipan"],
+    "bad": []
+  }
+}

@@ -237,3 +237,21 @@ beginner most often plants something that cannot work, so that case earns the qu
 - "Frost soon" for tasks and "samo uz pokrov" = forecast frost or the typical period.
 - Postavke has a "Prognoza mraza" switch (on by default) explaining what is sent; the about text says
   so too.
+
+## Bigger catalogue (85 plants)
+
+- 42 vegetables, 13 herbs, 20 fruits, 10 flowers. Generated content, every file `reviewed: false`.
+  Sowing/planting and harvest windows are given for both regions; asparagus, artichoke, bay laurel,
+  berry bushes and fruit trees are `perennial` with years to first harvest.
+- **Perennials**: never the Danas hero (also `rank: 300` for trees), "Posađeno" instead of
+  "Posijano", "Prvi plodovi za oko N godine" instead of a harvest month, and no harvest task until
+  marked ready. Citrus and olive are pot-only on the continent.
+- **Flowers** use their `harvest` windows as flowering months: the calendars show "C – Cvatnja", a
+  ready flower is "U cvatu", there are no harvest tasks, and Danas says "cvate od … do …".
+- Twelve new illustration shapes (pepper, cucumber, pumpkin, cabbage, berry, strawberry, fruit,
+  flower, sprig, corn, tuber, stalk) in the same style; colours are per plant.
+- **Recommendation order** gained a rule: plants in their prime rank before "Još stigneš" ones.
+  With a big catalogue, the plant closing soonest (rocket in October) otherwise became the hero.
+- All plant data still ships in one chunk (about 39 KB gzipped). Load per page if it grows a lot.
+- Vitest's persistent module cache (`fsModuleCache`) is off: it served a stale plant list to tests
+  after new data files were added.

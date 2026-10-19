@@ -15,7 +15,7 @@
 	const next = $derived(nextStage(item.stage));
 	const previous = $derived(previousStage(item.stage));
 	const stageName = $derived(stageLabel(item.stage, plant));
-	const dated = $derived(stageDateText(item, today));
+	const dated = $derived(stageDateText(item, today, plant));
 	const harvest = $derived(harvestText(item, plant, store.state.region, today));
 
 	let editing = $state(false);

@@ -67,9 +67,11 @@ export function harvestEstimate(plant: Plant, region: Region, sown: Date): { mon
 }
 
 /** "Posijano 19. listopada" for the current stage, if its day is known. */
-export function stageDateText(item: GardenItem, today: Date): string | null {
+export function stageDateText(item: GardenItem, today: Date, plant?: Plant): string | null {
 	const day = item.stageDates[item.stage];
-	return day ? t.garden.stageDate[item.stage](formatDay(parseDay(day), today.getFullYear())) : null;
+	if (!day) return null;
+	const pretty = formatDay(parseDay(day), today.getFullYear());
+	return item.stage === 'sown' && plant?.perennial ? t.garden.plantedOn(pretty) : t.garden.stageDate[item.stage](pretty);
 }
 
 /** Flowers use their harvest windows as flowering months. */
@@ -77,7 +79,9 @@ export const isFlower = (plant: Plant) => plant.category === 'flower';
 
 /** Stage name for a plant: a ready flower is "U cvatu" rather than "Spremno za berbu". */
 export function stageLabel(stage: Stage, plant: Plant): string {
-	return stage === 'ready' && isFlower(plant) ? t.garden.readyFlower : t.garden.stages[stage];
+	if (stage === 'ready' && isFlower(plant)) return t.garden.readyFlower;
+	if (stage === 'sown' && plant.perennial) return t.garden.planted;
+	return t.garden.stages[stage];
 }
 
 /**

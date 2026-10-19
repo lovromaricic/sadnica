@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "kadifa",
+  "name": "Kadifa",
+  "forms": { "nom": "kadifa", "gen": "kadife", "acc": "kadifu", "plural": false },
+  "latin": "Tagetes patula",
+  "aliases": ["kadifa", "tagetes", "samtarica", "french marigold"],
+  "category": "flower",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "25 cm",
+  "spacingExplanation": [
+    "Biljke drži 25 cm jednu od druge.",
+    "Niska je i gusta, lijepo obrubi gredicu."
+  ],
+  "containers": { "ok": true, "minPotCm": 15 },
+  "summary": "Niski cvijet koji tjera štetnike iz tla. Sadi ga uz rajčicu i krumpir.",
+  "weeklyTip": "Posadi kadifu između povrća, njezino korijenje tjera nematode iz tla.",
+  "illustration": { "kind": "flower", "fill": "#E65100", "stroke": "#7A2A00", "bg": "#FAD9CC" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5 }],
+    "adriatic": [{ "from": 3, "to": 5 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 10 }],
+    "adriatic": [{ "from": 5, "to": 11 }]
+  },
+  "steps": [
+    { "title": "Posij ili kupi presadnice", "text": "Sjetva u svibnju ili presadnice nakon mraza." },
+    { "title": "Posadi uz povrće", "text": "Između rajčica, paprika i krumpira." },
+    { "title": "Zalijevaj umjereno", "text": "Ne voli mokru zemlju." },
+    { "title": "Otkidaj precvale cvjetove", "text": "Cvate do mraza." }
+  ],
+  "problems": [
+    { "title": "Puževi pojedu mlade biljke", "signs": "Mlade presadnice nestanu preko noći.", "fix": "Puževi obožavaju kadifu. Skupljaj ih navečer dok biljke ne ojačaju." },
+    { "title": "Biljka trune pri dnu", "signs": "Stabljika potamni i biljka polegne.", "fix": "Previše vode. Zalijevaj rjeđe." }
+  ],
+  "neighbours": {
+    "good": ["Rajčica", "Krumpir", "Paprika"],
+    "bad": []
+  }
+}

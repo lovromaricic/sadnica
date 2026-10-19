@@ -205,6 +205,9 @@ export const t = {
 		bloomAround: (m: number, nextYear: boolean) => `Cvatnja oko ${MONTHS_GEN[m - 1]}${nextYear ? ' iduće godine' : ''}`,
 		firstFruitIn: (years: number) => `Prvi plodovi za oko ${pluralYears(years)}`,
 		readyFlower: 'U cvatu',
+		/** Trees and bushes are planted, not sown. */
+		planted: 'Posađeno',
+		plantedOn: (day: string) => `Posađeno ${day}`,
 		changeDate: 'Promijeni datum',
 		dateLabel: (stage: string) => `Datum, faza: ${stage}`,
 		dateDone: 'Spremi datum',

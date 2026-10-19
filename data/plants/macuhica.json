@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "macuhica",
+  "name": "Maćuhica",
+  "forms": { "nom": "maćuhica", "gen": "maćuhice", "acc": "maćuhicu", "plural": false },
+  "latin": "Viola × wittrockiana",
+  "aliases": ["maćuhica", "macuhica", "mačuhica", "pansy"],
+  "category": "flower",
+  "difficulty": "easy",
+  "sun": "partial",
+  "water": "medium",
+  "spacingText": "20 cm",
+  "spacingExplanation": [
+    "Sadnice drži 20 cm jednu od druge.",
+    "Niske su i lijepo popune posudu."
+  ],
+  "containers": { "ok": true, "minPotCm": 15, "note": "Idealna za balkonske posude u jesen i proljeće." },
+  "summary": "Cvate po hladnom vremenu, u jesen i rano proljeće. Savršena za balkon.",
+  "weeklyTip": "Otkidaj precvale cvjetove, cvast će tjednima.",
+  "illustration": { "kind": "flower", "fill": "#7E57C2", "stroke": "#3A1A7A", "bg": "#E6DBFF" },
+  "sow": {
+    "continental": [{ "from": 9, "to": 10, "note": "Sadnice." }, { "from": 3, "to": 4, "note": "Sadnice." }],
+    "adriatic": [{ "from": 10, "to": 11, "note": "Sadnice." }, { "from": 2, "to": 3, "note": "Sadnice." }]
+  },
+  "harvest": {
+    "continental": [{ "from": 3, "to": 5 }, { "from": 10, "to": 11 }],
+    "adriatic": [{ "from": 11, "to": 5 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnice", "text": "U jesen ili rano proljeće." },
+    { "title": "Posadi u posude", "text": "20 cm razmaka, u svježu zemlju." },
+    { "title": "Zalijevaj umjereno", "text": "Ne voli ni sušu ni mokru zemlju." },
+    { "title": "Otkidaj precvale cvjetove", "text": "Biljka tada stvara nove." }
+  ],
+  "problems": [
+    { "title": "Biljke se razvuku", "signs": "Duge, slabe stabljike.", "fix": "Premalo svjetla ili prevruće. Premjesti posudu na svjetlije, svježije mjesto." },
+    { "title": "Trune zimi", "signs": "Biljke propadnu u mokroj zimi.", "fix": "Posuda mora imati rupe, a zemlja ne smije biti mokra." }
+  ],
+  "neighbours": {
+    "good": ["Salata", "Luk"],
+    "bad": []
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "cinija",
+  "name": "Cinija",
+  "forms": { "nom": "cinija", "gen": "cinije", "acc": "ciniju", "plural": false },
+  "latin": "Zinnia elegans",
+  "aliases": ["cinija", "zinija", "zinnia"],
+  "category": "flower",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "30 cm",
+  "spacingExplanation": [
+    "Biljke drži 30 cm jednu od druge.",
+    "Treba zraka oko lišća, inače lakše oboli."
+  ],
+  "containers": { "ok": true, "minPotCm": 20 },
+  "summary": "Šareni cvjetovi cijelo ljeto. Što ih više režeš za vazu, to više cvjeta.",
+  "weeklyTip": "Sij je izravno u svibnju, ne voli presađivanje.",
+  "illustration": { "kind": "flower", "fill": "#EC407A", "stroke": "#7A1040", "bg": "#FFD9DE" },
+  "sow": {
+    "continental": [{ "from": 5, "to": 6 }],
+    "adriatic": [{ "from": 4, "to": 5 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 7, "to": 10 }],
+    "adriatic": [{ "from": 6, "to": 10 }]
+  },
+  "steps": [
+    { "title": "Posij u toplu zemlju", "text": "Sjemenke 1 cm duboko, nakon mraza." },
+    { "title": "Prorijedi", "text": "Ostavi biljku na 30 cm." },
+    { "title": "Zalijevaj uz korijen", "text": "Ne kvasi lišće." },
+    { "title": "Reži cvjetove", "text": "Za vazu, biljka tada stvara nove." }
+  ],
+  "problems": [
+    { "title": "Bijela prevlaka na listovima", "signs": "Pepelnica krajem ljeta.", "fix": "Zalijevaj uz korijen i ne sadi pregusto." },
+    { "title": "Puževi", "signs": "Izgrizeni mladi listovi.", "fix": "Skupljaj ih navečer." }
+  ],
+  "neighbours": {
+    "good": ["Rajčica", "Tikvica"],
+    "bad": []
+  }
+}
