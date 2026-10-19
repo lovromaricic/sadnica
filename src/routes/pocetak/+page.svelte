@@ -10,6 +10,7 @@
 	import { REGIONS } from '#lib/data/regions.ts';
 	import type { Region } from '#lib/data/schema.ts';
 	import { t } from '#lib/i18n/hr.ts';
+	import { navContext } from '#lib/navContext.svelte.ts';
 	import { store } from '#lib/store.svelte.ts';
 	import { EXPERIENCES, PLACES, type Place } from '#lib/storage.ts';
 	import type { Experience } from '#lib/season.ts';
@@ -40,6 +41,12 @@
 		little: { icon: 'sprout', bg: 'var(--peach)' },
 		basics: { icon: 'plant', bg: 'var(--pink)' }
 	};
+
+	/** Leave without saving: back to where the user came from, or Danas after a fresh load. */
+	function cancel() {
+		if (navContext.previousHref) history.back();
+		else goto(resolve('/'));
+	}
 
 	function finish(e?: SubmitEvent) {
 		e?.preventDefault();
@@ -158,7 +165,10 @@
 			{@render cityQuestion()}
 			{@render placeQuestion()}
 			{@render experienceQuestion()}
-			<button class="btn btn-primary btn-block cta" type="submit">{t.onboarding.cta}</button>
+			<button class="btn btn-primary btn-block cta" type="submit">{editing ? t.onboarding.save : t.onboarding.cta}</button>
+			{#if editing}
+				<button class="btn btn-secondary btn-block" type="button" onclick={cancel}>{t.onboarding.cancel}</button>
+			{/if}
 		</form>
 	{:else}
 		<form class="questions mobile" onsubmit={next}>
@@ -175,10 +185,16 @@
 			{/if}
 			<div class="step-actions">
 				<button class="btn btn-primary btn-block" type="submit">
-					{step < 2 ? t.onboarding.next : t.onboarding.cta}
+					{step < 2 ? t.onboarding.next : editing ? t.onboarding.save : t.onboarding.cta}
 				</button>
 				{#if step > 0}
 					<button class="btn btn-secondary btn-block" type="button" onclick={() => step--}>{t.onboarding.back}</button>
+				{/if}
+				{#if editing}
+					<!-- On the first step it is the only way out, so it gets the full button; later "Natrag" does. -->
+					<button class="btn btn-block" class:btn-secondary={step === 0} class:text-btn={step > 0} type="button" onclick={cancel}>
+						{t.onboarding.cancel}
+					</button>
 				{/if}
 			</div>
 		</form>
@@ -378,6 +394,14 @@
 	}
 	.dots span.on {
 		background: var(--ink);
+	}
+	.text-btn {
+		border-color: transparent;
+		background: transparent;
+		min-height: 48px;
+		text-decoration: underline;
+		text-underline-offset: 4px;
+		color: var(--muted-2);
 	}
 	.step-actions {
 		display: grid;

@@ -78,6 +78,7 @@ export const t = {
 		save: 'Spremi promjene',
 		next: 'Dalje',
 		back: 'Natrag',
+		cancel: 'Odustani',
 		step: (n: number, total: number) => `Korak ${n} od ${total}`
 	},
 

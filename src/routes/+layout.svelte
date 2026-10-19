@@ -54,8 +54,8 @@
 	{/if}
 </div>
 
-<!-- The sun check is a focused flow with its own back button and a full-screen camera. -->
-{#if !firstRun && page.route.id !== '/sunce'}
+<!-- Focused flows (sun check, changing your answers) have their own way out instead of the nav. -->
+{#if !firstRun && page.route.id !== '/sunce' && page.route.id !== '/pocetak'}
 	<MobileNav />
 {/if}
 <Toast />

@@ -81,6 +81,10 @@ Spec gaps and the simplest choice made for each. Review and overrule freely.
 
 ## Smaller choices
 
+- **Changing your answers** (location pill → onboarding screen): no bottom nav there; instead an
+  "Odustani" button leaves without saving (Back to the previous page, or Danas after a fresh load), and
+  the final button reads "Spremi promjene". First-run onboarding is unchanged.
+
 - **Phone header**: Danas, Biljke and Moj vrt start with the logo and the location pill (which opens
   the location screen), since phones have no top header. It scrolls away with the content; plant
   pages and the sun check keep their own top bars.
