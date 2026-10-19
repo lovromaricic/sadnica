@@ -92,7 +92,6 @@
 			min-height: 0;
 			overflow-y: auto;
 			overscroll-behavior-y: contain;
-			-webkit-overflow-scrolling: touch;
 		}
 	}
 	@media (min-width: 900px) {

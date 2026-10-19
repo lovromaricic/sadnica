@@ -2,6 +2,7 @@
 	import type { Snippet } from 'svelte';
 	import { tick } from 'svelte';
 	import { t } from '../i18n/hr';
+	import { portal } from '../portal';
 	import Icon from './Icon.svelte';
 
 	let {
@@ -77,7 +78,7 @@
 
 {#if open}
 	<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions (Esc closes; the overlay is a mouse convenience) -->
-	<div class="overlay" onclick={(e) => e.target === e.currentTarget && close()}>
+	<div class="overlay" {@attach portal} onclick={(e) => e.target === e.currentTarget && close()}>
 		<div class="dialog" role="dialog" aria-modal="true" aria-labelledby="{labelId} {titleId}" bind:this={dialog} {onkeydown} tabindex="-1">
 			<header style:background={color}>
 				<div>
@@ -96,8 +97,11 @@
 						{tip}
 					</div>
 				{/if}
-				<button type="button" class="btn btn-primary btn-block" data-autofocus onclick={close}>{t.plant.understood}</button>
 			</div>
+			<!-- Header and button stay put; only the text between them scrolls on small screens. -->
+			<footer>
+				<button type="button" class="btn btn-primary btn-block" data-autofocus onclick={close}>{t.plant.understood}</button>
+			</footer>
 		</div>
 	</div>
 {/if}
@@ -118,9 +122,10 @@
 	.dialog {
 		width: 100%;
 		max-width: 480px;
-		max-height: calc(100dvh - 24px);
-		overflow: auto;
-		overscroll-behavior: contain;
+		max-height: calc(100dvh - 24px - env(safe-area-inset-bottom));
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
 		border-radius: var(--r-xl);
 		background: var(--white);
 		animation: up 0.25s ease;
@@ -129,6 +134,7 @@
 		outline: none;
 	}
 	header {
+		flex: none;
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
@@ -146,10 +152,19 @@
 		margin-top: 2px;
 	}
 	.body {
+		flex: 1 1 auto;
+		min-height: 0;
+		overflow-y: auto;
+		overscroll-behavior: contain;
 		display: grid;
+		align-content: start;
 		gap: 14px;
-		padding: 24px;
+		padding: 24px 24px 8px;
 		color: var(--muted-2);
+	}
+	footer {
+		flex: none;
+		padding: 12px 24px 24px;
 	}
 	.body :global(p) {
 		font-size: 1.0625rem;
@@ -162,9 +177,6 @@
 	}
 	.tip strong {
 		color: var(--ink);
-	}
-	.btn {
-		margin-top: 6px;
 	}
 	@media (min-width: 600px) {
 		.overlay {

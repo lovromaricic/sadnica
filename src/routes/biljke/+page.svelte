@@ -169,7 +169,6 @@
 		gap: 8px;
 		overflow-x: auto;
 		overscroll-behavior-x: contain;
-		-webkit-overflow-scrolling: touch;
 		margin: 0 calc(-1 * var(--gutter));
 		padding: 2px var(--gutter) 6px;
 		scrollbar-width: none;

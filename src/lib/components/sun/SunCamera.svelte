@@ -4,6 +4,7 @@
 	import { angleDiff, arcDirections, hourDirections, project, smoothAngle } from '../../sun/arc';
 	import { SUN_HOURS, categoryFromHours } from '../../sun/logic';
 	import { watchOrientation } from '../../sun/sensors';
+	import { portal } from '../../portal';
 	import Icon from '../Icon.svelte';
 
 	let {
@@ -96,7 +97,7 @@
 	}
 </script>
 
-<div class="camera" role="dialog" aria-modal="true" aria-label={t.sun.title}>
+<div class="camera" role="dialog" aria-modal="true" aria-label={t.sun.title} {@attach portal}>
 	<div class="view" bind:clientWidth={width} bind:clientHeight={height}>
 		<!-- The feed is only shown on screen; no frame is ever captured or stored. -->
 		<video bind:this={video} playsinline muted autoplay aria-hidden="true"></video>
