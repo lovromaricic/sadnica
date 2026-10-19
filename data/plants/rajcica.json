@@ -2,7 +2,7 @@
   "reviewed": false,
   "id": "rajcica",
   "name": "Rajčica",
-  "nameAccusative": "rajčicu",
+  "forms": { "nom": "rajčica", "gen": "rajčice", "acc": "rajčicu", "plural": false },
   "latin": "Solanum lycopersicum",
   "aliases": ["rajcica", "paradajz", "pomidor", "pomodor", "tomato"],
   "category": "veg",

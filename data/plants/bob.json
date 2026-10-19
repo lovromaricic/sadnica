@@ -2,6 +2,7 @@
   "reviewed": false,
   "id": "bob",
   "name": "Bob",
+  "forms": { "nom": "bob", "gen": "boba", "acc": "bob", "plural": false },
   "latin": "Vicia faba",
   "aliases": ["bob", "konjski bob", "fava", "boba", "broad bean"],
   "category": "veg",

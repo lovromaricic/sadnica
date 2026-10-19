@@ -4,6 +4,7 @@
 	import AddButton from '#lib/components/AddButton.svelte';
 	import Icon from '#lib/components/Icon.svelte';
 	import PlantArt from '#lib/components/PlantArt.svelte';
+	import SunWidget from '#lib/components/sun/SunWidget.svelte';
 	import { plants, rules } from '#lib/data/index.ts';
 	import { formatDate, monthName, t } from '#lib/i18n/hr.ts';
 	import { isFrostNear, isInSeason, recommend, upcoming, withSeason } from '#lib/season.ts';
@@ -43,6 +44,8 @@
 			</p>
 		</aside>
 	{/if}
+
+	<SunWidget />
 
 	<div class="split">
 		{#if hero}

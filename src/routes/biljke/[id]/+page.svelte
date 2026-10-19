@@ -244,6 +244,15 @@
 			tip={modalContent.tip}
 		>
 			{#each modalContent.paragraphs as p, i (i)}<p>{p}</p>{/each}
+			{#if openFact === 'sun'}
+				<div class="sun-check">
+					<strong>{t.sun.boxTitle}</strong>
+					<p>{t.sun.boxText}</p>
+					<a class="sun-check-btn" href="{resolve('/sunce')}?plant={plant.id}">
+						<Icon name="sun" size={18} />{t.sun.boxCta}
+					</a>
+				</div>
+			{/if}
 		</Modal>
 	{/if}
 {:else}
@@ -517,6 +526,33 @@
 	}
 	.footnote {
 		padding: 0 6px;
+	}
+	.sun-check {
+		display: grid;
+		gap: 6px;
+		padding: 16px;
+		border-radius: var(--r-sm);
+		background: var(--lime);
+		color: var(--ink);
+	}
+	.sun-check p {
+		font-size: 0.9375rem !important;
+		color: var(--muted-2);
+	}
+	.sun-check-btn {
+		justify-self: start;
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		min-height: 44px;
+		margin-top: 4px;
+		padding: 0 16px;
+		border-radius: 999px;
+		background: var(--ink);
+		color: var(--white);
+		font-weight: 700;
+		font-size: 0.9375rem;
+		text-decoration: none;
 	}
 	.not-found {
 		display: grid;

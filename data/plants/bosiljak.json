@@ -2,6 +2,7 @@
   "reviewed": false,
   "id": "bosiljak",
   "name": "Bosiljak",
+  "forms": { "nom": "bosiljak", "gen": "bosiljka", "acc": "bosiljak", "plural": false },
   "latin": "Ocimum basilicum",
   "aliases": ["bosiljak", "bazilika", "bazilikum", "bosiok", "basil"],
   "category": "herb",

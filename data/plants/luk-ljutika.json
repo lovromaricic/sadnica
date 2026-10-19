@@ -2,7 +2,7 @@
   "reviewed": false,
   "id": "luk-ljutika",
   "name": "Luk ljutika",
-  "nameAccusative": "luk ljutiku",
+  "forms": { "nom": "luk ljutika", "gen": "luka ljutike", "acc": "luk ljutiku", "plural": false },
   "latin": "Allium cepa var. aggregatum",
   "aliases": ["ljutika", "ljutika luk", "kozjak", "šalotka", "salotka", "shallot"],
   "category": "veg",

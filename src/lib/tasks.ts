@@ -19,7 +19,7 @@ export function weekKey(date: Date): string {
 	return `${d.getUTCFullYear()}-W${String(week).padStart(2, '0')}`;
 }
 
-export const accusative = (plant: Plant) => plant.nameAccusative ?? plant.name.toLowerCase();
+export const accusative = (plant: Plant) => plant.forms.acc;
 
 /** This week's to-dos, derived from the garden and the date. */
 export function generateTasks(

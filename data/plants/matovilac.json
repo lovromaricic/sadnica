@@ -2,6 +2,7 @@
   "reviewed": false,
   "id": "matovilac",
   "name": "Matovilac",
+  "forms": { "nom": "matovilac", "gen": "matovilca", "acc": "matovilac", "plural": false },
   "latin": "Valerianella locusta",
   "aliases": ["matovilac", "motovilac", "matovilka", "poljska salata", "lamb's lettuce"],
   "category": "veg",

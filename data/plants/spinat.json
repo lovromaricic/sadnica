@@ -2,6 +2,7 @@
   "reviewed": false,
   "id": "spinat",
   "name": "Špinat",
+  "forms": { "nom": "špinat", "gen": "špinata", "acc": "špinat", "plural": false },
   "latin": "Spinacia oleracea",
   "aliases": ["spinat", "špinać", "spinac", "spinach"],
   "category": "veg",

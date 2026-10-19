@@ -2,6 +2,7 @@
   "reviewed": false,
   "id": "cesnjak",
   "name": "Češnjak",
+  "forms": { "nom": "češnjak", "gen": "češnjaka", "acc": "češnjak", "plural": false },
   "latin": "Allium sativum",
   "aliases": ["cesnjak", "bijeli luk", "luk bijeli", "česan", "cesan", "garlic"],
   "category": "veg",

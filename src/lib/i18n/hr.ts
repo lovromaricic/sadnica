@@ -200,5 +200,104 @@ export const t = {
 	ics: {
 		summary: (name: string) => `Vrijeme za sadnju: ${name}`,
 		description: (name: string) => `Prema ${APP_NAME}, sada je dobro vrijeme za sadnju: ${name}. Datumi su okvirni.`
+	},
+
+	sun: {
+		title: 'Provjera sunca',
+		forPlant: (acc: string) => `Provjera sunca za ${acc}`,
+		back: 'Natrag',
+
+		// Entry points
+		boxTitle: 'Želiš provjeriti koliko sunca ima tvoje mjesto?',
+		boxText: 'Usmjeri mobitel i vidi putanju sunca na svom mjestu.',
+		boxCta: 'Provjeri kamerom',
+		widgetTitle: 'Ima li tvoje mjesto dovoljno sunca?',
+		widgetText: 'Usmjeri mobitel prema nebu i za minutu vidi koliko sunca dobiva mjesto za sadnju.',
+		widgetTextDesktop: 'Odaberi biljku i odgovori na jedno pitanje. Na mobitelu to možeš provjeriti i kamerom.',
+		widgetCta: 'Provjeri kamerom',
+		widgetCtaDesktop: 'Provjeri sunce',
+
+		// Plant picker
+		pickTitle: 'Za koju biljku provjeravaš?',
+		pickText: 'Svaka biljka treba drugačije sunca, pa prvo odaberi jednu.',
+		fromGarden: 'Iz tvog vrta',
+		allPlants: 'Sve biljke',
+
+		// Intro
+		introTitle: 'Koliko sunca ima tvoje mjesto?',
+		introSteps: [
+			'Stani na mjesto gdje želiš saditi.',
+			'Usmjeri mobitel prema nebu. Na ekranu ćeš vidjeti današnji put sunca.',
+			'Dodirni sate u kojima sunce zaklanja zgrada ili drvo.'
+		],
+		privacy: 'Slika ne napušta tvoj mobitel',
+		start: 'Počni',
+		starting: 'Pokrećem kameru…',
+		manualInstead: 'Radije ću odgovoriti ručno',
+
+		// Calibration
+		calTitle: 'Kalibriraj kompas',
+		calText: 'Pomakni mobitel nekoliko puta u obliku osmice. Tako će smjer sunca biti točniji.',
+		calContinue: 'Nastavi',
+		calSkip: 'Preskoči kalibraciju',
+
+		// Camera
+		cameraHint: 'Dodirni sate kad je sunce zaklonjeno',
+		counter: (n: number) => `${n} od 9 sati`,
+		hourSunny: (h: number) => `${h}:00, ima sunca. Dodirni ako je zaklonjeno.`,
+		hourBlocked: (h: number) => `${h}:00, zaklonjeno. Dodirni ako ima sunca.`,
+		hourNight: (h: number) => `${h}:00, sunce je ispod obzora`,
+		hoursLabel: 'Sati od 8 do 16',
+		turnLeft: 'Put sunca je lijevo. Okreni se polako.',
+		turnRight: 'Put sunca je desno. Okreni se polako.',
+		tiltUp: 'Podigni mobitel prema nebu.',
+		tiltDown: 'Spusti mobitel malo niže.',
+		done: 'Gotovo',
+		closeCamera: 'Zatvori kameru',
+
+		// Manual fallback
+		manualTitle: 'Koliko sunca dobiva to mjesto?',
+		manualText: 'Sjeti se sunčanog dana i odaberi što najbolje opisuje mjesto.',
+		manualOptions: {
+			full: { label: 'Cijeli dan', sub: 'Sunce od jutra do popodneva' },
+			morning: { label: 'Samo ujutro', sub: 'Popodne je u sjeni' },
+			afternoon: { label: 'Samo popodne', sub: 'Ujutro je u sjeni' },
+			never: { label: 'Skoro nikad', sub: 'Zgrada ili drveće ga zaklanjaju' }
+		},
+		manualCta: 'Pokaži rezultat',
+		reasons: {
+			desktop: 'Kamera radi samo na mobitelu, pa ovdje odgovori na jedno pitanje.',
+			insecure: 'Kamera radi samo preko sigurne veze (https). Možeš odgovoriti ručno.',
+			denied: 'Nisi dopustio pristup kameri ili senzorima. Možeš odgovoriti ručno.',
+			noCamera: 'Ne možemo pokrenuti kameru na ovom uređaju. Možeš odgovoriti ručno.',
+			noSensor: 'Ovaj uređaj nema kompas, pa ne možemo pokazati put sunca. Možeš odgovoriti ručno.'
+		},
+
+		// Result
+		goodTitle: (acc: string) => `Za ${acc} je ovo dobro mjesto`,
+		weakTitle: (acc: string) => `Ovdje je malo sunca za ${acc}`,
+		goodText: (hours: string, nom: string, plural: boolean, need: string) =>
+			`Imaš oko ${hours} sunca, a ${nom} ${plural ? 'vole' : 'voli'} ${need}.`,
+		weakText: (hours: string, nom: string) =>
+			`Imaš oko ${hours} sunca. ${cap(nom)} će ovdje rasti slabije i roditi manje.`,
+		need: { full: 'puno sunca', partial: 'polusjenu', shade: 'hlad' },
+		monthNote: (m: number) =>
+			`Rezultat vrijedi za ${MONTHS[m - 1]}. Ljeti je sunce više, a zimi niže, pa se sjena mijenja.`,
+		approxNote: 'Kompas mobitela nije savršen, pa su sati okvirni.',
+		better: 'Što ovdje uspijeva bolje',
+		add: (acc: string) => `Dodaj ${acc} u moj vrt`,
+		addAnyway: (acc: string) => `Ipak dodaj ${acc} u moj vrt`,
+		inGarden: 'U tvom je vrtu',
+		again: 'Provjeri drugo mjesto',
+		hourBar: (sunny: number) => `Sunčani sati između 8 i 16 sati: ${sunny} od 9`
 	}
 };
+
+/** 1 sat, 2-4 sata, else sati (with the 11-14 exception). */
+export function pluralHours(n: number): string {
+	const mod10 = n % 10;
+	const mod100 = n % 100;
+	if (mod10 === 1 && mod100 !== 11) return `${n} sat`;
+	if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return `${n} sata`;
+	return `${n} sati`;
+}

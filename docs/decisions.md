@@ -80,3 +80,32 @@ Spec gaps and the simplest choice made for each. Review and overrule freely.
 - When onboarding is reopened from the header, the intro panel drops its logo (the header has one).
 - **Testing other dates:** add `?datum=2027-03-15` to any URL. It sticks for the browser session;
   `?datum=` clears it.
+
+## Sun check (`/sunce`)
+
+- **Design boards** (`SunceUlaz` … `DanasDesktopSunce`) were not available to me, so the screens follow
+  the spec text and the existing Bento tokens. Expect a visual review pass against the canvas.
+- One route, `/sunce?plant=<id>`, with the steps as screens inside it. No plant in the link shows a
+  picker (garden plants first). The mobile nav is hidden on this route; it has its own back button.
+- **Permissions** are all requested from the "Počni" tap (iOS only allows the motion prompt from a
+  tap): motion → location (non-blocking) → camera → wait up to 2 s for a compass reading. Any refusal or
+  missing piece goes to the manual screen with a one-line reason. Desktop (no coarse pointer) and
+  plain http go straight to manual. Offline needs no special case: suncalc runs locally and the city
+  from onboarding replaces geolocation.
+- **Location** is used only in memory for the sun path. Fallback: the onboarding city's approximate
+  coordinates (`src/lib/cities.ts`), else Zagreb or Split by region.
+- **Hours** are whole hours 08–16 local time. An hour with the sun below the horizon counts as not
+  sunny and cannot be toggled. Sunny hours = above the horizon and not tapped as blocked.
+- **Projection**: pinhole model, 64° vertical field of view for a portrait phone, roll ignored. Heading
+  comes from `webkitCompassHeading` on iOS and from `deviceorientationabsolute` on Android. The hour
+  chips under the camera toggle the same hours, so the check still works when the compass is off or
+  the dots are hard to hit.
+- **Manual answers** map to assumed sunny hours so the result can draw the same hour bar:
+  Cijeli dan 08–16, Samo ujutro 08–11, Samo popodne 13–16, Skoro nikad 12 only.
+- **Verdict copy** is generated from new per-plant `forms` (`nom`, `gen`, `acc`, `plural`), which
+  replace `nameAccusative`. `plural` handles agreement ("jagode vole" / "češnjak voli"). No per-plant
+  `sunVerdict` strings were needed.
+- "Što ovdje uspijeva bolje" lists up to 3 plants whose sun need equals the measured level, then ones
+  needing less; with the current 8 seed plants that is often fewer than 3, and none for full shade.
+- Not built: the QR code for opening the check on a phone (marked optional), and the design-review
+  "show other outcome" toggle (as instructed).

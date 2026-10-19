@@ -26,8 +26,17 @@ export const plantSchema = z
 		reviewed: z.boolean(),
 		id: z.string().regex(/^[a-z0-9-]+$/, 'id must be lowercase ascii, digits or dashes'),
 		name: z.string().min(1),
-		/** Accusative form used in task sentences ("Posadi rajčicu"). Defaults to the lowercased name. */
-		nameAccusative: z.string().optional(),
+		/**
+		 * Lowercase Croatian case forms for generated sentences: "Posadi rajčicu" (acc),
+		 * "Za jagode je ovo dobro mjesto" (acc), "malo sunca za ..." and verb agreement
+		 * ("jagode vole" when plural, "češnjak voli" otherwise).
+		 */
+		forms: z.object({
+			nom: z.string().min(1),
+			gen: z.string().min(1),
+			acc: z.string().min(1),
+			plural: z.boolean()
+		}),
 		latin: z.string().optional(),
 		aliases: z.array(z.string()),
 		category: z.enum(['veg', 'herb', 'flower', 'fruit']),

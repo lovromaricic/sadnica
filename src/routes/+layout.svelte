@@ -45,7 +45,8 @@
 	{/if}
 </div>
 
-{#if !firstRun}
+<!-- The sun check is a focused flow with its own back button and a full-screen camera. -->
+{#if !firstRun && page.route.id !== '/sunce'}
 	<MobileNav />
 {/if}
 <Toast />

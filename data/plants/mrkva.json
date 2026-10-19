@@ -2,7 +2,7 @@
   "reviewed": false,
   "id": "mrkva",
   "name": "Mrkva",
-  "nameAccusative": "mrkvu",
+  "forms": { "nom": "mrkva", "gen": "mrkve", "acc": "mrkvu", "plural": false },
   "latin": "Daucus carota",
   "aliases": ["mrkva", "mrkvica", "merlin", "šargarepa", "sargarepa", "carrot"],
   "category": "veg",
