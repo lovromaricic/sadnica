@@ -14,6 +14,7 @@
     "Biljke drži 30 cm jednu od druge.",
     "Naraste visok i prozračan."
   ],
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 30, "thinToCm": 30, "depthCm": 1 },
   "containers": { "ok": true, "minPotCm": 25 },
   "summary": "Lagani, prozračni cvjetovi do mraza. Ne treba gotovo nikakvu brigu.",
   "weeklyTip": "Ne gnoji ga, u siromašnoj zemlji cvate najljepše.",

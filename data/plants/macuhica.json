@@ -14,6 +14,7 @@
     "Sadnice drži 20 cm jednu od druge.",
     "Niske su i lijepo popune posudu."
   ],
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 20, "rowSpacingCm": 20, "depthCm": 5, "depthMode": "same-level" },
   "containers": { "ok": true, "minPotCm": 15, "note": "Idealna za balkonske posude u jesen i proljeće." },
   "summary": "Cvate po hladnom vremenu, u jesen i rano proljeće. Savršena za balkon.",
   "weeklyTip": "Otkidaj precvale cvjetove, cvast će tjednima.",

@@ -14,6 +14,7 @@
     "Presadnice sadi 45 cm jednu od druge.",
     "Kovrčave glavice se šire."
   ],
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 45, "rowSpacingCm": 60, "depthCm": 10, "depthMode": "same-level" },
   "containers": { "ok": false },
   "summary": "Kovrčavi zimski kupus. Mraz mu ne smeta, čak postaje slađi.",
   "weeklyTip": "Kelj možeš ostaviti u vrtu i brati ga po potrebi cijelu zimu.",

@@ -9,11 +9,12 @@
   "difficulty": "medium",
   "sun": "full",
   "water": "medium",
-  "spacingText": "150 cm",
+  "spacingText": "1,5 m",
   "spacingExplanation": [
     "Biljke sadi metar i pol jednu od druge.",
     "Vriježe se šire po zemlji."
   ],
+  "planting": { "method": "hill", "reviewed": false },
   "containers": { "ok": false },
   "summary": "Treba dugo i vruće ljeto. Na obali lako, na kontinentu na najtoplijem mjestu.",
   "weeklyTip": "Lubenica je zrela kad se suši vitica najbliža plodu, a zvuk pri kucanju je šupalj.",

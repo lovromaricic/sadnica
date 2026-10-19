@@ -14,6 +14,7 @@
     "Lukovice sadi 10 cm jednu od druge.",
     "U skupinama od desetak lukovica izgledaju najljepše."
   ],
+  "planting": { "method": "clove", "reviewed": false, "noun": "bulb", "spacingCm": 10, "rowSpacingCm": 20, "depthCm": 15, "orientation": "tip-up", "tipKey": "bulbDepth" },
   "containers": { "ok": true, "minPotCm": 20 },
   "summary": "Lukovice posadiš u jesen, a u proljeće dobiješ šarenilo. Lako za početnika.",
   "weeklyTip": "Lukovicu posadi tri puta dublje od njezine visine.",

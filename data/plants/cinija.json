@@ -14,6 +14,7 @@
     "Biljke drži 30 cm jednu od druge.",
     "Treba zraka oko lišća, inače lakše oboli."
   ],
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 30, "thinToCm": 30, "note": "Može se i uzgojiti iz presadnica.", "depthCm": 1 },
   "containers": { "ok": true, "minPotCm": 20 },
   "summary": "Šareni cvjetovi cijelo ljeto. Što ih više režeš za vazu, to više cvjeta.",
   "weeklyTip": "Sij je izravno u svibnju, ne voli presađivanje.",

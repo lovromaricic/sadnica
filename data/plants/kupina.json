@@ -11,12 +11,13 @@
   "water": "medium",
   "rank": 300,
   "perennial": { "yearsToFirstHarvest": 1 },
-  "spacingText": "150 cm",
+  "spacingText": "1,5 m",
   "spacingExplanation": [
     "Sadnice drži metar i pol jednu od druge, uz ogradu ili žicu.",
     "Izboji narastu nekoliko metara."
   ],
   "spacingTip": "sorte bez trnja puno su lakše za berbu.",
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 150, "rowSpacingCm": 200, "holeDepthCm": 40, "holeWidthCm": 40, "staked": false, "graftedAboveSoil": false },
   "containers": { "ok": false, "note": "Prebujna za lonac." },
   "summary": "Bujna i rodna. Sorte bez trnja lakše se beru, a plodovi dozrijevaju krajem ljeta.",
   "weeklyTip": "Izboje veži uz žicu u lepezu, lakše ćeš brati.",

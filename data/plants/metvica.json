@@ -15,6 +15,7 @@
     "Metvica se širi podzemnim izdancima."
   ],
   "spacingTip": "u vrtu je posadi u lonac bez dna ukopan u zemlju, inače se proširi posvuda.",
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 30, "rowSpacingCm": 40, "depthCm": 10, "depthMode": "same-level" },
   "containers": { "ok": true, "minPotCm": 25, "note": "Najbolje u loncu, u vrtu se nekontrolirano širi." },
   "summary": "Raste gotovo sama i širi se posvuda. Najbolje je drži u loncu.",
   "weeklyTip": "Beri vrhove prije cvatnje, listovi su tada najmirisniji.",

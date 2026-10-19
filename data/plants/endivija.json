@@ -15,6 +15,7 @@
     "Endivija se široko raširi."
   ],
   "spacingTip": "dva tjedna prije berbe poveži listove da sredina pobijeli i bude manje gorka.",
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 30, "rowSpacingCm": 35, "depthCm": 5, "depthMode": "same-level" },
   "containers": { "ok": true, "minPotCm": 25 },
   "summary": "Jesenska salata, kovrčava ili široka. Malo gorka, ali hrskava.",
   "weeklyTip": "Poveži listove gumicom dva tjedna prije berbe, sredina pobijeli.",

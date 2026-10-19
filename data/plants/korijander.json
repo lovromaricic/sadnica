@@ -14,6 +14,7 @@
     "Prorijedi na 15 cm.",
     "Gušće posijan daje više listova, a manje sjemena."
   ],
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 25, "thinToCm": 15, "depthCm": 1 },
   "containers": { "ok": true, "minPotCm": 20 },
   "summary": "Listovi za azijska i meksička jela, a sjemenke kao začin. Ljeti brzo cvjeta.",
   "weeklyTip": "Sij ga u proljeće i jesen, ljeti odmah ide u cvijet.",

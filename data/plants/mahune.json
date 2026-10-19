@@ -16,6 +16,7 @@
     "Visoke mahune sij uz kolce, po nekoliko sjemenki oko svakog."
   ],
   "spacingTip": "niske ne trebaju potporu, a visoke daju više na istoj površini.",
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 40, "thinToCm": 10, "sowCm": 10, "tipKey": "bigSeeds", "depthCm": 4 },
   "containers": { "ok": true, "minPotCm": 25, "note": "Niske sorte uspijevaju u koritu." },
   "summary": "Brzo niču i obilno rađaju. Bereš ih cijelo ljeto.",
   "weeklyTip": "Ne sij dok se zemlja ne ugrije, na kontinentu ne prije svibnja. Sjeme u hladnoj zemlji trune.",

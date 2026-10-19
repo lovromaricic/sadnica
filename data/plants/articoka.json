@@ -11,11 +11,12 @@
   "water": "medium",
   "rank": 300,
   "perennial": { "yearsToFirstHarvest": 2 },
-  "spacingText": "100 cm",
+  "spacingText": "1 m",
   "spacingExplanation": [
     "Biljke sadi metar jednu od druge.",
     "Artičoka je velika trajnica, raste do metar i pol."
   ],
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 100, "rowSpacingCm": 100, "depthCm": 15, "depthMode": "same-level" },
   "containers": { "ok": false, "note": "Naraste do metar i pol, prevelika za balkonski lonac." },
   "summary": "Velika, lijepa trajnica. Na obali raste godinama, na kontinentu treba zimsku zaštitu.",
   "weeklyTip": "Beri pupove dok su zatvoreni i čvrsti.",

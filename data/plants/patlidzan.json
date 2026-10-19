@@ -14,6 +14,7 @@
     "Presadnice sadi 50 cm jednu od druge.",
     "Biljka je široka i treba toplinu sa svih strana."
   ],
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 50, "rowSpacingCm": 70, "depthCm": 10, "depthMode": "same-level" },
   "containers": { "ok": true, "minPotCm": 30, "note": "U crnoj posudi na suncu korijen je topliji, što patlidžan voli." },
   "summary": "Najosjetljiviji na hladnoću od svih ljetnih biljaka. Treba vruće ljeto i puno sunca.",
   "weeklyTip": "Kupi presadnice, a sadi ih tek kad noći budu iznad 12 °C.",

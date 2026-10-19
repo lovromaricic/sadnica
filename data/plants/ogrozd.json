@@ -11,11 +11,12 @@
   "water": "medium",
   "rank": 300,
   "perennial": { "yearsToFirstHarvest": 2 },
-  "spacingText": "120 cm",
+  "spacingText": "1,2 m",
   "spacingExplanation": [
     "Grmove drži oko 120 cm jedan od drugog.",
     "Ogrozd je trnovit, ostavi prostor za berbu."
   ],
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 120, "rowSpacingCm": 150, "holeDepthCm": 40, "holeWidthCm": 50, "staked": false, "graftedAboveSoil": false },
   "containers": { "ok": true, "minPotCm": 40 },
   "summary": "Kiselkasto-slatke bobice. Otporan grm koji podnosi i hladnije krajeve.",
   "weeklyTip": "Rukavice su obavezne pri berbi, ogrozd je trnovit.",

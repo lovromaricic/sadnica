@@ -14,6 +14,7 @@
     "Prorijedi na 10 cm, redove drži 30 cm.",
     "Korijen je dug i debeo pa treba prostora."
   ],
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 30, "thinToCm": 10, "depthCm": 1 },
   "containers": { "ok": false, "note": "Korijen je predug za lonac." },
   "summary": "Slatki bijeli korijen. Mraz ga čini još slađim, pa ga beri zimi.",
   "weeklyTip": "Uvijek sij svježe sjeme, staro slabo niče.",

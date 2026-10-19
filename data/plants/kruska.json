@@ -16,6 +16,7 @@
     "Stabla sadi 4 m jedno od drugog.",
     "Kruška treba drugu sortu u blizini za oprašivanje."
   ],
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 400, "rowSpacingCm": 500, "holeDepthCm": 50, "holeWidthCm": 60, "staked": true, "graftedAboveSoil": true },
   "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
   "summary": "Dugovječno stablo slatkih plodova. Počinje rađati nešto kasnije od jabuke.",
   "weeklyTip": "Kruške beri malo nezrele i ostavi ih da dozriju u hladnoj prostoriji.",

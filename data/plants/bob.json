@@ -16,6 +16,7 @@
     "Biljke narastu do metra visine, pa se u dvostrukom redu međusobno podupiru."
   ],
   "spacingTip": "između dvostrukih redova ostavi stazu da možeš brati.",
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 25, "thinToCm": 15, "sowCm": 15, "note": "Sije se u dvostrukim redovima; dijagram prikazuje obične redove.", "depthCm": 5 },
   "containers": { "ok": false, "note": "Bob naraste do metra visine i treba duboku zemlju, pa u loncu slabo rodi." },
   "summary": "Krupne sjemenke koje lako niknu. Na obali se sije u jesen, a na kontinentu u rano proljeće.",
   "weeklyTip": "Namoči sjemenke preko noći u mlakoj vodi, brže će niknuti.",

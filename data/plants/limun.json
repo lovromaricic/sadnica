@@ -16,6 +16,7 @@
     "Na obali u vrt, na zaštićeno mjesto uz južni zid, 3 m od drugih stabala. U hladnim noćima ga prekrij agrilom.",
     "Na kontinentu raste u posudi."
   ],
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 300, "rowSpacingCm": 300, "holeDepthCm": 50, "holeWidthCm": 50, "staked": true, "graftedAboveSoil": true },
   "containers": { "ok": true, "minPotCm": 40, "note": "Na kontinentu samo u loncu, zimi unutra na svijetlom i hladnom." },
   "summary": "Mediteranska klasika. Na kontinentu raste u posudi i zimuje u kući.",
   "weeklyTip": "Zimi ga drži na svijetlom mjestu na 5 do 10 °C i zalijevaj rijetko.",

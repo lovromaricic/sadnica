@@ -16,6 +16,7 @@
     "Stabla sadi 4 m jedno od drugog.",
     "Breskva voli toplo, zaštićeno mjesto."
   ],
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 400, "rowSpacingCm": 500, "holeDepthCm": 50, "holeWidthCm": 60, "staked": true, "graftedAboveSoil": true },
   "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
   "summary": "Sočni plodovi, ali traži brigu: godišnje orezivanje i zaštitu od kovrčavosti lista.",
   "weeklyTip": "Prskanje bakrom krajem zime štiti od kovrčavosti lista.",

@@ -14,6 +14,7 @@
     "Presadnice sadi 40 cm jednu od druge.",
     "Biljka je manja od slatke paprike, ali daje puno plodova."
   ],
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 40, "rowSpacingCm": 60, "depthCm": 10, "depthMode": "same-level" },
   "containers": { "ok": true, "minPotCm": 20, "note": "Odlična za balkon, jedna biljka po loncu." },
   "summary": "Mala biljka puna ljutih plodova. Savršena za balkon.",
   "weeklyTip": "Što je biljka više na suncu, to su plodovi ljući.",

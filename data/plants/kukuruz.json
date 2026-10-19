@@ -15,6 +15,7 @@
     "Kukuruz se oprašuje vjetrom, pa u bloku bolje rađa nego u jednom dugom redu."
   ],
   "spacingTip": "blok od barem četiri reda puno bolje rađa od jednog reda.",
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 60, "thinToCm": 30, "sowCm": 10, "tipKey": "cornBlock", "depthCm": 4 },
   "containers": { "ok": false, "note": "Treba prostor i oprašivanje u skupini." },
   "summary": "Slatki klipovi za kuhanje i roštilj. Sadi ga u blok, ne u jedan red.",
   "weeklyTip": "Klip je zreo kad su svilene niti smeđe, a zrno pusti mliječni sok.",

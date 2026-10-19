@@ -11,11 +11,12 @@
   "water": "low",
   "rank": 300,
   "perennial": { "yearsToFirstHarvest": 2 },
-  "spacingText": "100 cm",
+  "spacingText": "1 m",
   "spacingExplanation": [
     "Sadnice drži metar jednu od druge.",
     "Lovor raste u velik grm ili malo stablo."
   ],
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 100, "rowSpacingCm": 100, "holeDepthCm": 40, "holeWidthCm": 50, "staked": false, "graftedAboveSoil": false },
   "containers": { "ok": true, "minPotCm": 40, "note": "Na kontinentu samo u loncu, zimi u svijetloj i hladnoj prostoriji." },
   "summary": "Zimzeleni grm s obale. Listove bereš cijele godine, a sušeni su još mirisniji.",
   "weeklyTip": "Na kontinentu ga drži u loncu i zimi unesi unutra.",

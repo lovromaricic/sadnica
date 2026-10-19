@@ -16,6 +16,7 @@
     "Između redova treba mjesta za zagrtanje."
   ],
   "spacingTip": "zagrći biljke dva puta, gomolji ne smiju biti na svjetlu.",
+  "planting": { "method": "special", "reviewed": false },
   "containers": { "ok": true, "minPotCm": 40, "note": "U velikoj vreći ili kanti od 40 litara." },
   "summary": "Posadiš gomolj, a ispod zemlje naraste cijelo gnijezdo novih.",
   "weeklyTip": "Gomolje prije sadnje drži dva tjedna na svijetlom mjestu da proklijaju.",

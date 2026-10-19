@@ -16,6 +16,7 @@
     "Na obali u vrt, 3 m od drugih stabala.",
     "Na kontinentu raste u posudi."
   ],
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 300, "rowSpacingCm": 300, "holeDepthCm": 50, "holeWidthCm": 50, "staked": true, "graftedAboveSoil": true },
   "containers": { "ok": true, "minPotCm": 40, "note": "Na kontinentu samo u loncu, zimi unutra." },
   "summary": "Najotporniji od uobičajenih citrusa. U dolini Neretve raste u vrtovima, na kontinentu u posudi.",
   "weeklyTip": "Mandarina podnosi kratki lagani mraz, ali mlado stablo zaštiti agrilom.",

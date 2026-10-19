@@ -7,6 +7,7 @@ import { join } from 'node:path';
 import { z } from 'zod';
 import { explanationsSchema, plantSchema, rulesSchema, type Plant } from '../src/lib/data/schema';
 import { normalize } from '../src/lib/search';
+import { plantingProblems } from '../src/lib/planting/validate';
 
 const root = join(import.meta.dirname, '..', 'data');
 const errors: string[] = [];
@@ -71,6 +72,7 @@ for (const p of all) {
 			}
 		}
 	}
+	for (const problem of plantingProblems(p)) errors.push(`${p.id}: planting: ${problem}`);
 	if (p.containers?.ok && p.perennial && p.perennial.yearsToFirstHarvest >= 3 && p.category === 'fruit' && !/citrus|olea/i.test(p.latin ?? '')) {
 		warnings.push(`${p.id}: a fruit tree marked as a balcony pot plant; is that realistic for a beginner?`);
 	}
@@ -88,4 +90,6 @@ console.log(`Data OK: ${ids.size} plants, explanations, rules.`);
 for (const w of warnings) console.warn(`Check: ${w}`);
 if (noContainers.length)
 	console.warn(`Note: no "containers" for ${noContainers.join(', ')}. Balcony users will not see them as pot plants.`);
+const plantingUnreviewed = all.filter((p) => p.planting && !p.planting.reviewed).length;
+if (plantingUnreviewed) console.warn(`Note: ${plantingUnreviewed} planting diagram value set(s) are marked "reviewed": false.`);
 if (unreviewed) console.warn(`Note: ${unreviewed} content file(s) are marked "reviewed": false. Verify before publishing.`);

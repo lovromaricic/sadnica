@@ -1,0 +1,27 @@
+/** Illustration colours for the planting diagrams (soil, seeds, leaves), from the design boards. */
+export const C = {
+	bed: '#D6B78C',
+	bedSpeck: '#C1A074',
+	furrow: '#B8956A',
+	sky: '#EAF4D8',
+	soil: '#C9A27A',
+	soilSpeck: '#B58E64',
+	grass: '#8DB36A',
+	hole: '#9C7A52',
+	cover: '#C9A27A',
+	thinCover: '#D5B189',
+	seed: '#6B4A2B',
+	clove: '#F4EBD6',
+	cloveLine: '#6B5A38',
+	leaf: '#6FA66B',
+	leafLine: '#2F5E34',
+	leafDark: '#3F6B2A',
+	stem: '#4F8A4B',
+	rootBall: '#7A5A3A',
+	rootLine: '#4A3420',
+	bark: '#7A5A3A',
+	trunkDot: '#6B4A2B',
+	graft: '#B58E64',
+	stake: '#8A6A3F',
+	ink: '#14201A'
+} as const;

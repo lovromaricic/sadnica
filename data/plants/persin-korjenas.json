@@ -14,6 +14,7 @@
     "Biljke prorijedi na 8 cm, redove drži 25 cm.",
     "Korijen raste u dubinu i treba mjesta oko sebe."
   ],
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 25, "thinToCm": 8, "depthCm": 1 },
   "containers": { "ok": false, "note": "Korijen treba duboku, rahlu zemlju u gredici." },
   "summary": "Korijen za juhe i variva, a listovi kao začin. Sporo niče, ali je poslije lak.",
   "weeklyTip": "Peršin niče i do četiri tjedna. Ne gubi strpljenje i drži zemlju vlažnom.",

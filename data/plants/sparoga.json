@@ -17,6 +17,7 @@
     "Gredica traje 15 do 20 godina, pa joj odredi stalno mjesto."
   ],
   "spacingTip": "prve dvije godine ne beri, biljka mora ojačati.",
+  "planting": { "method": "special", "reviewed": false },
   "containers": { "ok": false, "note": "Trajna biljka za gredicu." },
   "summary": "Posadiš jednom, bereš 15 godina. Prve dvije godine treba strpljenja.",
   "weeklyTip": "Šparoge se beru u proljeće, kad izbojci dosegnu 20 cm.",

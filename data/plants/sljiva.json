@@ -16,6 +16,7 @@
     "Stabla sadi 4 m jedno od drugog.",
     "Šljiva brzo raste i rano počne rađati."
   ],
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 400, "rowSpacingCm": 500, "holeDepthCm": 50, "holeWidthCm": 60, "staked": true, "graftedAboveSoil": true },
   "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
   "summary": "Otporno i rodno stablo. Plodovi za jelo, pekmez i kolače.",
   "weeklyTip": "Ako je plodova previše, prorijedi ih u lipnju, preostali će biti krupniji.",

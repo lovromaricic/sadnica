@@ -9,6 +9,9 @@
 	import GardenStage from '#lib/components/GardenStage.svelte';
 	import Icon from '#lib/components/Icon.svelte';
 	import Modal from '#lib/components/Modal.svelte';
+	import PlantingDiagram from '#lib/components/planting/PlantingDiagram.svelte';
+	import { headerValue, tipText } from '#lib/planting/content.ts';
+	import { hasDiagram } from '#lib/planting/geometry.ts';
 	import MonthStrip from '#lib/components/MonthStrip.svelte';
 	import PlantArt from '#lib/components/PlantArt.svelte';
 	import PlantProblems from '#lib/components/PlantProblems.svelte';
@@ -95,6 +98,14 @@
 	});
 
 	const factLabel = (f: Fact) => (f === 'spacing' && potCm ? t.plant.pot.label : t.plant.facts[f]);
+
+	// Garden spacing gets the animated planting diagram when the plant has one; pots keep the pot text.
+	const diagram = $derived(!potCm && plant?.planting && hasDiagram(plant.planting) ? plant.planting : undefined);
+	let diagramOpen = $state(false);
+	function openFactModal(f: Fact) {
+		if (f === 'spacing' && diagram) diagramOpen = true;
+		else showFact(f);
+	}
 
 	const badge = $derived.by(() => {
 		if (!season) return '';
@@ -228,7 +239,7 @@
 							class="fact"
 							style:background={FACT_COLORS[f]}
 							aria-haspopup="dialog"
-							onclick={() => showFact(f)}
+							onclick={() => openFactModal(f)}
 						>
 							<span class="i" aria-hidden="true">i</span>
 							<span class="fact-label">{factLabel(f)}<span class="sr-only">:</span></span>
@@ -324,6 +335,12 @@
 			<p><strong>{t.pets.part}:</strong> {pet.part}</p>
 			<p><strong>{t.pets.signs}:</strong> {pet.signs}</p>
 			<p>{t.pets.advice}</p>
+		</Modal>
+	{/if}
+
+	{#if diagram}
+		<Modal bind:open={diagramOpen} label={t.planting.label} value={headerValue(diagram)} color={FACT_COLORS.spacing} tip={tipText(diagram)}>
+			<PlantingDiagram {plant} planting={diagram} />
 		</Modal>
 	{/if}
 

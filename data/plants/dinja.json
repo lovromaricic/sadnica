@@ -9,11 +9,12 @@
   "difficulty": "medium",
   "sun": "full",
   "water": "medium",
-  "spacingText": "100 cm",
+  "spacingText": "1 m",
   "spacingExplanation": [
     "Biljke sadi metar jednu od druge.",
     "Vriježe se šire po zemlji."
   ],
+  "planting": { "method": "hill", "reviewed": false },
   "containers": { "ok": false },
   "summary": "Slatka i mirisna, ali treba toplinu. Na kontinentu je sadi uz topli zid.",
   "weeklyTip": "Dinja je zrela kad zamiriše i lako se odvoji od peteljke.",

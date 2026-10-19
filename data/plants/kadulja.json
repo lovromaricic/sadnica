@@ -14,6 +14,7 @@
     "Sadnice drži 40 cm jednu od druge.",
     "Kadulja naraste u mali grm."
   ],
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 40, "rowSpacingCm": 50, "depthCm": 10, "depthMode": "same-level" },
   "containers": { "ok": true, "minPotCm": 25, "note": "U loncu s dobrom drenažom." },
   "summary": "Mediteranska trajnica srebrnastih listova. Voli sunce i suho, ne voli vlagu.",
   "weeklyTip": "U proljeće je orezi za trećinu, ostat će gusta.",

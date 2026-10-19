@@ -10,12 +10,13 @@
   "sun": "full",
   "water": "high",
   "rank": 11,
-  "spacingText": "100 cm",
+  "spacingText": "1 m",
   "spacingExplanation": [
     "Biljke sadi metar jednu od druge.",
     "Jedna tikvica zauzme cijeli kvadratni metar."
   ],
   "spacingTip": "dvije biljke su dovoljne za cijelu obitelj.",
+  "planting": { "method": "hill", "reviewed": false },
   "containers": { "ok": true, "minPotCm": 45, "note": "Treba velika posuda, barem 45 litara." },
   "summary": "Jedna od najrodnijih biljaka u vrtu. Dvije biljke hrane cijelu obitelj cijelo ljeto.",
   "weeklyTip": "Beri tikvice dugačke 15 do 20 cm, veće su vodenaste.",

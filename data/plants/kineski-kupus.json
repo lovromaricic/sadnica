@@ -14,6 +14,7 @@
     "Biljke drži 30 cm jednu od druge.",
     "Glavice brzo rastu i trebaju prostora."
   ],
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 30, "rowSpacingCm": 40, "depthCm": 10, "depthMode": "same-level" },
   "containers": { "ok": true, "minPotCm": 30 },
   "summary": "Brzi kupus za kasno ljeto i jesen. Nježniji od običnog kupusa.",
   "weeklyTip": "Sij ga tek krajem srpnja, u proljeće prebrzo ide u cvijet.",

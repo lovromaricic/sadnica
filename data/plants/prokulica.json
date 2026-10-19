@@ -14,6 +14,7 @@
     "Biljke drži 60 cm jednu od druge.",
     "Narastu visoko i trebaju potporu."
   ],
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 60, "rowSpacingCm": 70, "depthCm": 10, "depthMode": "same-level" },
   "containers": { "ok": false },
   "summary": "Male glavice duž visoke stabljike. Dugo raste, a bere se zimi.",
   "weeklyTip": "Početkom jeseni otkini vrh biljke, glavice će brže narasti.",

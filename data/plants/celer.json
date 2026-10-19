@@ -15,6 +15,7 @@
     "Gomolj se širi i treba prostora."
   ],
   "spacingTip": "ne sadi ga preduboko, gomolj mora biti napola iznad zemlje.",
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 35, "rowSpacingCm": 40, "depthCm": 5, "depthMode": "same-level", "tipKey": "celery" },
   "containers": { "ok": false, "note": "Treba puno vode i prostora, bolje u gredici." },
   "summary": "Zahtjevniji: dugo raste i traži puno vode. Nagrada je mirisni gomolj za cijelu zimu.",
   "weeklyTip": "Kupi presadnice, sjetva celera je spora i zahtjevna.",

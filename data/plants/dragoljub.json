@@ -14,6 +14,7 @@
     "Biljke drži 30 cm jednu od druge.",
     "Penjuće sorte šire se metar i više."
   ],
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 30, "thinToCm": 30, "sowCm": 10, "depthCm": 2 },
   "containers": { "ok": true, "minPotCm": 20, "note": "Lijep u visećim posudama." },
   "summary": "Jestivi cvjetovi i listovi ljutkastog okusa. Raste i u siromašnoj zemlji.",
   "weeklyTip": "Ne gnoji ga, u bogatoj zemlji daje lišće umjesto cvjetova.",

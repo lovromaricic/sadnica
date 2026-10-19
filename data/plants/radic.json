@@ -14,6 +14,7 @@
     "Biljke drži 25 cm jednu od druge, redove 30 cm.",
     "Glavice radiča trebaju prostora da se zatvore."
   ],
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 30, "thinToCm": 25, "note": "Može se i presaditi iz presadnica.", "depthCm": 1 },
   "containers": { "ok": true, "minPotCm": 25, "note": "Uspijeva u dubljem koritu." },
   "summary": "Gorkasto lisnato povrće za jesen i zimu. Podnosi hladnoću bolje od salate.",
   "weeklyTip": "Gorčina se ublaži ako ga nakon branja držiš sat vremena u hladnoj vodi.",

@@ -16,6 +16,7 @@
     "Pregusto posijane rotkvice ne stvore gomolj."
   ],
   "spacingTip": "prorijedi čim niknu, inače ostaju tanke.",
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 15, "thinToCm": 5, "depthCm": 1 },
   "containers": { "ok": true, "minPotCm": 15, "note": "Uspijeva u svakom loncu dubljem od 15 cm." },
   "summary": "Najbrže povrće: od sjetve do berbe samo tri do četiri tjedna. Savršeno za prvi pokušaj.",
   "weeklyTip": "Sij malo svakih dva tjedna, pa imaš rotkvice stalno.",

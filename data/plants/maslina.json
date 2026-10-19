@@ -16,6 +16,7 @@
     "Na obali stabla sadi 6 m jedno od drugog.",
     "Na kontinentu raste u posudi."
   ],
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 600, "rowSpacingCm": 600, "holeDepthCm": 60, "holeWidthCm": 60, "staked": true, "graftedAboveSoil": false },
   "containers": { "ok": true, "minPotCm": 40, "note": "Na kontinentu u loncu, zimi na hladnom i svijetlom." },
   "summary": "Simbol obale, živi stoljećima. Na kontinentu raste kao ukras u posudi, a plodovi tamo rijetko dozriju.",
   "weeklyTip": "Maslina ne voli mokre noge, zalijevaj tek kad se zemlja osuši.",

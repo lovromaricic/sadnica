@@ -16,6 +16,7 @@
     "Penjući krastavac zauzme manje mjesta i manje obolijeva."
   ],
   "spacingTip": "pusti ga da se penje po mreži, plodovi su čišći.",
+  "planting": { "method": "hill", "reviewed": false },
   "containers": { "ok": true, "minPotCm": 30, "note": "U velikom loncu uz mrežu ili štap." },
   "summary": "Brzo raste i obilno rađa ako ima vode i sunca. Najbolji je penjući uz mrežu.",
   "weeklyTip": "Beri krastavce svaki dan ili dva, biljka tada daje nove.",

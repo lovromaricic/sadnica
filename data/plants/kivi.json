@@ -17,6 +17,7 @@
     "Treba muška i ženska biljka, jedna muška dovoljna je za nekoliko ženskih."
   ],
   "spacingTip": "bez muške biljke ženska neće roditi.",
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 300, "rowSpacingCm": 400, "holeDepthCm": 40, "holeWidthCm": 50, "staked": true, "graftedAboveSoil": false, "note": "Kolac predstavlja pergolu ili žicu." },
   "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
   "summary": "Penjačica za pergolu. Treba mušku i žensku biljku, a rađa tek nakon par godina.",
   "weeklyTip": "Kivi beri prije mraza i ostavi da dozrije u kući.",

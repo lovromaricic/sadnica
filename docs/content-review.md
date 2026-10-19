@@ -31,7 +31,13 @@ It cannot judge whether the advice is right. That is the review.
 6. **Perennials.** `perennial.yearsToFirstHarvest` for trees, bushes, asparagus and artichoke.
 7. **Pets.** `pets` follows the ASPCA toxic plant list: check each risk and each `safe: true`. Only
    mark a plant safe when a reliable source says so; leave it out when unsure.
-8. **Language.** Croatian grammar and the name forms in `forms` (nominative, genitive, accusative,
+8. **Planting** (the animated Razmak diagram). `planting.method` picks the picture: `clove` (cloves
+   and bulbs), `row-seed`, `broadcast`, `transplant`, `sapling`; `hill` and `special` keep the text
+   only. Check the numbers (cm), the method, `depthMode` for seedlings, and `staked` and
+   `graftedAboveSoil` for trees. The first spacing must match `spacingText` (the build checks this).
+   `note` explains a choice where a plant could go either way. Set `planting.reviewed` to true when
+   checked.
+9. **Language.** Croatian grammar and the name forms in `forms` (nominative, genitive, accusative,
    plural). Text never addresses the reader with a gendered past tense ("posadio/posadila").
 
 ## Already corrected
@@ -83,4 +89,7 @@ Then the other vegetables and herbs, then fruit and flowers.
 - Broad bean (bob) is sown in February to April inland and in autumn on the coast. The original design
   had it sown in October in Zagreb, but autumn-sown broad beans often do not survive inland winters.
 - For lemon, mandarin and olive inland, the "sowing" window means putting the pot outside in spring.
+- Planting diagrams show one method per plant. Some are sown or planted either way (parsley, zinnia,
+  marigold, chicory, spinach); the more common one for beginners was chosen and `note` says so.
+  Broad bean is shown in single rows, though it is sown in double rows.
 - Typical first-frost dates are in `data/rules.json` (inland: around late October; coast: December).

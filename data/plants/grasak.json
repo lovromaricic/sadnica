@@ -16,6 +16,7 @@
     "Gusti redovi se međusobno podupiru."
   ],
   "spacingTip": "uz red zabodi granje ili mrežu, grašak se penje viticama.",
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 30, "thinToCm": 5, "sowCm": 5, "tipKey": "peas", "depthCm": 4 },
   "containers": { "ok": true, "minPotCm": 25, "note": "Uz mrežicu, u dubljem koritu." },
   "summary": "Jedan od prvih usjeva u proljeće. Podnosi hladnoću i obogaćuje zemlju.",
   "weeklyTip": "Posij ga čim se zemlja odmrzne, grašak voli svježe vrijeme.",

@@ -14,6 +14,7 @@
     "Sij 10 cm jedan od drugog, u redove 50 cm.",
     "Visoki grah sij oko kolaca, četiri do pet zrna oko svakog."
   ],
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 50, "thinToCm": 10, "sowCm": 10, "tipKey": "bigSeeds", "note": "Prikazan je niski grah; visoki se sije oko kolaca.", "depthCm": 4 },
   "containers": { "ok": false },
   "summary": "Grah za suho zrno, za variva preko zime. Bere se kad se mahune osuše.",
   "weeklyTip": "Ostavi mahune da se osuše na biljci, pa ih beri po suhom vremenu.",

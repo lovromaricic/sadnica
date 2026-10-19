@@ -9,11 +9,12 @@
   "difficulty": "easy",
   "sun": "full",
   "water": "medium",
-  "spacingText": "150 cm",
+  "spacingText": "1,5 m",
   "spacingExplanation": [
     "Biljke sadi metar i pol jednu od druge.",
     "Vriježe puze nekoliko metara."
   ],
+  "planting": { "method": "hill", "reviewed": false },
   "containers": { "ok": false, "note": "Treba puno prostora za vriježe." },
   "summary": "Daje velike plodove za jesen i zimu. Treba prostora, ali gotovo ništa drugo.",
   "weeklyTip": "Ispod ploda stavi dasku ili slamu da ne trune na vlažnoj zemlji.",

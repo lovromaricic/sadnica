@@ -14,6 +14,7 @@
     "Lukovice sadi 15 cm jednu od druge.",
     "Svake godine se množe i šire u busen."
   ],
+  "planting": { "method": "clove", "reviewed": false, "noun": "bulb", "spacingCm": 15, "rowSpacingCm": 20, "depthCm": 15, "orientation": "tip-up", "tipKey": "bulbDepth" },
   "containers": { "ok": true, "minPotCm": 20 },
   "summary": "Prvi žuti cvjetovi u proljeće. Lukovice se množe i cvatu godinama.",
   "weeklyTip": "Nakon cvatnje ne reži listove dok ne požute, lukovica tada skuplja snagu.",

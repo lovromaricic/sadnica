@@ -34,6 +34,70 @@ export const containersSchema = z
 	.refine((c) => c.ok || c.minPotCm === undefined, { message: 'minPotCm only makes sense when ok is true', path: ['minPotCm'] });
 export type Containers = z.infer<typeof containersSchema>;
 
+const cm = z.number().positive();
+/** Shared by every planting method: review flag, an optional strings key for the tip, a note for the reviewer. */
+const plantingBase = {
+	reviewed: z.boolean(),
+	tipKey: z.string().min(1).optional(),
+	note: z.string().min(1).optional()
+};
+
+/**
+ * How the plant goes into the ground, for the animated Razmak diagram. All lengths in cm.
+ * "hill" and "special" have no diagram and keep the text-only explanation.
+ */
+export const plantingSchema = z.discriminatedUnion('method', [
+	z.object({
+		method: z.literal('clove'),
+		...plantingBase,
+		/** Which word the texts use: zubac (garlic) or lukovica (bulbs, onion sets). */
+		noun: z.enum(['clove', 'bulb']),
+		spacingCm: cm,
+		rowSpacingCm: cm,
+		/** From the surface to the tip of the clove or bulb. */
+		depthCm: cm,
+		orientation: z.literal('tip-up')
+	}).strict(),
+	z.object({
+		method: z.literal('row-seed'),
+		...plantingBase,
+		rowSpacingCm: cm,
+		thinToCm: cm,
+		/** Distance between seeds when sowing. Default a third of thinToCm; equal to it when nothing is thinned. */
+		sowCm: cm.optional(),
+		depthCm: cm
+	}).strict(),
+	z.object({
+		method: z.literal('broadcast'),
+		...plantingBase,
+		thinToCm: cm,
+		depthCm: cm
+	}).strict(),
+	z.object({
+		method: z.literal('transplant'),
+		...plantingBase,
+		spacingCm: cm,
+		rowSpacingCm: cm,
+		/** Planting hole depth: up to the first leaves, the root ball's own height, or with the crown left above. */
+		depthCm: cm,
+		depthMode: z.enum(['to-first-leaves', 'same-level', 'crown-above-soil'])
+	}).strict(),
+	z.object({
+		method: z.literal('sapling'),
+		...plantingBase,
+		spacingCm: cm,
+		rowSpacingCm: cm,
+		holeDepthCm: cm,
+		holeWidthCm: cm,
+		staked: z.boolean(),
+		graftedAboveSoil: z.boolean()
+	}).strict(),
+	z.object({ method: z.literal('hill'), ...plantingBase }).strict(),
+	z.object({ method: z.literal('special'), ...plantingBase }).strict()
+]);
+export type Planting = z.infer<typeof plantingSchema>;
+export type PlantingMethod = Planting['method'];
+
 export const ILLUSTRATION_KINDS = [
 	'bulb', 'pod', 'rosette', 'leaf', 'tomato', 'root',
 	'pepper', 'cucumber', 'pumpkin', 'cabbage', 'berry', 'strawberry',
@@ -67,6 +131,8 @@ export const plantSchema = z
 		spacingText: z.string().min(1),
 		spacingExplanation: z.array(z.string()).min(1),
 		spacingTip: z.string().optional(),
+		/** Missing means the Razmak explanation stays text only. */
+		planting: plantingSchema.optional(),
 		/**
 		 * Trees, bushes and long-lived herbs: planted once, first harvest after some years.
 		 * They are never the Danas hero and get "prvi plodovi za oko N godine" instead of a month.

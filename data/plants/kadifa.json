@@ -14,6 +14,7 @@
     "Biljke drži 25 cm jednu od druge.",
     "Niska je i gusta, lijepo obrubi gredicu."
   ],
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 25, "thinToCm": 25, "note": "Češće se sadi iz presadnica.", "depthCm": 1 },
   "containers": { "ok": true, "minPotCm": 15 },
   "summary": "Niski, šareni cvijet do mraza. Sadi ga uz rajčicu i krumpir.",
   "weeklyTip": "Kadifa gusto posađena cijelo ljeto smanjuje broj nematoda u tlu.",

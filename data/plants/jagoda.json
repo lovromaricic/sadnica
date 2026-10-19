@@ -16,6 +16,7 @@
     "Jagode tjeraju vriježe koje se ukorijene, pa se red brzo zgusne."
   ],
   "spacingTip": "vriježe odreži, osim ako želiš nove biljke.",
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 30, "rowSpacingCm": 50, "depthCm": 10, "depthMode": "crown-above-soil", "tipKey": "strawberry" },
   "containers": { "ok": true, "minPotCm": 20, "note": "Odlične za viseće posude i korita." },
   "summary": "Najlakše voće za vrt i balkon. Posadiš u kasno ljeto, bereš već iduće proljeće.",
   "weeklyTip": "Ispod plodova stavi slamu, ostat će čisti i neće truliti.",

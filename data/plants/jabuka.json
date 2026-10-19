@@ -17,6 +17,7 @@
     "Za oprašivanje je dobro imati dvije različite sorte u blizini."
   ],
   "spacingTip": "patuljaste sorte stanu i u manji vrt.",
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 400, "rowSpacingCm": 500, "holeDepthCm": 50, "holeWidthCm": 60, "staked": true, "graftedAboveSoil": true, "note": "Razmak ovisi o podlozi: patuljaste 3 m, bujnije 4 do 5 m." },
   "containers": { "ok": false, "note": "Za balkon je prevelika. Patuljaste sorte postoje, ali traže iskustvo." },
   "summary": "Najčešće voće u vrtu. Uz dvije sorte za oprašivanje rađa godinama.",
   "weeklyTip": "Prve dvije godine otkini cvjetove, stablo će brže ojačati.",

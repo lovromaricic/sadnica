@@ -16,6 +16,7 @@
     "Ako ostanu pregusto, korijeni se isprepletu i ostanu tanki."
   ],
   "spacingTip": "prorjeđuj navečer i odmah zalij, tako mirisom manje privlačiš mrkvinu muhu.",
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 25, "thinToCm": 5, "tipKey": "fineSeed", "depthCm": 1 },
   "containers": { "ok": true, "minPotCm": 30, "note": "Lonac neka bude dubok barem 30 cm. Odaberi kratke ili okrugle sorte." },
   "summary": "Sije se izravno u gredicu. Treba strpljenja dok nikne, ali je poslije lako.",
   "weeklyTip": "Zemlja za mrkvu mora biti rahla i bez kamenja, inače korijen naraste kriv.",

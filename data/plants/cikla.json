@@ -15,6 +15,7 @@
     "Iz jednog sjemena nikne nekoliko biljčica, pa je prorjeđivanje obavezno."
   ],
   "spacingTip": "mlade listove koje počupaš možeš pojesti kao salatu.",
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 25, "thinToCm": 10, "tipKey": "beetClusters", "depthCm": 2 },
   "containers": { "ok": true, "minPotCm": 25, "note": "Treba lonac dubok barem 25 cm." },
   "summary": "Slatki korijen i jestivi listovi. Lako raste i dobro se čuva.",
   "weeklyTip": "Prije sjetve namoči sjeme preko noći, brže će niknuti.",

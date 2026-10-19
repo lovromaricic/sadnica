@@ -16,6 +16,7 @@
     "Blitva naraste velika i bereš je mjesecima, pa joj treba mjesta."
   ],
   "spacingTip": "beri vanjske listove, a srce ostavi da raste dalje.",
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 40, "thinToCm": 30, "tipKey": "beetClusters", "depthCm": 2 },
   "containers": { "ok": true, "minPotCm": 30, "note": "U većem loncu daje listove cijelo ljeto." },
   "summary": "Jedna sjetva, berba cijelo ljeto i jesen. Podnosi i vrućinu i hladnoću.",
   "weeklyTip": "Ne beri više od trećine listova odjednom.",

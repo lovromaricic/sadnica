@@ -14,6 +14,7 @@
     "Biljke drži 40 cm jednu od druge.",
     "Visoke sorte narastu i preko dva metra."
   ],
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 60, "thinToCm": 40, "sowCm": 20, "depthCm": 3 },
   "containers": { "ok": true, "minPotCm": 30, "note": "Patuljaste sorte za lonac." },
   "summary": "Divovski cvijet koji prati sunce. Djeca ga obožavaju, a ptice zimi jedu sjemenke.",
   "weeklyTip": "Visoke sorte priveži uz kolac prije ljetnih oluja.",

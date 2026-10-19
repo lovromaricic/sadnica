@@ -269,8 +269,29 @@ beginner most often plants something that cannot work, so that case earns the qu
 - Optional `pets` per plant, after the ASPCA toxic plant list: either `{ safe: true }` (listed as
   non-toxic) or `{ dogs, cats, severity: mild | serious, part, signs }`. 28 plants carry a risk
   (onion family, grapes and daffodil are serious), 15 are marked safe, the rest are unchecked.
-- Plant page: a chip under the Latin name ("Otrovno za pse i mačke", or the softer "Može naškoditi
+- Plant page: a quiet text link under the Latin name (red paw, underlined "Otrovno za pse i mačke", or the softer "Može naškoditi
   psima i mačkama" for mild risks) opening a popup with the dangerous parts, the signs of poisoning,
   "contact a vet" advice and the source. Safe and unchecked plants show nothing.
 - Catalogue: "Sigurno za ljubimce" shows only plants marked safe, never unchecked ones, because a
   wrong "safe" is worse than no label.
+
+## Planting diagrams (Razmak)
+
+- The Razmak tile opens "Razmak i dubina": tabs Odozgo / Sa strane, a looping 10 s SVG animation,
+  one paragraph per view and the tip. Design boards R3–R7 (RazmakKombo, Mrkva, Presadnica, Rasuto,
+  Sadnica) give the five templates: clove, row-seed, transplant, broadcast, sapling.
+- Data: optional `planting` per plant (lengths in cm, `reviewed: false`), validated per method by
+  zod; the build also fails when the first spacing disagrees with `spacingText` or a `tipKey` is
+  unknown. 78 of 85 plants have a diagram; hill crops (squashes, melons) and potato and asparagus
+  keep the text explanation. So do balcony users, who see the pot size instead.
+- Geometry lives in `src/lib/planting/geometry.ts` (pure, tested): each view picks its own scale
+  from the numbers so it fits the viewBox. Animation is plain CSS keyframes: every element runs the
+  whole loop with its own start offset (no animation-delay, which would drift). Scattered seeds use a
+  seeded random generator, so they do not jump between renders.
+- Reduced motion shows the finished picture with every label; soil covers stay see-through there so
+  the seed or root under them is still visible.
+- Row seeding knows the sowing distance (`sowCm`, default a third of the final spacing), so peas and
+  beans, which are not thinned, keep every seed with the same code path.
+- Spacing labels of 100 cm or more are written in metres ("1,5 m") on the tile too, to match.
+- Texts avoid gender agreement on the plant where possible ("Presadnicu zakopaj…"); clove texts
+  have a "zubac" and a "lukovica" variant; tree texts say "Voćke" for fruit and "Sadnice" otherwise.
