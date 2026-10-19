@@ -22,6 +22,8 @@ export default defineConfig(({ mode }) => ({
 	},
 	test: {
 		include: ['src/**/*.test.ts'],
+		// Tests use local dates and hours as a Croatian phone sees them; CI machines run in UTC.
+		env: { TZ: 'Europe/Zagreb' },
 		// The persistent module cache does not notice new data/plants/*.json files picked up by
 		// import.meta.glob, so tests would silently run against the old plant list.
 		fsModuleCache: false
