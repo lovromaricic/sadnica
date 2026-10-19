@@ -5,6 +5,8 @@ done 2026-10-19 with Chrome 155. Routes: `/`, `/pocetak`, `/biljke`, `/biljke/ce
 at Lighthouse's mobile preset (Moto G Power, simulated slow 4G, 4x CPU slowdown) and desktop preset.
 Every run started from cleared storage with `sadnica:v1` set to an onboarded state (Zagreb,
 continental, češnjak in Moj vrt) before any page script ran, so no route redirected to `/pocetak`.
+The final scores and keyboard checks include the phone app-shell layout (`main[data-scroller]` is the
+scroll container below 900px).
 
 ## Scores
 
@@ -16,7 +18,7 @@ Lighthouse 12.8. Performance is before → after the fixes below; accessibility 
 | mobile `/`              | 87 → 99     | 100           | 100            |
 | mobile `/pocetak`       | 98 → 99     | 100           | 100            |
 | mobile `/biljke`        | 97 → 99     | 100           | 100            |
-| mobile `/biljke/cesnjak`| 87 → 93     | 100           | 100            |
+| mobile `/biljke/cesnjak`| 87 → 87–99  | 100           | 100            |
 | mobile `/moj-vrt`       | 98 → 99     | 100           | 100            |
 | desktop `/`             | 100 → 100   | 100           | 100            |
 | desktop `/pocetak`      | 100 → 100   | 100           | 100            |
@@ -24,7 +26,9 @@ Lighthouse 12.8. Performance is before → after the fixes below; accessibility 
 | desktop `/biljke/cesnjak` | 99 → 99   | 100           | 100            |
 | desktop `/moj-vrt`      | 98 → 100    | 100           | 100            |
 
-Mobile metrics after the fixes: FCP = LCP = 1.7 s on every route except the plant page (2.6 s); total
+The plant page on mobile is noisy: four runs of the final build scored 87, 93, 99 and 99. The rest
+varied by a point at most. Mobile metrics after the fixes: FCP = LCP = 1.7 s on every route except
+the plant page (1.7–3.2 s); total
 blocking time 0 ms everywhere; CLS at most 0.009.
 
 **PWA / installability.** Lighthouse 12 no longer has a PWA category, so it was run with Lighthouse
@@ -58,6 +62,11 @@ correctly). Offline was also checked after the font change: with the network off
   whole chip, extended to 44px tall with an invisible pseudo-element. Nothing changes visually.
 - **Text fields had no focus ring.** The search field (`/biljke`) and city field (`/pocetak`) only
   darkened their border on focus. They now get the same 3px blue ring as every other control.
+- **Focus hidden behind the bottom nav (phones).** Tabbing to controls near the end of a page ("Kako
+  saditi", the last catalogue cards, the last step, "Podsjeti me") scrolled them only to the bottom
+  edge, half under the floating nav (WCAG 2.4.11). The scroll container now has
+  `scroll-padding-bottom: var(--nav-space)`; every focused element on `/`, `/biljke`,
+  `/biljke/cesnjak` and `/moj-vrt` now stops above the nav.
 - **Placeholder contrast.** Placeholders used the browser default `#757575`, which is 4.31:1 on the
   ground-coloured city field on `/pocetak` (below AA). They now use `--muted` (6.85:1 there).
 
@@ -98,7 +107,7 @@ Muted text on the pastel tiles is comfortably AA (5.5–6.4:1).
 
 ## Remaining
 
-- **Plant page mobile performance (93).** LCP is the summary paragraph at 2.6 s; 83% of it is render
+- **Plant page mobile performance (87–99, run to run).** LCP is the summary paragraph; about 85% of it is render
   delay while the client-side app boots (`ssr = false`, see decisions.md). Prerendering real HTML
   would fix it but conflicts with the localStorage-and-today design; not changed.
 - **Same-origin CSS is still render-blocking** (three small SvelteKit stylesheets, ~150 ms estimated

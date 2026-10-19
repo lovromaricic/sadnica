@@ -245,6 +245,11 @@ svg {
 	padding: 20px var(--gutter) var(--nav-space);
 }
 
+/* Keyboard focus scrolls controls clear of the floating bottom nav (WCAG 2.4.11). */
+[data-scroller] {
+	scroll-padding-bottom: var(--nav-space);
+}
+
 @media (min-width: 900px) {
 	:root {
 		--gutter: 32px;
