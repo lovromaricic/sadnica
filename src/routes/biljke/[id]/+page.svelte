@@ -205,7 +205,7 @@
 				{#if plant.latin}<p class="latin">{plant.latin}</p>{/if}
 				{#if pet}
 					<button type="button" class="pet-chip" class:serious={pet.severity === 'serious'} aria-haspopup="dialog" onclick={() => (petOpen = true)}>
-						<Icon name="paw" size={16} />{petLabel(pet)}<span class="pet-i" aria-hidden="true">i</span>
+						<Icon name="paw" size={18} /><span class="pet-text">{petLabel(pet)}</span>
 					</button>
 				{/if}
 				<p class="summary">{plant.summary}</p>
@@ -398,38 +398,33 @@
 		font-style: italic;
 		color: var(--muted-2);
 	}
+	/* A quiet text link: only the paw is red, so the warning does not shout over the plant. */
 	.pet-chip {
 		justify-self: start;
 		display: inline-flex;
 		align-items: center;
 		gap: 8px;
 		min-height: 44px;
-		margin-top: 2px;
-		padding: 0 8px 0 14px;
-		border: 2px solid var(--lilac-ink);
-		border-radius: 999px;
-		background: var(--white);
-		color: var(--lilac-ink);
-		font-weight: 700;
+		padding: 0;
+		border: 0;
+		background: none;
+		color: var(--muted-2);
+		font-weight: 600;
 		font-size: 0.9375rem;
 		text-align: left;
 	}
 	.pet-chip.serious {
-		background: var(--lilac-ink);
-		color: var(--white);
+		color: var(--ink);
+		font-weight: 700;
 	}
-	.pet-i {
-		display: grid;
-		place-items: center;
-		width: 24px;
-		height: 24px;
+	.pet-chip :global(svg) {
 		flex: none;
-		border-radius: 50%;
-		background: var(--lilac);
-		color: var(--lilac-ink);
-		font-family: var(--font-head);
-		font-weight: 800;
-		font-size: 0.8125rem;
+		color: #b42318;
+	}
+	.pet-text {
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 3px;
 	}
 	.summary {
 		font-size: 1.0625rem;
