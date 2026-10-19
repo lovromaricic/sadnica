@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { addToGarden } from '../../gardenActions';
 	import { resolve } from '$app/paths';
 	import { plants } from '../../data';
 	import type { Plant } from '../../data/schema';
@@ -23,8 +24,7 @@
 	const added = $derived(!!store.inGarden(plant.id));
 
 	function add() {
-		store.addPlant(plant.id);
-		toast.show(t.toast.added(plant.name), { href: resolve('/moj-vrt'), label: t.toast.open });
+		addToGarden(plant);
 	}
 </script>
 

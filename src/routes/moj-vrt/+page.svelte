@@ -5,6 +5,7 @@
 	import { plantsById, rules } from '#lib/data/index.ts';
 	import type { Plant } from '#lib/data/schema.ts';
 	import { t } from '#lib/i18n/hr.ts';
+	import { gardenNeighbours, listNames } from '#lib/companions.ts';
 	import { STAGE_PROGRESS, harvestText, nextStage, nextStepText, stageDateText } from '#lib/garden.ts';
 	import { store } from '#lib/store.svelte.ts';
 	import type { GardenItem } from '#lib/storage.ts';
@@ -80,6 +81,7 @@
 			<ul class="cards">
 				{#each items as { item, plant } (plant.id)}
 					{@const next = nextStage(item.stage)}
+					{@const badNb = gardenNeighbours(plant, items.map((x) => x.plant)).bad}
 					{@const dated = stageDateText(item, today)}
 					{@const harvest = harvestText(item, plant, region, today)}
 					<li class="card">
@@ -99,6 +101,7 @@
 									{#if harvest}<span class="harvest">{harvest}</span>{/if}
 								</p>
 							{/if}
+							{#if badNb.length}<p class="not-with">{t.companions.notWith(listNames(badNb))}</p>{/if}
 							<p class="next">{nextStepText(item.stage, plant, region, today, rules)}</p>
 							{#if next}
 								<button type="button" class="advance" onclick={() => store.advanceStage(plant.id)}>
@@ -319,6 +322,15 @@
 	}
 	.harvest {
 		color: #7a5a00;
+	}
+	.not-with {
+		justify-self: start;
+		padding: 3px 10px;
+		border-radius: 999px;
+		background: var(--lilac);
+		color: var(--lilac-ink);
+		font-size: 0.8125rem;
+		font-weight: 700;
 	}
 	.next {
 		font-size: 0.9375rem;

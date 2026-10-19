@@ -221,6 +221,7 @@ export const t = {
 		added: (name: string) => `${name} je u tvom vrtu.`,
 		open: 'Otvori moj vrt',
 		removed: (name: string) => `${name} je maknut iz vrta.`,
+		addedWithWarning: (name: string, bad: string) => `${name} je u tvom vrtu. Ne sadi uz: ${bad}.`,
 		close: 'Zatvori obavijest'
 	},
 
@@ -233,6 +234,13 @@ export const t = {
 		description: (name: string) => `Prema ${APP_NAME}, sada je dobro vrijeme za sadnju: ${name}. Datumi su okvirni.`
 	},
 
+	companions: {
+		badTitle: 'Pazi, loš susjed u vrtu',
+		badText: (acc: string, list: string) => `Ne sadi ${acc} uz: ${list}. Neka budu na različitim gredicama.`,
+		goodText: (list: string) => `Dobri susjedi iz tvog vrta: ${list}. Posadi ih blizu.`,
+		inGarden: 'u vrtu',
+		notWith: (list: string) => `Ne uz: ${list}`
+	},
 	settings: {
 		title: 'Postavke',
 		open: 'Postavke',

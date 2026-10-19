@@ -189,3 +189,13 @@ beginner most often plants something that cannot work, so that case earns the qu
   never set up takes the incoming answers and skips onboarding (`/uvoz` is exempt from the
   first-run redirect).
 - It is a one-time copy, not sync.
+
+## Companion check
+
+- Neighbour names in the plant data are matched to catalogue plants by name or alias (normalised).
+  Bad neighbours count both ways: if either plant lists the other, they conflict. Good neighbours
+  count unless the pair is also bad.
+- Shown when adding (the toast adds "Ne sadi uz: …"), on the plant page (a warning card in "Susjedi
+  u gredici", a note about good neighbours, and an "u vrtu" tag on neighbour pills that are in the
+  garden; this works before the plant is added, for planning), and on Moj vrt cards ("Ne uz: …").
+- All three add buttons go through one `addToGarden()` so they warn the same way.

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { addToGarden, gardenPlants } from '#lib/gardenActions.ts';
+	import { gardenNeighbours, gardenPlantNamed, listNames } from '#lib/companions.ts';
 	import { resolve } from '$app/paths';
 	import { SvelteSet } from 'svelte/reactivity';
 	import GardenStage from '#lib/components/GardenStage.svelte';
@@ -109,6 +111,10 @@
 	/** Link neighbours that are in the catalogue. */
 	const byName = new Map(plants.map((p) => [normalize(p.name), p]));
 
+	/** Neighbours already in the garden (works whether or not this plant is in it yet). */
+	const inGardenPlants = $derived(gardenPlants());
+	const gardenNb = $derived(plant ? gardenNeighbours(plant, inGardenPlants) : { bad: [], good: [] });
+
 	/** Back to the tab this page was opened from: real Back when we just came from it, so scroll is kept. */
 	const backHref = $derived(navContext.tabHref ?? resolve('/biljke'));
 	function goBack(e: MouseEvent) {
@@ -129,8 +135,7 @@
 
 	function add() {
 		if (!plant) return;
-		store.addPlant(plant.id);
-		toast.show(t.toast.added(plant.name), { href: resolve('/moj-vrt'), label: t.toast.open });
+		addToGarden(plant);
 	}
 
 	function remove() {
@@ -231,9 +236,18 @@
 				</ol>
 			</section>
 
-			{#if plant.neighbours.good.length || plant.neighbours.bad.length}
+			{#if plant.neighbours.good.length || plant.neighbours.bad.length || gardenNb.bad.length}
 				<section class="neighbours" aria-labelledby="nb-title">
 					<h2 id="nb-title" class="section-title">{t.plant.neighboursTitle}</h2>
+					{#if gardenNb.bad.length}
+						<div class="nb-warning" role="note">
+							<strong><Icon name="x" size={16} />{t.companions.badTitle}</strong>
+							<p>{t.companions.badText(plant.forms.acc, listNames(gardenNb.bad))}</p>
+						</div>
+					{/if}
+					{#if gardenNb.good.length}
+						<p class="nb-good-note">{t.companions.goodText(listNames(gardenNb.good))}</p>
+					{/if}
 					{#if plant.neighbours.good.length}
 						<h3 class="nb-sub">{t.plant.goodNeighbours}</h3>
 						<ul class="nb-list">
@@ -242,6 +256,7 @@
 								<li class="nb good">
 									<Icon name="check" size={16} />
 									{#if linked}<a href={resolve('/biljke/[id]', { id: linked.id })}>{name}</a>{:else}{name}{/if}
+									{#if gardenPlantNamed(name, inGardenPlants)}<span class="in-garden-tag">{t.companions.inGarden}</span>{/if}
 								</li>
 							{/each}
 						</ul>
@@ -254,6 +269,7 @@
 								<li class="nb bad">
 									<Icon name="x" size={16} />
 									{#if linked}<a href={resolve('/biljke/[id]', { id: linked.id })}>{name}</a>{:else}{name}{/if}
+									{#if gardenPlantNamed(name, inGardenPlants)}<span class="in-garden-tag">{t.companions.inGarden}</span>{/if}
 								</li>
 							{/each}
 						</ul>
@@ -498,6 +514,36 @@
 		font-weight: 700;
 		letter-spacing: 0;
 		margin: 6px 4px 8px;
+	}
+	.nb-warning {
+		display: grid;
+		gap: 4px;
+		margin: 0 0 12px;
+		padding: 14px 16px;
+		border-radius: var(--r-sm);
+		background: var(--lilac-ink);
+		color: var(--white);
+	}
+	.nb-warning strong {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+	}
+	.nb-warning p {
+		font-size: 0.9375rem;
+	}
+	.nb-good-note {
+		margin: 0 4px 10px;
+		font-size: 0.9375rem;
+		font-weight: 600;
+	}
+	.in-garden-tag {
+		padding: 2px 8px;
+		border-radius: 999px;
+		background: var(--lime);
+		color: var(--ink);
+		font-size: 0.75rem;
+		font-weight: 700;
 	}
 	.nb-list {
 		list-style: none;
