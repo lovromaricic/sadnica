@@ -19,7 +19,19 @@ export interface GardenItem {
 	stepsDone: number[];
 	/** Day each stage was reached, as local YYYY-MM-DD. The user can correct these. */
 	stageDates: Partial<Record<Stage, string>>;
+	/** Notes and harvests, oldest first. */
+	log: LogEntry[];
 }
+
+export interface LogEntry {
+	id: string;
+	/** Local YYYY-MM-DD. */
+	day: string;
+	text: string;
+	harvest: boolean;
+}
+
+export const LOG_TEXT_MAX = 500;
 
 const DAY_RE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -64,7 +76,8 @@ export function sanitize(raw: unknown): AppState {
 					addedAt: typeof g.addedAt === 'string' ? g.addedAt : new Date().toISOString(),
 					stage: oneOf(g.stage, STAGES, 'toPlant'),
 					stepsDone: Array.isArray(g.stepsDone) ? g.stepsDone.filter((n) => Number.isInteger(n)) : [],
-					stageDates: sanitizeStageDates(g.stageDates, g.addedAt)
+					stageDates: sanitizeStageDates(g.stageDates, g.addedAt),
+					log: sanitizeLog((g as { log?: unknown }).log)
 				}))
 		: [];
 	return {
@@ -77,6 +90,16 @@ export function sanitize(raw: unknown): AppState {
 		garden,
 		tasksDone: r.tasksDone && typeof r.tasksDone === 'object' ? { ...r.tasksDone } : {}
 	};
+}
+
+/** Drop malformed entries, trim overly long text, keep date order. */
+function sanitizeLog(raw: unknown): LogEntry[] {
+	if (!Array.isArray(raw)) return [];
+	return raw
+		.filter((e) => e && typeof e.id === 'string' && typeof e.text === 'string' && typeof e.day === 'string' && DAY_RE.test(e.day))
+		.map((e) => ({ id: e.id, day: e.day, text: e.text.trim().slice(0, LOG_TEXT_MAX), harvest: e.harvest === true }))
+		.filter((e) => e.text)
+		.sort((a, b) => a.day.localeCompare(b.day));
 }
 
 /** Keep only valid days for known stages. Older saves get their "added" day from addedAt. */

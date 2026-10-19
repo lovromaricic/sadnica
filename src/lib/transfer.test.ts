@@ -19,6 +19,7 @@ const item = (plantId: string, stage: GardenItem['stage'], extra: Partial<Garden
 	stage,
 	stepsDone: [],
 	stageDates: { toPlant: '2026-10-01' },
+	log: [],
 	...extra
 });
 const state = (over: Partial<AppState> = {}): AppState => ({ ...structuredClone(DEFAULT_STATE), onboarded: true, ...over });
@@ -42,6 +43,15 @@ describe('link round trip', () => {
 		const link = await transferLink('https://sadnica.hr', '/uvoz', payloadFromState(state({ garden })));
 		expect(link.length).toBeLessThan(800);
 		expect(payloadFromHash(new URL(link).hash)).not.toBeNull();
+	});
+
+	it('carries notes and harvests along', async () => {
+		const log = [
+			{ id: 'a1', day: '2026-10-05', text: 'Posađeno 20 zubaca', harvest: false },
+			{ id: 'b2', day: '2027-06-20', text: 'Ubrano 18 glavica', harvest: true }
+		];
+		const payload = payloadFromState(state({ garden: [item('cesnjak', 'ready', { log })] }));
+		expect((await decodePayload(await encodePayload(payload), known))?.garden[0].log).toEqual(log);
 	});
 
 	it('rejects broken links and drops unknown plants', async () => {

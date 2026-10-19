@@ -1,4 +1,4 @@
-import { DEFAULT_STATE, STAGES, loadState, saveState, type AppState, type GardenItem, type Place, type Stage } from './storage';
+import { DEFAULT_STATE, LOG_TEXT_MAX, STAGES, loadState, saveState, type AppState, type GardenItem, type Place, type Stage } from './storage';
 import { applyImport, type GardenPayload, type ImportMode } from './transfer';
 import { datesForStage, isoDay } from './garden';
 import { today } from './today';
@@ -41,7 +41,8 @@ class AppStore {
 			addedAt: new Date().toISOString(),
 			stage: 'toPlant',
 			stepsDone: [],
-			stageDates: { toPlant: isoDay(today) }
+			stageDates: { toPlant: isoDay(today) },
+			log: []
 		});
 		this.persist();
 	}
@@ -71,6 +72,23 @@ class AppStore {
 		const item = this.inGarden(plantId);
 		if (!item || !/^\d{4}-\d{2}-\d{2}$/.test(day)) return;
 		item.stageDates = { ...item.stageDates, [item.stage]: day };
+		this.persist();
+	}
+
+	/** Write a note or a harvest for a garden plant. */
+	addLog(plantId: string, entry: { day: string; text: string; harvest: boolean }) {
+		const item = this.inGarden(plantId);
+		const text = entry.text.trim().slice(0, LOG_TEXT_MAX);
+		if (!item || !text || !/^\d{4}-\d{2}-\d{2}$/.test(entry.day)) return;
+		const id = `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
+		item.log = [...item.log, { id, day: entry.day, text, harvest: entry.harvest }].sort((a, b) => a.day.localeCompare(b.day));
+		this.persist();
+	}
+
+	deleteLog(plantId: string, id: string) {
+		const item = this.inGarden(plantId);
+		if (!item) return;
+		item.log = item.log.filter((e) => e.id !== id);
 		this.persist();
 	}
 

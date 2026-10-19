@@ -11,7 +11,8 @@ const item = (stage: GardenItem['stage'], stageDates: GardenItem['stageDates']):
 	addedAt: '',
 	stage,
 	stepsDone: [],
-	stageDates
+	stageDates,
+	log: []
 });
 
 describe('days', () => {

@@ -102,6 +102,7 @@
 									{#if harvest}<span class="harvest">{harvest}</span>{/if}
 								</p>
 							{/if}
+							{#if item.log.some((e) => e.harvest)}<p class="harvested">{t.log.harvestCount(item.log.filter((e) => e.harvest).length)}</p>{/if}
 							{#if badNb.length}<p class="not-with">{t.companions.notWith(listNames(badNb))}</p>{/if}
 							<p class="next">{nextStepText(item.stage, plant, region, today, rules)}</p>
 							{#if next}
@@ -325,6 +326,14 @@
 	}
 	.harvest {
 		color: #7a5a00;
+	}
+	.harvested {
+		justify-self: start;
+		padding: 3px 10px;
+		border-radius: 999px;
+		background: var(--butter);
+		font-size: 0.8125rem;
+		font-weight: 700;
 	}
 	.not-with {
 		justify-self: start;

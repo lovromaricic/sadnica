@@ -123,7 +123,7 @@
 		{#if hasGarden}
 			{#if desktop.current && link}
 				<div class="qr-box">
-					<QrCode url={link} size={140} label={t.settings.qrLabel} />
+					<QrCode url={link} size={140} label={t.settings.qrLabel} fallback={t.settings.qrTooBig} />
 					<div>
 						<strong>{t.settings.qrTitle}</strong>
 						<p>{t.settings.qrText}</p>

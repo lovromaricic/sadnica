@@ -10,7 +10,8 @@ const item = (plantId: string, stage: 'toPlant' | 'sown' | 'growing' | 'ready') 
 	stage,
 	addedAt: '',
 	stepsDone: [],
-	stageDates: {}
+	stageDates: {},
+	log: []
 });
 
 describe('generateTasks', () => {
@@ -67,6 +68,28 @@ describe('sanitize', () => {
 		const s = sanitize({ version: 1, region: 'mars', garden: [{ plantId: 'bob', stage: 'x' }, { nope: 1 }] });
 		expect(s.region).toBe('continental');
 		expect(s.garden).toEqual([expect.objectContaining({ plantId: 'bob', stage: 'toPlant', stepsDone: [] })]);
+	});
+
+	it('cleans up the notes log', () => {
+		const s = sanitize({
+			version: 1,
+			garden: [{
+				plantId: 'bob',
+				log: [
+					{ id: 'b', day: '2026-10-09', text: '  zalijevano  ', harvest: 'yes' },
+					{ id: 'a', day: '2026-10-01', text: 'posijano', harvest: true },
+					{ id: 'c', day: 'jučer', text: 'loš datum' },
+					{ id: 'd', day: '2026-10-02', text: '   ' },
+					{ day: '2026-10-03', text: 'bez id-a' },
+					{ id: 'e', day: '2026-10-04', text: 'x'.repeat(900) }
+				]
+			}]
+		});
+		const log = s.garden[0].log;
+		expect(log.map((e) => e.id)).toEqual(['a', 'e', 'b']);
+		expect(log[2]).toEqual({ id: 'b', day: '2026-10-09', text: 'zalijevano', harvest: false });
+		expect(log[1].text).toHaveLength(500);
+		expect(sanitize({ version: 1, garden: [{ plantId: 'bob' }] }).garden[0].log).toEqual([]);
 	});
 
 	it('carries old place answers over to the three current ones', () => {

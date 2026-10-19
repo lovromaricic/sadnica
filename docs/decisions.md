@@ -206,3 +206,12 @@ beginner most often plants something that cannot work, so that case earns the qu
   current one (forward-looking rather than January to December), sowing (S) and harvest (B) months
   for the user's region. Phones put the plant name above its months; desktop puts it on the left.
 - It is a real table restyled as a grid, so explicit table roles keep it readable for screen readers.
+
+## Notes and harvest log
+
+- Each garden plant has a `log` of entries (`id`, `day`, `text` up to 500 characters, `harvest`),
+  kept in date order. Written and deleted on the plant page ("Bilješke i berba"); Moj vrt cards show
+  "Ubrano N×". The log travels with transfers and backups like the rest of the garden.
+- Removing a plant that has notes asks first, since the notes go with it.
+- Long notes can outgrow a QR code. The QR now uses the low error-correction level (most capacity)
+  and, if it still does not fit, Postavke says so and points to sharing the link or a backup file.

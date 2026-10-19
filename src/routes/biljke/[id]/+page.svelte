@@ -3,6 +3,7 @@
 	import { gardenNeighbours, gardenPlantNamed, listNames } from '#lib/companions.ts';
 	import { resolve } from '$app/paths';
 	import { SvelteSet } from 'svelte/reactivity';
+	import GardenLog from '#lib/components/GardenLog.svelte';
 	import GardenStage from '#lib/components/GardenStage.svelte';
 	import Icon from '#lib/components/Icon.svelte';
 	import Modal from '#lib/components/Modal.svelte';
@@ -138,8 +139,15 @@
 		addToGarden(plant);
 	}
 
+	// Notes would be lost with the plant, so ask first when there are any.
+	let confirmRemove = $state(false);
 	function remove() {
 		if (!plant) return;
+		if (gardenItem?.log.length && !confirmRemove) {
+			confirmRemove = true;
+			return;
+		}
+		confirmRemove = false;
 		store.removePlant(plant.id);
 		toast.show(t.toast.removed(plant.name));
 	}
@@ -153,7 +161,17 @@
 	<div class="actions {where}">
 		{#if gardenItem && plant}
 			<GardenStage {plant} item={gardenItem} />
-			<button type="button" class="btn btn-secondary btn-block" onclick={remove}>{t.plant.removeFromGarden}</button>
+			{#if confirmRemove}
+				<div class="remove-confirm" role="alert">
+					<p>{t.log.removeConfirm}</p>
+					<div class="remove-row">
+						<button type="button" class="btn btn-primary" onclick={remove}>{t.log.removeYes}</button>
+						<button type="button" class="btn btn-secondary" onclick={() => (confirmRemove = false)}>{t.log.removeNo}</button>
+					</div>
+				</div>
+			{:else}
+				<button type="button" class="btn btn-secondary btn-block" onclick={remove}>{t.plant.removeFromGarden}</button>
+			{/if}
 		{:else}
 			<button type="button" class="btn btn-primary btn-block" onclick={add}>
 				<Icon name="plus" size={20} />{t.plant.addToGarden}
@@ -235,6 +253,10 @@
 					{/each}
 				</ol>
 			</section>
+
+			{#if gardenItem}
+				<GardenLog plantId={plant.id} item={gardenItem} />
+			{/if}
 
 			{#if plant.neighbours.good.length || plant.neighbours.bad.length || gardenNb.bad.length}
 				<section class="neighbours" aria-labelledby="nb-title">
@@ -587,6 +609,23 @@
 	.actions {
 		display: grid;
 		gap: 10px;
+	}
+	.remove-confirm {
+		display: grid;
+		gap: 10px;
+		padding: 14px;
+		border-radius: var(--r-md);
+		background: var(--white);
+		font-weight: 600;
+	}
+	.remove-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+	.remove-row .btn {
+		min-height: 48px;
+		padding: 0 18px;
 	}
 	.reminded {
 		font-size: 0.875rem;

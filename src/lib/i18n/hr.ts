@@ -234,6 +234,22 @@ export const t = {
 		description: (name: string) => `Prema ${APP_NAME}, sada je dobro vrijeme za sadnju: ${name}. Datumi su okvirni.`
 	},
 
+	log: {
+		title: 'Bilješke i berba',
+		text: 'Zapiši što se događa s biljkom i koliko je ubrano. Ostaje samo na ovom uređaju.',
+		label: 'Nova bilješka',
+		placeholder: 'Npr. prvi listići su nikli',
+		harvestToggle: 'Ovo je berba',
+		dateLabel: 'Datum',
+		save: 'Spremi',
+		empty: 'Još nema bilježaka.',
+		delete: (day: string) => `Obriši bilješku od ${day}`,
+		harvestBadge: 'Berba',
+		harvestCount: (n: number) => `Ubrano ${n}×`,
+		removeConfirm: 'Uz biljku će se obrisati i njezine bilješke. Makni je iz vrta?',
+		removeYes: 'Da, makni',
+		removeNo: 'Odustani'
+	},
 	calendar: {
 		title: 'Kalendar vrta',
 		text: 'Što te čeka idućih 12 mjeseci, za tvoje mjesto.',
@@ -263,6 +279,7 @@ export const t = {
 		qrTitle: 'Skeniraj mobitelom',
 		qrText: 'Usmjeri kameru mobitela u kod i otvori poveznicu. Vrt će se prenijeti.',
 		qrLabel: 'QR kod za prijenos vrta',
+		qrTooBig: 'Vrt je prevelik za QR kod. Pošalji poveznicu ili spremi kopiju vrta.',
 		copyLink: 'Kopiraj poveznicu',
 		copied: 'Poveznica je kopirana.',
 		share: 'Pošalji na drugi uređaj',
