@@ -1,11 +1,9 @@
 import { STORAGE_KEY } from './config';
 import { REGIONS } from './data/regions';
 import type { Region } from './data/schema';
-import type { Experience } from './season';
 
 export type Place = 'ground' | 'raised' | 'balcony' | 'none';
 export const PLACES: Place[] = ['ground', 'raised', 'balcony', 'none'];
-export const EXPERIENCES: Experience[] = ['never', 'little', 'basics'];
 
 export type Stage = 'toPlant' | 'sown' | 'growing' | 'ready';
 export const STAGES: Stage[] = ['toPlant', 'sown', 'growing', 'ready'];
@@ -30,7 +28,6 @@ export interface AppState {
 	/** The user picked the region by hand instead of from the city. */
 	regionManual: boolean;
 	place: Place;
-	experience: Experience;
 	garden: GardenItem[];
 	/** Done weekly tasks, keyed `${weekKey}:${taskId}`. */
 	tasksDone: Record<string, true>;
@@ -43,7 +40,6 @@ export const DEFAULT_STATE: AppState = {
 	region: 'continental',
 	regionManual: false,
 	place: 'ground',
-	experience: 'never',
 	garden: [],
 	tasksDone: {}
 };
@@ -75,7 +71,6 @@ export function sanitize(raw: unknown): AppState {
 		region: oneOf(r.region, REGIONS, DEFAULT_STATE.region),
 		regionManual: r.regionManual === true,
 		place: oneOf(r.place, PLACES, DEFAULT_STATE.place),
-		experience: oneOf(r.experience, EXPERIENCES, DEFAULT_STATE.experience),
 		garden,
 		tasksDone: r.tasksDone && typeof r.tasksDone === 'object' ? { ...r.tasksDone } : {}
 	};

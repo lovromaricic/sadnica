@@ -135,12 +135,19 @@ describe('isFrostNear', () => {
 describe('recommend', () => {
 	const items = withSeason(plants, 'continental', d(2026, 10, 19), rules);
 
-	it('puts garlic first and cover-only plants last for beginners', () => {
-		const ids = recommend(items, 'never').map((i) => i.plant.id);
+	it('puts garlic first and cover-only plants last', () => {
+		const ids = recommend(items).map((i) => i.plant.id);
 		expect(ids[0]).toBe('cesnjak');
 		expect(ids.slice(0, 3).sort()).toEqual(['bob', 'cesnjak', 'luk-ljutika']);
 		expect(ids.slice(-2).sort()).toEqual(['matovilac', 'spinat']);
 		expect(ids).not.toContain('rajcica');
+	});
+
+	it('puts easy plants before harder ones, even when those close sooner', () => {
+		// May: basil (easy) is in season, carrot and tomato (medium) too, tomato closes soonest.
+		const may = recommend(withSeason(plants, 'continental', d(2026, 5, 10), rules)).map((i) => i.plant.id);
+		expect(may.indexOf('bosiljak')).toBeLessThan(may.indexOf('rajcica'));
+		expect(may.indexOf('bosiljak')).toBeLessThan(may.indexOf('mrkva'));
 	});
 
 	it('lists upcoming plants soonest first', () => {

@@ -2,7 +2,6 @@ import { STAGES, loadState, saveState, type AppState, type GardenItem, type Plac
 import { datesForStage, isoDay } from './garden';
 import { today } from './today';
 import type { Region } from './data/schema';
-import type { Experience } from './season';
 
 class AppStore {
 	state = $state<AppState>(loadState());
@@ -11,7 +10,7 @@ class AppStore {
 		saveState($state.snapshot(this.state) as AppState);
 	}
 
-	completeOnboarding(answers: { city: string; region: Region; regionManual: boolean; place: Place; experience: Experience }) {
+	completeOnboarding(answers: { city: string; region: Region; regionManual: boolean; place: Place }) {
 		Object.assign(this.state, answers, { onboarded: true });
 		this.persist();
 	}

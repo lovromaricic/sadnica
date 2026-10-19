@@ -53,7 +53,7 @@ export const t = {
 	onboarding: {
 		title: 'Početak',
 		headline: 'Što danas posaditi, bez predznanja.',
-		help: 'Odgovori na tri kratka pitanja i pokazat ćemo ti što možeš posaditi ovaj tjedan.',
+		help: 'Odgovori na dva kratka pitanja i pokazat ćemo ti što možeš posaditi ovaj tjedan.',
 		cityQ: 'Gdje živiš?',
 		cityLabel: 'Grad ili mjesto',
 		cityHint: 'Po mjestu biramo podneblje i datume sadnje.',
@@ -66,13 +66,6 @@ export const t = {
 			raised: { label: 'Povišena gredica', sub: 'Okvir napunjen zemljom' },
 			balcony: { label: 'Balkon ili lonci', sub: 'Biljke u posudama' },
 			none: { label: 'Još ništa', sub: 'Samo istražujem' }
-		},
-		experienceQ: 'Koliko znaš o vrtlarenju?',
-		// Short, gender-neutral labels; the hint carries the detail.
-		experience: {
-			never: { label: 'Prvi put', sub: 'Još nemam iskustva' },
-			little: { label: 'Malo iskustva', sub: 'Par biljaka na balkonu ili u vrtu' },
-			basics: { label: 'Znam osnove', sub: 'Već imam vrt ili gredicu' }
 		},
 		cta: 'Pokaži mi što sada saditi',
 		save: 'Spremi promjene',

@@ -16,7 +16,7 @@
 	const desktop = new MediaQuery('min-width: 900px');
 	const region = $derived(store.state.region);
 	const items = $derived(withSeason(plants, region, today, rules));
-	const picks = $derived(recommend(items, store.state.experience));
+	const picks = $derived(recommend(items));
 	const hero = $derived(picks[0]);
 	const more = $derived(picks.slice(1, 5));
 	const soon = $derived(upcoming(items).slice(0, 2));

@@ -12,8 +12,7 @@
 	import { t } from '#lib/i18n/hr.ts';
 	import { navContext } from '#lib/navContext.svelte.ts';
 	import { store } from '#lib/store.svelte.ts';
-	import { EXPERIENCES, PLACES, type Place } from '#lib/storage.ts';
-	import type { Experience } from '#lib/season.ts';
+	import { PLACES, type Place } from '#lib/storage.ts';
 
 	const desktop = new MediaQuery('min-width: 900px');
 	const s = store.state;
@@ -22,8 +21,9 @@
 	let city = $state(s.city);
 	let manualRegion = $state<Region | null>(s.regionManual ? s.region : null);
 	let place = $state<Place>(s.place);
-	let experience = $state<Experience>(s.experience);
 	let step = $state(0);
+	/** Mobile shows one question per step: city, then place. */
+	const LAST_STEP = 1;
 
 	const region = $derived(manualRegion ?? regionForCity(city));
 	const garlic = plantsById.get('cesnjak');
@@ -33,13 +33,6 @@
 		raised: { icon: 'raised', bg: 'var(--butter)' },
 		balcony: { icon: 'pot', bg: 'var(--sky)' },
 		none: { icon: 'compass', bg: 'var(--lilac)' }
-	};
-
-	/** The icon grows with experience: seed, sprout, plant. */
-	const EXPERIENCE_STYLE: Record<Experience, { icon: IconName; bg: string }> = {
-		never: { icon: 'seed', bg: 'var(--apricot)' },
-		little: { icon: 'sprout', bg: 'var(--peach)' },
-		basics: { icon: 'plant', bg: 'var(--pink)' }
 	};
 
 	/** Leave without saving: back to where the user came from, or Danas after a fresh load. */
@@ -54,15 +47,14 @@
 			city: city.trim() || 'Zagreb',
 			region,
 			regionManual: manualRegion !== null,
-			place,
-			experience
+			place
 		});
 		goto(resolve('/'));
 	}
 
 	function next(e: SubmitEvent) {
 		e.preventDefault();
-		if (step < 2) step++;
+		if (step < LAST_STEP) step++;
 		else finish();
 	}
 </script>
@@ -124,30 +116,6 @@
 	</fieldset>
 {/snippet}
 
-{#snippet experienceQuestion()}
-	<fieldset class="q">
-		<legend><h2>{t.onboarding.experienceQ}</h2></legend>
-		<div class="places levels">
-			{#each EXPERIENCES as x (x)}
-				<button
-					type="button"
-					class="place"
-					style:--tile={EXPERIENCE_STYLE[x].bg}
-					aria-pressed={experience === x}
-					onclick={() => (experience = x)}
-				>
-					<span class="place-icon"><Icon name={EXPERIENCE_STYLE[x].icon} size={26} /></span>
-					<span class="place-text">
-						<strong>{t.onboarding.experience[x].label}</strong>
-						<span>{t.onboarding.experience[x].sub}</span>
-					</span>
-					<span class="tick" aria-hidden="true"><Icon name="check" size={16} /></span>
-				</button>
-			{/each}
-		</div>
-	</fieldset>
-{/snippet}
-
 <div class="onboarding">
 	<section class="intro lime" class:compact={!desktop.current && step > 0}>
 		{#if !editing}<Logo href={false} large />{/if}
@@ -164,7 +132,6 @@
 		<form class="questions panel" onsubmit={finish}>
 			{@render cityQuestion()}
 			{@render placeQuestion()}
-			{@render experienceQuestion()}
 			<button class="btn btn-primary btn-block cta" type="submit">{editing ? t.onboarding.save : t.onboarding.cta}</button>
 			{#if editing}
 				<button class="btn btn-secondary btn-block" type="button" onclick={cancel}>{t.onboarding.cancel}</button>
@@ -172,20 +139,18 @@
 		</form>
 	{:else}
 		<form class="questions mobile" onsubmit={next}>
-			<p class="sr-only" aria-live="polite">{t.onboarding.step(step + 1, 3)}</p>
+			<p class="sr-only" aria-live="polite">{t.onboarding.step(step + 1, LAST_STEP + 1)}</p>
 			<div class="dots" aria-hidden="true">
-				{#each [0, 1, 2] as i (i)}<span class:on={i <= step}></span>{/each}
+				{#each Array.from({ length: LAST_STEP + 1 }, (_, i) => i) as i (i)}<span class:on={i <= step}></span>{/each}
 			</div>
 			{#if step === 0}
 				{@render cityQuestion()}
-			{:else if step === 1}
-				{@render placeQuestion()}
 			{:else}
-				{@render experienceQuestion()}
+				{@render placeQuestion()}
 			{/if}
 			<div class="step-actions">
 				<button class="btn btn-primary btn-block" type="submit">
-					{step < 2 ? t.onboarding.next : editing ? t.onboarding.save : t.onboarding.cta}
+					{step < LAST_STEP ? t.onboarding.next : editing ? t.onboarding.save : t.onboarding.cta}
 				</button>
 				{#if step > 0}
 					<button class="btn btn-secondary btn-block" type="button" onclick={() => step--}>{t.onboarding.back}</button>
@@ -439,16 +404,6 @@
 		}
 		.places {
 			grid-template-columns: 1fr 1fr;
-		}
-		/* Experience: one row of three, same tiles as the place question. */
-		.places.levels {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-		}
-		.levels .place {
-			min-height: 168px;
-		}
-		.levels .place-text span {
-			font-size: 0.875rem;
 		}
 		.place {
 			align-items: flex-start;

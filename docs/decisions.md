@@ -31,8 +31,8 @@ Spec gaps and the simplest choice made for each. Review and overrule freely.
 - In the catalogue, `upcoming` and `off` both show the grey "Nije sezona" chip; the timing line says
   when it starts ("od veljače").
 - If two windows overlap, the one without `needsCover` wins.
-- **Recommendation order**: plants that need cover go last; then easy before medium before hard (only
-  for "Nikad nisam sadio" / "Malo sam probao"); then the window that closes soonest; then the optional
+- **Recommendation order**: plants that need cover go last; then easy before medium before hard; then
+  the window that closes soonest; then the optional
   per-plant `rank` field; then name. `rank` was added because several plants share the same window
   end (garlic, shallot and broad bean all close at the end of November) and the design leads with garlic.
 - **Frost alert** shows from `frostAlertDays` (21) days before the typical first frost until the end of
@@ -80,6 +80,10 @@ Spec gaps and the simplest choice made for each. Review and overrule freely.
   last for the visit only.
 
 ## Smaller choices
+
+- **No experience question** (removed after review): it only reordered Danas and, with the current
+  plants, changed nothing visible. Everyone gets the beginner order (easy first). Onboarding is now city
+  and place; old saves simply drop the stored answer. The place answer is saved but not used yet.
 
 - **Changing your answers** (location pill → onboarding screen): no bottom nav there; instead an
   "Odustani" button leaves without saving (Back to the previous page, or Danas after a fresh load), and

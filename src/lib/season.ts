@@ -1,7 +1,6 @@
 import type { HarvestWindow, Plant, Region, Rules, SowWindow } from './data/schema';
 
 export type SeasonStatus = 'now' | 'late' | 'upcoming' | 'off';
-export type Experience = 'never' | 'little' | 'basics';
 
 export interface SeasonInfo {
 	status: SeasonStatus;
@@ -144,17 +143,16 @@ export function withSeason(plants: Plant[], region: Region, date: Date, rules: S
 }
 
 /**
- * Plants to plant now, best first: ones that do not need cover, easy first for
- * beginners, then the ones whose window closes soonest.
+ * Plants to plant now, best first: ones that do not need cover, then easy before harder
+ * (the app is for beginners), then the ones whose window closes soonest.
  */
-export function recommend(items: PlantWithSeason[], experience: Experience): PlantWithSeason[] {
-	const beginner = experience !== 'basics';
+export function recommend(items: PlantWithSeason[]): PlantWithSeason[] {
 	return items
 		.filter((i) => isInSeason(i.season))
 		.sort(
 			(a, b) =>
 				Number(a.season.needsCover) - Number(b.season.needsCover) ||
-				(beginner ? DIFFICULTY_ORDER[a.plant.difficulty] - DIFFICULTY_ORDER[b.plant.difficulty] : 0) ||
+				DIFFICULTY_ORDER[a.plant.difficulty] - DIFFICULTY_ORDER[b.plant.difficulty] ||
 				(a.season.daysLeft ?? 0) - (b.season.daysLeft ?? 0) ||
 				(a.plant.rank ?? 100) - (b.plant.rank ?? 100) ||
 				a.plant.name.localeCompare(b.plant.name, 'hr')
