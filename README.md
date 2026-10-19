@@ -5,8 +5,8 @@ na hrvatskom, radi bez računa i bez interneta, a sve što upišeš ostaje samo 
 "Sadnica" je radni naziv (`src/lib/config.ts`).
 
 <p>
-  <img src="docs/screenshots/danas-iphone.png" alt="Danas: preporuka tjedna, upozorenje na mraz i provjera sunca kamerom" width="260">
-  <img src="docs/screenshots/biljke-iphone.png" alt="Sve biljke: katalog s pretragom i filtrima" width="260">
+  <img src="docs/screenshots/danas-iphone.png" alt="Danas: preporuka tjedna, upozorenje na mraz i provjera sunca kamerom" width="260">&nbsp;&nbsp;
+  <img src="docs/screenshots/biljke-iphone.png" alt="Sve biljke: katalog s pretragom i filtrima" width="260">&nbsp;&nbsp;
   <img src="docs/screenshots/biljka-iphone.png" alt="Stranica biljke: češnjak s osnovnim podacima i upozorenjem za ljubimce" width="260">
 </p>
 
