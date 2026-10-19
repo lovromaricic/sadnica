@@ -24,6 +24,11 @@ class AppStore {
 		this.persist();
 	}
 
+	setWeather(on: boolean) {
+		this.state.weather = on;
+		this.persist();
+	}
+
 	/** Forget everything on this device: garden, answers, ticks. */
 	resetAll() {
 		Object.assign(this.state, structuredClone(DEFAULT_STATE));

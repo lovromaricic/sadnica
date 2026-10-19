@@ -223,3 +223,17 @@ beginner most often plants something that cannot work, so that case earns the qu
   as native `<details>` rows (keyboard and screen-reader friendly without extra code).
 - Not searchable from the catalogue yet; matching problem titles in search was left out to keep
   plant search predictable.
+
+## Frost forecast
+
+- Added after review (the original spec left weather out). Open-Meteo, free and keyless: daily minimum
+  temperatures for 7 days at the onboarding town's coordinates rounded to 0.1° (never the phone's own
+  location). Cached on the device (`sadnica:prognoza`): fresh for 3 hours, usable for 24 hours, for the
+  same place only. Offline or on errors the cache is used, else the typical dates.
+- Coming nights are tomorrow up to 6 days ahead (this morning is past). ≤ 0 °C is frost, ≤ 2 °C a cold
+  night ("moguć prizemni mraz"); the first such night is reported ("U noći na četvrtak do −2 °C").
+- Danas shows the forecast alert first (frost in a darker, urgent style). Without forecast frost, the
+  typical-date heads-up remains, prefixed with "Idućih 7 dana nema mraza" when a forecast is known.
+- "Frost soon" for tasks and "samo uz pokrov" = forecast frost or the typical period.
+- Postavke has a "Prognoza mraza" switch (on by default) explaining what is sent; the about text says
+  so too.

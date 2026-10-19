@@ -9,11 +9,12 @@
 	import { plants, rules } from '#lib/data/index.ts';
 	import { pluralPlants, t } from '#lib/i18n/hr.ts';
 	import { FILTERS, filterCatalog, filtersParam, initialFilters, type FilterKey } from '#lib/catalog.ts';
-	import { isFrostNear, withSeason } from '#lib/season.ts';
+	import { withSeason } from '#lib/season.ts';
 	import { navContext } from '#lib/navContext.svelte.ts';
 	import { store } from '#lib/store.svelte.ts';
 	import { chipKind, timingText } from '#lib/timing.ts';
 	import { today } from '#lib/today.ts';
+	import { frostSoon } from '#lib/forecast.svelte.ts';
 
 	// Search and filters live in the address (?q=…&filtri=…), so Back from a plant restores them.
 	const initial = new URLSearchParams(window.location.search);
@@ -40,7 +41,7 @@
 	});
 
 	const region = $derived(store.state.region);
-	const frostNear = $derived(isFrostNear(region, today, rules));
+	const frostNear = $derived(frostSoon(region, today, rules));
 	const items = $derived(withSeason(plants, region, today, rules));
 
 	const results = $derived(filterCatalog(items, query, active));

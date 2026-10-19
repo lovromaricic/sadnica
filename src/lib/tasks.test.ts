@@ -31,6 +31,15 @@ describe('generateTasks', () => {
 	});
 });
 
+describe('generateTasks: frost from the forecast', () => {
+	it('adds the cover task when the forecast says frost, even outside the typical period', () => {
+		// Mid December is past the typical first-frost period, but a forecast frost still means covering.
+		const args = [[item('matovilac', 'growing')], plantsById, 'continental', d(2026, 12, 15), rules, new Set<string>()] as const;
+		expect(generateTasks(...args).some((t) => t.id === 'cover:matovilac')).toBe(false);
+		expect(generateTasks(...args, true).some((t) => t.id === 'cover:matovilac')).toBe(true);
+	});
+});
+
 describe('generateTasks: ticked planting task', () => {
 	it('stays listed after the plant is marked as sown', () => {
 		const args = [[item('cesnjak', 'sown')], plantsById, 'continental', d(2026, 10, 19), rules] as const;

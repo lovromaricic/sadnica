@@ -156,6 +156,15 @@
 		{/if}
 	</section>
 
+	<section class="card" aria-labelledby="weather-title">
+		<h2 id="weather-title">{t.settings.weatherTitle}</h2>
+		<p class="muted">{t.settings.weatherText}</p>
+		<button type="button" class="switch" role="switch" aria-checked={s.weather} aria-label={t.settings.weatherToggle} onclick={() => store.setWeather(!s.weather)}>
+			<span class="track" aria-hidden="true"><span class="thumb"></span></span>
+			{s.weather ? t.settings.on : t.settings.off}
+		</button>
+	</section>
+
 	<section class="card" aria-labelledby="data-title">
 		<h2 id="data-title">{t.settings.dataTitle}</h2>
 		<p class="muted">{t.settings.resetText}</p>
@@ -296,6 +305,44 @@
 		background: #b42318;
 		border-color: #b42318;
 		color: var(--white);
+	}
+	.switch {
+		display: inline-flex;
+		align-items: center;
+		gap: 12px;
+		min-height: 48px;
+		padding: 0 6px 0 0;
+		border: 0;
+		background: transparent;
+		font-weight: 700;
+	}
+	.track {
+		position: relative;
+		width: 52px;
+		height: 32px;
+		border-radius: 999px;
+		background: var(--off);
+		border: 2px solid var(--border);
+		transition: background-color 0.2s ease;
+	}
+	.thumb {
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background: var(--white);
+		box-shadow: 0 1px 3px rgb(0 0 0 / 0.25);
+		transition: transform 0.2s ease;
+	}
+	.switch[aria-checked='true'] .track {
+		background: var(--ink);
+		border-color: var(--ink);
+	}
+	.switch[aria-checked='true'] .thumb {
+		transform: translateX(20px);
+		background: var(--lime);
 	}
 	.version {
 		font-size: 0.875rem;

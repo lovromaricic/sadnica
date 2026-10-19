@@ -19,6 +19,8 @@ export const MONTHS_LOC = [
 	'srpnju', 'kolovozu', 'rujnu', 'listopadu', 'studenom', 'prosincu'
 ];
 export const MONTHS_SHORT = ['Sij', 'Vel', 'Ožu', 'Tra', 'Svi', 'Lip', 'Srp', 'Kol', 'Ruj', 'Lis', 'Stu', 'Pro'];
+/** "u noći na srijedu" */
+const WEEKDAYS_ACC = ['nedjelju', 'ponedjeljak', 'utorak', 'srijedu', 'četvrtak', 'petak', 'subotu'];
 const WEEKDAYS = ['nedjelja', 'ponedjeljak', 'utorak', 'srijeda', 'četvrtak', 'petak', 'subota'];
 
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
@@ -234,6 +236,23 @@ export const t = {
 		description: (name: string) => `Prema ${APP_NAME}, sada je dobro vrijeme za sadnju: ${name}. Datumi su okvirni.`
 	},
 
+	weather: {
+		frostTitle: 'Mraz je najavljen.',
+		frostText: (when: string, temp: string) => `${cap(when)} do ${temp}.`,
+		coldTitle: 'Hladna noć.',
+		coldText: (when: string, temp: string) => `${cap(when)} do ${temp}, moguć je prizemni mraz.`,
+		action: 'Osjetljivo bilje pokrij agrilom ili unesi u kuću.',
+		calmButTypical: (typical: string) => `Idućih 7 dana nema mraza, ali prvi mraz je blizu. ${typical}`,
+		when: (date: Date, today: Date) =>
+			Math.round((Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(today.getFullYear(), today.getMonth(), today.getDate())) / 86_400_000) === 1
+				? 'sutra ujutro'
+				: `u noći na ${WEEKDAYS_ACC[date.getDay()]}`,
+		temp: (c: number) => {
+			const n = Math.round(c);
+			return `${n < 0 ? '−' : ''}${Math.abs(n)} °C`;
+		},
+		source: 'Prognoza: Open-Meteo'
+	},
 	problems: {
 		title: 'Što nije u redu?',
 		lead: 'Najčešći problemi i kako ih riješiti. Dodirni problem za savjet.',
@@ -294,6 +313,11 @@ export const t = {
 		saveBackup: 'Spremi kopiju vrta',
 		restoreBackup: 'Vrati iz kopije',
 		badFile: 'Ova datoteka nije kopija vrta iz aplikacije Sadnica.',
+		weatherTitle: 'Prognoza mraza',
+		weatherText: 'Upozori me na mraz prema stvarnoj prognozi za idućih 7 dana. Servisu Open-Meteo šalju se samo približne koordinate grada. Isključeno: koriste se uobičajeni datumi mraza.',
+		weatherToggle: 'Prognoza mraza',
+		on: 'Uključeno',
+		off: 'Isključeno',
 		dataTitle: 'Podaci',
 		resetText: 'Briše vrt, odgovore i sve oznake s ovog uređaja.',
 		reset: 'Obriši sve podatke',
@@ -304,7 +328,8 @@ export const t = {
 		about: [
 			'Sadnica ti pokazuje što posaditi ovaj tjedan i kako.',
 			'Datumi su okvirni i računaju se za tvoje mjesto. Savjeti su opći, pa za posebne slučajeve pitaj u poljoapoteci ili iskusnijeg vrtlara.',
-			'Podaci ostaju na tvom uređaju. Nema računa ni slanja podataka.'
+			'Tvoj vrt i odgovori ostaju na tvom uređaju. Nema računa.',
+			'Za prognozu mraza aplikacija servisu Open-Meteo šalje samo približne koordinate tvog grada. To možeš isključiti gore.'
 		],
 		version: (v: string) => `Verzija ${v}`,
 		gardenLink: 'Imaš vrt i na drugom uređaju? Prenesi ga'

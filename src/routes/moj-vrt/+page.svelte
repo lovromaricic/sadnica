@@ -12,6 +12,7 @@
 	import type { GardenItem } from '#lib/storage.ts';
 	import { generateTasks, weekKey } from '#lib/tasks.ts';
 	import { today } from '#lib/today.ts';
+	import { frostSoon } from '#lib/forecast.svelte.ts';
 
 	const region = $derived(store.state.region);
 	const items = $derived(
@@ -27,7 +28,7 @@
 				.map((k) => k.slice(week.length + 1))
 		)
 	);
-	const tasks = $derived(generateTasks(store.state.garden, plantsById, region, today, rules, doneIds));
+	const tasks = $derived(generateTasks(store.state.garden, plantsById, region, today, rules, doneIds, frostSoon(region, today, rules)));
 	const doneCount = $derived(tasks.filter((task) => store.state.tasksDone[`${week}:${task.id}`]).length);
 
 </script>

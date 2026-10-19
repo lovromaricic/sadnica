@@ -12,6 +12,7 @@
 	import { accusative } from '#lib/tasks.ts';
 	import { heroReason, timingText } from '#lib/timing.ts';
 	import { today } from '#lib/today.ts';
+	import { forecast } from '#lib/forecast.svelte.ts';
 
 	const desktop = new MediaQuery('min-width: 900px');
 	const region = $derived(store.state.region);
@@ -25,7 +26,10 @@
 	const inSeasonCount = $derived(
 		items.filter((i) => isInSeason(i.season) && (!balcony || potFriendly(i.plant))).length
 	);
-	const frostNear = $derived(isFrostNear(region, today, rules));
+	const typicalFrost = $derived(isFrostNear(region, today, rules));
+	const outlook = $derived(forecast.outlook(today));
+	/** Frost worth acting on (drives "samo uz pokrov"): forecast frost or the typical period. */
+	const frostNear = $derived(outlook?.level === 'frost' || typicalFrost);
 </script>
 
 <svelte:head>
@@ -38,13 +42,29 @@
 		<h1>{hero ? t.today.headline(accusative(hero.plant)) : balcony ? t.today.headlineNoneBalcony : t.today.headlineNone}</h1>
 	</header>
 
-	{#if frostNear}
+	{#if outlook && outlook.level !== 'none' && outlook.day && outlook.min !== undefined}
+		{@const when = t.weather.when(outlook.day, today)}
+		{@const temp = t.weather.temp(outlook.min)}
+		<aside class="alert" class:urgent={outlook.level === 'frost'} aria-label={outlook.level === 'frost' ? t.weather.frostTitle : t.weather.coldTitle}>
+			<span class="alert-icon"><Icon name="snow" size={22} /></span>
+			<p>
+				<strong>{outlook.level === 'frost' ? t.weather.frostTitle : t.weather.coldTitle}</strong>
+				{outlook.level === 'frost' ? t.weather.frostText(when, temp) : t.weather.coldText(when, temp)}
+				{t.weather.action}
+				<span class="source">{t.weather.source}</span>
+			</p>
+		</aside>
+	{:else if typicalFrost}
 		<aside class="alert" aria-label={t.today.frostTitle}>
 			<span class="alert-icon"><Icon name="snow" size={22} /></span>
 			<p>
-				<strong>{t.today.frostTitle}</strong>
-				{rules.frost[region].text}
-				{t.today.frostAction}
+				{#if outlook}
+					{t.weather.calmButTypical(rules.frost[region].text)}
+				{:else}
+					<strong>{t.today.frostTitle}</strong>
+					{rules.frost[region].text}
+					{t.today.frostAction}
+				{/if}
 			</p>
 		</aside>
 	{/if}
@@ -147,6 +167,19 @@
 		flex: none;
 		border-radius: 50%;
 		background: rgb(255 255 255 / 0.6);
+	}
+	.alert.urgent {
+		background: var(--lilac-ink);
+		color: var(--white);
+	}
+	.alert.urgent .alert-icon {
+		background: rgb(255 255 255 / 0.15);
+	}
+	.source {
+		display: block;
+		margin-top: 4px;
+		font-size: 0.75rem;
+		opacity: 0.8;
 	}
 	.alert p {
 		font-size: 0.9375rem;

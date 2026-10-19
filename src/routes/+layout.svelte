@@ -9,6 +9,8 @@
 	import OfflineBanner from '#lib/components/OfflineBanner.svelte';
 	import Toast from '#lib/components/Toast.svelte';
 	import { navContext } from '#lib/navContext.svelte.ts';
+	import { forecast } from '#lib/forecast.svelte.ts';
+	import { coordsForCity } from '#lib/cities.ts';
 	import { store } from '#lib/store.svelte.ts';
 	import type { LayoutProps } from './$types';
 
@@ -23,6 +25,13 @@
 
 	$effect(() => {
 		if (firstRun && !onOnboarding && !onImport) goto(resolve('/pocetak'), { replace: true });
+	});
+
+	// Frost forecast for the town (never the phone's own location); refreshed when stale.
+	$effect(() => {
+		if (!store.state.onboarded) return;
+		const { lat, lng } = coordsForCity(store.state.city, store.state.region);
+		forecast.ensure(lat, lng, store.state.weather);
 	});
 
 	// On phones the content area scrolls instead of the window (see .shell below), so SvelteKit's

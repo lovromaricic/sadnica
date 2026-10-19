@@ -44,6 +44,8 @@ export interface AppState {
 	regionManual: boolean;
 	place: Place;
 	garden: GardenItem[];
+	/** Fetch a frost forecast (sends the town's approximate coordinates to Open-Meteo). */
+	weather: boolean;
 	/** Done weekly tasks, keyed `${weekKey}:${taskId}`. */
 	tasksDone: Record<string, true>;
 }
@@ -56,6 +58,7 @@ export const DEFAULT_STATE: AppState = {
 	regionManual: false,
 	place: 'garden',
 	garden: [],
+	weather: true,
 	tasksDone: {}
 };
 
@@ -88,6 +91,7 @@ export function sanitize(raw: unknown): AppState {
 		regionManual: r.regionManual === true,
 		place: oneOf(OLD_PLACES[r.place as string] ?? r.place, PLACES, DEFAULT_STATE.place),
 		garden,
+		weather: r.weather !== false,
 		tasksDone: r.tasksDone && typeof r.tasksDone === 'object' ? { ...r.tasksDone } : {}
 	};
 }

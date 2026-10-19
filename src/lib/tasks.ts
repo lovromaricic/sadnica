@@ -29,10 +29,11 @@ export function generateTasks(
 	date: Date,
 	rules: Rules,
 	/** Task ids already ticked this week; a ticked planting task stays listed after the plant moves on. */
-	doneIds: ReadonlySet<string> = new Set()
+	doneIds: ReadonlySet<string> = new Set(),
+	/** Frost expected soon (forecast or typical dates); defaults to the typical dates alone. */
+	frostNear: boolean = isFrostNear(region, date, rules)
 ): Task[] {
 	const tasks: Task[] = [];
-	const frostNear = isFrostNear(region, date, rules);
 	const month = date.getMonth() + 1;
 
 	for (const item of garden) {

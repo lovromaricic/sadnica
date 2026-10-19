@@ -15,11 +15,12 @@
 	import { t } from '#lib/i18n/hr.ts';
 	import { buildIcs, downloadFile } from '#lib/ics.ts';
 	import { normalize } from '#lib/search.ts';
-	import { getSeasonStatus, isFrostNear } from '#lib/season.ts';
+	import { getSeasonStatus } from '#lib/season.ts';
 	import { navContext } from '#lib/navContext.svelte.ts';
 	import { store } from '#lib/store.svelte.ts';
 	import { toast } from '#lib/toast.svelte.ts';
 	import { today } from '#lib/today.ts';
+	import { frostSoon } from '#lib/forecast.svelte.ts';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
@@ -37,7 +38,7 @@
 	const region = $derived(store.state.region);
 	const month = today.getMonth() + 1;
 	const season = $derived(plant && getSeasonStatus(plant, region, today, rules));
-	const frostNear = $derived(isFrostNear(region, today, rules));
+	const frostNear = $derived(frostSoon(region, today, rules));
 	const gardenItem = $derived(plant && store.inGarden(plant.id));
 	const city = $derived(store.state.city);
 	// Balcony gardeners see the pot size instead of row spacing, or why the plant does not suit a pot.
