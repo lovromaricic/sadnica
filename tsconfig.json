@@ -1,0 +1,10 @@
+{
+	"extends": "$app/tsconfig",
+	"compilerOptions": {
+		"strict": true,
+		"types": ["$app/types", "node"],
+		"resolveJsonModule": true
+	},
+	"include": ["src", "scripts/**/*.ts", "vite.config.ts"],
+	"exclude": ["src/service-worker"]
+}
