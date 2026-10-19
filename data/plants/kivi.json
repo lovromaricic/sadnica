@@ -1,0 +1,46 @@
+{
+  "reviewed": false,
+  "id": "kivi",
+  "name": "Kivi",
+  "forms": { "nom": "kivi", "gen": "kivija", "acc": "kivi", "plural": false },
+  "latin": "Actinidia deliciosa",
+  "aliases": ["kivi", "kiwi", "aktinidija"],
+  "category": "fruit",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 3 },
+  "spacingText": "3 m",
+  "spacingExplanation": [
+    "Biljke sadi 3 m jednu od druge uz pergolu.",
+    "Treba muška i ženska biljka, jedna muška dovoljna je za nekoliko ženskih."
+  ],
+  "spacingTip": "bez muške biljke ženska neće roditi.",
+  "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
+  "summary": "Penjačica za pergolu. Treba mušku i žensku biljku, a rađa tek nakon par godina.",
+  "weeklyTip": "Kivi beri prije mraza i ostavi da dozrije u kući.",
+  "illustration": { "kind": "fruit", "fill": "#8D6E4A", "stroke": "#4A361E", "bg": "#FFE2C2" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11, "note": "Sadnice golog korijena." }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice golog korijena." }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 10, "to": 11 }],
+    "adriatic": [{ "from": 10, "to": 11 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu u rasadniku", "text": "Jednogodišnja ili dvogodišnja sadnica, zdravog korijena." },
+    { "title": "Iskopaj široku jamu", "text": "Jama 60 × 60 cm, a zemlju pomiješaj s kompostom." },
+    { "title": "Posadi uz kolac", "text": "Mjesto cijepljenja mora ostati iznad zemlje. Sadnicu priveži uz kolac i obilno zalij." },
+    { "title": "Vodi uz pergolu", "text": "Glavni izboj veži uz čvrstu pergolu ili žicu." }
+  ],
+  "problems": [
+    { "title": "Nema plodova", "signs": "Biljka cvjeta, ali ne rađa.", "fix": "Nedostaje muška biljka ili su obje istog spola. Posadi mušku biljku u blizini." },
+    { "title": "Mladice smrznute", "signs": "Mladi listovi posmeđe u proljeće.", "fix": "Kasni mraz. Prekrij mlade izboje agrilom u hladnim noćima." }
+  ],
+  "neighbours": {
+    "good": ["Neven", "Vlasac"],
+    "bad": []
+  }
+}

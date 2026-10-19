@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "vinova-loza",
+  "name": "Vinova loza",
+  "forms": { "nom": "vinova loza", "gen": "vinove loze", "acc": "vinovu lozu", "plural": false },
+  "latin": "Vitis vinifera",
+  "aliases": ["vinova loza", "loza", "grožđe", "groždje", "grape"],
+  "category": "fruit",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "low",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 3 },
+  "spacingText": "150 cm",
+  "spacingExplanation": [
+    "Trsove sadi metar i pol jedan od drugog, uz žicu ili pergolu.",
+    "Loza se penje i treba čvrstu potporu."
+  ],
+  "containers": { "ok": true, "minPotCm": 50, "note": "Uz pergolu ili ogradu, i u velikoj posudi." },
+  "summary": "Stolno grožđe uz pergolu ili ogradu. Treba redovito orezivanje.",
+  "weeklyTip": "Za stolno grožđe biraj sorte otporne na bolesti.",
+  "illustration": { "kind": "berry", "fill": "#6A3D9A", "stroke": "#2E1648", "bg": "#E6DBFF" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11, "note": "Sadnice golog korijena." }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice golog korijena." }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 9, "to": 10 }],
+    "adriatic": [{ "from": 8, "to": 10 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu u rasadniku", "text": "Jednogodišnja ili dvogodišnja sadnica, zdravog korijena." },
+    { "title": "Iskopaj široku jamu", "text": "Jama 60 × 60 cm, a zemlju pomiješaj s kompostom." },
+    { "title": "Posadi uz kolac", "text": "Mjesto cijepljenja mora ostati iznad zemlje. Sadnicu priveži uz kolac i obilno zalij." },
+    { "title": "Orezuj zimi", "text": "Svake zime skrati prošlogodišnje rozgve na nekoliko pupova." }
+  ],
+  "problems": [
+    { "title": "Bijela prevlaka na bobicama", "signs": "Bobice i listovi kao posuti brašnom.", "fix": "Pepelnica. Prorijedi lišće oko grozdova i biraj otporne sorte." },
+    { "title": "Uljaste mrlje na listovima", "signs": "Žute mrlje na licu lista, bijela prevlaka na naličju.", "fix": "Plamenjača, nakon kiše. Otkini zahvaćeno lišće i ne sadi pregusto." }
+  ],
+  "neighbours": {
+    "good": ["Neven", "Vlasac"],
+    "bad": []
+  }
+}

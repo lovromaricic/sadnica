@@ -1,0 +1,46 @@
+{
+  "reviewed": false,
+  "id": "kupina",
+  "name": "Kupina",
+  "forms": { "nom": "kupina", "gen": "kupine", "acc": "kupinu", "plural": false },
+  "latin": "Rubus fruticosus",
+  "aliases": ["kupina", "kupine", "blackberry"],
+  "category": "fruit",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 1 },
+  "spacingText": "150 cm",
+  "spacingExplanation": [
+    "Sadnice drži metar i pol jednu od druge, uz ogradu ili žicu.",
+    "Izboji narastu nekoliko metara."
+  ],
+  "spacingTip": "sorte bez trnja puno su lakše za berbu.",
+  "containers": { "ok": false, "note": "Prebujna za lonac." },
+  "summary": "Bujna i rodna. Sorte bez trnja lakše se beru, a plodovi dozrijevaju krajem ljeta.",
+  "weeklyTip": "Izboje veži uz žicu u lepezu, lakše ćeš brati.",
+  "illustration": { "kind": "berry", "fill": "#2A1B3D", "stroke": "#100818", "bg": "#E6DBFF" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11 }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 11, "to": 12 }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 7, "to": 9 }],
+    "adriatic": [{ "from": 6, "to": 9 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu bez trnja", "text": "Za vrt su najugodnije sorte bez trnja." },
+    { "title": "Posadi uz ogradu", "text": "Metar i pol razmaka." },
+    { "title": "Veži izboje", "text": "Uz žicu ili ogradu, u lepezu." },
+    { "title": "Orezuj nakon berbe", "text": "Izreži izboje koji su rodili." }
+  ],
+  "problems": [
+    { "title": "Plodovi se ne zacrne do kraja", "signs": "Dio bobica ostaje crven.", "fix": "Vrućina ili grinje. Zalijevaj u suši i izreži stare izboje." },
+    { "title": "Kupina se širi", "signs": "Izdanci niču posvuda.", "fix": "Iskopaj ih redovito ili ograniči gredicu." }
+  ],
+  "neighbours": {
+    "good": ["Neven"],
+    "bad": []
+  }
+}

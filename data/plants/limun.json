@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "limun",
+  "name": "Limun",
+  "forms": { "nom": "limun", "gen": "limuna", "acc": "limun", "plural": false },
+  "latin": "Citrus limon",
+  "aliases": ["limun", "limuni", "lemon"],
+  "category": "fruit",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 2 },
+  "spacingText": "3 m",
+  "spacingExplanation": [
+    "Na obali u vrt, 3 m od drugih stabala.",
+    "Na kontinentu raste u posudi."
+  ],
+  "containers": { "ok": true, "minPotCm": 40, "note": "Na kontinentu samo u loncu, zimi unutra na svijetlom i hladnom." },
+  "summary": "Mediteranska klasika. Na kontinentu raste u posudi i zimuje u kući.",
+  "weeklyTip": "Zimi ga drži na svijetlom mjestu na 5 do 10 °C i zalijevaj rijetko.",
+  "illustration": { "kind": "fruit", "fill": "#F4D03F", "stroke": "#8A7010", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5, "note": "Iznesi lonac van kad prođu mrazevi." }],
+    "adriatic": [{ "from": 3, "to": 4 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 11, "to": 3 }],
+    "adriatic": [{ "from": 11, "to": 3 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu u loncu", "text": "Cijepljena sadnica rađa ranije." },
+    { "title": "Presadi u veću posudu", "text": "Zemlja za citruse, posuda s rupama." },
+    { "title": "Ljeti iznesi van", "text": "Na sunčano, zaštićeno mjesto." },
+    { "title": "Zimi unesi unutra", "text": "Na svijetlo i hladno, bez mraza." }
+  ],
+  "problems": [
+    { "title": "Žuti listovi", "signs": "Listovi žute, žile ostaju zelene.", "fix": "Manjak željeza. Koristi gnojivo za citruse i zalijevaj kišnicom." },
+    { "title": "Lišće otpada zimi", "signs": "U kući gubi lišće.", "fix": "Pretoplo i premalo svjetla. Drži ga na hladnijem i svjetlijem mjestu." }
+  ],
+  "neighbours": {
+    "good": ["Neven", "Vlasac"],
+    "bad": []
+  }
+}

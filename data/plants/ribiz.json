@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "ribiz",
+  "name": "Ribiz",
+  "forms": { "nom": "ribiz", "gen": "ribiza", "acc": "ribiz", "plural": false },
+  "latin": "Ribes rubrum",
+  "aliases": ["ribiz", "ribizl", "ribizla", "currant"],
+  "category": "fruit",
+  "difficulty": "easy",
+  "sun": "partial",
+  "water": "medium",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 1 },
+  "spacingText": "120 cm",
+  "spacingExplanation": [
+    "Grmove drži metar i pol jedan od drugog.",
+    "Ribiz naraste u grm visok oko metar."
+  ],
+  "containers": { "ok": true, "minPotCm": 40 },
+  "summary": "Crveni, crni ili bijeli. Otporan grm koji rađa i u polusjeni.",
+  "weeklyTip": "Najviše rađaju dvogodišnje i trogodišnje grane, starije izreži.",
+  "illustration": { "kind": "berry", "fill": "#C62828", "stroke": "#6A1010", "bg": "#FFD9DE" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11 }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 11, "to": 12 }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 7 }],
+    "adriatic": [{ "from": 6, "to": 7 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu", "text": "Dvogodišnji grm s nekoliko grana." },
+    { "title": "Posadi malo dublje", "text": "Grm će tjerati nove grane iz zemlje." },
+    { "title": "Malčiraj", "text": "Ribiz voli vlažnu zemlju." },
+    { "title": "Orezuj zimi", "text": "Izreži grane starije od tri godine." }
+  ],
+  "problems": [
+    { "title": "Bijela prevlaka na listovima", "signs": "Listovi i bobice kao posuti brašnom.", "fix": "Pepelnica. Izreži zahvaćene vrhove i prorijedi grm." },
+    { "title": "Lisne uši", "signs": "Listovi su naborani i crvenkasti.", "fix": "Isperi uši mlazom vode i otkini najgore vrhove." }
+  ],
+  "neighbours": {
+    "good": ["Neven"],
+    "bad": []
+  }
+}

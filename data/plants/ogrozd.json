@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "ogrozd",
+  "name": "Ogrozd",
+  "forms": { "nom": "ogrozd", "gen": "ogrozda", "acc": "ogrozd", "plural": false },
+  "latin": "Ribes uva-crispa",
+  "aliases": ["ogrozd", "ogrozdi", "gooseberry"],
+  "category": "fruit",
+  "difficulty": "easy",
+  "sun": "partial",
+  "water": "medium",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 2 },
+  "spacingText": "120 cm",
+  "spacingExplanation": [
+    "Grmove drži metar i pol jedan od drugog.",
+    "Ogrozd je trnovit, ostavi prostor za berbu."
+  ],
+  "containers": { "ok": true, "minPotCm": 40 },
+  "summary": "Kiselkasto-slatke bobice. Otporan grm koji podnosi i hladnije krajeve.",
+  "weeklyTip": "Rukavice su obavezne pri berbi, ogrozd je trnovit.",
+  "illustration": { "kind": "berry", "fill": "#9CCC65", "stroke": "#3E6B1F", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11 }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 11, "to": 12 }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 7 }],
+    "adriatic": [{ "from": 5, "to": 7 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu", "text": "Sorte otporne na pepelnicu su najbolji izbor." },
+    { "title": "Posadi", "text": "Malo dublje nego u lončiću." },
+    { "title": "Prorijedi grm", "text": "Sredina grma neka bude otvorena za zrak." },
+    { "title": "Beri zrele bobice", "text": "Kad omekšaju i dobiju boju sorte." }
+  ],
+  "problems": [
+    { "title": "Bijela prevlaka na bobicama", "signs": "Bobice i listovi kao posuti brašnom.", "fix": "Pepelnica. Izreži zahvaćene vrhove i biraj otporne sorte." },
+    { "title": "Grm ostane bez lišća", "signs": "Gusjenice pojedu lišće.", "fix": "Pilatka. Pregledaj grm u proljeće i skupljaj ličinke." }
+  ],
+  "neighbours": {
+    "good": ["Neven"],
+    "bad": []
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "reviewed": false,
+  "id": "jabuka",
+  "name": "Jabuka",
+  "forms": { "nom": "jabuka", "gen": "jabuke", "acc": "jabuku", "plural": false },
+  "latin": "Malus domestica",
+  "aliases": ["jabuka", "jabuke", "apple"],
+  "category": "fruit",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 3 },
+  "spacingText": "4 m",
+  "spacingExplanation": [
+    "Stabla na slabijoj podlozi sadi 3 do 4 m jedno od drugog.",
+    "Za oprašivanje je dobro imati dvije različite sorte u blizini."
+  ],
+  "spacingTip": "patuljaste sorte stanu i u manji vrt.",
+  "containers": { "ok": true, "minPotCm": 50, "note": "Samo patuljaste sorte na slaboj podlozi." },
+  "summary": "Najčešće voće u vrtu. Uz dvije sorte za oprašivanje rađa godinama.",
+  "weeklyTip": "Prve dvije godine otkini cvjetove, stablo će brže ojačati.",
+  "illustration": { "kind": "fruit", "fill": "#E85A4F", "stroke": "#7E1F18", "bg": "#FAD9CC" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11, "note": "Sadnice golog korijena." }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice golog korijena." }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 8, "to": 10 }],
+    "adriatic": [{ "from": 8, "to": 10 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu u rasadniku", "text": "Jednogodišnja ili dvogodišnja sadnica, zdravog korijena." },
+    { "title": "Iskopaj široku jamu", "text": "Jama 60 × 60 cm, a zemlju pomiješaj s kompostom." },
+    { "title": "Posadi uz kolac", "text": "Mjesto cijepljenja mora ostati iznad zemlje. Sadnicu priveži uz kolac i obilno zalij." },
+    { "title": "Orezuj zimi", "text": "Svake zime prorijedi krošnju da u nju ulazi svjetlo." }
+  ],
+  "problems": [
+    { "title": "Crvljive jabuke", "signs": "U plodu je hodnik i ličinka.", "fix": "Jabučni savijač. Uklanjaj otpale plodove i oko debla stavi traku s ljepilom." },
+    { "title": "Tamne mrlje na listovima i plodovima", "signs": "Listovi i plodovi imaju tamne krastave mrlje.", "fix": "Krastavost. Pograbi i ukloni otpalo lišće u jesen i biraj otporne sorte." }
+  ],
+  "neighbours": {
+    "good": ["Neven", "Vlasac"],
+    "bad": []
+  }
+}

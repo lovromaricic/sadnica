@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "dunja",
+  "name": "Dunja",
+  "forms": { "nom": "dunja", "gen": "dunje", "acc": "dunju", "plural": false },
+  "latin": "Cydonia oblonga",
+  "aliases": ["dunja", "dunje", "gunja", "quince"],
+  "category": "fruit",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 3 },
+  "spacingText": "4 m",
+  "spacingExplanation": [
+    "Stabla sadi 4 m jedno od drugog.",
+    "Dunja naraste u manje stablo ili velik grm."
+  ],
+  "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
+  "summary": "Mirisni plodovi za kompot i džem. Skromno stablo koje se samo oprašuje.",
+  "weeklyTip": "Beri dunje kad požute i zamirišu, prije prvog mraza.",
+  "illustration": { "kind": "fruit", "fill": "#E3C04A", "stroke": "#7A6010", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11, "note": "Sadnice golog korijena." }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice golog korijena." }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 9, "to": 10 }],
+    "adriatic": [{ "from": 9, "to": 10 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu u rasadniku", "text": "Jednogodišnja ili dvogodišnja sadnica, zdravog korijena." },
+    { "title": "Iskopaj široku jamu", "text": "Jama 60 × 60 cm, a zemlju pomiješaj s kompostom." },
+    { "title": "Posadi uz kolac", "text": "Mjesto cijepljenja mora ostati iznad zemlje. Sadnicu priveži uz kolac i obilno zalij." },
+    { "title": "Orezuj lagano", "text": "Samo prorijedi krošnju i ukloni suhe grane." }
+  ],
+  "problems": [
+    { "title": "Smeđe mrlje na listovima", "signs": "Listovi imaju smeđe mrlje i otpadaju.", "fix": "Pjegavost lista. Ukloni otpalo lišće u jesen." },
+    { "title": "Plodovi trunu", "signs": "Plodovi trunu na stablu.", "fix": "Monilija. Uklanjaj trule plodove." }
+  ],
+  "neighbours": {
+    "good": ["Neven", "Vlasac"],
+    "bad": []
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "maslina",
+  "name": "Maslina",
+  "forms": { "nom": "maslina", "gen": "masline", "acc": "maslinu", "plural": false },
+  "latin": "Olea europaea",
+  "aliases": ["maslina", "masline", "olive"],
+  "category": "fruit",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "low",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 4 },
+  "spacingText": "6 m",
+  "spacingExplanation": [
+    "Na obali stabla sadi 6 m jedno od drugog.",
+    "Na kontinentu raste u posudi."
+  ],
+  "containers": { "ok": true, "minPotCm": 40, "note": "Na kontinentu u loncu, zimi na hladnom i svijetlom." },
+  "summary": "Simbol obale, živi stoljećima. Na kontinentu raste kao ukras u posudi.",
+  "weeklyTip": "Maslina ne voli mokre noge, zalijevaj tek kad se zemlja osuši.",
+  "illustration": { "kind": "fruit", "fill": "#6B7A3A", "stroke": "#33401A", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5, "note": "Iznesi lonac van kad prođu mrazevi." }],
+    "adriatic": [{ "from": 3, "to": 4 }, { "from": 10, "to": 11 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 10, "to": 12 }],
+    "adriatic": [{ "from": 10, "to": 12 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu u rasadniku", "text": "Jednogodišnja ili dvogodišnja sadnica, zdravog korijena." },
+    { "title": "Iskopaj široku jamu", "text": "Jama 60 × 60 cm, a zemlju pomiješaj s kompostom." },
+    { "title": "Posadi uz kolac", "text": "Mjesto cijepljenja mora ostati iznad zemlje. Sadnicu priveži uz kolac i obilno zalij." },
+    { "title": "Orezuj u proljeće", "text": "Otvori krošnju da u nju ulazi svjetlo." }
+  ],
+  "problems": [
+    { "title": "Crvljivi plodovi", "signs": "Plodovi imaju rupice i otpadaju.", "fix": "Maslinina muha. Postavi žute ljepljive ploče ljeti." },
+    { "title": "Okrugle mrlje na listovima", "signs": "Tamne okrugle mrlje, listovi otpadaju.", "fix": "Paunovo oko. Prorijedi krošnju i ukloni otpalo lišće." }
+  ],
+  "neighbours": {
+    "good": ["Neven", "Vlasac"],
+    "bad": []
+  }
+}

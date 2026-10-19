@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "jagoda",
+  "name": "Jagoda",
+  "forms": { "nom": "jagode", "gen": "jagoda", "acc": "jagode", "plural": true },
+  "latin": "Fragaria × ananassa",
+  "aliases": ["jagoda", "jagode", "strawberry"],
+  "category": "fruit",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "rank": 15,
+  "spacingText": "30 cm",
+  "spacingExplanation": [
+    "Sadnice drži 30 cm jednu od druge, redove 50 cm.",
+    "Jagode tjeraju vriježe koje se ukorijene, pa se red brzo zgusne."
+  ],
+  "spacingTip": "vriježe odreži, osim ako želiš nove biljke.",
+  "containers": { "ok": true, "minPotCm": 20, "note": "Odlične za viseće posude i korita." },
+  "summary": "Najlakše voće za vrt i balkon. Posadiš u kasno ljeto, bereš već iduće proljeće.",
+  "weeklyTip": "Ispod plodova stavi slamu, ostat će čisti i neće truliti.",
+  "illustration": { "kind": "strawberry", "fill": "#E53935", "stroke": "#8E1B19", "bg": "#FFD9DE" },
+  "sow": {
+    "continental": [{ "from": 8, "to": 9 }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 9, "to": 11 }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 5, "to": 6 }],
+    "adriatic": [{ "from": 4, "to": 6 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnice", "text": "Zdrave sadnice s nekoliko listova i jakim korijenom." },
+    { "title": "Posadi plitko", "text": "Srce biljke mora ostati iznad zemlje." },
+    { "title": "Malčiraj slamom", "text": "Prije cvatnje rasprostri slamu oko biljaka." },
+    { "title": "Beri zrele plodove", "text": "Svaki drugi dan, s peteljkom." }
+  ],
+  "problems": [
+    { "title": "Sivi, pljesnivi plodovi", "signs": "Plodovi trunu i prekrije ih siva plijesan.", "fix": "Siva plijesan, nakon kiše. Uklanjaj trule plodove i stavi slamu ispod biljaka." },
+    { "title": "Izgrizeni plodovi", "signs": "Rupe u plodovima.", "fix": "Puževi ili ptice. Skupljaj puževe navečer, a nasad prekrij mrežom." }
+  ],
+  "neighbours": {
+    "good": ["Češnjak", "Špinat", "Luk"],
+    "bad": ["Kupus"]
+  }
+}

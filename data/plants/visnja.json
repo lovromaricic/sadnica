@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "visnja",
+  "name": "Višnja",
+  "forms": { "nom": "višnja", "gen": "višnje", "acc": "višnju", "plural": false },
+  "latin": "Prunus cerasus",
+  "aliases": ["višnja", "visnja", "višnje", "maraska", "sour cherry"],
+  "category": "fruit",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 3 },
+  "spacingText": "4 m",
+  "spacingExplanation": [
+    "Stabla sadi 4 m jedno od drugog.",
+    "Višnja je manja od trešnje i sama se oprašuje."
+  ],
+  "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
+  "summary": "Kiselkasti plodovi za sokove i kolače. Manje stablo koje se samo oprašuje.",
+  "weeklyTip": "Višnja rađa na prošlogodišnjim granama, orezuj nakon berbe.",
+  "illustration": { "kind": "fruit", "fill": "#8E1B1B", "stroke": "#4A0808", "bg": "#FAD9CC" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11, "note": "Sadnice golog korijena." }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice golog korijena." }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 7 }],
+    "adriatic": [{ "from": 6, "to": 7 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu u rasadniku", "text": "Jednogodišnja ili dvogodišnja sadnica, zdravog korijena." },
+    { "title": "Iskopaj široku jamu", "text": "Jama 60 × 60 cm, a zemlju pomiješaj s kompostom." },
+    { "title": "Posadi uz kolac", "text": "Mjesto cijepljenja mora ostati iznad zemlje. Sadnicu priveži uz kolac i obilno zalij." },
+    { "title": "Orezuj nakon berbe", "text": "Prorijedi grane da krošnja bude prozračna." }
+  ],
+  "problems": [
+    { "title": "Grane se suše nakon cvatnje", "signs": "Cvjetovi i mladice uvenu i posmeđe.", "fix": "Monilija. Izreži suhe grane do zdravog drva." },
+    { "title": "Rupice na listovima", "signs": "Listovi izgledaju kao izbušeni.", "fix": "Šupljikavost lista. Ukloni otpalo lišće u jesen." }
+  ],
+  "neighbours": {
+    "good": ["Neven", "Vlasac"],
+    "bad": []
+  }
+}

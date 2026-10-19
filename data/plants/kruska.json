@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "kruska",
+  "name": "Kruška",
+  "forms": { "nom": "kruška", "gen": "kruške", "acc": "krušku", "plural": false },
+  "latin": "Pyrus communis",
+  "aliases": ["kruška", "kruska", "kruške", "pear"],
+  "category": "fruit",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 4 },
+  "spacingText": "4 m",
+  "spacingExplanation": [
+    "Stabla sadi 4 m jedno od drugog.",
+    "Kruška treba drugu sortu u blizini za oprašivanje."
+  ],
+  "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
+  "summary": "Dugovječno stablo slatkih plodova. Počinje rađati nešto kasnije od jabuke.",
+  "weeklyTip": "Kruške beri malo nezrele i ostavi ih da dozriju u hladnoj prostoriji.",
+  "illustration": { "kind": "fruit", "fill": "#C9C24A", "stroke": "#6A6A1A", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11, "note": "Sadnice golog korijena." }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice golog korijena." }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 8, "to": 10 }],
+    "adriatic": [{ "from": 8, "to": 10 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu u rasadniku", "text": "Jednogodišnja ili dvogodišnja sadnica, zdravog korijena." },
+    { "title": "Iskopaj široku jamu", "text": "Jama 60 × 60 cm, a zemlju pomiješaj s kompostom." },
+    { "title": "Posadi uz kolac", "text": "Mjesto cijepljenja mora ostati iznad zemlje. Sadnicu priveži uz kolac i obilno zalij." },
+    { "title": "Orezuj zimi", "text": "Uklanjaj grane koje rastu prema unutra." }
+  ],
+  "problems": [
+    { "title": "Narančaste mrlje na listovima", "signs": "Listovi imaju jarke narančaste mrlje.", "fix": "Hrđa kruške, prelazi s borovice. Otkini najgore listove, a borovicu u blizini ukloni ako možeš." },
+    { "title": "Plodovi pucaju", "signs": "Plodovi imaju tamne mrlje i pukotine.", "fix": "Krastavost. Ukloni otpalo lišće u jesen." }
+  ],
+  "neighbours": {
+    "good": ["Neven", "Vlasac"],
+    "bad": []
+  }
+}

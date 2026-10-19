@@ -1,0 +1,46 @@
+{
+  "reviewed": false,
+  "id": "tresnja",
+  "name": "Trešnja",
+  "forms": { "nom": "trešnja", "gen": "trešnje", "acc": "trešnju", "plural": false },
+  "latin": "Prunus avium",
+  "aliases": ["trešnja", "tresnja", "trešnje", "cherry"],
+  "category": "fruit",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 4 },
+  "spacingText": "5 m",
+  "spacingExplanation": [
+    "Stabla sadi 5 m jedno od drugog.",
+    "Trešnja naraste veliko stablo."
+  ],
+  "spacingTip": "većina sorti treba drugu sortu za oprašivanje.",
+  "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
+  "summary": "Prvo voće u sezoni. Stablo naraste veliko, a ptice obožavaju plodove.",
+  "weeklyTip": "Mreža preko krošnje sačuva plodove od ptica.",
+  "illustration": { "kind": "fruit", "fill": "#B71C1C", "stroke": "#5A0A0A", "bg": "#FFD9DE" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11, "note": "Sadnice golog korijena." }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice golog korijena." }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 6 }],
+    "adriatic": [{ "from": 5, "to": 6 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu u rasadniku", "text": "Jednogodišnja ili dvogodišnja sadnica, zdravog korijena." },
+    { "title": "Iskopaj široku jamu", "text": "Jama 60 × 60 cm, a zemlju pomiješaj s kompostom." },
+    { "title": "Posadi uz kolac", "text": "Mjesto cijepljenja mora ostati iznad zemlje. Sadnicu priveži uz kolac i obilno zalij." },
+    { "title": "Orezuj ljeti", "text": "Nakon berbe, rane brže zacjeljuju." }
+  ],
+  "problems": [
+    { "title": "Crvi u trešnjama", "signs": "U plodovima su bijele ličinke.", "fix": "Trešnjina muha. Beri na vrijeme i postavi žute ljepljive ploče u svibnju." },
+    { "title": "Plodovi pucaju", "signs": "Zreli plodovi napuknu nakon kiše.", "fix": "Biraj sorte otporne na pucanje i beri čim dozriju." }
+  ],
+  "neighbours": {
+    "good": ["Neven", "Vlasac"],
+    "bad": []
+  }
+}

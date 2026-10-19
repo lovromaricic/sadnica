@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "mandarina",
+  "name": "Mandarina",
+  "forms": { "nom": "mandarina", "gen": "mandarine", "acc": "mandarinu", "plural": false },
+  "latin": "Citrus reticulata",
+  "aliases": ["mandarina", "mandarine", "tangerine"],
+  "category": "fruit",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 3 },
+  "spacingText": "3 m",
+  "spacingExplanation": [
+    "Na obali u vrt, 3 m od drugih stabala.",
+    "Na kontinentu raste u posudi."
+  ],
+  "containers": { "ok": true, "minPotCm": 40, "note": "Na kontinentu samo u loncu, zimi unutra." },
+  "summary": "Najotporniji citrus. U dolini Neretve raste u vrtovima, na kontinentu u posudi.",
+  "weeklyTip": "Mandarina podnosi kratki lagani mraz, ali mlado stablo zaštiti agrilom.",
+  "illustration": { "kind": "fruit", "fill": "#F39C12", "stroke": "#8A4A0A", "bg": "#FFE2C2" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5, "note": "Iznesi lonac van kad prođu mrazevi." }],
+    "adriatic": [{ "from": 3, "to": 4 }, { "from": 10, "to": 11 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 10, "to": 12 }],
+    "adriatic": [{ "from": 10, "to": 12 }]
+  },
+  "steps": [
+    { "title": "Kupi cijepljenu sadnicu", "text": "Ranije rađa i otpornija je." },
+    { "title": "Posadi ili presadi", "text": "Na obali u vrt, na kontinentu u posudu." },
+    { "title": "Zalijevaj ljeti", "text": "Redovito, ali bez stajaće vode." },
+    { "title": "Zaštiti zimi", "text": "Agrilom na obali, u kući na kontinentu." }
+  ],
+  "problems": [
+    { "title": "Ljepljivi listovi", "signs": "Listovi su ljepljivi i prekriveni čađom.", "fix": "Štitaste uši. Obriši ih krpom sa sapunicom." },
+    { "title": "Plodovi otpadaju", "signs": "Mali plodovi otpadaju u ljeto.", "fix": "Suša. Zalijevaj redovito." }
+  ],
+  "neighbours": {
+    "good": ["Neven", "Vlasac"],
+    "bad": []
+  }
+}

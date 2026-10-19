@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "smokva",
+  "name": "Smokva",
+  "forms": { "nom": "smokva", "gen": "smokve", "acc": "smokvu", "plural": false },
+  "latin": "Ficus carica",
+  "aliases": ["smokva", "smokve", "fig"],
+  "category": "fruit",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "low",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 2 },
+  "spacingText": "4 m",
+  "spacingExplanation": [
+    "Stablo sadi 4 m od drugih stabala.",
+    "Smokva se široko razgrana."
+  ],
+  "containers": { "ok": true, "minPotCm": 50, "note": "Na kontinentu u velikoj posudi, zimi na hladnom mjestu bez mraza." },
+  "summary": "Na obali raste gotovo sama. Na kontinentu uz topli zid ili u velikoj posudi.",
+  "weeklyTip": "Na kontinentu je zimi zaštiti agrilom ili unesi posudu u garažu.",
+  "illustration": { "kind": "fruit", "fill": "#6D4C7D", "stroke": "#33203D", "bg": "#E6DBFF" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5 }],
+    "adriatic": [{ "from": 11, "to": 12 }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 8, "to": 9 }],
+    "adriatic": [{ "from": 7, "to": 10 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu u rasadniku", "text": "Jednogodišnja ili dvogodišnja sadnica, zdravog korijena." },
+    { "title": "Iskopaj široku jamu", "text": "Jama 60 × 60 cm, a zemlju pomiješaj s kompostom." },
+    { "title": "Posadi uz kolac", "text": "Mjesto cijepljenja mora ostati iznad zemlje. Sadnicu priveži uz kolac i obilno zalij." },
+    { "title": "Zaštiti zimi", "text": "Na kontinentu omotaj mlado stablo agrilom." }
+  ],
+  "problems": [
+    { "title": "Plodovi otpadaju nezreli", "signs": "Male smokve otpadaju.", "fix": "Suša ili mlado stablo. Zalijevaj u suši, s godinama prestaje." },
+    { "title": "Smrzne se zimi", "signs": "Grane su u proljeće suhe.", "fix": "Na kontinentu izreži suho, a stablo će potjerati iz korijena. Sljedeće zime ga zaštiti." }
+  ],
+  "neighbours": {
+    "good": ["Neven", "Vlasac"],
+    "bad": []
+  }
+}

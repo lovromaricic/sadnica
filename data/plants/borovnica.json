@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "borovnica",
+  "name": "Borovnica",
+  "forms": { "nom": "borovnica", "gen": "borovnice", "acc": "borovnicu", "plural": false },
+  "latin": "Vaccinium corymbosum",
+  "aliases": ["borovnica", "borovnice", "američka borovnica", "blueberry"],
+  "category": "fruit",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "high",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 2 },
+  "spacingText": "100 cm",
+  "spacingExplanation": [
+    "Grmove drži metar jedan od drugog.",
+    "Dvije različite sorte bolje se oprašuju i obilnije rađaju."
+  ],
+  "containers": { "ok": true, "minPotCm": 40, "note": "U loncu s kiselom zemljom za borovnice ili azaleje." },
+  "summary": "Traži kiselu zemlju, pa je najlakše uzgojiti u loncu sa supstratom za borovnice.",
+  "weeklyTip": "Zalijevaj kišnicom, vapnenasta voda iz slavine joj ne odgovara.",
+  "illustration": { "kind": "berry", "fill": "#3D5A99", "stroke": "#1A2A4F", "bg": "#D3E9FF" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11 }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 11, "to": 12 }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 7, "to": 8 }],
+    "adriatic": [{ "from": 6, "to": 8 }]
+  },
+  "steps": [
+    { "title": "Kupi dvije sorte", "text": "Bolje se oprašuju i više rađaju." },
+    { "title": "Posadi u kiselu zemlju", "text": "Supstrat za borovnice ili jama napunjena tresetom." },
+    { "title": "Zalijevaj kišnicom", "text": "Zemlja treba biti stalno vlažna." },
+    { "title": "Beri zrele bobice", "text": "Kad su potpuno plave i lako se odvajaju." }
+  ],
+  "problems": [
+    { "title": "Žuti listovi sa zelenim žilama", "signs": "Listovi požute, a žile ostaju zelene.", "fix": "Zemlja nije dovoljno kisela. Presadi u supstrat za borovnice i zalijevaj kišnicom." },
+    { "title": "Ptice pojedu bobice", "signs": "Bobice nestaju prije berbe.", "fix": "Prekrij grm mrežom kad bobice počnu plaviti." }
+  ],
+  "neighbours": {
+    "good": [],
+    "bad": []
+  }
+}

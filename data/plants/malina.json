@@ -1,0 +1,46 @@
+{
+  "reviewed": false,
+  "id": "malina",
+  "name": "Malina",
+  "forms": { "nom": "malina", "gen": "maline", "acc": "malinu", "plural": false },
+  "latin": "Rubus idaeus",
+  "aliases": ["malina", "maline", "raspberry"],
+  "category": "fruit",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 1 },
+  "spacingText": "50 cm",
+  "spacingExplanation": [
+    "Sadnice drži 50 cm jednu od druge, u redu uz žicu.",
+    "Malina se širi izdancima iz korijena."
+  ],
+  "spacingTip": "uz red razapni dvije žice, izboji se na njih oslanjaju.",
+  "containers": { "ok": true, "minPotCm": 40, "note": "Jedna do dvije biljke u velikoj posudi." },
+  "summary": "Bujan grm koji rađa već prve godine nakon sadnje. Treba samo malo orezivanja.",
+  "weeklyTip": "Nakon berbe izreži izboje koji su rodili, iduće godine rađaju novi.",
+  "illustration": { "kind": "berry", "fill": "#D6336C", "stroke": "#7A0F35", "bg": "#FFD9DE" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11 }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 11, "to": 12 }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 9 }],
+    "adriatic": [{ "from": 6, "to": 9 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnice", "text": "Jednogodišnje izboje s korijenom." },
+    { "title": "Posadi uz žicu", "text": "50 cm razmaka, pa skrati na 30 cm." },
+    { "title": "Malčiraj", "text": "Malina voli vlažnu, rahlu zemlju." },
+    { "title": "Orezuj nakon berbe", "text": "Izreži izboje koji su rodili." }
+  ],
+  "problems": [
+    { "title": "Crvi u plodovima", "signs": "U plodovima su sitne ličinke.", "fix": "Malinina muha. Beri redovito i uklanjaj prezrele plodove." },
+    { "title": "Izboji se suše", "signs": "Mladi izboji venu odozgo.", "fix": "Gljivična bolest. Izreži zahvaćene izboje i ne sadi pregusto." }
+  ],
+  "neighbours": {
+    "good": ["Neven", "Češnjak"],
+    "bad": ["Krumpir", "Rajčica"]
+  }
+}

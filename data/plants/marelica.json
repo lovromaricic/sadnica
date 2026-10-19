@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "marelica",
+  "name": "Marelica",
+  "forms": { "nom": "marelica", "gen": "marelice", "acc": "marelicu", "plural": false },
+  "latin": "Prunus armeniaca",
+  "aliases": ["marelica", "marelice", "kajsija", "apricot"],
+  "category": "fruit",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 3 },
+  "spacingText": "4 m",
+  "spacingExplanation": [
+    "Stabla sadi 4 m jedno od drugog.",
+    "Marelica rano cvjeta, pa joj treba zaštićeno mjesto."
+  ],
+  "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
+  "summary": "Rano cvjeta, pa je proljetni mraz najveći rizik. Na zaštićenom mjestu obilno rađa.",
+  "weeklyTip": "Sadi je uz južni zid, gdje cvjetove manje pogađa mraz.",
+  "illustration": { "kind": "fruit", "fill": "#F6B042", "stroke": "#8A5A0A", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11, "note": "Sadnice golog korijena." }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice golog korijena." }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 7, "to": 7 }],
+    "adriatic": [{ "from": 6, "to": 7 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu u rasadniku", "text": "Jednogodišnja ili dvogodišnja sadnica, zdravog korijena." },
+    { "title": "Iskopaj široku jamu", "text": "Jama 60 × 60 cm, a zemlju pomiješaj s kompostom." },
+    { "title": "Posadi uz kolac", "text": "Mjesto cijepljenja mora ostati iznad zemlje. Sadnicu priveži uz kolac i obilno zalij." },
+    { "title": "Orezuj nakon berbe", "text": "Ljeti, kad rane brže zacjeljuju." }
+  ],
+  "problems": [
+    { "title": "Nema plodova", "signs": "Stablo cvjeta, ali ne rađa.", "fix": "Proljetni mraz uništio je cvjetove. Biraj kasnije sorte i zaštićeno mjesto." },
+    { "title": "Grane se naglo osuše", "signs": "Cijela grana uvene usred ljeta.", "fix": "Apopleksija marelice. Izreži suhu granu do zdravog drva." }
+  ],
+  "neighbours": {
+    "good": ["Neven", "Vlasac"],
+    "bad": []
+  }
+}

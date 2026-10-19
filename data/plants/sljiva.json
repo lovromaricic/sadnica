@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "sljiva",
+  "name": "Šljiva",
+  "forms": { "nom": "šljiva", "gen": "šljive", "acc": "šljivu", "plural": false },
+  "latin": "Prunus domestica",
+  "aliases": ["šljiva", "sljiva", "šljive", "plum"],
+  "category": "fruit",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 3 },
+  "spacingText": "4 m",
+  "spacingExplanation": [
+    "Stabla sadi 4 m jedno od drugog.",
+    "Šljiva brzo raste i rano počne rađati."
+  ],
+  "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
+  "summary": "Otporno i rodno stablo. Plodovi za jelo, pekmez i kolače.",
+  "weeklyTip": "Ako je plodova previše, prorijedi ih u lipnju, preostali će biti krupniji.",
+  "illustration": { "kind": "fruit", "fill": "#5E3A7A", "stroke": "#2A1238", "bg": "#E6DBFF" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11, "note": "Sadnice golog korijena." }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice golog korijena." }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 8, "to": 9 }],
+    "adriatic": [{ "from": 7, "to": 9 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu u rasadniku", "text": "Jednogodišnja ili dvogodišnja sadnica, zdravog korijena." },
+    { "title": "Iskopaj široku jamu", "text": "Jama 60 × 60 cm, a zemlju pomiješaj s kompostom." },
+    { "title": "Posadi uz kolac", "text": "Mjesto cijepljenja mora ostati iznad zemlje. Sadnicu priveži uz kolac i obilno zalij." },
+    { "title": "Orezuj ljeti", "text": "Šljivu orezuj nakon berbe, a ne zimi." }
+  ],
+  "problems": [
+    { "title": "Crvljive šljive", "signs": "U plodu su ličinke.", "fix": "Šljivin savijač. Uklanjaj otpale plodove." },
+    { "title": "Plodovi se smežuraju i ne dozriju", "signs": "Plodovi su deformirani.", "fix": "Rogač šljive. Uklanjaj i spali zahvaćene plodove." }
+  ],
+  "neighbours": {
+    "good": ["Neven", "Vlasac"],
+    "bad": []
+  }
+}
