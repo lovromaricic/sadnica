@@ -62,10 +62,9 @@ export const t = {
 		regionAuto: (region: string) => `Prepoznali smo: ${region}. Možeš promijeniti.`,
 		placeQ: 'Gdje ćeš saditi?',
 		places: {
-			ground: { label: 'Direktno u zemlji', sub: 'Gredica u vrtu ili na polju' },
-			raised: { label: 'Povišena gredica', sub: 'Okvir napunjen zemljom' },
-			balcony: { label: 'Balkon ili lonci', sub: 'Biljke u posudama' },
-			none: { label: 'Još ništa', sub: 'Samo istražujem' }
+			garden: { label: 'U vrtu ili gredici', sub: 'U zemlji ili u povišenoj gredici' },
+			balcony: { label: 'Na balkonu ili u loncima', sub: 'Biljke u posudama' },
+			unsure: { label: 'Još ne znam', sub: 'Samo istražujem' }
 		},
 		cta: 'Pokaži mi što sada saditi',
 		save: 'Spremi promjene',

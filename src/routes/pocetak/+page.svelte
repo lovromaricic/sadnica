@@ -29,10 +29,9 @@
 	const garlic = plantsById.get('cesnjak');
 
 	const PLACE_STYLE: Record<Place, { icon: IconName; bg: string }> = {
-		ground: { icon: 'ground', bg: 'var(--mint)' },
-		raised: { icon: 'raised', bg: 'var(--butter)' },
+		garden: { icon: 'ground', bg: 'var(--mint)' },
 		balcony: { icon: 'pot', bg: 'var(--sky)' },
-		none: { icon: 'compass', bg: 'var(--lilac)' }
+		unsure: { icon: 'compass', bg: 'var(--lilac)' }
 	};
 
 	/** Leave without saving: back to where the user came from, or Danas after a fresh load. */
@@ -403,12 +402,12 @@
 			justify-self: end;
 		}
 		.places {
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}
 		.place {
 			align-items: flex-start;
 			flex-direction: column;
-			min-height: 150px;
+			min-height: 168px;
 		}
 		.tick {
 			position: absolute;

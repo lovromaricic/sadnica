@@ -60,8 +60,11 @@ Spec gaps and the simplest choice made for each. Review and overrule freely.
 
 ## Balcony (place answer)
 
-Only the "Balkon ili lonci" answer changes anything; the other three places keep today's behaviour.
-Pots are where a beginner most often plants something that cannot work, so that case earns the question.
+The question has three answers: "U vrtu ili gredici" (`garden`), "Na balkonu ili u loncima"
+(`balcony`) and "Još ne znam" (`unsure`). It used to have four; ground and raised bed gave identical
+advice, so they were merged. Saved answers carry over (ground and raised → garden, none → unsure).
+Only the balcony answer changes anything; the others keep the default behaviour. Pots are where a
+beginner most often plants something that cannot work, so that case earns the question.
 
 - **Data**: optional per-plant `containers: { ok, minPotCm?, note? }`. `minPotCm` (smallest pot
   diameter) is required when `ok` is true and not allowed when false; `npm run validate` enforces this

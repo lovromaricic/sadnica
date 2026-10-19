@@ -68,4 +68,12 @@ describe('sanitize', () => {
 		expect(s.region).toBe('continental');
 		expect(s.garden).toEqual([expect.objectContaining({ plantId: 'bob', stage: 'toPlant', stepsDone: [] })]);
 	});
+
+	it('carries old place answers over to the three current ones', () => {
+		expect(sanitize({ version: 1, place: 'ground' }).place).toBe('garden');
+		expect(sanitize({ version: 1, place: 'raised' }).place).toBe('garden');
+		expect(sanitize({ version: 1, place: 'none' }).place).toBe('unsure');
+		expect(sanitize({ version: 1, place: 'balcony' }).place).toBe('balcony');
+		expect(sanitize({ version: 1, place: 'moon' }).place).toBe('garden');
+	});
 });

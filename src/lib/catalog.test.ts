@@ -28,15 +28,15 @@ describe('initialFilters and filtersParam', () => {
 
 	it('preselects "Za balkon" for balcony gardeners on a plain visit only', () => {
 		expect(initialFilters(params(''), 'balcony')).toEqual(['balcony']);
-		expect(initialFilters(params(''), 'ground')).toEqual([]);
+		expect(initialFilters(params(''), 'garden')).toEqual([]);
 		expect(initialFilters(params('filtri=season'), 'balcony')).toEqual(['season']);
 		expect(initialFilters(params('filtri='), 'balcony')).toEqual([]);
-		expect(initialFilters(params('filtri=season,bogus,balcony'), 'none')).toEqual(['season', 'balcony']);
+		expect(initialFilters(params('filtri=season,bogus,balcony'), 'unsure')).toEqual(['season', 'balcony']);
 	});
 
 	it('remembers that a balcony gardener cleared the filters', () => {
 		expect(filtersParam(new Set(), 'balcony')).toBe('');
-		expect(filtersParam(new Set(), 'ground')).toBeNull();
-		expect(filtersParam(new Set<FilterKey>(['balcony', 'season']), 'ground')).toBe('season,balcony');
+		expect(filtersParam(new Set(), 'garden')).toBeNull();
+		expect(filtersParam(new Set<FilterKey>(['balcony', 'season']), 'garden')).toBe('season,balcony');
 	});
 });

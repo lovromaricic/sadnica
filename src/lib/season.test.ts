@@ -167,7 +167,7 @@ describe('recommend for balcony gardeners', () => {
 	});
 
 	it('keeps the usual order for every other place', () => {
-		for (const place of ['ground', 'raised', 'none', undefined] as const) {
+		for (const place of ['garden', 'unsure', undefined] as const) {
 			expect(ids(place)).toEqual(ids());
 		}
 		expect(ids().indexOf('bob')).toBeLessThan(ids().indexOf('matovilac'));
@@ -182,7 +182,7 @@ describe('recommend for balcony gardeners', () => {
 	it('never makes a plant that does not suit a pot the hero', () => {
 		const onlyBob = withSeason([P('bob')], 'continental', d(2026, 10, 19), rules);
 		expect(heroPick(recommend(onlyBob, 'balcony'), 'balcony')).toBeUndefined();
-		expect(heroPick(recommend(onlyBob, 'ground'), 'ground')?.plant.id).toBe('bob');
+		expect(heroPick(recommend(onlyBob, 'garden'), 'garden')?.plant.id).toBe('bob');
 		expect(heroPick(recommend(items, 'balcony'), 'balcony')?.plant.id).toBe('cesnjak');
 		expect(heroPick([], 'balcony')).toBeUndefined();
 	});

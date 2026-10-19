@@ -2,8 +2,11 @@ import { STORAGE_KEY } from './config';
 import { REGIONS } from './data/regions';
 import type { Region } from './data/schema';
 
-export type Place = 'ground' | 'raised' | 'balcony' | 'none';
-export const PLACES: Place[] = ['ground', 'raised', 'balcony', 'none'];
+export type Place = 'garden' | 'balcony' | 'unsure';
+export const PLACES: Place[] = ['garden', 'balcony', 'unsure'];
+
+/** Answers saved before the question had three options. */
+const OLD_PLACES: Record<string, Place> = { ground: 'garden', raised: 'garden', none: 'unsure' };
 
 export type Stage = 'toPlant' | 'sown' | 'growing' | 'ready';
 export const STAGES: Stage[] = ['toPlant', 'sown', 'growing', 'ready'];
@@ -39,7 +42,7 @@ export const DEFAULT_STATE: AppState = {
 	city: 'Zagreb',
 	region: 'continental',
 	regionManual: false,
-	place: 'ground',
+	place: 'garden',
 	garden: [],
 	tasksDone: {}
 };
@@ -70,7 +73,7 @@ export function sanitize(raw: unknown): AppState {
 		city: typeof r.city === 'string' && r.city.trim() ? r.city : DEFAULT_STATE.city,
 		region: oneOf(r.region, REGIONS, DEFAULT_STATE.region),
 		regionManual: r.regionManual === true,
-		place: oneOf(r.place, PLACES, DEFAULT_STATE.place),
+		place: oneOf(OLD_PLACES[r.place as string] ?? r.place, PLACES, DEFAULT_STATE.place),
 		garden,
 		tasksDone: r.tasksDone && typeof r.tasksDone === 'object' ? { ...r.tasksDone } : {}
 	};
