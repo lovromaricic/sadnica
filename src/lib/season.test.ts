@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { Plant, Rules } from './data/schema';
-import { getSeasonStatus, isFrostNear, recommend, upcoming, withSeason } from './season';
+import { getSeasonStatus, heroPick, isFrostNear, recommend, upcoming, withSeason } from './season';
 import { plants, plantsById, rules } from './data';
 
 const d = (y: number, m: number, day: number) => new Date(y, m - 1, day);
@@ -154,5 +154,36 @@ describe('recommend', () => {
 		const ids = upcoming(items).map((i) => i.plant.id);
 		expect(ids[0]).toBe('rajcica');
 		expect(ids).toEqual(expect.arrayContaining(['mrkva', 'bosiljak']));
+	});
+});
+
+describe('recommend for balcony gardeners', () => {
+	const items = withSeason(plants, 'continental', d(2026, 10, 19), rules);
+	const ids = (place?: Parameters<typeof recommend>[1]) => recommend(items, place).map((i) => i.plant.id);
+
+	it('puts pot-friendly plants first, even before cover-free ones', () => {
+		// Broad bean does not suit a pot, so it drops below the cover-only lamb's lettuce and spinach.
+		expect(ids('balcony')).toEqual(['cesnjak', 'luk-ljutika', 'spinat', 'matovilac', 'bob']);
+	});
+
+	it('keeps the usual order for every other place', () => {
+		for (const place of ['ground', 'raised', 'none', undefined] as const) {
+			expect(ids(place)).toEqual(ids());
+		}
+		expect(ids().indexOf('bob')).toBeLessThan(ids().indexOf('matovilac'));
+	});
+
+	it('treats plants without container data as not for pots', () => {
+		const { containers: _, ...unknown } = { ...P('cesnjak'), id: 'unknown', rank: 0 };
+		const mixed = withSeason([unknown, P('luk-ljutika')], 'continental', d(2026, 10, 19), rules);
+		expect(recommend(mixed, 'balcony').map((i) => i.plant.id)).toEqual(['luk-ljutika', 'unknown']);
+	});
+
+	it('never makes a plant that does not suit a pot the hero', () => {
+		const onlyBob = withSeason([P('bob')], 'continental', d(2026, 10, 19), rules);
+		expect(heroPick(recommend(onlyBob, 'balcony'), 'balcony')).toBeUndefined();
+		expect(heroPick(recommend(onlyBob, 'ground'), 'ground')?.plant.id).toBe('bob');
+		expect(heroPick(recommend(items, 'balcony'), 'balcony')?.plant.id).toBe('cesnjak');
+		expect(heroPick([], 'balcony')).toBeUndefined();
 	});
 });

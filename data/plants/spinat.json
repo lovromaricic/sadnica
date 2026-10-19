@@ -16,6 +16,7 @@
     "Ako su pregusto, listovi ostanu sitni i brže idu u cvijet."
   ],
   "spacingTip": "posij malo gušće pa prorijedi. Mlade listove koje počupaš pojedi u salati.",
+  "containers": { "ok": true, "minPotCm": 20, "note": "Lonac ili žardinjera neka bude duboka barem 20 cm." },
   "summary": "Brzo raste po hladnom vremenu. Prve listove bereš već za šest do osam tjedana.",
   "weeklyTip": "Beri vanjske listove, a srce ostavi. Biljka će dati nove.",
   "illustration": { "kind": "leaf", "fill": "#4E9A5A", "stroke": "#1F4A2A", "bg": "#E6DBFF" },

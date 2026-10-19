@@ -16,6 +16,7 @@
     "Svaka biljka naraste u malu rozetu listova."
   ],
   "spacingTip": "biljčice koje počupaš kod prorjeđivanja možeš odmah pojesti.",
+  "containers": { "ok": true, "minPotCm": 20, "note": "Dobro raste i u balkonskoj žardinjeri dubokoj 15 cm." },
   "summary": "Zimska salata koja raste i kad je hladno. Bereš je cijelu zimu, list po list.",
   "weeklyTip": "Sjeme je sitno: pomiješaj ga sa šakom pijeska pa tek onda sij, lakše ćeš ga rasporediti.",
   "illustration": { "kind": "rosette", "fill": "#6DBA6A", "stroke": "#285A2E", "bg": "#D3E9FF" },

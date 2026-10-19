@@ -7,33 +7,28 @@
 	import PlantArt from '#lib/components/PlantArt.svelte';
 	import StatusChip from '#lib/components/StatusChip.svelte';
 	import { plants, rules } from '#lib/data/index.ts';
-	import type { Plant } from '#lib/data/schema.ts';
 	import { pluralPlants, t } from '#lib/i18n/hr.ts';
-	import { matchesQuery } from '#lib/search.ts';
-	import { isFrostNear, isInSeason, withSeason } from '#lib/season.ts';
+	import { FILTERS, filterCatalog, filtersParam, initialFilters, type FilterKey } from '#lib/catalog.ts';
+	import { isFrostNear, withSeason } from '#lib/season.ts';
 	import { navContext } from '#lib/navContext.svelte.ts';
 	import { store } from '#lib/store.svelte.ts';
 	import { chipKind, timingText } from '#lib/timing.ts';
 	import { today } from '#lib/today.ts';
 
-	type FilterKey = keyof typeof t.catalog.filters;
-	const FILTERS: FilterKey[] = ['season', 'easy', 'veg', 'herb', 'flower', 'fruit'];
-	const CATEGORIES: Plant['category'][] = ['veg', 'herb', 'flower', 'fruit'];
-
 	// Search and filters live in the address (?q=…&filtri=…), so Back from a plant restores them.
 	const initial = new URLSearchParams(window.location.search);
 	let query = $state(initial.get('q') ?? '');
-	const active = new SvelteSet<FilterKey>(
-		(initial.get('filtri') ?? '').split(',').filter((f): f is FilterKey => (FILTERS as string[]).includes(f))
-	);
+	// Balcony gardeners start with "Za balkon" on.
+	const place = store.state.place;
+	const active = new SvelteSet<FilterKey>(initialFilters(initial, place));
 	// "Vidi sve u sezoni" links here with ?sezona=1.
 	if (initial.has('sezona')) active.add('season');
 
 	$effect(() => {
 		const params = new URLSearchParams();
 		if (query.trim()) params.set('q', query.trim());
-		const filters = FILTERS.filter((f) => active.has(f));
-		if (filters.length) params.set('filtri', filters.join(','));
+		const filters = filtersParam(active, place);
+		if (filters !== null) params.set('filtri', filters);
 		const href = `${resolve('/biljke')}${params.size ? `?${params}` : ''}`;
 		if (href === window.location.pathname + window.location.search) return;
 		try {
@@ -48,17 +43,7 @@
 	const frostNear = $derived(isFrostNear(region, today, rules));
 	const items = $derived(withSeason(plants, region, today, rules));
 
-	const results = $derived.by(() => {
-		const cats = CATEGORIES.filter((c) => active.has(c));
-		return items.filter(
-			({ plant, season }) =>
-				matchesQuery(plant, query) &&
-				(!active.has('season') || isInSeason(season)) &&
-				(!active.has('easy') || plant.difficulty === 'easy') &&
-				// Categories combine as OR; the rest as AND.
-				(cats.length === 0 || cats.includes(plant.category))
-		);
-	});
+	const results = $derived(filterCatalog(items, query, active));
 
 	function toggle(key: FilterKey) {
 		if (active.has(key)) active.delete(key);

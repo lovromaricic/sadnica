@@ -16,6 +16,7 @@
     "Rajčica naraste visoko i široko. Kad joj je zrak oko listova slobodan, manje obolijeva."
   ],
   "spacingTip": "uz svaku biljku odmah pri sadnji zabij kolac, kasnije ćeš oštetiti korijen.",
+  "containers": { "ok": true, "minPotCm": 40, "note": "Odaberi niske ili cherry sorte. Lonac neka ima barem 20 litara zemlje." },
   "summary": "Najdraže ljetno povrće. Traži sunce, redovito zalijevanje i kolac uz koji raste.",
   "weeklyTip": "Ako ti je ovo prvo ljeto, kupi gotove presadnice u svibnju umjesto da siješ sam.",
   "illustration": { "kind": "tomato", "fill": "#E8503A", "stroke": "#8A2216", "bg": "#FFD9DE" },

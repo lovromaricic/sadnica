@@ -16,6 +16,7 @@
     "Kad mu je prostrano, bosiljak se razgrana i daje više listova."
   ],
   "spacingTip": "otkidaj vrhove grančica, biljka će se više granati.",
+  "containers": { "ok": true, "minPotCm": 20, "note": "U jedan lonac stanu jedna do tri biljke." },
   "summary": "Mirisno bilje za balkon ili vrt. Voli toplinu i sunce, a hladnoću ne podnosi.",
   "weeklyTip": "Ne iznosi bosiljak van dok noći ne postanu tople, ni lagani mraz ne preživi.",
   "illustration": { "kind": "leaf", "fill": "#5FB35A", "stroke": "#24552A", "bg": "#C9EEDB" },

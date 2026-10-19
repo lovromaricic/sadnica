@@ -1,4 +1,5 @@
 import type { HarvestWindow, Plant, Region, Rules, SowWindow } from './data/schema';
+import type { Place } from './storage';
 
 export type SeasonStatus = 'now' | 'late' | 'upcoming' | 'off';
 
@@ -142,21 +143,35 @@ export function withSeason(plants: Plant[], region: Region, date: Date, rules: S
 	return plants.map((plant) => ({ plant, season: getSeasonStatus(plant, region, date, rules) }));
 }
 
+/** Known to grow well in a pot. Plants without `containers` data count as not suitable. */
+export function potFriendly(plant: Plant): boolean {
+	return plant.containers?.ok === true;
+}
+
 /**
- * Plants to plant now, best first: ones that do not need cover, then easy before harder
- * (the app is for beginners), then the ones whose window closes soonest.
+ * Plants to plant now, best first: for balcony gardeners pot-friendly plants come first; then ones
+ * that do not need cover, then easy before harder (the app is for beginners), then the ones whose
+ * window closes soonest.
  */
-export function recommend(items: PlantWithSeason[]): PlantWithSeason[] {
+export function recommend(items: PlantWithSeason[], place?: Place): PlantWithSeason[] {
+	const pots = place === 'balcony';
 	return items
 		.filter((i) => isInSeason(i.season))
 		.sort(
 			(a, b) =>
+				(pots ? Number(potFriendly(b.plant)) - Number(potFriendly(a.plant)) : 0) ||
 				Number(a.season.needsCover) - Number(b.season.needsCover) ||
 				DIFFICULTY_ORDER[a.plant.difficulty] - DIFFICULTY_ORDER[b.plant.difficulty] ||
 				(a.season.daysLeft ?? 0) - (b.season.daysLeft ?? 0) ||
 				(a.plant.rank ?? 100) - (b.plant.rank ?? 100) ||
 				a.plant.name.localeCompare(b.plant.name, 'hr')
 		);
+}
+
+/** The plant of the week: the first pick, but never one that does not suit a pot for balcony gardeners. */
+export function heroPick(picks: PlantWithSeason[], place?: Place): PlantWithSeason | undefined {
+	const first = picks[0];
+	return first && (place !== 'balcony' || potFriendly(first.plant)) ? first : undefined;
 }
 
 /** Plants whose next window opens soon, soonest first. */

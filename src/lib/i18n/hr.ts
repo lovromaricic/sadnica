@@ -80,6 +80,11 @@ export const t = {
 		headline: (plantAcc: string) => `Ovaj tjedan sadimo ${plantAcc}`,
 		headlineNone: 'Ovaj tjedan je mirno u vrtu',
 		noneText: 'Trenutno nema ničeg što bi bilo dobro posaditi. Pogledaj što dolazi uskoro.',
+		headlineNoneBalcony: 'Ovaj tjedan je mirno na balkonu',
+		noneTextBalcony: (others: boolean) =>
+			others
+				? 'Trenutno nema ničeg što bi bilo dobro posaditi u lonac. Ovo sada raste, ali treba gredicu.'
+				: 'Trenutno nema ničeg što bi bilo dobro posaditi u lonac. Pogledaj što dolazi uskoro.',
 		frostTitle: 'Prvi mraz je blizu.',
 		frostAction: 'Osjetljivo bilje pokrij agrilom ili unesi u kuću.',
 		badge: 'Preporuka tjedna',
@@ -111,6 +116,7 @@ export const t = {
 		filtersLabel: 'Filtri',
 		filters: {
 			season: 'Sada u sezoni',
+			balcony: 'Za balkon',
 			easy: 'Lako za početnike',
 			veg: 'Povrće',
 			herb: 'Začinsko bilje',
@@ -132,6 +138,14 @@ export const t = {
 		offBadge: 'Nije sezona',
 		gardenBadge: (stage: string) => `U vrtu · ${stage}`,
 		facts: { difficulty: 'Težina', sun: 'Sunce', water: 'Voda', spacing: 'Razmak' },
+		pot: {
+			label: 'Lonac',
+			value: (cm: number) => `Ø ${cm} cm`,
+			text: (cm: number) => `Treba ti lonac promjera barem ${cm} cm.`,
+			tip: 'lonac mora imati rupe na dnu, da višak vode može oteći.',
+			notTitle: 'Nije za lonac',
+			notText: 'Ova biljka ne uspijeva dobro na balkonu.'
+		},
 		difficulty: { easy: 'Lako', medium: 'Srednje', hard: 'Zahtjevno' },
 		sun: { full: 'Puno sunca', partial: 'Polusjena', shade: 'Hlad' },
 		water: { low: 'Malo', medium: 'Umjereno', high: 'Puno' },

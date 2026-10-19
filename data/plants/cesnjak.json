@@ -16,6 +16,7 @@
     "Svaki zubac naraste u jednu glavicu, pa im treba mjesta."
   ],
   "spacingTip": "odmjeri prvi zubac, a ostale posadi na istu udaljenost. Otprilike je to širina dlana.",
+  "containers": { "ok": true, "minPotCm": 25, "note": "Lonac neka bude dubok barem 20 cm. U njega stane pet do šest zubaca." },
   "summary": "Posadiš zupce u jesen, a iduće ljeto vadiš cijele glavice. Gotovo da ne traži brigu.",
   "weeklyTip": "Kupi češnjak za sadnju u poljoapoteci ili na placu od domaćeg uzgajivača. Onaj iz trgovine često je tretiran da ne proklija.",
   "illustration": { "kind": "bulb", "fill": "#FFF7E8", "stroke": "#6B5236", "bg": "#FFEFB5" },

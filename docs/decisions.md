@@ -58,6 +58,28 @@ Spec gaps and the simplest choice made for each. Review and overrule freely.
   which is the "settings" screen too: the location pill in the desktop header opens it. Picking a
   region by hand overrides the city lookup.
 
+## Balcony (place answer)
+
+Only the "Balkon ili lonci" answer changes anything; the other three places keep today's behaviour.
+Pots are where a beginner most often plants something that cannot work, so that case earns the question.
+
+- **Data**: optional per-plant `containers: { ok, minPotCm?, note? }`. `minPotCm` (smallest pot
+  diameter) is required when `ok` is true and not allowed when false; `npm run validate` enforces this
+  and lists plants with no `containers` at all. A plant without the field counts as not for pots
+  (it is never preselected or made the hero), but the plant page shows no "Nije za lonac" note for it,
+  since we simply do not know. Pot sizes and notes are placeholders like the rest of the content.
+- **Danas**: pot-friendly plants rank first, ahead of the usual order (so with balcony, a cover-only
+  pot plant beats a cover-free one that needs a bed). The hero is the first pick only if it suits a
+  pot; otherwise there is no hero and the text says nothing fits a pot now, and the other plants stay
+  in the list below. "Vidi sve u sezoni" counts and opens in-season pot plants (`?filtri=season,balcony`).
+  In October in Zagreb this moves broad bean (not for pots) from third to last; garlic stays the hero.
+- **Plant page**: for a pot-friendly plant the Razmak tile becomes "Lonac · Ø 20 cm" and its modal says
+  "Treba ti lonac promjera barem 20 cm." plus the plant's note, with a generic drainage tip. For a plant
+  marked `ok: false`, a short peach note sits above the tiles ("Nije za lonac." + the plant's note).
+- **Catalogue**: new "Za balkon" filter (AND with the others), second in the row so it is visible on a 393px phone when preselected. Balcony gardeners get it switched on
+  when they open Biljke without filters in the address. If they switch everything off, the address
+  keeps an empty `?filtri=` so Back to the catalogue does not switch it on again.
+
 ## Moj vrt
 
 - Stages: Za posaditi → Posijano → Raste → Spremno za berbu. A button on each card moves to the next
@@ -83,7 +105,7 @@ Spec gaps and the simplest choice made for each. Review and overrule freely.
 
 - **No experience question** (removed after review): it only reordered Danas and, with the current
   plants, changed nothing visible. Everyone gets the beginner order (easy first). Onboarding is now city
-  and place; old saves simply drop the stored answer. The place answer is saved but not used yet.
+  and place; old saves simply drop the stored answer.
 
 - **Changing your answers** (location pill → onboarding screen): no bottom nav there; instead an
   "Odustani" button leaves without saving (Back to the previous page, or Danas after a fresh load), and

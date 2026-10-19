@@ -10,6 +10,7 @@ import { explanationsSchema, plantSchema, rulesSchema } from '../src/lib/data/sc
 const root = join(import.meta.dirname, '..', 'data');
 const errors: string[] = [];
 let unreviewed = 0;
+const noContainers: string[] = [];
 
 function check(file: string, schema: z.ZodType<{ reviewed: boolean }>) {
 	let json: unknown;
@@ -36,6 +37,7 @@ for (const name of readdirSync(plantDir).filter((f) => f.endsWith('.json'))) {
 	if (`${plant.id}.json` !== name) errors.push(`${name}: id "${plant.id}" must match the file name`);
 	if (ids.has(plant.id)) errors.push(`${name}: duplicate id "${plant.id}"`);
 	ids.add(plant.id);
+	if (!plant.containers) noContainers.push(plant.id);
 	for (const region of ['continental', 'adriatic'] as const) {
 		if (!plant.sow[region]) errors.push(`${name}: missing sow windows for region "${region}"`);
 		if (!plant.harvest[region]) errors.push(`${name}: missing harvest windows for region "${region}"`);
@@ -50,4 +52,6 @@ if (errors.length) {
 	process.exit(1);
 }
 console.log(`Data OK: ${ids.size} plants, explanations, rules.`);
+if (noContainers.length)
+	console.warn(`Note: no "containers" for ${noContainers.join(', ')}. Balcony users will not see them as pot plants.`);
 if (unreviewed) console.warn(`Note: ${unreviewed} content file(s) are marked "reviewed": false. Verify before publishing.`);

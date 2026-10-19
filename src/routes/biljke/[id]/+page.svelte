@@ -36,6 +36,10 @@
 	const frostNear = $derived(isFrostNear(region, today, rules));
 	const gardenItem = $derived(plant && store.inGarden(plant.id));
 	const city = $derived(store.state.city);
+	// Balcony gardeners see the pot size instead of row spacing, or why the plant does not suit a pot.
+	const balcony = $derived(store.state.place === 'balcony');
+	const potCm = $derived(balcony && plant?.containers?.ok ? plant.containers.minPotCm : undefined);
+	const notForPots = $derived(balcony && plant?.containers?.ok === false);
 
 	// Steps are saved with the plant when it is in the garden, otherwise kept for this visit.
 	const localSteps = new SvelteSet<number>();
@@ -58,7 +62,9 @@
 		!plant
 			? ''
 			: f === 'spacing'
-				? plant.spacingText
+				? potCm
+					? t.plant.pot.value(potCm)
+					: plant.spacingText
 				: f === 'difficulty'
 					? t.plant.difficulty[plant.difficulty]
 					: f === 'sun'
@@ -67,6 +73,10 @@
 
 	const modalContent = $derived.by(() => {
 		if (!plant || !openFact) return null;
+		if (openFact === 'spacing' && potCm) {
+			const note = plant.containers?.note;
+			return { paragraphs: [t.plant.pot.text(potCm), ...(note ? [note] : [])], tip: t.plant.pot.tip };
+		}
 		if (openFact === 'spacing') return { paragraphs: plant.spacingExplanation, tip: plant.spacingTip };
 		const e =
 			openFact === 'difficulty'
@@ -76,6 +86,8 @@
 					: explanations.water[plant.water];
 		return { paragraphs: e.paragraphs, tip: e.tip };
 	});
+
+	const factLabel = (f: Fact) => (f === 'spacing' && potCm ? t.plant.pot.label : t.plant.facts[f]);
 
 	const badge = $derived.by(() => {
 		if (!season) return '';
@@ -166,6 +178,12 @@
 		</aside>
 
 		<div class="details">
+			{#if notForPots}
+				<p class="pot-note">
+					<strong>{t.plant.pot.notTitle}.</strong>
+					{plant.containers?.note ?? t.plant.pot.notText}
+				</p>
+			{/if}
 			<ul class="facts">
 				{#each FACTS as f (f)}
 					<li>
@@ -177,7 +195,7 @@
 							onclick={() => showFact(f)}
 						>
 							<span class="i" aria-hidden="true">i</span>
-							<span class="fact-label">{t.plant.facts[f]}<span class="sr-only">:</span></span>
+							<span class="fact-label">{factLabel(f)}<span class="sr-only">:</span></span>
 							<span class="fact-value">{factValue(f)}</span>
 						</button>
 					</li>
@@ -251,7 +269,7 @@
 	{#if openFact && modalContent}
 		<Modal
 			bind:open={modalOpen}
-			label={t.plant.facts[openFact]}
+			label={factLabel(openFact)}
 			value={factValue(openFact)}
 			color={FACT_COLORS[openFact]}
 			tip={modalContent.tip}
@@ -331,6 +349,12 @@
 		min-width: 0;
 	}
 
+	.pot-note {
+		padding: 16px 18px;
+		border-radius: var(--r-md);
+		background: var(--peach);
+		font-size: 0.9375rem;
+	}
 	.facts {
 		list-style: none;
 		margin: 0;

@@ -7,7 +7,7 @@
 	import SunWidget from '#lib/components/sun/SunWidget.svelte';
 	import { plants, rules } from '#lib/data/index.ts';
 	import { formatDate, monthName, t } from '#lib/i18n/hr.ts';
-	import { isFrostNear, isInSeason, recommend, upcoming, withSeason } from '#lib/season.ts';
+	import { heroPick, isFrostNear, isInSeason, potFriendly, recommend, upcoming, withSeason } from '#lib/season.ts';
 	import { store } from '#lib/store.svelte.ts';
 	import { accusative } from '#lib/tasks.ts';
 	import { heroReason, timingText } from '#lib/timing.ts';
@@ -16,11 +16,15 @@
 	const desktop = new MediaQuery('min-width: 900px');
 	const region = $derived(store.state.region);
 	const items = $derived(withSeason(plants, region, today, rules));
-	const picks = $derived(recommend(items));
-	const hero = $derived(picks[0]);
-	const more = $derived(picks.slice(1, 5));
+	const balcony = $derived(store.state.place === 'balcony');
+	const picks = $derived(recommend(items, store.state.place));
+	const hero = $derived(heroPick(picks, store.state.place));
+	const more = $derived(picks.filter((p) => p !== hero).slice(0, 4));
 	const soon = $derived(upcoming(items).slice(0, 2));
-	const inSeasonCount = $derived(items.filter((i) => isInSeason(i.season)).length);
+	// Balcony gardeners see all pot plants in season; the catalogue opens with the same filters.
+	const inSeasonCount = $derived(
+		items.filter((i) => isInSeason(i.season) && (!balcony || potFriendly(i.plant))).length
+	);
 	const frostNear = $derived(isFrostNear(region, today, rules));
 </script>
 
@@ -31,7 +35,7 @@
 <div class="page today">
 	<header class="head">
 		<p class="eyebrow">{formatDate(today)}</p>
-		<h1>{hero ? t.today.headline(accusative(hero.plant)) : t.today.headlineNone}</h1>
+		<h1>{hero ? t.today.headline(accusative(hero.plant)) : balcony ? t.today.headlineNoneBalcony : t.today.headlineNone}</h1>
 	</header>
 
 	{#if frostNear}
@@ -69,7 +73,7 @@
 			</section>
 		{:else}
 			<section class="hero lime">
-				<p class="reason">{t.today.noneText}</p>
+				<p class="reason">{balcony ? t.today.noneTextBalcony(more.length > 0) : t.today.noneText}</p>
 			</section>
 		{/if}
 
@@ -90,7 +94,7 @@
 				</ul>
 			{/if}
 			{#if inSeasonCount > 0}
-				<a class="btn btn-secondary btn-block see-all" href="{resolve('/biljke')}?filtri=season">
+				<a class="btn btn-secondary btn-block see-all" href="{resolve('/biljke')}?filtri={balcony ? 'season,balcony' : 'season'}">
 					{t.today.seeAll(inSeasonCount)}
 				</a>
 			{/if}

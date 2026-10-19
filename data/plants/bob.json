@@ -16,6 +16,7 @@
     "Biljke narastu do metra visine, pa se u dvostrukom redu međusobno podupiru."
   ],
   "spacingTip": "između dvostrukih redova ostavi stazu da možeš brati.",
+  "containers": { "ok": false, "note": "Bob naraste do metra visine i treba duboku zemlju, pa u loncu slabo rodi." },
   "summary": "Krupne sjemenke koje lako niknu. Prezime u zemlji i u proljeće daju prve mahune.",
   "weeklyTip": "Namoči sjemenke preko noći u mlakoj vodi, brže će niknuti.",
   "illustration": { "kind": "pod", "fill": "#8CC66B", "stroke": "#2F5E2A", "bg": "#C9EEDB" },

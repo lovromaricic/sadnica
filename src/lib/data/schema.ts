@@ -19,6 +19,21 @@ export type SowWindow = z.infer<typeof sowWindowSchema>;
 export const harvestWindowSchema = z.object({ from: month, to: month });
 export type HarvestWindow = z.infer<typeof harvestWindowSchema>;
 
+/**
+ * Growing in pots (balcony). `ok` plants need `minPotCm`, the smallest pot diameter that works;
+ * `note` is one short sentence shown with the pot size, or why it does not suit a pot.
+ */
+export const containersSchema = z
+	.object({
+		ok: z.boolean(),
+		minPotCm: z.number().int().min(5).max(100).optional(),
+		note: z.string().min(1).optional()
+	})
+	.strict()
+	.refine((c) => !c.ok || c.minPotCm !== undefined, { message: 'minPotCm is required when ok is true', path: ['minPotCm'] })
+	.refine((c) => c.ok || c.minPotCm === undefined, { message: 'minPotCm only makes sense when ok is true', path: ['minPotCm'] });
+export type Containers = z.infer<typeof containersSchema>;
+
 export const ILLUSTRATION_KINDS = ['bulb', 'pod', 'rosette', 'leaf', 'tomato', 'root'] as const;
 
 export const plantSchema = z
@@ -48,6 +63,8 @@ export const plantSchema = z
 		spacingText: z.string().min(1),
 		spacingExplanation: z.array(z.string()).min(1),
 		spacingTip: z.string().optional(),
+		/** Missing means we do not know yet; the app then treats the plant as not for pots. */
+		containers: containersSchema.optional(),
 		summary: z.string().min(1),
 		weeklyTip: z.string().optional(),
 		illustration: z.object({
