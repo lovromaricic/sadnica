@@ -81,6 +81,10 @@ Spec gaps and the simplest choice made for each. Review and overrule freely.
 
 ## Smaller choices
 
+- **Mobile nav labels** are always visible (requested after review), stacked under the icons so the
+  floating pill still fits a 360px screen; the active item keeps the lime highlight. This differs from
+  the design, where only the active item shows its label.
+
 - Confirmation after adding a plant: a toast with "Otvori moj vrt", 6 seconds.
 - Offline notice: a small butter-coloured bar when the browser reports no network.
 - Reminder: an `.ics` all-day event spanning the rest of the current window (or the next window),

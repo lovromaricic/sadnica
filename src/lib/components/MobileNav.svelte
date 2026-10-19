@@ -12,7 +12,7 @@
 		{@const active = isActive(item.href, page.route.id)}
 		<a href={resolve(item.href)} class:active aria-current={active ? 'page' : undefined}>
 			<Icon name={item.icon} size={22} />
-			<span class:sr-only={!active}>{item.label}</span>
+			<span>{item.label}</span>
 		</a>
 	{/each}
 </nav>
@@ -25,7 +25,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		height: calc(var(--nav-bottom) + 72px);
+		height: calc(var(--nav-bottom) + 76px);
 		background: linear-gradient(to bottom, rgb(246 248 244 / 0), var(--ground) 55%);
 		pointer-events: none;
 	}
@@ -44,18 +44,22 @@
 		background: var(--ink);
 		box-shadow: 0 10px 30px rgb(20 32 26 / 0.25);
 	}
+	/* Every item shows its label under the icon, like a tab bar; the active one is lime. */
 	a {
 		display: inline-flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: 8px;
-		min-width: 56px;
-		height: 56px;
-		padding: 0 16px;
+		gap: 2px;
+		min-width: 84px;
+		height: 60px;
+		padding: 0 14px;
 		border-radius: 999px;
 		color: var(--dark-muted);
 		text-decoration: none;
 		font-weight: 700;
+		font-size: 0.75rem;
+		line-height: 1.1;
 		white-space: nowrap;
 		transition:
 			background-color 0.2s ease,
@@ -67,7 +71,6 @@
 	a.active {
 		background: var(--lime);
 		color: var(--ink);
-		padding: 0 20px 0 18px;
 	}
 	a:focus-visible {
 		outline-color: var(--lime);
