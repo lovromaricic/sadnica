@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "maticnjak",
+  "name": "Matičnjak",
+  "forms": { "nom": "matičnjak", "gen": "matičnjaka", "acc": "matičnjak", "plural": false },
+  "latin": "Melissa officinalis",
+  "aliases": ["matičnjak", "maticnjak", "melisa", "lemon balm"],
+  "category": "herb",
+  "difficulty": "easy",
+  "sun": "partial",
+  "water": "medium",
+  "spacingText": "40 cm",
+  "spacingExplanation": [
+    "Sadnice drži 40 cm jednu od druge.",
+    "Matičnjak naraste u velik busen."
+  ],
+  "containers": { "ok": true, "minPotCm": 25 },
+  "summary": "Trajnica s mirisom limuna. Za čaj koji smiruje, a pčele je obožavaju.",
+  "weeklyTip": "Prije cvatnje ga orezi, dat će nove mirisne listove.",
+  "illustration": { "kind": "leaf", "fill": "#8CC56A", "stroke": "#3A6A22", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5, "note": "Sadnice iz rasadnika." }],
+    "adriatic": [{ "from": 3, "to": 4, "note": "Sadnice iz rasadnika." }, { "from": 9, "to": 10 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 5, "to": 9 }],
+    "adriatic": [{ "from": 4, "to": 10 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu", "text": "Ili posij u lončiće u proljeće." },
+    { "title": "Posadi u polusjenu", "text": "Podnosi i sunce i polusjenu." },
+    { "title": "Zalijevaj u suši", "text": "Inače je skroman." },
+    { "title": "Orezuj prije cvatnje", "text": "Biljka tjera nove listove." }
+  ],
+  "problems": [
+    { "title": "Sam se zasije posvuda", "signs": "Mlade biljke niču po vrtu.", "fix": "Odreži cvjetove prije nego sjeme sazrije." },
+    { "title": "Bijela prevlaka na listovima", "signs": "Pepelnica krajem ljeta.", "fix": "Odreži biljku do zemlje, izrast će nova." }
+  ],
+  "neighbours": {
+    "good": ["Rajčica", "Tikvica"],
+    "bad": []
+  }
+}

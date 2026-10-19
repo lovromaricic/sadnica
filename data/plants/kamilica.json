@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "kamilica",
+  "name": "Kamilica",
+  "forms": { "nom": "kamilica", "gen": "kamilice", "acc": "kamilicu", "plural": false },
+  "latin": "Matricaria chamomilla",
+  "aliases": ["kamilica", "titrica", "chamomile"],
+  "category": "herb",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "low",
+  "spacingText": "20 cm",
+  "spacingExplanation": [
+    "Prorijedi na 20 cm.",
+    "Kamilica se razgrana u nježan grmić."
+  ],
+  "containers": { "ok": true, "minPotCm": 20 },
+  "summary": "Bijeli cvjetići za čaj. Sama se zasije iz godine u godinu.",
+  "weeklyTip": "Beri cvjetove kad su potpuno otvoreni, po suhom vremenu.",
+  "illustration": { "kind": "flower", "fill": "#FFFFFF", "stroke": "#8A8A5A", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 4 }, { "from": 9, "to": 9 }],
+    "adriatic": [{ "from": 2, "to": 3 }, { "from": 9, "to": 10 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 5, "to": 7 }],
+    "adriatic": [{ "from": 4, "to": 6 }]
+  },
+  "steps": [
+    { "title": "Posij po površini", "text": "Sjeme je sitno, samo ga pritisni, treba svjetlo." },
+    { "title": "Drži vlažno", "text": "Dok ne nikne." },
+    { "title": "Prorijedi", "text": "Ostavi biljku na 20 cm." },
+    { "title": "Beri cvjetove", "text": "Suši ih u tankom sloju u hladu." }
+  ],
+  "problems": [
+    { "title": "Ne niče", "signs": "Sjeme ne niče.", "fix": "Posijano preduboko. Sjeme samo pritisni na površinu." },
+    { "title": "Lisne uši", "signs": "Sitni kukci na stabljikama.", "fix": "Isperi ih mlazom vode." }
+  ],
+  "neighbours": {
+    "good": ["Kupus", "Luk"],
+    "bad": []
+  }
+}

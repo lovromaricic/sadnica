@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "timijan",
+  "name": "Timijan",
+  "forms": { "nom": "timijan", "gen": "timijana", "acc": "timijan", "plural": false },
+  "latin": "Thymus vulgaris",
+  "aliases": ["timijan", "majčina dušica", "materinka", "thyme"],
+  "category": "herb",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "low",
+  "spacingText": "25 cm",
+  "spacingExplanation": [
+    "Sadnice drži 25 cm jednu od druge.",
+    "Timijan je nizak i širi se u jastuk."
+  ],
+  "containers": { "ok": true, "minPotCm": 15, "note": "Odličan za plitki lonac na suncu." },
+  "summary": "Niski mirisni grmić. Skroman je i voli suho, kamenito mjesto.",
+  "weeklyTip": "Nakon cvatnje ga skrati, ostat će gust i mirisan.",
+  "illustration": { "kind": "sprig", "fill": "#7C9E6A", "stroke": "#3A5230", "bg": "#E6DBFF" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5, "note": "Sadnice iz rasadnika." }],
+    "adriatic": [{ "from": 3, "to": 4, "note": "Sadnice iz rasadnika." }, { "from": 10, "to": 11 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 5, "to": 10 }],
+    "adriatic": [{ "from": 1, "to": 12 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu", "text": "Ili posij u lončiće u ožujku." },
+    { "title": "Posadi na sunce", "text": "U propusnu zemlju, i među kamenje." },
+    { "title": "Zalijevaj rijetko", "text": "Voli suho." },
+    { "title": "Skrati nakon cvatnje", "text": "Biljka ostaje gusta." }
+  ],
+  "problems": [
+    { "title": "Grm ogoli", "signs": "Sredina je drvenasta i gola.", "fix": "Biljka je stara. Svakog ljeta je skrati, a nakon par godina posadi novu." },
+    { "title": "Trune", "signs": "Biljka propada nakon kiše.", "fix": "Previše vlage. Sadi na ocjedito mjesto." }
+  ],
+  "neighbours": {
+    "good": ["Kupus", "Rajčica"],
+    "bad": []
+  }
+}

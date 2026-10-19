@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "origano",
+  "name": "Origano",
+  "forms": { "nom": "origano", "gen": "origana", "acc": "origano", "plural": false },
+  "latin": "Origanum vulgare",
+  "aliases": ["origano", "mravinac", "vranilovka", "mažuran", "oregano"],
+  "category": "herb",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "low",
+  "spacingText": "30 cm",
+  "spacingExplanation": [
+    "Sadnice drži 30 cm jednu od druge.",
+    "Origano se širi u busen."
+  ],
+  "containers": { "ok": true, "minPotCm": 20 },
+  "summary": "Začin za pizzu i umake. Trajnica koja se sama širi.",
+  "weeklyTip": "Najjači miris ima kad ga bereš neposredno prije cvatnje.",
+  "illustration": { "kind": "sprig", "fill": "#6E9E5A", "stroke": "#2F4E24", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5, "note": "Sadnice iz rasadnika." }],
+    "adriatic": [{ "from": 3, "to": 4, "note": "Sadnice iz rasadnika." }, { "from": 10, "to": 11 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 9 }],
+    "adriatic": [{ "from": 5, "to": 10 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu", "text": "Ili posij sitno sjeme u lončiće." },
+    { "title": "Posadi na sunce", "text": "U suhu, propusnu zemlju." },
+    { "title": "Zalijevaj rijetko", "text": "Dovoljna mu je kiša." },
+    { "title": "Beri prije cvatnje", "text": "Osuši grančice u svežnju na zraku." }
+  ],
+  "problems": [
+    { "title": "Slab miris", "signs": "Listovi gotovo ne mirišu.", "fix": "Premalo sunca ili previše vode. Presadi ga na sunčanije, suše mjesto." },
+    { "title": "Biljka se razvuče", "signs": "Duge, tanke stabljike.", "fix": "Premalo svjetla. Skrati je i presadi na sunce." }
+  ],
+  "neighbours": {
+    "good": ["Paprika", "Rajčica"],
+    "bad": []
+  }
+}

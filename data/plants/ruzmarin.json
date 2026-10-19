@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "ruzmarin",
+  "name": "Ružmarin",
+  "forms": { "nom": "ružmarin", "gen": "ružmarina", "acc": "ružmarin", "plural": false },
+  "latin": "Salvia rosmarinus",
+  "aliases": ["ružmarin", "ruzmarin", "rosmarin", "rosemary"],
+  "category": "herb",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "low",
+  "spacingText": "60 cm",
+  "spacingExplanation": [
+    "Sadnice drži 60 cm jednu od druge.",
+    "Ružmarin naraste u grm."
+  ],
+  "containers": { "ok": true, "minPotCm": 30, "note": "Na kontinentu ga zimi drži u loncu na svijetlom, hladnom mjestu." },
+  "summary": "Mirisni grm s obale. Na kontinentu ga zimi štiti ili uzgajaj u loncu.",
+  "weeklyTip": "Zalijevaj tek kad se zemlja posve osuši.",
+  "illustration": { "kind": "sprig", "fill": "#5E8F6A", "stroke": "#2A4A33", "bg": "#D3E9FF" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5, "note": "Sadnice iz rasadnika." }],
+    "adriatic": [{ "from": 3, "to": 4, "note": "Sadnice iz rasadnika." }, { "from": 10, "to": 11 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 1, "to": 12 }],
+    "adriatic": [{ "from": 1, "to": 12 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu", "text": "Iz sjemena raste sporo." },
+    { "title": "Posadi na sunce", "text": "Uz topli zid, u propusnu zemlju." },
+    { "title": "Zalijevaj rijetko", "text": "Previše vode mu škodi više od suše." },
+    { "title": "Beri vrhove", "text": "Cijele godine, po potrebi." }
+  ],
+  "problems": [
+    { "title": "Listovi smeđe i otpadaju", "signs": "Grm se suši odozdo.", "fix": "Najčešće previše vode ili smrznuto korijenje. Zalijevaj rjeđe, zimi zaštiti." },
+    { "title": "Ne preživi zimu", "signs": "U proljeće je suh.", "fix": "Na kontinentu ga uzgajaj u loncu i zimi unesi na hladno, svijetlo mjesto." }
+  ],
+  "neighbours": {
+    "good": ["Kupus", "Mrkva", "Kadulja"],
+    "bad": []
+  }
+}

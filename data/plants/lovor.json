@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "lovor",
+  "name": "Lovor",
+  "forms": { "nom": "lovor", "gen": "lovora", "acc": "lovor", "plural": false },
+  "latin": "Laurus nobilis",
+  "aliases": ["lovor", "lovorika", "lovorov list", "bay laurel"],
+  "category": "herb",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "low",
+  "rank": 300,
+  "perennial": { "yearsToFirstHarvest": 2 },
+  "spacingText": "100 cm",
+  "spacingExplanation": [
+    "Sadnice drži metar jednu od druge.",
+    "Lovor raste u velik grm ili malo stablo."
+  ],
+  "containers": { "ok": true, "minPotCm": 40, "note": "Na kontinentu samo u loncu, zimi u svijetloj i hladnoj prostoriji." },
+  "summary": "Zimzeleni grm s obale. Listove bereš cijele godine, a sušeni su još mirisniji.",
+  "weeklyTip": "Na kontinentu ga drži u loncu i zimi unesi unutra.",
+  "illustration": { "kind": "leaf", "fill": "#2E6B3A", "stroke": "#163A1E", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5, "note": "Sadnice iz rasadnika." }],
+    "adriatic": [{ "from": 3, "to": 4, "note": "Sadnice iz rasadnika." }, { "from": 10, "to": 11 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 1, "to": 12 }],
+    "adriatic": [{ "from": 1, "to": 12 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu", "text": "Lovor iz sjemena raste godinama." },
+    { "title": "Posadi ili presadi u lonac", "text": "Na obali u vrt, na kontinentu u lonac." },
+    { "title": "Zalijevaj umjereno", "text": "U loncu češće ljeti." },
+    { "title": "Beri listove", "text": "Kad grm ojača, beri po potrebi cijele godine." }
+  ],
+  "problems": [
+    { "title": "Ljepljivi listovi i crna prevlaka", "signs": "Na listovima je ljepljiva tvar i čađ.", "fix": "Štitaste uši. Obriši ih krpom namočenom u sapunicu." },
+    { "title": "Smeđi listovi nakon zime", "signs": "Listovi posmeđe.", "fix": "Smrzavanje. Na kontinentu ga zimi drži unutra." }
+  ],
+  "neighbours": {
+    "good": [],
+    "bad": []
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "reviewed": false,
+  "id": "metvica",
+  "name": "Metvica",
+  "forms": { "nom": "metvica", "gen": "metvice", "acc": "metvicu", "plural": false },
+  "latin": "Mentha spicata",
+  "aliases": ["metvica", "menta", "nana", "pepermint", "mint"],
+  "category": "herb",
+  "difficulty": "easy",
+  "sun": "partial",
+  "water": "high",
+  "spacingText": "30 cm",
+  "spacingExplanation": [
+    "Sadnice drži 30 cm jednu od druge.",
+    "Metvica se širi podzemnim izdancima."
+  ],
+  "spacingTip": "u vrtu je posadi u lonac bez dna ukopan u zemlju, inače se proširi posvuda.",
+  "containers": { "ok": true, "minPotCm": 25, "note": "Najbolje u loncu, u vrtu se nekontrolirano širi." },
+  "summary": "Raste gotovo sama i širi se posvuda. Najbolje je drži u loncu.",
+  "weeklyTip": "Beri vrhove prije cvatnje, listovi su tada najmirisniji.",
+  "illustration": { "kind": "leaf", "fill": "#4CAF6A", "stroke": "#1F5530", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 5, "note": "Sadnice iz rasadnika." }],
+    "adriatic": [{ "from": 3, "to": 4, "note": "Sadnice iz rasadnika." }, { "from": 10, "to": 11 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 5, "to": 10 }],
+    "adriatic": [{ "from": 4, "to": 11 }]
+  },
+  "steps": [
+    { "title": "Kupi sadnicu", "text": "Iz sjemena je spora, sadnica je najbolji izbor." },
+    { "title": "Posadi u lonac", "text": "Ili u vrt u ukopani lonac bez dna." },
+    { "title": "Zalijevaj redovito", "text": "Voli vlažnu zemlju." },
+    { "title": "Beri vrhove", "text": "Biljka se tada grana i daje više listova." }
+  ],
+  "problems": [
+    { "title": "Narančaste mrlje na listovima", "signs": "Na naličju listova su narančaste točke.", "fix": "Hrđa. Odreži zahvaćene stabljike do zemlje, izrast će zdrave." },
+    { "title": "Širi se po vrtu", "signs": "Metvica niče posvuda.", "fix": "Iskopaj izdanke i ubuduće je drži u loncu." }
+  ],
+  "neighbours": {
+    "good": ["Kupus", "Rajčica"],
+    "bad": []
+  }
+}

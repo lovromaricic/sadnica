@@ -1,0 +1,44 @@
+{
+  "reviewed": false,
+  "id": "persin",
+  "name": "Peršin",
+  "forms": { "nom": "peršin", "gen": "peršina", "acc": "peršin", "plural": false },
+  "latin": "Petroselinum crispum",
+  "aliases": ["peršin", "persin", "petrusin", "petersilj", "parsley"],
+  "category": "herb",
+  "difficulty": "easy",
+  "sun": "partial",
+  "water": "medium",
+  "spacingText": "15 cm",
+  "spacingExplanation": [
+    "Biljke drži 15 cm jednu od druge.",
+    "Peršin se razgrana pa mu treba malo prostora."
+  ],
+  "spacingTip": "beri vanjske grančice, sredina nastavlja rasti.",
+  "containers": { "ok": true, "minPotCm": 15, "note": "Uspijeva i u loncu na prozoru." },
+  "summary": "Najčešći začin u kuhinji. Raste i u loncu na prozoru, a bereš ga cijelu sezonu.",
+  "weeklyTip": "Peršin niče sporo, i do četiri tjedna. Namoči sjeme preko noći.",
+  "illustration": { "kind": "leaf", "fill": "#4E9A3A", "stroke": "#1F4A18", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 5 }, { "from": 8, "to": 8 }],
+    "adriatic": [{ "from": 2, "to": 4 }, { "from": 9, "to": 10 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 5, "to": 11 }],
+    "adriatic": [{ "from": 4, "to": 12 }]
+  },
+  "steps": [
+    { "title": "Namoči sjeme", "text": "Preko noći u mlakoj vodi." },
+    { "title": "Posij plitko", "text": "Pola centimetra duboko, u redove ili lonac." },
+    { "title": "Drži vlažno", "text": "Dok ne nikne, zemlja ne smije presušiti." },
+    { "title": "Beri vanjske grančice", "text": "Reži pri dnu, biljka daje nove." }
+  ],
+  "problems": [
+    { "title": "Ne niče", "signs": "Nakon tri tjedna nema ničega.", "fix": "Peršin niče sporo. Drži zemlju vlažnom i budi strpljiv." },
+    { "title": "Žuti listovi", "signs": "Listovi žute.", "fix": "Previše vode ili premalo hrane. Pusti zemlju da se malo prosuši i dodaj kompost." }
+  ],
+  "neighbours": {
+    "good": ["Rajčica", "Šparoga"],
+    "bad": ["Salata", "Mrkva"]
+  }
+}

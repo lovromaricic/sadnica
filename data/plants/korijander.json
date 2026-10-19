@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "korijander",
+  "name": "Korijander",
+  "forms": { "nom": "korijander", "gen": "korijandera", "acc": "korijander", "plural": false },
+  "latin": "Coriandrum sativum",
+  "aliases": ["korijander", "cilantro", "coriander"],
+  "category": "herb",
+  "difficulty": "medium",
+  "sun": "partial",
+  "water": "medium",
+  "spacingText": "15 cm",
+  "spacingExplanation": [
+    "Prorijedi na 15 cm.",
+    "Gušće posijan daje više listova, a manje sjemena."
+  ],
+  "containers": { "ok": true, "minPotCm": 20 },
+  "summary": "Listovi za azijska i meksička jela, a sjemenke kao začin. Ljeti brzo cvjeta.",
+  "weeklyTip": "Sij ga u proljeće i jesen, ljeti odmah ide u cvijet.",
+  "illustration": { "kind": "leaf", "fill": "#6DBA5A", "stroke": "#2A5A22", "bg": "#D3E9FF" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 5 }, { "from": 8, "to": 9 }],
+    "adriatic": [{ "from": 2, "to": 4 }, { "from": 9, "to": 10 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 5, "to": 7 }, { "from": 9, "to": 10 }],
+    "adriatic": [{ "from": 4, "to": 6 }, { "from": 10, "to": 12 }]
+  },
+  "steps": [
+    { "title": "Posij izravno", "text": "Sjemenke 1 cm duboko." },
+    { "title": "Drži vlažno", "text": "Niče za dva tjedna." },
+    { "title": "Sij ponovno", "text": "Svakih nekoliko tjedana za stalnu berbu." },
+    { "title": "Beri listove ili sjemenke", "text": "Listove mlade, sjemenke kad posmeđe." }
+  ],
+  "problems": [
+    { "title": "Odmah cvjeta", "signs": "Biljka je mala, a već cvjeta.", "fix": "Vrućina i dug dan. Sij u proljeće i krajem ljeta, u polusjeni." },
+    { "title": "Ne niče", "signs": "Sjeme ne niče.", "fix": "Lagano zgnječi sjemenke prije sjetve i drži zemlju vlažnom." }
+  ],
+  "neighbours": {
+    "good": ["Grah", "Grašak"],
+    "bad": ["Komorač"]
+  }
+}

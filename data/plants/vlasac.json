@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "vlasac",
+  "name": "Vlasac",
+  "forms": { "nom": "vlasac", "gen": "vlasca", "acc": "vlasac", "plural": false },
+  "latin": "Allium schoenoprasum",
+  "aliases": ["vlasac", "luk vlasac", "vlasci", "chives"],
+  "category": "herb",
+  "difficulty": "easy",
+  "sun": "partial",
+  "water": "medium",
+  "spacingText": "20 cm",
+  "spacingExplanation": [
+    "Busenove sadi 20 cm jedan od drugog.",
+    "Svaki busen se godinama širi."
+  ],
+  "containers": { "ok": true, "minPotCm": 15, "note": "Odličan za lonac na balkonu ili prozoru." },
+  "summary": "Trajnica nalik tankom luku. Režeš ga, a on stalno raste iznova.",
+  "weeklyTip": "Reži vlasac 3 cm iznad zemlje, za dva tjedna opet je spreman.",
+  "illustration": { "kind": "stalk", "fill": "#B5D98F", "stroke": "#3F6B2A", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 5 }],
+    "adriatic": [{ "from": 2, "to": 4 }, { "from": 9, "to": 10 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 4, "to": 10 }],
+    "adriatic": [{ "from": 3, "to": 11 }]
+  },
+  "steps": [
+    { "title": "Kupi busen ili posij", "text": "Busen iz rasadnika je najbrži početak." },
+    { "title": "Posadi", "text": "Na mjesto s barem pola dana sunca." },
+    { "title": "Zalijevaj umjereno", "text": "Ne voli ni sušu ni mokru zemlju." },
+    { "title": "Reži redovito", "text": "3 cm iznad zemlje. Ljubičaste cvjetove možeš pojesti." }
+  ],
+  "problems": [
+    { "title": "Tanki, žuti listovi", "signs": "Vlasac je blijed i slab.", "fix": "Treba mu hrane ili je busen prestar. Dodaj kompost ili busen podijeli na manje." },
+    { "title": "Lisne uši", "signs": "Sitni kukci na listovima.", "fix": "Isperi ih mlazom vode." }
+  ],
+  "neighbours": {
+    "good": ["Mrkva", "Rajčica"],
+    "bad": ["Grah", "Grašak"]
+  }
+}

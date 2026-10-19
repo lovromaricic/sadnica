@@ -1,0 +1,43 @@
+{
+  "reviewed": false,
+  "id": "kopar",
+  "name": "Kopar",
+  "forms": { "nom": "kopar", "gen": "kopra", "acc": "kopar", "plural": false },
+  "latin": "Anethum graveolens",
+  "aliases": ["kopar", "mirodija", "dill"],
+  "category": "herb",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "spacingText": "20 cm",
+  "spacingExplanation": [
+    "Prorijedi na 20 cm, redove drži 30 cm.",
+    "Kopar naraste visok i nježan."
+  ],
+  "containers": { "ok": true, "minPotCm": 20, "note": "Treba dubok lonac, ima dug korijen." },
+  "summary": "Mirisan začin za salatu od krastavaca i ribu. Brzo raste iz sjemena.",
+  "weeklyTip": "Sij ga izravno, ne voli presađivanje.",
+  "illustration": { "kind": "sprig", "fill": "#9BC76A", "stroke": "#3E6326", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 4, "to": 7 }],
+    "adriatic": [{ "from": 3, "to": 5 }, { "from": 9, "to": 10 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 5, "to": 9 }],
+    "adriatic": [{ "from": 4, "to": 11 }]
+  },
+  "steps": [
+    { "title": "Posij izravno", "text": "Pola centimetra duboko." },
+    { "title": "Prorijedi", "text": "Ostavi biljku na svakih 20 cm." },
+    { "title": "Sij ponovno", "text": "Svakih tri do četiri tjedna za stalnu berbu." },
+    { "title": "Beri listove i cvjetove", "text": "Cvjetni štitovi koriste se za kiseljenje." }
+  ],
+  "problems": [
+    { "title": "Brzo cvjeta", "signs": "Biljka odmah tjera cvijet.", "fix": "Vrućina i suša. Zalijevaj redovito i sij češće." },
+    { "title": "Lisne uši", "signs": "Sitni kukci na vrhovima.", "fix": "Isperi ih mlazom vode." }
+  ],
+  "neighbours": {
+    "good": ["Krastavac", "Kupus", "Salata"],
+    "bad": ["Mrkva"]
+  }
+}
