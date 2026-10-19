@@ -1,0 +1,39 @@
+{
+  "reviewed": false,
+  "id": "matovilac",
+  "name": "Matovilac",
+  "latin": "Valerianella locusta",
+  "aliases": ["matovilac", "motovilac", "matovilka", "poljska salata", "lamb's lettuce"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "partial",
+  "water": "medium",
+  "rank": 4,
+  "spacingText": "10 cm",
+  "spacingExplanation": [
+    "Sij u redove udaljene oko 10 cm. Kad niknu, prorijedi biljčice da između njih ostane 5 do 10 cm.",
+    "Svaka biljka naraste u malu rozetu listova."
+  ],
+  "spacingTip": "biljčice koje počupaš kod prorjeđivanja možeš odmah pojesti.",
+  "summary": "Zimska salata koja raste i kad je hladno. Bereš je cijelu zimu, list po list.",
+  "weeklyTip": "Sjeme je sitno: pomiješaj ga sa šakom pijeska pa tek onda sij, lakše ćeš ga rasporediti.",
+  "illustration": { "kind": "rosette", "fill": "#6DBA6A", "stroke": "#285A2E", "bg": "#D3E9FF" },
+  "sow": {
+    "continental": [{ "from": 8, "to": 9 }, { "from": 10, "to": 11, "needsCover": true, "note": "Kasna sjetva uspijeva samo uz pokrov od agrila." }],
+    "adriatic": [{ "from": 9, "to": 12 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 10, "to": 3 }],
+    "adriatic": [{ "from": 11, "to": 3 }]
+  },
+  "steps": [
+    { "title": "Izravnaj gredicu", "text": "Zemlju dobro usitni i izravnaj grabljama. Sjeme je sitno i treba glatku površinu." },
+    { "title": "Posij u plitke redove", "text": "Povuci brazdice duboke 1 cm, 10 cm jednu od druge, i u njih rijetko pospi sjeme." },
+    { "title": "Lagano zalij", "text": "Zalij nježnim mlazom da ne ispereš sjeme. Drži zemlju vlažnom dok ne nikne." },
+    { "title": "Prekrij agrilom", "text": "Kad zahladi, prebaci preko gredice agril (bijelo vrtno platno) i rubove pritisni kamenjem." }
+  ],
+  "neighbours": {
+    "good": ["Luk", "Luk ljutika", "Špinat", "Mrkva"],
+    "bad": []
+  }
+}

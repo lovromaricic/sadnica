@@ -1,0 +1,39 @@
+{
+  "reviewed": false,
+  "id": "cesnjak",
+  "name": "Češnjak",
+  "latin": "Allium sativum",
+  "aliases": ["cesnjak", "bijeli luk", "luk bijeli", "česan", "cesan", "garlic"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "low",
+  "rank": 1,
+  "spacingText": "10 cm",
+  "spacingExplanation": [
+    "Zupce sadi oko 10 cm jedan od drugog, a redove drži oko 25 cm razmaka.",
+    "Svaki zubac naraste u jednu glavicu, pa im treba mjesta."
+  ],
+  "spacingTip": "odmjeri prvi zubac, a ostale posadi na istu udaljenost. Otprilike je to širina dlana.",
+  "summary": "Posadiš zupce u jesen, a iduće ljeto vadiš cijele glavice. Gotovo da ne traži brigu.",
+  "weeklyTip": "Kupi češnjak za sadnju u poljoapoteci ili na placu od domaćeg uzgajivača. Onaj iz trgovine često je tretiran da ne proklija.",
+  "illustration": { "kind": "bulb", "fill": "#FFF7E8", "stroke": "#6B5236", "bg": "#FFEFB5" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11 }],
+    "adriatic": [{ "from": 10, "to": 12 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 7 }],
+    "adriatic": [{ "from": 5, "to": 6 }]
+  },
+  "steps": [
+    { "title": "Odaberi zdrav zubac", "text": "Rastavi glavicu na zupce i uzmi one najveće, čvrste i bez mrlja. Ljusku ostavi na zupcu." },
+    { "title": "Pripremi gredicu", "text": "Prekopaj zemlju na dubinu lopate i makni korov i kamenje. Ako je zemlja teška, umiješaj malo komposta." },
+    { "title": "Posadi vrhom prema gore", "text": "Zabodi zubac oko 5 cm duboko, šiljatim vrhom prema gore. Razmak 10 cm, redovi 25 cm." },
+    { "title": "Prekrij malčem", "text": "Pospi sloj slame ili suhog lišća debeo nekoliko centimetara. Štiti od smrzavanja i korova." }
+  ],
+  "neighbours": {
+    "good": ["Mrkva", "Rajčica", "Jagoda", "Cikla"],
+    "bad": ["Grah", "Grašak", "Bob"]
+  }
+}

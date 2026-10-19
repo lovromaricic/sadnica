@@ -1,0 +1,46 @@
+{
+  "reviewed": false,
+  "id": "rajcica",
+  "name": "Rajčica",
+  "nameAccusative": "rajčicu",
+  "latin": "Solanum lycopersicum",
+  "aliases": ["rajcica", "paradajz", "pomidor", "pomodor", "tomato"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "high",
+  "rank": 10,
+  "spacingText": "50 cm",
+  "spacingExplanation": [
+    "Presadnice sadi oko 50 cm jednu od druge, a redove drži 70 cm razmaka.",
+    "Rajčica naraste visoko i široko. Kad joj je zrak oko listova slobodan, manje obolijeva."
+  ],
+  "spacingTip": "uz svaku biljku odmah pri sadnji zabij kolac, kasnije ćeš oštetiti korijen.",
+  "summary": "Najdraže ljetno povrće. Traži sunce, redovito zalijevanje i kolac uz koji raste.",
+  "weeklyTip": "Ako ti je ovo prvo ljeto, kupi gotove presadnice u svibnju umjesto da siješ sam.",
+  "illustration": { "kind": "tomato", "fill": "#E8503A", "stroke": "#8A2216", "bg": "#FFD9DE" },
+  "sow": {
+    "continental": [
+      { "from": 2, "to": 3, "note": "Sije se u zatvorenom, na toplom i svijetlom mjestu." },
+      { "from": 5, "to": 5, "note": "Presadnice se sade van nakon zadnjeg mraza." }
+    ],
+    "adriatic": [
+      { "from": 2, "to": 2, "note": "Sije se u zatvorenom, na toplom i svijetlom mjestu." },
+      { "from": 4, "to": 5, "note": "Presadnice se sade van kad noći postanu tople." }
+    ]
+  },
+  "harvest": {
+    "continental": [{ "from": 7, "to": 9 }],
+    "adriatic": [{ "from": 6, "to": 10 }]
+  },
+  "steps": [
+    { "title": "Posij u lončiće", "text": "U veljači posij po dvije sjemenke u lončić sa zemljom za sjetvu i drži ga na prozoru u toploj sobi." },
+    { "title": "Privikni na vanjski zrak", "text": "Desetak dana prije sadnje iznosi presadnice van preko dana, a navečer ih vrati." },
+    { "title": "Posadi duboko", "text": "Presadnicu ukopaj malo dublje nego što je bila u lončiću i odmah uz nju zabij kolac." },
+    { "title": "Zalijevaj uz korijen", "text": "Zalijevaj zemlju, ne listove. Ljeti svaki dan ili svaki drugi dan." }
+  ],
+  "neighbours": {
+    "good": ["Bosiljak", "Češnjak", "Mrkva", "Neven"],
+    "bad": ["Krumpir", "Komorač", "Kupus"]
+  }
+}

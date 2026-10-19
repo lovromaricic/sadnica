@@ -1,0 +1,39 @@
+{
+  "reviewed": false,
+  "id": "bob",
+  "name": "Bob",
+  "latin": "Vicia faba",
+  "aliases": ["bob", "konjski bob", "fava", "boba", "broad bean"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "rank": 3,
+  "spacingText": "15 cm",
+  "spacingExplanation": [
+    "Sjemenke sadi oko 15 cm jednu od druge, u dvostrukim redovima udaljenima 25 cm.",
+    "Biljke narastu do metra visine, pa se u dvostrukom redu međusobno podupiru."
+  ],
+  "spacingTip": "između dvostrukih redova ostavi stazu da možeš brati.",
+  "summary": "Krupne sjemenke koje lako niknu. Prezime u zemlji i u proljeće daju prve mahune.",
+  "weeklyTip": "Namoči sjemenke preko noći u mlakoj vodi, brže će niknuti.",
+  "illustration": { "kind": "pod", "fill": "#8CC66B", "stroke": "#2F5E2A", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11 }, { "from": 2, "to": 3 }],
+    "adriatic": [{ "from": 10, "to": 12 }, { "from": 1, "to": 2 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 5, "to": 6 }],
+    "adriatic": [{ "from": 4, "to": 5 }]
+  },
+  "steps": [
+    { "title": "Namoči sjemenke", "text": "Ostavi ih preko noći u zdjeli mlake vode." },
+    { "title": "Pripremi gredicu", "text": "Prekopaj zemlju i izravnaj je grabljama. Bob voli sunčano mjesto zaštićeno od vjetra." },
+    { "title": "Posadi 5 cm duboko", "text": "Sjemenke stavi 5 cm duboko i 15 cm jednu od druge, u dva reda udaljena 25 cm." },
+    { "title": "Podupri kad naraste", "text": "U proljeće uz red zabodi nekoliko kolaca i provuci špagu da se biljke ne prevrnu." }
+  ],
+  "neighbours": {
+    "good": ["Krumpir", "Kukuruz", "Salata", "Špinat"],
+    "bad": ["Češnjak", "Luk", "Luk ljutika"]
+  }
+}

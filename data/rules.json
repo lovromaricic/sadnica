@@ -1,0 +1,18 @@
+{
+  "reviewed": false,
+  "lateDays": 21,
+  "upcomingMonths": 5,
+  "frostAlertDays": 21,
+  "frost": {
+    "continental": {
+      "from": { "month": 10, "day": 20 },
+      "to": { "month": 11, "day": 10 },
+      "text": "Obično krajem listopada."
+    },
+    "adriatic": {
+      "from": { "month": 12, "day": 1 },
+      "to": { "month": 1, "day": 15 },
+      "text": "Obično u prosincu, a na obali često ni ne dođe."
+    }
+  }
+}

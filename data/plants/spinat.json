@@ -1,0 +1,39 @@
+{
+  "reviewed": false,
+  "id": "spinat",
+  "name": "Špinat",
+  "latin": "Spinacia oleracea",
+  "aliases": ["spinat", "špinać", "spinac", "spinach"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "partial",
+  "water": "medium",
+  "rank": 5,
+  "spacingText": "10 cm",
+  "spacingExplanation": [
+    "Biljke drži oko 10 cm jednu od druge, a redove oko 25 cm.",
+    "Ako su pregusto, listovi ostanu sitni i brže idu u cvijet."
+  ],
+  "spacingTip": "posij malo gušće pa prorijedi. Mlade listove koje počupaš pojedi u salati.",
+  "summary": "Brzo raste po hladnom vremenu. Prve listove bereš već za šest do osam tjedana.",
+  "weeklyTip": "Beri vanjske listove, a srce ostavi. Biljka će dati nove.",
+  "illustration": { "kind": "leaf", "fill": "#4E9A5A", "stroke": "#1F4A2A", "bg": "#E6DBFF" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 4 }, { "from": 8, "to": 9 }, { "from": 10, "to": 10, "needsCover": true, "note": "U listopadu samo uz pokrov od agrila." }],
+    "adriatic": [{ "from": 2, "to": 3 }, { "from": 9, "to": 11 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 5, "to": 6 }, { "from": 10, "to": 12 }],
+    "adriatic": [{ "from": 4, "to": 5 }, { "from": 11, "to": 3 }]
+  },
+  "steps": [
+    { "title": "Pripremi gredicu", "text": "Prekopaj zemlju i umiješaj malo komposta. Špinat voli rahlu, hranjivu zemlju." },
+    { "title": "Posij 2 cm duboko", "text": "Sjemenke stavi 2 cm duboko, u redove 25 cm jedan od drugog." },
+    { "title": "Prorijedi", "text": "Kad biljke imaju dva do tri lista, ostavi jednu na svakih 10 cm." },
+    { "title": "Zaštiti od mraza", "text": "U kasnu jesen prekrij gredicu agrilom, a beri vanjske listove." }
+  ],
+  "neighbours": {
+    "good": ["Mrkva", "Rotkvica", "Bob", "Jagoda"],
+    "bad": ["Cikla", "Blitva"]
+  }
+}

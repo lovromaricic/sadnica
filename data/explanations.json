@@ -1,0 +1,63 @@
+{
+  "reviewed": false,
+  "difficulty": {
+    "easy": {
+      "label": "Lako",
+      "paragraphs": ["Oprašta greške. Uspijeva i ako ponekad zaboraviš zaliti ili je ne njeguješ idealno. Dobar prvi izbor za početnika."],
+      "tip": "ocjene su Lako, Srednje i Zahtjevno. Početnicima prvo predlažemo Lako."
+    },
+    "medium": {
+      "label": "Srednje",
+      "paragraphs": ["Traži redovitu brigu: zalijevanje, zaštitu od hladnoće ili prihranu. Izvedivo je i početniku koji ima malo vremena tjedno."],
+      "tip": "ako ti je ovo prvi vrt, prvo posadi nešto s ocjenom Lako, pa dodaj ovo."
+    },
+    "hard": {
+      "label": "Zahtjevno",
+      "paragraphs": ["Osjetljiva je na vrijeme, vodu ili bolesti, pa ne oprašta propuste. Bolje je pokušati nakon što prođeš jednu sezonu."],
+      "tip": "to ne znači da ne ide, samo da treba više pažnje."
+    }
+  },
+  "sun": {
+    "full": {
+      "label": "Puno sunca",
+      "paragraphs": [
+        "Treba 6 ili više sati izravnog sunca na dan.",
+        "Kako provjeriti na svom mjestu: pogledaj gredicu u 10, 13 i 16 sati. Ako je u sva tri termina na suncu, imaš puno sunca."
+      ],
+      "tip": "polusjena je 3 do 5 sati sunca. Većina biljaka koje vole sunce tamo raste, ali slabije."
+    },
+    "partial": {
+      "label": "Polusjena",
+      "paragraphs": [
+        "Treba 3 do 5 sati sunca na dan, ili sunce samo ujutro ili samo poslijepodne.",
+        "Dobro mjesto za lisnato povrće i bilje koje ne voli žegu."
+      ],
+      "tip": "ljeti je podnevno sunce jače, pa polusjena štiti biljke od pregrijavanja."
+    },
+    "shade": {
+      "label": "Hlad",
+      "paragraphs": ["Manje od 3 sata sunca na dan. Uspijeva malo biljaka, npr. metvica i neko lisnato povrće."],
+      "tip": "ako je cijelo mjesto u hladu, razmisli o drugom dijelu vrta ili balkona."
+    }
+  },
+  "water": {
+    "low": {
+      "label": "Malo",
+      "paragraphs": [
+        "Zalij tek kad je gornjih 2 do 3 cm zemlje suho. Stavi prst u zemlju: ako je vlažna, ne zalijevaj.",
+        "Zimi često uopće ne treba zalijevati."
+      ],
+      "tip": "previše vlage je veći problem od suše za ove biljke."
+    },
+    "medium": {
+      "label": "Umjereno",
+      "paragraphs": ["Zalij kad se gornji sloj osuši, ljeti obično jednom do dvaput tjedno. Zemlja treba biti blago vlažna, ne mokra."],
+      "tip": "u kišnim tjednima preskoči zalijevanje."
+    },
+    "high": {
+      "label": "Puno",
+      "paragraphs": ["Zemlja ne smije presušiti. U vrućini zalijevaj svaki dan ili svaki drugi dan."],
+      "tip": "zalijevaj ujutro ili navečer, ne u podne, da voda ne ispari odmah."
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "reviewed": false,
+  "id": "mrkva",
+  "name": "Mrkva",
+  "nameAccusative": "mrkvu",
+  "latin": "Daucus carota",
+  "aliases": ["mrkva", "mrkvica", "merlin", "šargarepa", "sargarepa", "carrot"],
+  "category": "veg",
+  "difficulty": "medium",
+  "sun": "full",
+  "water": "medium",
+  "rank": 8,
+  "spacingText": "5 cm",
+  "spacingExplanation": [
+    "Kad mrkvice niknu, prorijedi ih da između njih ostane oko 5 cm. Redove drži 25 cm razmaka.",
+    "Ako ostanu pregusto, korijeni se isprepletu i ostanu tanki."
+  ],
+  "spacingTip": "prorjeđuj navečer i odmah zalij, tako mirisom manje privlačiš mrkvinu muhu.",
+  "summary": "Sije se izravno u gredicu. Treba strpljenja dok nikne, ali je poslije lako.",
+  "weeklyTip": "Zemlja za mrkvu mora biti rahla i bez kamenja, inače korijen naraste kriv.",
+  "illustration": { "kind": "root", "fill": "#F28B30", "stroke": "#9A4A0C", "bg": "#FFE2C2" },
+  "sow": {
+    "continental": [{ "from": 3, "to": 6 }],
+    "adriatic": [{ "from": 2, "to": 5 }, { "from": 8, "to": 9 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 10 }],
+    "adriatic": [{ "from": 5, "to": 11 }]
+  },
+  "steps": [
+    { "title": "Usitni zemlju", "text": "Prekopaj duboko i makni sve kamenje. Ne stavljaj svježi gnoj." },
+    { "title": "Posij u plitke redove", "text": "Brazdice duboke 1 cm, 25 cm razmaka. Sjeme pospi rijetko." },
+    { "title": "Drži vlažno", "text": "Mrkva niče dva do tri tjedna. Sve to vrijeme zemlja ne smije presušiti." },
+    { "title": "Prorijedi", "text": "Kad su biljčice visoke kao prst, ostavi jednu na svakih 5 cm." }
+  ],
+  "neighbours": {
+    "good": ["Luk", "Češnjak", "Luk ljutika", "Rajčica"],
+    "bad": ["Kopar", "Peršin"]
+  }
+}

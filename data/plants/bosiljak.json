@@ -1,0 +1,45 @@
+{
+  "reviewed": false,
+  "id": "bosiljak",
+  "name": "Bosiljak",
+  "latin": "Ocimum basilicum",
+  "aliases": ["bosiljak", "bazilika", "bazilikum", "bosiok", "basil"],
+  "category": "herb",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "medium",
+  "rank": 6,
+  "spacingText": "25 cm",
+  "spacingExplanation": [
+    "Biljke drži oko 25 cm jednu od druge. U loncu promjera 20 cm uzgajaj jednu do tri biljke.",
+    "Kad mu je prostrano, bosiljak se razgrana i daje više listova."
+  ],
+  "spacingTip": "otkidaj vrhove grančica, biljka će se više granati.",
+  "summary": "Mirisno bilje za balkon ili vrt. Voli toplinu i sunce, a hladnoću ne podnosi.",
+  "weeklyTip": "Ne iznosi bosiljak van dok noći ne postanu tople, ni lagani mraz ne preživi.",
+  "illustration": { "kind": "leaf", "fill": "#5FB35A", "stroke": "#24552A", "bg": "#C9EEDB" },
+  "sow": {
+    "continental": [
+      { "from": 3, "to": 4, "note": "Sije se u zatvorenom, na prozoru." },
+      { "from": 5, "to": 6 }
+    ],
+    "adriatic": [
+      { "from": 3, "to": 3, "note": "Sije se u zatvorenom, na prozoru." },
+      { "from": 4, "to": 6 }
+    ]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 9 }],
+    "adriatic": [{ "from": 6, "to": 10 }]
+  },
+  "steps": [
+    { "title": "Posij plitko", "text": "Pospi sjeme po vlažnoj zemlji u lončiću i samo ga lagano pritisni. Treba svjetlo da nikne." },
+    { "title": "Drži na toplom", "text": "Lončić stavi na sunčan prozor. Nikne za tjedan do dva." },
+    { "title": "Presadi van", "text": "Kad prođe opasnost od mraza, posadi ga u vrt ili veći lonac, 25 cm razmaka." },
+    { "title": "Beri vrhove", "text": "Otkidaj gornje listove iznad para listova. Cvjetove odmah otkini." }
+  ],
+  "neighbours": {
+    "good": ["Rajčica", "Paprika", "Krastavac"],
+    "bad": ["Kadulja", "Ružmarin"]
+  }
+}

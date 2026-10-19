@@ -1,0 +1,40 @@
+{
+  "reviewed": false,
+  "id": "luk-ljutika",
+  "name": "Luk ljutika",
+  "nameAccusative": "luk ljutiku",
+  "latin": "Allium cepa var. aggregatum",
+  "aliases": ["ljutika", "ljutika luk", "kozjak", "šalotka", "salotka", "shallot"],
+  "category": "veg",
+  "difficulty": "easy",
+  "sun": "full",
+  "water": "low",
+  "rank": 2,
+  "spacingText": "15 cm",
+  "spacingExplanation": [
+    "Lukovice sadi oko 15 cm jednu od druge, a redove drži oko 25 cm razmaka.",
+    "Od jedne lukovice naraste cijela skupina novih, pa joj treba više mjesta nego češnjaku."
+  ],
+  "spacingTip": "ako ti je gredica mala, posadi manje lukovica, ali ne gušće.",
+  "summary": "Jedna posađena lukovica do ljeta se razmnoži u cijelu skupinu. Blaža je od običnog luka.",
+  "weeklyTip": "Lukovicu posadi tako da joj vrh malo viri iz zemlje. Ako je ptice izvuku, samo je vrati.",
+  "illustration": { "kind": "bulb", "fill": "#E9A07E", "stroke": "#6E3A26", "bg": "#FAD9CC" },
+  "sow": {
+    "continental": [{ "from": 10, "to": 11 }, { "from": 3, "to": 4 }],
+    "adriatic": [{ "from": 10, "to": 12 }, { "from": 2, "to": 3 }]
+  },
+  "harvest": {
+    "continental": [{ "from": 6, "to": 7 }],
+    "adriatic": [{ "from": 5, "to": 6 }]
+  },
+  "steps": [
+    { "title": "Odaberi čvrste lukovice", "text": "Uzmi srednje velike lukovice bez mekanih mjesta i plijesni." },
+    { "title": "Pripremi gredicu", "text": "Rahla zemlja na sunčanom mjestu. Ne stavljaj svježi gnoj, luk ga ne voli." },
+    { "title": "Posadi plitko", "text": "Utisni lukovicu u zemlju tako da joj vrh malo viri. Razmak 15 cm, redovi 25 cm." },
+    { "title": "Malo zalij i pusti", "text": "Zalij jednom nakon sadnje. Dalje zalijevaj samo kad je dugo suho." }
+  ],
+  "neighbours": {
+    "good": ["Mrkva", "Cikla", "Salata", "Rajčica"],
+    "bad": ["Grah", "Grašak", "Bob"]
+  }
+}
