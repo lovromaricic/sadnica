@@ -8,6 +8,7 @@ static site, no accounts, works offline. "Sadnica" is a placeholder name (`src/l
 ```bash
 npm install
 npm run dev        # http://localhost:5173
+npm run dev:phone  # https on your network, for testing the camera sun check on a phone
 npm test           # unit tests (season logic, search, tasks, storage)
 npm run validate   # check data/ against the schema
 npm run build      # validate, then build the static site into build/
