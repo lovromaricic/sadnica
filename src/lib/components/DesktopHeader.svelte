@@ -6,6 +6,7 @@
 	import { t } from '../i18n/hr';
 	import Icon from './Icon.svelte';
 	import LocationPill from './LocationPill.svelte';
+	import SettingsButton from './SettingsButton.svelte';
 	import Logo from './Logo.svelte';
 </script>
 
@@ -20,7 +21,7 @@
 			</a>
 		{/each}
 	</nav>
-	<div class="location"><LocationPill /></div>
+	<div class="location"><LocationPill /><SettingsButton /></div>
 </header>
 
 <style>
@@ -69,5 +70,8 @@
 	}
 	.location {
 		justify-self: end;
+		display: flex;
+		align-items: center;
+		gap: 8px;
 	}
 </style>

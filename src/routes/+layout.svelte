@@ -15,12 +15,14 @@
 	let { children }: LayoutProps = $props();
 
 	const onOnboarding = $derived(page.route.id === '/pocetak');
+	/** A transfer link must work on a phone that was never set up. */
+	const onImport = $derived(page.route.id === '/uvoz');
 	const firstRun = $derived(!store.state.onboarded);
 	/** Danas, Biljke and Moj vrt get the phone header; detail pages have their own top bar. */
 	const isTabPage = $derived(['/', '/biljke', '/moj-vrt'].includes(page.route.id ?? ''));
 
 	$effect(() => {
-		if (firstRun && !onOnboarding) goto(resolve('/pocetak'), { replace: true });
+		if (firstRun && !onOnboarding && !onImport) goto(resolve('/pocetak'), { replace: true });
 	});
 
 	// On phones the content area scrolls instead of the window (see .shell below), so SvelteKit's
@@ -34,7 +36,10 @@
 		// On the first load `from` exists but has no url.
 		if (to?.url) navContext.update(to.route.id, to.url.pathname + to.url.search, from?.url ? from.url.pathname + from.url.search : null);
 		if (!scroller) return;
-		scroller.scrollTop = type === 'popstate' && to?.url ? (positions.get(to.url.href) ?? 0) : 0;
+		// A link to a section (…#prijenos) scrolls to it instead of the top.
+		const target = to?.url.hash ? document.getElementById(decodeURIComponent(to.url.hash.slice(1))) : null;
+		if (target && type !== 'popstate') target.scrollIntoView();
+		else scroller.scrollTop = type === 'popstate' && to?.url ? (positions.get(to.url.href) ?? 0) : 0;
 	});
 </script>
 
@@ -44,7 +49,7 @@
 	{/if}
 	<OfflineBanner />
 
-	{#if !firstRun || onOnboarding}
+	{#if !firstRun || onOnboarding || onImport}
 		<main class="scroller" bind:this={scroller} data-scroller>
 			{#if !firstRun && isTabPage}
 				<MobileHeader />
@@ -55,7 +60,7 @@
 </div>
 
 <!-- Focused flows (sun check, changing your answers) have their own way out instead of the nav. -->
-{#if !firstRun && page.route.id !== '/sunce' && page.route.id !== '/pocetak'}
+{#if !firstRun && page.route.id !== '/sunce' && page.route.id !== '/pocetak' && !onImport}
 	<MobileNav />
 {/if}
 <Toast />

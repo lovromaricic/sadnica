@@ -171,3 +171,21 @@ beginner most often plants something that cannot work, so that case earns the qu
   the desktop page via the Network address (`npm run dev:phone`), not `localhost`, or the phone
   cannot reach it. The encoder (`qrcode-generator`, no dependencies) loads only when a code is shown.
 - Not built: the design-review "show other outcome" toggle (as instructed).
+
+## Postavke, transfer and backup
+
+- **Postavke** (`/postavke`, gear icon next to the location pill on desktop and on the phone header):
+  your answers (changed via the onboarding screen), transfer and backup, delete all data (two-step
+  confirm, then onboarding), and an about section. Moj vrt links to the transfer section.
+- **Transfer link**: `/uvoz#g=<data>`. The garden (plants, stages, dates, ticked steps) and answers
+  are JSON, compressed with the browser's `CompressionStream` (`z` prefix; plain `j` fallback) and
+  base64url-encoded after `#`, which browsers never send to a server. A garden of 4 plants is about
+  260 characters, comfortably inside a QR code. Desktop shows a QR code and "Kopiraj poveznicu";
+  phones get the share sheet (`navigator.share`, falling back to copying).
+- **Backup file**: `sadnica-vrt-YYYY-MM-DD.json` with an `app: "sadnica"` tag; anything else is refused.
+- **Import** validates through the same sanitiser as local storage and drops plants this version does
+  not know. Merge (default): the same plant on both sides keeps whichever is further along; new plants
+  are added. Replace: takes the incoming garden and answers, clears this week's ticks. A device that was
+  never set up takes the incoming answers and skips onboarding (`/uvoz` is exempt from the
+  first-run redirect).
+- It is a one-time copy, not sync.

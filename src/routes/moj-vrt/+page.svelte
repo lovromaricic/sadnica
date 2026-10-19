@@ -117,6 +117,10 @@
 				</li>
 			</ul>
 		</section>
+
+		<a class="transfer-link" href="{resolve('/postavke')}#prijenos">
+			<Icon name="phone" size={18} />{t.settings.gardenLink}
+		</a>
 	{/if}
 </div>
 
@@ -337,6 +341,17 @@
 	}
 	.advance:hover {
 		background: var(--lime);
+	}
+	.transfer-link {
+		justify-self: start;
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		min-height: 44px;
+		padding: 0 4px;
+		color: var(--muted-2);
+		font-weight: 600;
+		text-underline-offset: 4px;
 	}
 	.add-card {
 		display: flex;

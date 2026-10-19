@@ -1,4 +1,5 @@
-import { STAGES, loadState, saveState, type AppState, type GardenItem, type Place, type Stage } from './storage';
+import { DEFAULT_STATE, STAGES, loadState, saveState, type AppState, type GardenItem, type Place, type Stage } from './storage';
+import { applyImport, type GardenPayload, type ImportMode } from './transfer';
 import { datesForStage, isoDay } from './garden';
 import { today } from './today';
 import type { Region } from './data/schema';
@@ -12,6 +13,20 @@ class AppStore {
 
 	completeOnboarding(answers: { city: string; region: Region; regionManual: boolean; place: Place }) {
 		Object.assign(this.state, answers, { onboarded: true });
+		this.persist();
+	}
+
+	/** Bring in a garden from another device or a backup file. */
+	importGarden(payload: GardenPayload, mode: ImportMode) {
+		// Both may be reactive proxies (held in component state); plain copies can be cloned.
+		const plain = $state.snapshot(payload) as GardenPayload;
+		Object.assign(this.state, applyImport($state.snapshot(this.state) as AppState, plain, mode));
+		this.persist();
+	}
+
+	/** Forget everything on this device: garden, answers, ticks. */
+	resetAll() {
+		Object.assign(this.state, structuredClone(DEFAULT_STATE));
 		this.persist();
 	}
 
