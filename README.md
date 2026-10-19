@@ -7,7 +7,7 @@ na hrvatskom, radi bez računa i bez interneta, a sve što upišeš ostaje samo 
 <p>
   <img src="docs/screenshots/danas.jpg" alt="Danas: preporuka tjedna, upozorenje na mraz i provjera sunca kamerom" width="260">
   <img src="docs/screenshots/biljka.jpg" alt="Stranica biljke: češnjak s osnovnim podacima i upozorenjem za ljubimce" width="260">
-  <img src="docs/screenshots/razmak.jpg" alt="Razmak i dubina: animirani prikaz sadnje češnjaka sa strane" width="260">
+  <img src="docs/screenshots/biljke.jpg" alt="Sve biljke: katalog s pretragom i filtrima" width="260">
 </p>
 
 ## Što aplikacija radi
