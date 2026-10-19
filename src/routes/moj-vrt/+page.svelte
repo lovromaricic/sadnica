@@ -5,7 +5,7 @@
 	import { plantsById, rules } from '#lib/data/index.ts';
 	import type { Plant } from '#lib/data/schema.ts';
 	import { t } from '#lib/i18n/hr.ts';
-	import { STAGE_PROGRESS, nextStage, nextStepText } from '#lib/garden.ts';
+	import { STAGE_PROGRESS, harvestText, nextStage, nextStepText, stageDateText } from '#lib/garden.ts';
 	import { store } from '#lib/store.svelte.ts';
 	import type { GardenItem } from '#lib/storage.ts';
 	import { generateTasks, weekKey } from '#lib/tasks.ts';
@@ -80,6 +80,8 @@
 			<ul class="cards">
 				{#each items as { item, plant } (plant.id)}
 					{@const next = nextStage(item.stage)}
+					{@const dated = stageDateText(item, today)}
+					{@const harvest = harvestText(item, plant, region, today)}
 					<li class="card">
 						<div class="card-art" style:background={plant.illustration.bg}>
 							<PlantArt art={plant.illustration} size={84} />
@@ -91,6 +93,12 @@
 								<span style:width="{STAGE_PROGRESS[item.stage]}%"></span>
 							</div>
 							<p class="sr-only">{t.garden.progress(t.garden.stages[item.stage])}</p>
+							{#if dated || harvest}
+								<p class="dates">
+									{#if dated}<span>{dated}</span>{/if}
+									{#if harvest}<span class="harvest">{harvest}</span>{/if}
+								</p>
+							{/if}
 							<p class="next">{nextStepText(item.stage, plant, region, today, rules)}</p>
 							{#if next}
 								<button type="button" class="advance" onclick={() => store.advanceStage(plant.id)}>
@@ -297,6 +305,16 @@
 		border-radius: inherit;
 		background: var(--ink);
 		transition: width 0.3s ease;
+	}
+	.dates {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2px 10px;
+		font-size: 0.875rem;
+		font-weight: 600;
+	}
+	.harvest {
+		color: #7a5a00;
 	}
 	.next {
 		font-size: 0.9375rem;

@@ -16,7 +16,11 @@ export interface GardenItem {
 	stage: Stage;
 	/** Indexes of checked steps on the plant page. */
 	stepsDone: number[];
+	/** Day each stage was reached, as local YYYY-MM-DD. The user can correct these. */
+	stageDates: Partial<Record<Stage, string>>;
 }
+
+const DAY_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 export interface AppState {
 	version: 1;
@@ -60,7 +64,8 @@ export function sanitize(raw: unknown): AppState {
 					plantId: g.plantId,
 					addedAt: typeof g.addedAt === 'string' ? g.addedAt : new Date().toISOString(),
 					stage: oneOf(g.stage, STAGES, 'toPlant'),
-					stepsDone: Array.isArray(g.stepsDone) ? g.stepsDone.filter((n) => Number.isInteger(n)) : []
+					stepsDone: Array.isArray(g.stepsDone) ? g.stepsDone.filter((n) => Number.isInteger(n)) : [],
+					stageDates: sanitizeStageDates(g.stageDates, g.addedAt)
 				}))
 		: [];
 	return {
@@ -74,6 +79,19 @@ export function sanitize(raw: unknown): AppState {
 		garden,
 		tasksDone: r.tasksDone && typeof r.tasksDone === 'object' ? { ...r.tasksDone } : {}
 	};
+}
+
+/** Keep only valid days for known stages. Older saves get their "added" day from addedAt. */
+function sanitizeStageDates(raw: unknown, addedAt: unknown): GardenItem['stageDates'] {
+	const out: GardenItem['stageDates'] = {};
+	if (raw && typeof raw === 'object') {
+		for (const stage of STAGES) {
+			const day = (raw as Record<string, unknown>)[stage];
+			if (typeof day === 'string' && DAY_RE.test(day)) out[stage] = day;
+		}
+	}
+	if (!out.toPlant && typeof addedAt === 'string' && DAY_RE.test(addedAt.slice(0, 10))) out.toPlant = addedAt.slice(0, 10);
+	return out;
 }
 
 export function loadState(): AppState {

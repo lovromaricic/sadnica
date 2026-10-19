@@ -67,6 +67,15 @@ Spec gaps and the simplest choice made for each. Review and overrule freely.
   plants, May to September). Tick marks are stored per ISO week, so the list resets every Monday.
 - Ticking "Posadi X" also moves X to Posijano (unticking moves it back); the ticked task stays visible
   for the rest of the week.
+- **Stage dates**: each garden plant keeps the day it reached each stage (`stageDates`, local
+  YYYY-MM-DD). Moving forward stamps today, undoing a stage forgets its date. Plants saved before this
+  get their "Dodano" day from `addedAt`; later stages stay undated until the user sets them.
+- The card and plant page show the current stage's day ("Posijano 19. listopada") and, while sown or
+  growing, "Berba oko <month>": the first harvest month after the sowing month, up to a year ahead,
+  with "iduće godine" when it falls next year. Month precision only, like the rest of the calendar.
+- Dates are corrected on the plant page ("Promijeni datum"). A day cannot be in the future or before
+  the previous growing stage; the "Dodano" day does not limit the sowing day, since a plant can be
+  added after it was sown.
 - Step check marks on a plant page are saved with the plant when it is in Moj vrt, otherwise they
   last for the visit only.
 

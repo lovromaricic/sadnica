@@ -30,6 +30,12 @@ export function formatDate(date: Date): string {
 	return `${WEEKDAYS[date.getDay()]}, ${date.getDate()}. ${MONTHS_GEN[date.getMonth()]}`;
 }
 
+/** "19. listopada", or "19. listopada 2025." when not in `currentYear`. */
+export function formatDay(date: Date, currentYear: number): string {
+	const base = `${date.getDate()}. ${MONTHS_GEN[date.getMonth()]}`;
+	return date.getFullYear() === currentYear ? base : `${base} ${date.getFullYear()}.`;
+}
+
 /** 1 biljka, 2-4 biljke, else biljaka (with the 11-14 exception). */
 export function pluralPlants(n: number): string {
 	const mod10 = n % 10;
@@ -170,6 +176,16 @@ export const t = {
 		stages: { toPlant: 'Za posaditi', sown: 'Posijano', growing: 'Raste', ready: 'Spremno za berbu' },
 		advance: (next: string) => `Označi: ${next}`,
 		undo: (previous: string) => `Vrati na: ${previous}`,
+		stageDate: {
+			toPlant: (day: string) => `Dodano ${day}`,
+			sown: (day: string) => `Posijano ${day}`,
+			growing: (day: string) => `Raste od ${day}`,
+			ready: (day: string) => `Spremno od ${day}`
+		},
+		harvestAround: (m: number, nextYear: boolean) => `Berba oko ${MONTHS_GEN[m - 1]}${nextYear ? ' iduće godine' : ''}`,
+		changeDate: 'Promijeni datum',
+		dateLabel: (stage: string) => `Datum, faza: ${stage}`,
+		dateDone: 'Spremi datum',
 		stageTitle: 'U tvom vrtu',
 		progress: (stage: string) => `Faza: ${stage}`,
 		next: {

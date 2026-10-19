@@ -9,7 +9,8 @@ const item = (plantId: string, stage: 'toPlant' | 'sown' | 'growing' | 'ready') 
 	plantId,
 	stage,
 	addedAt: '',
-	stepsDone: []
+	stepsDone: [],
+	stageDates: {}
 });
 
 describe('generateTasks', () => {
