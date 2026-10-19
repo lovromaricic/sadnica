@@ -14,7 +14,7 @@
     "Sadnice drži 60 cm jednu od druge.",
     "Ružmarin naraste u grm."
   ],
-  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 60, "rowSpacingCm": 60, "depthCm": 10, "depthMode": "same-level" },
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 60, "rowSpacingCm": 60, "depthMode": "same-level" },
   "containers": { "ok": true, "minPotCm": 30, "note": "Na kontinentu ga zimi drži u loncu na svijetlom, hladnom mjestu." },
   "summary": "Mirisni grm s obale. Na kontinentu ga zimi štiti ili uzgajaj u loncu.",
   "weeklyTip": "Zalijevaj tek kad se zemlja posve osuši.",

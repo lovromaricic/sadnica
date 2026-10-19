@@ -15,7 +15,7 @@
     "Peršin se razgrana pa mu treba malo prostora."
   ],
   "spacingTip": "beri vanjske grančice, sredina nastavlja rasti.",
-  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 25, "thinToCm": 15, "tipKey": "slowSeed", "note": "Često se kupuje i kao presadnica.", "depthCm": 1 },
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 25, "thinToCm": 15, "tipKey": "slowSeed", "note": "Često se kupuje i kao presadnica.", "depthCm": 0.5 },
   "containers": { "ok": true, "minPotCm": 15, "note": "Uspijeva i u loncu na prozoru." },
   "summary": "Najčešći začin u kuhinji. Raste i u loncu na prozoru, a bereš ga cijelu sezonu.",
   "weeklyTip": "Peršin niče sporo, i do četiri tjedna. Namoči sjeme preko noći.",

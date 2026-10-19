@@ -16,7 +16,7 @@
     "Svaka sitna lukovica naraste u jednu veliku glavicu."
   ],
   "spacingTip": "arpadžik je najlakši način: sitne lukovice samo utisneš u zemlju.",
-  "planting": { "method": "clove", "reviewed": false, "noun": "bulb", "spacingCm": 10, "rowSpacingCm": 25, "depthCm": 2, "orientation": "tip-up", "tipKey": "onionSets", "note": "Arpadžik se sadi plitko, vrh tek ispod površine." },
+  "planting": { "method": "clove", "reviewed": false, "noun": "bulb", "spacingCm": 10, "rowSpacingCm": 25, "orientation": "tip-up", "tipKey": "onionSets", "tipShowing": true },
   "containers": { "ok": true, "minPotCm": 25, "note": "U širem loncu ili koritu stane desetak lukovica." },
   "summary": "Iz sitnih lukovica (arpadžika) do ljeta naraste pravi luk. Ne traži gotovo nikakvu brigu.",
   "weeklyTip": "Arpadžik posadi tako da mu vrh malo viri iz zemlje.",

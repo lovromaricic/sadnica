@@ -62,7 +62,7 @@
 		{/each}
 		<Measure x1={g.xs[0] + 14} y1={g.ys[0]} x2={g.xs[1] - 14} y2={g.ys[0]} label={formatCm(p.spacingCm)} style={scene.spacing} />
 		<Measure x1={294} y1={g.ys[0]} x2={294} y2={g.ys[1]} label={formatCm(p.rowSpacingCm)} style={scene.rows} />
-		<g class="an" style={scene.caption}><text class="small" x={TOP.width / 2} y="208" text-anchor="middle">{t.planting.sapling.crown}</text></g>
+		<g class="an" style={scene.caption}><text class="small" x={TOP.width / 2} y="208" text-anchor="middle">{t.planting.sapling.crown[p.form ?? 'tree']}</text></g>
 	</svg>
 {:else}
 	{@const { g } = scene}
@@ -86,6 +86,18 @@
 			<g class="an" style={scene.stake}>
 				<path d="M183 34V{SURFACE + g.h * 0.75}" stroke={C.stake} stroke-width="5" stroke-linecap="round" />
 				<path d="M183 52h-27" stroke={C.ink} stroke-width="2.4" stroke-linecap="round" />
+			</g>
+		{:else if p.support === 'trellis'}
+			<!-- A pergola post with its crossbar. -->
+			<g class="an" style={scene.stake}>
+				<path d="M196 8V{SURFACE + g.h * 0.6}M160 10H252" stroke={C.stake} stroke-width="5" stroke-linecap="round" />
+				<path d="M196 40h-40" stroke={C.ink} stroke-width="2.4" stroke-linecap="round" />
+			</g>
+		{:else if p.support === 'wires'}
+			<!-- A post with two wires along the row. -->
+			<g class="an" style={scene.stake}>
+				<path d="M210 18V{SURFACE + g.h * 0.6}" stroke={C.stake} stroke-width="5" stroke-linecap="round" />
+				<path d="M120 28H290M120 50H290" stroke={C.ink} stroke-width="1.6" stroke-linecap="round" />
 			</g>
 		{/if}
 		<rect class="an" style={scene.cover} x={g.x} y="71" width={g.w} height={g.h + 2} rx="12" fill={C.cover} />

@@ -2,6 +2,7 @@
 	import type { Planting } from '../../data/schema';
 	import { formatCm } from '../../planting/format';
 	import { cloveSide, cloveTop, SIDE, SURFACE, TOP } from '../../planting/geometry';
+	import { t } from '../../i18n/hr';
 	import { C } from '../../planting/palette';
 	import { COVER_STILL, Timeline } from '../../planting/timeline';
 	import Measure from './Measure.svelte';
@@ -65,7 +66,12 @@
 		{#each scene.items as it, i (i)}
 			<rect class="an" style={it.cover} x={it.x - 17} y="71" width="34" height={g.holeBottom - 68} rx="8" fill={C.cover} />
 		{/each}
-		<Measure x1={g.xs[0]} y1={50} x2={g.xs[1]} y2={50} label={formatCm(p.spacingCm)} style={scene.spacing} />
-		<Measure x1={24} y1={SURFACE} x2={24} y2={g.tipY} label={formatCm(p.depthCm)} side="right" style={scene.depth} />
+		{#if p.depthCm}
+			<Measure x1={g.xs[0]} y1={50} x2={g.xs[1]} y2={50} label={formatCm(p.spacingCm)} style={scene.spacing} />
+			<Measure x1={24} y1={SURFACE} x2={24} y2={g.tipY} label={formatCm(p.depthCm)} side="right" style={scene.depth} />
+		{:else}
+			<Measure x1={g.xs[0]} y1={34} x2={g.xs[1]} y2={34} label={formatCm(p.spacingCm)} style={scene.spacing} />
+			<g class="an" style={scene.depth}><text class="small" x={g.xs[0] + 14} y="61">{t.planting.clove.tipShowingLabel}</text></g>
+		{/if}
 	</svg>
 {/if}

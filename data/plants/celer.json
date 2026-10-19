@@ -14,8 +14,8 @@
     "Presadnice sadi 35 cm jednu od druge.",
     "Gomolj se širi i treba prostora."
   ],
-  "spacingTip": "ne sadi ga preduboko, gomolj mora biti napola iznad zemlje.",
-  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 35, "rowSpacingCm": 40, "depthCm": 5, "depthMode": "same-level", "tipKey": "celery" },
+  "spacingTip": "celer ne sadi dublje nego u teglici. Srce mora ostati iznad zemlje, a gomolj raste na površini.",
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 35, "rowSpacingCm": 40, "depthMode": "same-level", "tipKey": "celery" },
   "containers": { "ok": false, "note": "Treba puno vode i prostora, bolje u gredici." },
   "summary": "Zahtjevniji: dugo raste i traži puno vode. Nagrada je mirisni gomolj za cijelu zimu.",
   "weeklyTip": "Kupi presadnice, sjetva celera je spora i zahtjevna.",
@@ -30,7 +30,7 @@
   },
   "steps": [
     { "title": "Kupi presadnice", "text": "Zdrave presadnice imaju tamnozelene listove." },
-    { "title": "Posadi plitko", "text": "Gomolj mora ostati napola iznad zemlje." },
+    { "title": "Posadi plitko", "text": "Ne dublje nego u teglici. Gomolj raste napola iznad zemlje." },
     { "title": "Zalijevaj obilno", "text": "Celer ne smije presušiti, osobito ljeti." },
     { "title": "Makni bočne listove", "text": "Krajem ljeta otkini donje listove i bočne izdanke." }
   ],

@@ -184,6 +184,8 @@ export const t = {
 
 	planting: {
 		label: 'Razmak i dubina',
+		/** When there is no depth to show (bulbs pressed in, seed on the surface, seedlings at pot level). */
+		labelSpacing: 'Razmak',
 		value: (spacing: string, depth: string) => `${spacing} · ${depth}`,
 		tabs: 'Pogled na sadnju',
 		top: 'Odozgo',
@@ -201,7 +203,10 @@ export const t = {
 				side: (_name: string, d: string) => `Lukovice idu oko ${d} duboko, vrhom prema gore. Zatim ih prekrij zemljom.`,
 				ariaTop: (a: string, b: string) => `Pogled odozgo: lukovice na razmaku ${a}, redovi na ${b}`,
 				ariaSide: (d: string) => `Presjek tla: lukovica ${d} duboko, vrhom prema gore`
-			}
+			},
+			tipShowing: 'Lukovice samo utisni u zemlju, vrhom prema gore, tako da im vrh malo viri.',
+			ariaTipShowing: 'Presjek tla: lukovice utisnute u zemlju, vrh malo viri',
+			tipShowingLabel: 'vrh malo viri'
 		},
 		rowSeed: {
 			top: (row: string, thin: string) => `Sij sjeme u red, a redove drži oko ${row} razmaka. Kad niknu, prorijedi biljke na oko ${thin}.`,
@@ -215,6 +220,10 @@ export const t = {
 		broadcast: {
 			top: (thin: string) => `Rasipaj sjeme ravnomjerno po gredici. Kad niknu, prorijedi biljke na oko ${thin} razmaka.`,
 			side: (d: string) => `Sjeme ide plitko, oko ${d} duboko. Prekrij ga tankim slojem zemlje i lagano pritisni.`,
+			sideDeep: (d: string) => `Sjeme ide oko ${d} duboko. Prekrij ga zemljom i lagano pritisni.`,
+			sideSurface: 'Sjeme rasipaj po površini i samo ga lagano utisni. Ne prekrivaj ga, treba mu svjetlo da nikne.',
+			ariaSideSurface: 'Presjek tla: sjeme na površini, nije prekriveno zemljom',
+			surfaceLabel: ['samo utisni,', 'ne prekrivaj'],
 			ariaTop: (thin: string) => `Pogled odozgo: sjeme rasuto po gredici, biljke prorijeđene na ${thin}`,
 			ariaSide: (d: string) => `Presjek tla: sjeme rasuto po površini, prekriveno slojem zemlje debljine oko ${d}`
 		},
@@ -224,33 +233,41 @@ export const t = {
 			side: {
 				'to-first-leaves': 'Presadnicu zakopaj dublje nego u teglici, sve do prvih listova. Zemlju lagano pritisni.',
 				'same-level': 'Presadnicu posadi na istu dubinu na kojoj je rasla u teglici. Zemlju oko nje lagano pritisni.',
-				'crown-above-soil': 'Presadnicu posadi tako da srce biljke ostane iznad zemlje. Zemlju oko nje lagano pritisni.'
+				'crown-above-soil': 'Presadnicu posadi tako da srce biljke ostane iznad zemlje. Zemlju oko nje lagano pritisni.',
+				dibber: 'Presadnicu spusti u rupu i samo je zalij. Rupu ne zatrpavaj, voda će sama nanijeti malo zemlje.'
 			},
 			ariaSide: {
 				'to-first-leaves': (d: string) => `Presjek tla: presadnica zakopana oko ${d}, do prvih listova`,
 				'same-level': () => 'Presjek tla: presadnica na istoj razini kao u teglici',
-				'crown-above-soil': () => 'Presjek tla: presadnica sa srcem biljke iznad zemlje'
+				'crown-above-soil': () => 'Presjek tla: presadnica sa srcem biljke iznad zemlje',
+				dibber: (d: string) => `Presjek tla: presadnica u rupi dubokoj oko ${d}, rupa ostaje otvorena`
 			},
 			/** Diagram captions, one string per line. */
 			label: {
 				'to-first-leaves': ['prvi listovi'],
 				'same-level': ['na istoj razini', 'kao u teglici'],
-				'crown-above-soil': ['srce biljke', 'iznad zemlje']
+				'crown-above-soil': ['srce biljke', 'iznad zemlje'],
+				dibber: ['rupu samo zalij']
 			}
 		},
 		sapling: {
-			/** Fruit trees and berry bushes are "voćke"; bay laurel is a "sadnica". */
-			noun: { fruit: 'Voćke', other: 'Sadnice' },
-			top: (noun: string, a: string, b: string) =>
-				`${noun} sadi oko ${a} jednu od druge, a redove drži oko ${b} razmaka. Krošnje će narasti, pa im treba mjesta.`,
+			/** Trees, bushes (currants, blueberry, bay) and canes or vines that are tied up. */
+			top: {
+				tree: (a: string, b: string) => `Voćke sadi oko ${a} jednu od druge, a redove drži oko ${b} razmaka. Krošnje će narasti, pa im treba mjesta.`,
+				bush: (a: string, b: string) => `Grmove sadi oko ${a} jedan od drugoga, a redove drži oko ${b} razmaka. Grmovi će se razrasti, pa im treba mjesta.`,
+				cane: (a: string, b: string) => `Sadnice sadi oko ${a} jednu od druge, a redove drži oko ${b} razmaka. Izboji će se razrasti, pa ih veži uz potporu.`
+			},
+			ariaNoun: { tree: 'voćke', bush: 'grmovi', cane: 'sadnice' },
+			crown: { tree: 'krošnja kad naraste', bush: 'grm kad naraste', cane: 'kad se razraste' },
 			hole: (d: string, w: string) => `Iskopaj jamu duboku oko ${d} i široku oko ${w}.`,
 			graftAndStake: 'Mjesto cijepljenja neka ostane iznad zemlje, a uz biljku zabij kolac.',
 			graft: 'Mjesto cijepljenja neka ostane iznad zemlje.',
 			stake: 'Uz biljku zabij kolac.',
-			ariaTop: (noun: string, a: string, b: string) => `Pogled odozgo: ${noun.toLowerCase()} na razmaku ${a}, redovi na ${b}, s krošnjom koja će narasti`,
-			ariaSide: (d: string, w: string, graft: boolean, stake: boolean) =>
-				`Presjek tla: jama duboka oko ${d} i široka oko ${w}${graft ? ', mjesto cijepljenja iznad zemlje' : ''}${stake ? ', kolac uz biljku' : ''}`,
-			crown: 'krošnja kad naraste',
+			support: { trellis: 'Uz biljku postavi čvrstu pergolu ili žicu.', wires: 'Uz red razapni žicu na stupovima.' },
+			ariaTop: (noun: string, a: string, b: string) => `Pogled odozgo: ${noun} na razmaku ${a}, redovi na ${b}, s prostorom za rast`,
+			ariaSide: (d: string, w: string, graft: boolean, support: string) =>
+				`Presjek tla: jama duboka oko ${d} i široka oko ${w}${graft ? ', mjesto cijepljenja iznad zemlje' : ''}${support ? `, ${support}` : ''}`,
+			ariaSupport: { stake: 'kolac uz biljku', trellis: 'pergola uz biljku', wires: 'žica uz red' },
 			graftLabel: 'mjesto cijepljenja'
 		},
 		/** "Dobro je znati" for each method, unless the plant names its own tip with `tipKey`. */
@@ -259,25 +276,25 @@ export const t = {
 			'row-seed': 'nakon sjetve zalij laganim mlazom, da voda ne ispere sjeme.',
 			broadcast: 'rasipaj sjeme u dva prolaza, jednom uzduž i jednom poprijeko. Tako će biti ravnomjernije.',
 			transplant: 'sadi navečer ili po oblačnom danu i odmah dobro zalij. Presadnica se tako lakše primi.',
-			sapling: 'raširi korijen u jami prije nego što zasuješ zemlju. Ne smije biti savijen ni zbijen.'
+			sapling: 'raširi korijen u jami prije nego što je zatrpaš. Ako je sadnica u posudi, samo lagano rastresi korijenje po rubu grude.'
 		},
 		tips: {
-			garlic: 'odmjeri prvi zubac, a ostale posadi na istu udaljenost. Otprilike je to širina dlana.',
-			onionSets: 'arpadžik samo utisni u zemlju, vrh neka ostane tek ispod površine.',
-			bulbDepth: 'lukovicu sadi otprilike tri puta dublje nego što je visoka.',
+			garlic: 'razmak odmjeri dlanom. Širina dlana je otprilike 10 cm.',
+			onionSets: 'arpadžik nemoj zakopati. Ako mu vrh viri, lakše se osuši i manje trune.',
+			bulbDepth: 'rupa neka bude otprilike tri puta dublja od visine lukovice.',
 			bigSeeds: 'krupno sjeme možeš preko noći namočiti u vodi, pa brže nikne.',
 			peas: 'uz red odmah postavi mrežu ili granje, grašak se penje viticama.',
 			fineSeed: 'sjeme je sitno. Pomiješaj ga s malo pijeska pa ga nećeš posijati pregusto.',
 			beetClusters: 'iz jednog sjemena nikne nekoliko biljčica, pa ih obavezno prorijedi.',
 			cornBlock: 'sij u blok od barem četiri kratka reda, tako se kukuruz bolje opraši.',
 			slowSeed: 'peršin sporo niče, i do tri tjedna. Drži zemlju vlažnom dok ne nikne.',
-			lightSeed: 'sjeme kamilice klija na svjetlu, pa ga prekrij jedva malo zemlje ili ga samo utisni.',
+			lightSeed: 'sjeme je sitno kao prašina. Pomiješaj ga s malo pijeska pa ga lakše rasipaš ravnomjerno.',
 			tomato: 'odlomi donje listove prije sadnje. Iz zakopane stabljike izrast će dodatno korijenje.',
-			lettuce: 'ne sadi je preduboko. Srce salate mora ostati iznad zemlje, inače trune.',
-			celery: 'ne sadi ga preduboko, gomolj mora biti napola iznad zemlje.',
+			lettuce: 'salatu ne sadi preduboko. Srce mora ostati iznad zemlje, inače trune.',
+			celery: 'celer ne sadi dublje nego u teglici. Srce mora ostati iznad zemlje, a gomolj raste na površini.',
 			leek: 'što dublje posadiš, to je duži bijeli dio.',
-			strawberry: 'ako zatrpaš srce biljke, može istrunuti. Ako je posadiš previsoko, korijen se osuši.',
-			blueberry: 'borovnica treba kiselu zemlju. U jamu dodaj treset ili zemlju za borovnice.'
+			strawberry: 'ako zatrpaš srce, biljka može istrunuti. Ako je posadiš previsoko, korijen se osuši.',
+			blueberry: 'borovnica traži kiselu zemlju. U jamu dodaj treset ili zemlju za borovnice, a nikad vapno ni pepeo.'
 		} as Record<string, string>
 	},
 	garden: {

@@ -292,6 +292,10 @@ beginner most often plants something that cannot work, so that case earns the qu
   the seed or root under them is still visible.
 - Row seeding knows the sowing distance (`sowCm`, default a third of the final spacing), so peas and
   beans, which are not thinned, keep every seed with the same code path.
+- After a fact check the data gained cases the first design did not have: `tipShowing` (onion
+  sets), `surface` (chamomile), `depthMode: dibber` (leek, hole left open), sapling `form` (tree,
+  bush, cane) and `support` (pergola, wires). The schema requires a depth exactly when the picture
+  shows one; without one the header reads "Razmak" with the spacing only.
 - Spacing labels of 100 cm or more are written in metres ("1,5 m") on the tile too, to match.
 - Texts avoid gender agreement on the plant where possible ("Presadnicu zakopaj…"); clove texts
   have a "zubac" and a "lukovica" variant; tree texts say "Voćke" for fruit and "Sadnice" otherwise.

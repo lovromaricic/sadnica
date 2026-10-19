@@ -10,7 +10,7 @@
 	import Icon from '#lib/components/Icon.svelte';
 	import Modal from '#lib/components/Modal.svelte';
 	import PlantingDiagram from '#lib/components/planting/PlantingDiagram.svelte';
-	import { headerValue, tipText } from '#lib/planting/content.ts';
+	import { headerLabel, headerValue, tipText } from '#lib/planting/content.ts';
 	import { hasDiagram } from '#lib/planting/geometry.ts';
 	import MonthStrip from '#lib/components/MonthStrip.svelte';
 	import PlantArt from '#lib/components/PlantArt.svelte';
@@ -339,7 +339,7 @@
 	{/if}
 
 	{#if diagram}
-		<Modal bind:open={diagramOpen} label={t.planting.label} value={headerValue(diagram)} color={FACT_COLORS.spacing} tip={tipText(diagram)}>
+		<Modal bind:open={diagramOpen} label={headerLabel(diagram)} value={headerValue(diagram)} color={FACT_COLORS.spacing} tip={tipText(diagram)}>
 			<PlantingDiagram {plant} planting={diagram} />
 		</Modal>
 	{/if}

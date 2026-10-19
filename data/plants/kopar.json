@@ -14,7 +14,7 @@
     "Prorijedi na 20 cm, redove drži 30 cm.",
     "Kopar naraste visok i nježan."
   ],
-  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 30, "thinToCm": 20, "depthCm": 1 },
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 30, "thinToCm": 20, "depthCm": 0.5 },
   "containers": { "ok": true, "minPotCm": 20, "note": "Treba dubok lonac, ima dug korijen." },
   "summary": "Mirisan začin za salatu od krastavaca i ribu. Brzo raste iz sjemena.",
   "weeklyTip": "Sij ga izravno, ne voli presađivanje.",

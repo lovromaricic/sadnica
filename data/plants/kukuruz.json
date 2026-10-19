@@ -11,11 +11,11 @@
   "water": "medium",
   "spacingText": "30 cm",
   "spacingExplanation": [
-    "Sij 30 cm u redu, a redove drži 60 cm. Sij u blok od barem četiri kratka reda.",
+    "Sij zrna oko 10 cm razmaka, a kad niknu, ostavi biljku svakih 30 cm. Redove drži 60 cm. Sij u blok od barem četiri kratka reda.",
     "Kukuruz se oprašuje vjetrom, pa u bloku bolje rađa nego u jednom dugom redu."
   ],
   "spacingTip": "blok od barem četiri reda puno bolje rađa od jednog reda.",
-  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 60, "thinToCm": 30, "sowCm": 10, "tipKey": "cornBlock", "depthCm": 4 },
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 60, "thinToCm": 30, "tipKey": "cornBlock", "depthCm": 4 },
   "containers": { "ok": false, "note": "Treba prostor i oprašivanje u skupini." },
   "summary": "Slatki klipovi za kuhanje i roštilj. Sadi ga u blok, ne u jedan red.",
   "weeklyTip": "Klip je zreo kad su svilene niti smeđe, a zrno pusti mliječni sok.",

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { plants, plantsById } from '../data';
 import { plantingSchema, type Planting } from '../data/schema';
-import { ariaLabel, headerValue, tipText, viewText } from './content';
+import { ariaLabel, headerLabel, headerValue, showsDepth, tipText, viewText } from './content';
 import { formatCm } from './format';
 import {
 	broadcastSide,
@@ -204,7 +204,7 @@ describe('texts', () => {
 	});
 
 	it('uses the plant tip when named, else the method default', () => {
-		expect(tipText(clove({ tipKey: 'garlic' }))).toContain('širina dlana');
+		expect(tipText(clove({ tipKey: 'garlic' }))).toContain('dlanom');
 		expect(tipText(broadcast())).toContain('dva prolaza');
 	});
 });
@@ -249,5 +249,79 @@ describe('planting validation', () => {
 		expect(plantingProblems({ ...garlic, planting: clove({ spacingCm: 12 }) })[0]).toContain('12 cm');
 		expect(plantingProblems({ ...garlic, planting: clove({ tipKey: 'nope' }) })[0]).toContain('nope');
 		expect(plantingProblems({ ...garlic, spacingText: '5 cm', planting: rowSeed({ sowCm: 8 }) })).toContain('sowCm cannot be larger than thinToCm');
+	});
+});
+
+describe('plants without a depth to show', () => {
+	const shallot = plantsById.get('luk-ljutika')!;
+	const chamomile = plantsById.get('kamilica')!;
+
+	it('onion sets keep the tip above the soil and the header shows spacing only', () => {
+		const p = clove({ depthCm: undefined, tipShowing: true, noun: 'bulb' });
+		expect(cloveSide(p).tipY).toBeLessThan(SURFACE);
+		expect(showsDepth(p)).toBe(false);
+		expect(headerLabel(p)).toBe('Razmak');
+		expect(headerValue(p)).toBe('10 cm');
+		expect(viewText(shallot, p, 'side')).toContain('vrh malo viri');
+	});
+
+	it('light-sprouting seed stays on the surface, uncovered', () => {
+		const p = broadcast({ depthCm: undefined, surface: true });
+		expect(broadcastSide(p).depthPx).toBe(0);
+		expect(broadcastSide(p).seeds.every((s) => s.y <= SURFACE + 3)).toBe(true);
+		expect(viewText(chamomile, p, 'side')).toContain('Ne prekrivaj');
+		expect(headerValue(p)).toBe('5 cm');
+	});
+
+	it('seedlings at pot level show spacing only; buried ones show the depth', () => {
+		expect(headerValue(transplant({ depthMode: 'same-level', depthCm: undefined }))).toBe('50 cm');
+		expect(headerLabel(transplant())).toBe('Razmak i dubina');
+		expect(headerValue(transplant({ depthMode: 'dibber', depthCm: 15 }))).toBe('50 cm · 15 cm');
+		expect(transplantSide(transplant({ depthMode: 'dibber', depthCm: 15 })).ballTop).toBeGreaterThan(SURFACE);
+	});
+
+	it('uses the deep seed text from 2 cm', () => {
+		const chard = plantsById.get('blitva')!;
+		expect(viewText(chard, rowSeed({ depthCm: 2 }), 'side')).not.toContain('plitko');
+		expect(viewText(chard, rowSeed({ depthCm: 1 }), 'side')).toContain('plitko');
+	});
+});
+
+describe('sapling forms and supports', () => {
+	const currant = plantsById.get('ribiz')!;
+	const kiwi = plantsById.get('kivi')!;
+
+	it('talks about bushes and canes, not crowns', () => {
+		expect(viewText(currant, sapling({ form: 'bush' }), 'top')).toMatch(/^Grmove sadi .* jedan od drugoga/);
+		expect(viewText(kiwi, sapling({ form: 'cane' }), 'top')).toContain('veži uz potporu');
+		expect(viewText(kiwi, sapling({ form: 'cane' }), 'top')).not.toContain('Krošnje');
+	});
+
+	it('names a pergola or wires instead of a stake', () => {
+		const text = viewText(kiwi, sapling({ staked: false, support: 'trellis', graftedAboveSoil: false }), 'side');
+		expect(text).toContain('pergolu');
+		expect(text).not.toContain('kolac');
+		expect(ariaLabel(kiwi, sapling({ staked: false, support: 'wires', graftedAboveSoil: false }), 'side')).toContain('žica');
+	});
+});
+
+describe('depth rules in the schema', () => {
+	it('asks for a depth exactly when the picture uses one', () => {
+		expect(plantingSchema.safeParse(clove({ depthCm: undefined })).success).toBe(false);
+		expect(plantingSchema.safeParse(clove({ depthCm: undefined, tipShowing: true })).success).toBe(true);
+		expect(plantingSchema.safeParse(clove({ tipShowing: true })).success).toBe(false);
+		expect(plantingSchema.safeParse(broadcast({ surface: true })).success).toBe(false);
+		expect(plantingSchema.safeParse(transplant({ depthMode: 'same-level' })).success).toBe(false);
+		expect(plantingSchema.safeParse(transplant({ depthMode: 'same-level', depthCm: undefined })).success).toBe(true);
+		expect(plantingSchema.safeParse(transplant({ depthMode: 'dibber', depthCm: undefined })).success).toBe(false);
+	});
+
+	it('does not allow a stake and another support together', () => {
+		expect(plantingSchema.safeParse(sapling({ support: 'wires' })).success).toBe(false);
+		expect(plantingSchema.safeParse(sapling({ support: 'wires', staked: false })).success).toBe(true);
+	});
+
+	it('every plant file still parses', () => {
+		for (const p of plants) if (p.planting) expect(plantingSchema.safeParse(p.planting).success, p.id).toBe(true);
 	});
 });

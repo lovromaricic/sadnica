@@ -26,6 +26,8 @@
 		return { kind: 'side' as const, g, hole: tl.fade(3), drop: tl.drop(7), depth: tl.fade(22), cover: tl.fade(36, { to: 0.92, end: COVER_STILL }), caption: tl.fade(42), css: tl.css() };
 	});
 
+	/** A dibber hole is narrow; a seedling from a pot needs a hole wider than its root ball. */
+	const holeHalf = $derived(p.depthMode === 'dibber' ? 14 : 23);
 	const lines = $derived(t.planting.transplant.label[p.depthMode]);
 </script>
 
@@ -51,10 +53,10 @@
 	<svg viewBox="0 0 {SIDE.width} {SIDE.height}" role="img" aria-label={label}>
 		{@html `<style>${scene.css}</style>`}
 		<Soil view="side" />
-		<rect class="an" style={scene.hole} x={g.x - 23} y="72" width="46" height={g.holeBottom - 72} rx="10" fill={C.hole} />
+		<rect class="an" style={scene.hole} x={g.x - holeHalf} y="72" width={holeHalf * 2} height={g.holeBottom - 72} rx="10" fill={C.hole} />
 		<g transform="translate({g.x} 0)">
 			<g class="an" style={scene.drop}>
-				<ellipse cx="0" cy={g.ballY} rx="15" ry="13" fill={C.rootBall} stroke={C.rootLine} stroke-width="2" />
+				<ellipse cx="0" cy={g.ballY} rx={p.depthMode === 'dibber' ? 10 : 15} ry="13" fill={C.rootBall} stroke={C.rootLine} stroke-width="2" />
 				<path d="M-7 {g.ballY + 10}v6M0 {g.ballY + 12}v7M7 {g.ballY + 10}v6" stroke={C.rootLine} stroke-width="2" stroke-linecap="round" />
 				<path d="M0 {g.ballTop + 3}V{g.leafY}" stroke={C.stem} stroke-width="5" stroke-linecap="round" />
 				<ellipse cx="-14" cy={g.leafY} rx="13" ry="6" transform="rotate(-20 -14 {g.leafY})" fill={C.leaf} stroke={C.leafLine} stroke-width="1.6" />
@@ -62,8 +64,11 @@
 				<ellipse cx="0" cy={g.leafY - 10} rx="5" ry="9" fill={C.leaf} stroke={C.leafLine} stroke-width="1.6" />
 			</g>
 		</g>
-		<rect class="an" style={scene.cover} x={g.x - 23} y="71" width="46" height={g.holeBottom - 70} rx="10" fill={C.cover} />
-		{#if p.depthMode === 'to-first-leaves'}
+		<!-- A dibber hole is only watered in, so it stays open. -->
+		{#if p.depthMode !== 'dibber'}
+			<rect class="an" style={scene.cover} x={g.x - 23} y="71" width="46" height={g.holeBottom - 70} rx="10" fill={C.cover} />
+		{/if}
+		{#if p.depthCm}
 			<Measure x1={218} y1={SURFACE} x2={218} y2={g.ballTop} label={formatCm(p.depthCm)} side="right" style={scene.depth} />
 			<g class="an" style={scene.caption}><text class="small" x={g.x + 38} y={g.leafY - 12}>{lines[0]}</text></g>
 		{:else}

@@ -16,7 +16,7 @@
     "Od jedne lukovice naraste cijela skupina novih, pa joj treba više mjesta nego češnjaku."
   ],
   "spacingTip": "ako ti je gredica mala, posadi manje lukovica, ali ne gušće.",
-  "planting": { "method": "clove", "reviewed": false, "noun": "bulb", "spacingCm": 15, "rowSpacingCm": 25, "depthCm": 3, "orientation": "tip-up" },
+  "planting": { "method": "clove", "reviewed": false, "noun": "bulb", "spacingCm": 15, "rowSpacingCm": 25, "orientation": "tip-up", "tipShowing": true },
   "containers": { "ok": true, "minPotCm": 25, "note": "Lonac neka bude dubok barem 20 cm. U njega stanu tri do četiri lukovice." },
   "summary": "Jedna posađena lukovica do ljeta se razmnoži u cijelu skupinu. Blaža je od običnog luka.",
   "weeklyTip": "Lukovicu posadi tako da joj vrh malo viri iz zemlje. Ako je ptice izvuku, samo je vrati.",

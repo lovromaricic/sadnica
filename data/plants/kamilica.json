@@ -14,7 +14,7 @@
     "Prorijedi na 20 cm.",
     "Kamilica se razgrana u nježan grmić."
   ],
-  "planting": { "method": "broadcast", "reviewed": false, "thinToCm": 20, "depthCm": 0.5, "tipKey": "lightSeed", "note": "Sjeme klija na svjetlu; samo ga utisni u zemlju." },
+  "planting": { "method": "broadcast", "reviewed": false, "thinToCm": 20, "tipKey": "lightSeed", "surface": true },
   "containers": { "ok": true, "minPotCm": 20 },
   "summary": "Bijeli cvjetići za čaj. Sama se zasije iz godine u godinu.",
   "weeklyTip": "Beri cvjetove kad su potpuno otvoreni, po suhom vremenu.",

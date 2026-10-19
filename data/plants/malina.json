@@ -17,7 +17,7 @@
     "Malina se širi izdancima iz korijena."
   ],
   "spacingTip": "uz red razapni dvije žice, izboji se na njih oslanjaju.",
-  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 50, "rowSpacingCm": 150, "holeDepthCm": 30, "holeWidthCm": 40, "staked": false, "graftedAboveSoil": false },
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 50, "rowSpacingCm": 150, "holeDepthCm": 30, "holeWidthCm": 40, "staked": false, "graftedAboveSoil": false, "form": "cane", "support": "wires" },
   "containers": { "ok": true, "minPotCm": 40, "note": "Jedna do dvije biljke u velikoj posudi." },
   "summary": "Bujan grm. Jesenske sorte rađaju već prve godine, ljetne iduće godine.",
   "weeklyTip": "Nakon berbe izreži izboje koji su rodili, iduće godine rađaju novi.",

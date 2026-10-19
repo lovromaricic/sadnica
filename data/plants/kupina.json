@@ -11,13 +11,13 @@
   "water": "medium",
   "rank": 300,
   "perennial": { "yearsToFirstHarvest": 1 },
-  "spacingText": "1,5 m",
+  "spacingText": "2,5 m",
   "spacingExplanation": [
-    "Sadnice drži metar i pol jednu od druge, uz ogradu ili žicu.",
+    "Sadnice drži dva i pol metra jednu od druge, uz ogradu ili žicu.",
     "Izboji narastu nekoliko metara."
   ],
   "spacingTip": "sorte bez trnja puno su lakše za berbu.",
-  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 150, "rowSpacingCm": 200, "holeDepthCm": 40, "holeWidthCm": 40, "staked": false, "graftedAboveSoil": false },
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 250, "rowSpacingCm": 250, "holeDepthCm": 40, "holeWidthCm": 40, "staked": false, "graftedAboveSoil": false, "form": "cane", "support": "wires" },
   "containers": { "ok": false, "note": "Prebujna za lonac." },
   "summary": "Bujna i rodna. Sorte bez trnja lakše se beru, a plodovi dozrijevaju krajem ljeta.",
   "weeklyTip": "Izboje veži uz žicu u lepezu, lakše ćeš brati.",
@@ -32,7 +32,7 @@
   },
   "steps": [
     { "title": "Kupi sadnicu bez trnja", "text": "Za vrt su najugodnije sorte bez trnja." },
-    { "title": "Posadi uz ogradu", "text": "Metar i pol razmaka." },
+    { "title": "Posadi uz ogradu", "text": "Dva i pol metra razmaka." },
     { "title": "Veži izboje", "text": "Uz žicu ili ogradu, u lepezu." },
     { "title": "Orezuj nakon berbe", "text": "Izreži izboje koji su rodili." }
   ],

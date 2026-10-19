@@ -15,7 +15,7 @@
     "Glavica se raširi više nego što misliš."
   ],
   "spacingTip": "između biljaka posij salatu, uberi je prije nego kupus zatreba mjesto.",
-  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 50, "rowSpacingCm": 60, "depthCm": 10, "depthMode": "same-level" },
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 50, "rowSpacingCm": 60, "depthCm": 5, "depthMode": "to-first-leaves" },
   "containers": { "ok": false, "note": "Treba puno mjesta i vode, bolje u gredici." },
   "summary": "Velike glavice za salatu i kiseljenje. Traži vodu i hranu, ali dugo traje.",
   "weeklyTip": "Prekrij mlade biljke agrilom, leptir kupusar tada ne može na njih.",

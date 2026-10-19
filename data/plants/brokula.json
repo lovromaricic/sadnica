@@ -15,7 +15,7 @@
     "Biljka je velika, a cvat raste u sredini."
   ],
   "spacingTip": "kad odrežeš glavni cvat, iz pazuha listova narastu manji.",
-  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 45, "rowSpacingCm": 60, "depthCm": 10, "depthMode": "same-level" },
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 45, "rowSpacingCm": 60, "depthCm": 5, "depthMode": "to-first-leaves" },
   "containers": { "ok": true, "minPotCm": 40, "note": "Jedna biljka u velikom loncu." },
   "summary": "Bereš zelene cvjetove prije nego procvjetaju. Nakon glavnog cvata rastu još manji.",
   "weeklyTip": "Beri cvat dok su pupoljci zbijeni i tamnozeleni, prije nego požute.",

@@ -14,7 +14,7 @@
     "Sadnice drži 30 cm jednu od druge.",
     "Origano se širi u busen."
   ],
-  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 30, "rowSpacingCm": 40, "depthCm": 10, "depthMode": "same-level" },
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 30, "rowSpacingCm": 40, "depthMode": "same-level" },
   "containers": { "ok": true, "minPotCm": 20 },
   "summary": "Začin za pizzu i umake. Trajnica koja se sama širi.",
   "weeklyTip": "Najjači miris ima kad ga bereš neposredno prije cvatnje.",

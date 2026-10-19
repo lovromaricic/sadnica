@@ -14,7 +14,7 @@
     "Lukovice sadi 10 cm jednu od druge.",
     "U skupinama od desetak lukovica izgledaju najljepše."
   ],
-  "planting": { "method": "clove", "reviewed": false, "noun": "bulb", "spacingCm": 10, "rowSpacingCm": 20, "depthCm": 15, "orientation": "tip-up", "tipKey": "bulbDepth" },
+  "planting": { "method": "clove", "reviewed": false, "noun": "bulb", "spacingCm": 10, "rowSpacingCm": 20, "depthCm": 10, "orientation": "tip-up", "tipKey": "bulbDepth" },
   "containers": { "ok": true, "minPotCm": 20 },
   "summary": "Lukovice posadiš u jesen, a u proljeće dobiješ šarenilo. Lako za početnika.",
   "weeklyTip": "Lukovicu posadi tri puta dublje od njezine visine.",
@@ -29,7 +29,7 @@
   },
   "steps": [
     { "title": "Kupi zdrave lukovice", "text": "Čvrste, bez plijesni. Lukovice nisu jestive i štetne su za mačke i pse." },
-    { "title": "Posadi duboko", "text": "Oko 15 cm, vrhom prema gore." },
+    { "title": "Posadi duboko", "text": "U rupu duboku oko 15 cm, vrhom prema gore. Vrh ostane oko 10 cm ispod površine." },
     { "title": "Ostavi ih na miru", "text": "Zimi ne trebaju ništa." },
     { "title": "Nakon cvatnje", "text": "Odreži cvijet, a listove ostavi dok ne požute." }
   ],

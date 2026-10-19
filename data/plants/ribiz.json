@@ -16,7 +16,7 @@
     "Grmove drži oko 120 cm jedan od drugog.",
     "Ribiz naraste u grm visok oko metar."
   ],
-  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 120, "rowSpacingCm": 150, "holeDepthCm": 40, "holeWidthCm": 50, "staked": false, "graftedAboveSoil": false },
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 120, "rowSpacingCm": 150, "holeDepthCm": 40, "holeWidthCm": 50, "staked": false, "graftedAboveSoil": false, "form": "bush" },
   "containers": { "ok": true, "minPotCm": 40 },
   "summary": "Crveni, crni ili bijeli. Otporan grm koji rađa i u polusjeni.",
   "weeklyTip": "Grane starije od tri godine izreži zimi, mlađe grane bolje rađaju.",

@@ -16,7 +16,7 @@
     "Trsove sadi metar i pol jedan od drugog, uz žicu ili pergolu.",
     "Loza se penje i treba čvrstu potporu."
   ],
-  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 150, "rowSpacingCm": 200, "holeDepthCm": 40, "holeWidthCm": 40, "staked": true, "graftedAboveSoil": true },
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 150, "rowSpacingCm": 200, "holeDepthCm": 60, "holeWidthCm": 60, "staked": true, "graftedAboveSoil": true, "form": "cane" },
   "containers": { "ok": false, "note": "Treba pergolu ili ogradu i dubok korijen, nije za balkon." },
   "summary": "Stolno grožđe uz pergolu ili ogradu. Treba redovito orezivanje.",
   "weeklyTip": "Za stolno grožđe biraj sorte otporne na bolesti.",

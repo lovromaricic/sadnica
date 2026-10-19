@@ -15,7 +15,7 @@
     "Bijeli dio raste ispod zemlje, pa ga treba duboko posaditi."
   ],
   "spacingTip": "što dublje posadiš, to je duži bijeli dio.",
-  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 15, "rowSpacingCm": 30, "depthCm": 15, "depthMode": "to-first-leaves", "tipKey": "leek" },
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 15, "rowSpacingCm": 30, "depthCm": 15, "depthMode": "dibber", "tipKey": "leek" },
   "containers": { "ok": true, "minPotCm": 30, "note": "Treba dubok lonac, barem 30 cm." },
   "summary": "Dugo raste, ali je otporan na hladnoću. Bereš ga od jeseni do kasne zime.",
   "weeklyTip": "Presadnicu spusti u rupu duboku 15 cm i samo je zalij, ne zatrpavaj.",

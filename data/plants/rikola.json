@@ -15,7 +15,7 @@
     "Gusto posijana rikola daje sitnije, nježnije listove."
   ],
   "spacingTip": "beri vanjske listove, sredina nastavlja rasti.",
-  "planting": { "method": "broadcast", "reviewed": false, "thinToCm": 10, "depthCm": 1 },
+  "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 15, "thinToCm": 10, "depthCm": 1 },
   "containers": { "ok": true, "minPotCm": 15, "note": "Uspijeva i u plitkom koritu na balkonu." },
   "summary": "Najbrže lisnato povrće: prve listove bereš za tri do četiri tjedna.",
   "weeklyTip": "Rikola ljeti brzo cvjeta, zato je sij u proljeće i jesen.",

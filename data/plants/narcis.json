@@ -14,7 +14,7 @@
     "Lukovice sadi 15 cm jednu od druge.",
     "Svake godine se množe i šire u busen."
   ],
-  "planting": { "method": "clove", "reviewed": false, "noun": "bulb", "spacingCm": 15, "rowSpacingCm": 20, "depthCm": 15, "orientation": "tip-up", "tipKey": "bulbDepth" },
+  "planting": { "method": "clove", "reviewed": false, "noun": "bulb", "spacingCm": 15, "rowSpacingCm": 20, "depthCm": 10, "orientation": "tip-up", "tipKey": "bulbDepth" },
   "containers": { "ok": true, "minPotCm": 20 },
   "summary": "Prvi žuti cvjetovi u proljeće. Lukovice se množe i cvatu godinama.",
   "weeklyTip": "Nakon cvatnje ne reži listove dok ne požute, lukovica tada skuplja snagu.",
@@ -29,7 +29,7 @@
   },
   "steps": [
     { "title": "Kupi lukovice", "text": "U rujnu ili listopadu. Lukovice su otrovne: čuvaj ih odvojeno od luka, daleko od djece i ljubimaca." },
-    { "title": "Posadi duboko", "text": "Oko 15 cm, vrhom prema gore." },
+    { "title": "Posadi duboko", "text": "U rupu duboku oko 15 cm, vrhom prema gore. Vrh ostane oko 10 cm ispod površine." },
     { "title": "Pusti da zimuju", "text": "Ne trebaju zalijevanje ni zaštitu." },
     { "title": "Nakon cvatnje", "text": "Odreži cvijet, listove ostavi. Nosi rukavice, sok nadražuje kožu." }
   ],

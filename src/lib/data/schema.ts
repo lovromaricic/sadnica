@@ -46,7 +46,7 @@ const plantingBase = {
  * How the plant goes into the ground, for the animated Razmak diagram. All lengths in cm.
  * "hill" and "special" have no diagram and keep the text-only explanation.
  */
-export const plantingSchema = z.discriminatedUnion('method', [
+const plantingMethods = z.discriminatedUnion('method', [
 	z.object({
 		method: z.literal('clove'),
 		...plantingBase,
@@ -54,8 +54,10 @@ export const plantingSchema = z.discriminatedUnion('method', [
 		noun: z.enum(['clove', 'bulb']),
 		spacingCm: cm,
 		rowSpacingCm: cm,
-		/** From the surface to the tip of the clove or bulb. */
-		depthCm: cm,
+		/** From the surface to the tip of the clove or bulb. Leave out with `tipShowing`. */
+		depthCm: cm.optional(),
+		/** Onion sets and shallots are only pressed in, with the tip showing. */
+		tipShowing: z.literal(true).optional(),
 		orientation: z.literal('tip-up')
 	}).strict(),
 	z.object({
@@ -71,30 +73,57 @@ export const plantingSchema = z.discriminatedUnion('method', [
 		method: z.literal('broadcast'),
 		...plantingBase,
 		thinToCm: cm,
-		depthCm: cm
+		/** Leave out with `surface`. */
+		depthCm: cm.optional(),
+		/** Seed that needs light to sprout: pressed onto the surface, not covered. */
+		surface: z.literal(true).optional()
 	}).strict(),
 	z.object({
 		method: z.literal('transplant'),
 		...plantingBase,
 		spacingCm: cm,
 		rowSpacingCm: cm,
-		/** Planting hole depth: up to the first leaves, the root ball's own height, or with the crown left above. */
-		depthCm: cm,
-		depthMode: z.enum(['to-first-leaves', 'same-level', 'crown-above-soil'])
+		/**
+		 * Deeper than in the pot up to the first leaves, at the pot's level, with the crown left above
+		 * the soil, or dropped into a deep dibber hole that is only watered in (leek).
+		 */
+		depthMode: z.enum(['to-first-leaves', 'same-level', 'crown-above-soil', 'dibber']),
+		/** How deep the stem goes: only for to-first-leaves and dibber. */
+		depthCm: cm.optional()
 	}).strict(),
 	z.object({
 		method: z.literal('sapling'),
 		...plantingBase,
+		/** Tree (default), bush (currants, blueberry, bay) or canes and vines that are tied up. */
+		form: z.enum(['tree', 'bush', 'cane']).optional(),
 		spacingCm: cm,
 		rowSpacingCm: cm,
 		holeDepthCm: cm,
 		holeWidthCm: cm,
 		staked: z.boolean(),
+		/** Instead of a stake: a pergola for kiwi, wires along the row for raspberry and blackberry. */
+		support: z.enum(['trellis', 'wires']).optional(),
 		graftedAboveSoil: z.boolean()
 	}).strict(),
 	z.object({ method: z.literal('hill'), ...plantingBase }).strict(),
 	z.object({ method: z.literal('special'), ...plantingBase }).strict()
 ]);
+
+/** A depth is given exactly when the picture needs one. */
+export const plantingSchema = plantingMethods.superRefine((p, ctx) => {
+	const need = (has: boolean, needed: boolean, message: string) => {
+		if (has !== needed) ctx.addIssue({ code: 'custom', path: ['depthCm'], message });
+	};
+	if (p.method === 'clove') need(p.depthCm !== undefined, !p.tipShowing, 'clove needs depthCm, or tipShowing instead');
+	if (p.method === 'broadcast') need(p.depthCm !== undefined, !p.surface, 'broadcast needs depthCm, or surface instead');
+	if (p.method === 'transplant') {
+		const deep = p.depthMode === 'to-first-leaves' || p.depthMode === 'dibber';
+		need(p.depthCm !== undefined, deep, `depthCm is ${deep ? 'required' : 'not used'} for depthMode ${p.depthMode}`);
+	}
+	if (p.method === 'sapling' && p.support && p.staked) {
+		ctx.addIssue({ code: 'custom', path: ['support'], message: 'a support replaces the stake: set staked to false' });
+	}
+});
 export type Planting = z.infer<typeof plantingSchema>;
 export type PlantingMethod = Planting['method'];
 

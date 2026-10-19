@@ -14,7 +14,7 @@
     "Busenove sadi 20 cm jedan od drugog.",
     "Svaki busen se godinama širi."
   ],
-  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 20, "rowSpacingCm": 25, "depthCm": 8, "depthMode": "same-level" },
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 20, "rowSpacingCm": 25, "depthMode": "same-level" },
   "containers": { "ok": true, "minPotCm": 15, "note": "Odličan za lonac na balkonu ili prozoru." },
   "summary": "Trajnica nalik tankom luku. Režeš ga, a on stalno raste iznova.",
   "weeklyTip": "Reži vlasac 3 cm iznad zemlje, za dva tjedna opet je spreman.",

@@ -15,7 +15,7 @@
     "Biljke se granaju i trebaju zraka."
   ],
   "spacingTip": "kolac uz biljku spriječit će da se pod plodovima prelomi.",
-  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 40, "rowSpacingCm": 60, "depthCm": 10, "depthMode": "same-level" },
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 40, "rowSpacingCm": 60, "depthMode": "same-level" },
   "containers": { "ok": true, "minPotCm": 25, "note": "Lijepo uspijeva u loncu na sunčanom balkonu." },
   "summary": "Voli toplinu i sunce. Iz jedne presadnice ubereš desetak plodova.",
   "weeklyTip": "Za početak kupi presadnice u svibnju, sjetva paprike je spora.",

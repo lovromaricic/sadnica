@@ -67,12 +67,33 @@ A second, deeper read (three reviewers by category) then fixed:
   marigolds only suppress nematodes when planted densely, tulips decline after the first year, sweet
   corn row spacing, and watering advice for pots in summer and winter.
 
+A third read (three reviewers) checked the new planting diagram data and fixed:
+
+- **Contradictions with the steps**: onion sets and shallots are pressed in with the tip showing
+  (not buried); pea and bean depth 3 cm, dill and parsley 0.5 cm, chard rows 30 cm; Chinese cabbage,
+  rocket and spinach are sown in rows; lamb's lettuce is scattered (its steps now say so); kiwi and
+  grapevine pits 60 × 60 cm; fig has no stake; tomato goes in up to the first leaves.
+- **Wrong method or depth**: cabbage, broccoli, cauliflower, kale, Brussels sprouts and collards go
+  in up to the first leaves; kohlrabi stays at pot level; leek drops into a dibber hole that is only
+  watered; chamomile is sown on the surface, uncovered (it needs light).
+- **Misleading pictures and texts**: tulip and daffodil depth now measured to the tip (10 cm, in a
+  15 cm hole); seedlings at pot level show spacing only, no made-up depth; bushes and canes no
+  longer talk about crowns; kiwi gets a pergola, raspberry and blackberry wires, not a stake.
+- **Spacing**: apple 3 × 4 m (common rootstocks), thornless blackberry 2.5 m.
+- **Tips**: clearer garlic, onion set, bulb, celery, lettuce, strawberry, blueberry and tree
+  planting tips (container plants only need their roots loosened).
+
 Judgment calls left as they are (for the expert to decide):
 
 - Companion planting follows common folk lists; much of it is not well proven.
 - "Polusjena" means 3–5 hours of sun, so it matches the app's sun check (6 or more hours is full sun),
   although some sources say 3–6.
 - Trees inland: bare-root planting is really March, April is for potted plants.
+- Cucumber is grown up a net in a row, so "hill" fits it loosely; it keeps the text explanation.
+- In-ground lemon and mandarin rows (3 m) may be tight; coastal advice ranges 3–4 × 4–5 m.
+- Olive is shown as not grafted (most nurseries sell rooted cuttings); quince as grafted.
+- Pepper and aubergine at pot level; some guides plant them 2–3 cm deeper.
+- Bay is spaced as a hedge (1 m), too tight for a single tree on the coast.
 - Olive inland is shown with a harvest window although the fruit rarely ripens in a pot (the summary
   says so).
 

@@ -14,7 +14,7 @@
     "Biljke drži 25 cm jednu od druge.",
     "Gomolj raste iznad zemlje."
   ],
-  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 25, "rowSpacingCm": 30, "depthCm": 5, "depthMode": "same-level" },
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 25, "rowSpacingCm": 30, "depthMode": "same-level" },
   "containers": { "ok": true, "minPotCm": 20, "note": "Uspijeva u loncu ili koritu." },
   "summary": "Najbrža kupusnjača: hrskavi gomolj bereš za dva mjeseca.",
   "weeklyTip": "Beri gomolje veličine teniske loptice, veći postaju drvenasti.",

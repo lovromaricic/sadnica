@@ -15,7 +15,7 @@
     "Treba prostora i ravnomjernu vlagu."
   ],
   "spacingTip": "kad se pojavi bijeli cvat, preklopi preko njega nekoliko listova da ostane bijel.",
-  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 50, "rowSpacingCm": 60, "depthCm": 10, "depthMode": "same-level" },
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 50, "rowSpacingCm": 60, "depthCm": 5, "depthMode": "to-first-leaves" },
   "containers": { "ok": false, "note": "Osjetljiva na sušu, bolje u gredici." },
   "summary": "Zahtjevnija od kupusa: treba ravnomjernu vlagu i hranu. Nagrada je bijela glavica.",
   "weeklyTip": "Preklopi listove preko cvata, sunce ga inače požuti.",

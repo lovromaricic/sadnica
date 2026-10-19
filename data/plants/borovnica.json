@@ -16,7 +16,7 @@
     "Grmove drži metar jedan od drugog.",
     "Dvije različite sorte bolje se oprašuju i obilnije rađaju."
   ],
-  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 100, "rowSpacingCm": 150, "holeDepthCm": 40, "holeWidthCm": 60, "staked": false, "graftedAboveSoil": false, "tipKey": "blueberry" },
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 100, "rowSpacingCm": 150, "holeDepthCm": 40, "holeWidthCm": 60, "staked": false, "graftedAboveSoil": false, "tipKey": "blueberry", "form": "bush" },
   "containers": { "ok": true, "minPotCm": 40, "note": "U loncu s kiselom zemljom za borovnice ili azaleje." },
   "summary": "Traži kiselu zemlju, pa je najlakše uzgojiti u loncu sa supstratom za borovnice.",
   "weeklyTip": "Zalijevaj kišnicom, vapnenasta voda iz slavine joj ne odgovara.",

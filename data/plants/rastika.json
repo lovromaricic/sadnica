@@ -14,7 +14,7 @@
     "Biljke drži 40 cm jednu od druge.",
     "Raste u visinu, a listove bereš odozdo."
   ],
-  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 40, "rowSpacingCm": 60, "depthCm": 10, "depthMode": "same-level" },
+  "planting": { "method": "transplant", "reviewed": false, "spacingCm": 40, "rowSpacingCm": 60, "depthCm": 5, "depthMode": "to-first-leaves" },
   "containers": { "ok": true, "minPotCm": 30, "note": "U većem loncu daje listove mjesecima." },
   "summary": "Dalmatinsko zelje bez glavice. Bereš listove mjesecima, od jeseni do proljeća.",
   "weeklyTip": "Beri donje listove, vrh ostavi da biljka raste dalje.",

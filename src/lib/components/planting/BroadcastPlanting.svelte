@@ -2,6 +2,7 @@
 	import type { Planting } from '../../data/schema';
 	import { formatCm } from '../../planting/format';
 	import { broadcastSide, broadcastTop, SIDE, SURFACE, TOP } from '../../planting/geometry';
+	import { t } from '../../i18n/hr';
 	import { C } from '../../planting/palette';
 	import { COVER_STILL, Timeline } from '../../planting/timeline';
 	import Measure from './Measure.svelte';
@@ -52,7 +53,13 @@
 		{#each scene.seeds as s, i (i)}
 			<g transform="translate({s.x} {s.y})"><g class="an" style={s.style}><ellipse rx="3.6" ry="5" fill={C.seed} transform="rotate({s.angle})" /></g></g>
 		{/each}
-		<rect class="an" style={scene.cover} x="0" y="71" width={SIDE.width} height={g.depthPx + 2} fill={C.thinCover} />
-		<Measure x1={26} y1={SURFACE} x2={26} y2={SURFACE + g.depthPx} label={formatCm(p.depthCm)} side="right" style={scene.depth} />
+		{#if p.depthCm}
+			<rect class="an" style={scene.cover} x="0" y="71" width={SIDE.width} height={g.depthPx + 2} fill={C.thinCover} />
+			<Measure x1={26} y1={SURFACE} x2={26} y2={SURFACE + g.depthPx} label={formatCm(p.depthCm)} side="right" style={scene.depth} />
+		{:else}
+			<g class="an" style={scene.depth}>
+				{#each t.planting.broadcast.surfaceLabel as line, i (i)}<text class="small" x="20" y={112 + i * 16}>{line}</text>{/each}
+			</g>
+		{/if}
 	</svg>
 {/if}

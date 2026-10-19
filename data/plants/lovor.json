@@ -16,7 +16,7 @@
     "Sadnice drži metar jednu od druge.",
     "Lovor raste u velik grm ili malo stablo."
   ],
-  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 100, "rowSpacingCm": 100, "holeDepthCm": 40, "holeWidthCm": 50, "staked": false, "graftedAboveSoil": false },
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 100, "rowSpacingCm": 100, "holeDepthCm": 40, "holeWidthCm": 50, "staked": false, "graftedAboveSoil": false, "form": "bush" },
   "containers": { "ok": true, "minPotCm": 40, "note": "Na kontinentu samo u loncu, zimi u svijetloj i hladnoj prostoriji." },
   "summary": "Zimzeleni grm s obale. Listove bereš cijele godine, a sušeni su još mirisniji.",
   "weeklyTip": "Na kontinentu ga drži u loncu i zimi unesi unutra.",

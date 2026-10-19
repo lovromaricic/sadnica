@@ -12,7 +12,7 @@
   "rank": 4,
   "spacingText": "10 cm",
   "spacingExplanation": [
-    "Sij u redove udaljene oko 10 cm. Kad niknu, prorijedi biljčice da između njih ostane 5 do 10 cm.",
+    "Rasipaj sjeme rijetko po gredici. Kad niknu, prorijedi biljčice da između njih ostane oko 10 cm.",
     "Svaka biljka naraste u malu rozetu listova."
   ],
   "spacingTip": "biljčice koje počupaš kod prorjeđivanja možeš odmah pojesti.",
@@ -31,7 +31,7 @@
   },
   "steps": [
     { "title": "Izravnaj gredicu", "text": "Zemlju dobro usitni i izravnaj grabljama. Sjeme je sitno i treba glatku površinu." },
-    { "title": "Posij u plitke redove", "text": "Povuci brazdice duboke 1 cm, 10 cm jednu od druge, i u njih rijetko pospi sjeme." },
+    { "title": "Rasipaj sjeme", "text": "Rijetko ga rasipaj po gredici i prekrij s oko 1 cm zemlje. Može i u brazdice 10 cm jednu od druge." },
     { "title": "Lagano zalij", "text": "Zalij nježnim mlazom da ne ispereš sjeme. Drži zemlju vlažnom dok ne nikne." },
     { "title": "Prekrij agrilom", "text": "Kad zahladi, prebaci preko gredice agril (bijelo vrtno platno) i rubove pritisni kamenjem." }
   ],

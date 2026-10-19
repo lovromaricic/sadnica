@@ -42,10 +42,11 @@ export function cloveTop(p: Of<'clove'>) {
 }
 
 export function cloveSide(p: Of<'clove'>) {
-	const vScale = fitScale([[p.depthCm, 80]], 10);
+	const vScale = p.depthCm ? fitScale([[p.depthCm, 80]], 10) : 10;
 	const hScale = fitScale([[p.spacingCm, 100]], 10);
 	const gap = p.spacingCm * hScale;
-	const tipY = SURFACE + p.depthCm * vScale;
+	// Pressed-in onion sets show their tip just above the soil.
+	const tipY = p.depthCm ? SURFACE + p.depthCm * vScale : SURFACE - 5;
 	// The clove is drawn 30 px tall around its centre, roots below.
 	const centerY = tipY + 15;
 	return { vScale, hScale, gap, xs: [85, 85 + gap, 85 + 2 * gap], tipY, centerY, holeBottom: centerY + 23 };
@@ -96,12 +97,13 @@ export function broadcastTop(_p: Of<'broadcast'>, seed = 7) {
 }
 
 export function broadcastSide(p: Of<'broadcast'>, seed = 11) {
-	const vScale = fitScale([[p.depthCm, 40]], 20);
-	const depthPx = p.depthCm * vScale;
+	// Seed that needs light stays on the surface.
+	const vScale = p.depthCm ? fitScale([[p.depthCm, 40]], 20) : 20;
+	const depthPx = (p.depthCm ?? 0) * vScale;
 	const rand = seededRandom(seed);
 	const seeds = Array.from({ length: 28 }, () => ({
 		x: 14 + rand() * (SIDE.width - 28),
-		y: Math.max(SURFACE + 3, SURFACE + depthPx - 4 + (rand() - 0.5) * 6),
+		y: depthPx ? Math.max(SURFACE + 3, SURFACE + depthPx - 4 + (rand() - 0.5) * 6) : SURFACE + 1 + rand() * 2,
 		angle: Math.round(rand() * 160 - 80)
 	}));
 	return { vScale, depthPx, seeds };
@@ -120,9 +122,9 @@ export function transplantTop(p: Of<'transplant'>) {
 }
 
 export function transplantSide(p: Of<'transplant'>) {
-	const vScale = fitScale([[p.depthCm, 80]], 8);
-	const buried = p.depthMode === 'to-first-leaves';
-	const ballTop = buried ? SURFACE + p.depthCm * vScale : p.depthMode === 'crown-above-soil' ? SURFACE - 2 : SURFACE;
+	const vScale = p.depthCm ? fitScale([[p.depthCm, 80]], 8) : 8;
+	const buried = p.depthMode === 'to-first-leaves' || p.depthMode === 'dibber';
+	const ballTop = buried ? SURFACE + (p.depthCm ?? 0) * vScale : p.depthMode === 'crown-above-soil' ? SURFACE - 2 : SURFACE;
 	const ballY = ballTop + 13;
 	// Where the leaves start: just above ground when buried to them, a tall stem from a level pot,
 	// and right at the soil for a crown that stays above it.
