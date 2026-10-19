@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { replaceState } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import { SvelteSet } from 'svelte/reactivity';
 	import AddButton from '#lib/components/AddButton.svelte';
@@ -11,6 +11,7 @@
 	import { pluralPlants, t } from '#lib/i18n/hr.ts';
 	import { matchesQuery } from '#lib/search.ts';
 	import { isFrostNear, isInSeason, withSeason } from '#lib/season.ts';
+	import { navContext } from '#lib/navContext.svelte.ts';
 	import { store } from '#lib/store.svelte.ts';
 	import { chipKind, timingText } from '#lib/timing.ts';
 	import { today } from '#lib/today.ts';
@@ -19,12 +20,28 @@
 	const FILTERS: FilterKey[] = ['season', 'easy', 'veg', 'herb', 'flower', 'fruit'];
 	const CATEGORIES: Plant['category'][] = ['veg', 'herb', 'flower', 'fruit'];
 
-	let query = $state('');
-	const active = new SvelteSet<FilterKey>();
+	// Search and filters live in the address (?q=…&filtri=…), so Back from a plant restores them.
+	const initial = new URLSearchParams(window.location.search);
+	let query = $state(initial.get('q') ?? '');
+	const active = new SvelteSet<FilterKey>(
+		(initial.get('filtri') ?? '').split(',').filter((f): f is FilterKey => (FILTERS as string[]).includes(f))
+	);
+	// "Vidi sve u sezoni" links here with ?sezona=1.
+	if (initial.has('sezona')) active.add('season');
 
-	onMount(() => {
-		// "Vidi sve u sezoni" links here with ?sezona=1.
-		if (new URLSearchParams(window.location.search).has('sezona')) active.add('season');
+	$effect(() => {
+		const params = new URLSearchParams();
+		if (query.trim()) params.set('q', query.trim());
+		const filters = FILTERS.filter((f) => active.has(f));
+		if (filters.length) params.set('filtri', filters.join(','));
+		const href = `${resolve('/biljke')}${params.size ? `?${params}` : ''}`;
+		if (href === window.location.pathname + window.location.search) return;
+		try {
+			replaceState(href, {});
+			navContext.replaceTabHref(href);
+		} catch {
+			// The router is not ready on the very first render; the next change will sync.
+		}
 	});
 
 	const region = $derived(store.state.region);

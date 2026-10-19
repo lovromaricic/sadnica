@@ -81,6 +81,15 @@ Spec gaps and the simplest choice made for each. Review and overrule freely.
 
 ## Smaller choices
 
+- **Tabs and plant pages**: a plant page belongs to the tab it was opened from (Moj vrt, Danas or
+  Biljke; a fresh load or shared link counts as Biljke). That tab stays highlighted, and the back arrow
+  returns to it: a real browser Back when the tab was the previous page (keeps scroll), otherwise a
+  link to the tab's last address. Plant-to-plant neighbour links keep the original tab.
+- The catalogue keeps search and filters in the address (`?q=luk&filtri=veg,easy`) so Back restores
+  them. The old `?sezona=1` link still works.
+- The plant page badge shows the garden stage ("U vrtu · Raste") once a garden plant is past
+  "Za posaditi"; before that, and for plants not in the garden, it shows the planting season.
+
 - **Mobile nav labels** are always visible (requested after review), stacked under the icons so the
   floating pill still fits a 360px screen; the active item keeps the lime highlight. This differs from
   the design, where only the active item shows its label.

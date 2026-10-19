@@ -12,6 +12,7 @@
 	import { buildIcs, downloadFile } from '#lib/ics.ts';
 	import { normalize } from '#lib/search.ts';
 	import { getSeasonStatus, isFrostNear } from '#lib/season.ts';
+	import { navContext } from '#lib/navContext.svelte.ts';
 	import { store } from '#lib/store.svelte.ts';
 	import { toast } from '#lib/toast.svelte.ts';
 	import { today } from '#lib/today.ts';
@@ -78,6 +79,8 @@
 
 	const badge = $derived.by(() => {
 		if (!season) return '';
+		// Once it is in the ground, the garden stage matters more than the planting season.
+		if (gardenItem && gardenItem.stage !== 'toPlant') return t.plant.gardenBadge(t.garden.stages[gardenItem.stage]);
 		if (season.status === 'now') return t.plant.canPlant;
 		if (season.status === 'late') return season.needsCover ? t.plant.coverBadge : t.plant.lateBadge;
 		return t.plant.offBadge;
@@ -93,6 +96,15 @@
 
 	/** Link neighbours that are in the catalogue. */
 	const byName = new Map(plants.map((p) => [normalize(p.name), p]));
+
+	/** Back to the tab this page was opened from: real Back when we just came from it, so scroll is kept. */
+	const backHref = $derived(navContext.tabHref ?? resolve('/biljke'));
+	function goBack(e: MouseEvent) {
+		if (navContext.previousHref && navContext.previousHref === navContext.tabHref) {
+			e.preventDefault();
+			history.back();
+		}
+	}
 
 	let reminded = $state(false);
 	function remind() {
@@ -141,8 +153,8 @@
 	<div class="page plant-page">
 		<aside class="hero lime">
 			<div class="hero-top">
-				<a class="icon-btn back" href={resolve('/biljke')} aria-label={t.plant.back}><Icon name="back" size={22} /></a>
-				<span class="badge" class:muted={season.status !== 'now'}>{badge}</span>
+				<a class="icon-btn back" href={backHref} onclick={goBack} aria-label={t.plant.back}><Icon name="back" size={22} /></a>
+				<span class="badge" class:muted={season.status !== 'now' && !(gardenItem && gardenItem.stage !== 'toPlant')}>{badge}</span>
 			</div>
 			<div class="hero-art"><PlantArt art={plant.illustration} size={200} /></div>
 			<div class="hero-text">

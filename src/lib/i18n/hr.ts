@@ -131,6 +131,7 @@ export const t = {
 		lateBadge: 'Još stigneš',
 		coverBadge: 'Samo uz pokrov',
 		offBadge: 'Nije sezona',
+		gardenBadge: (stage: string) => `U vrtu · ${stage}`,
 		facts: { difficulty: 'Težina', sun: 'Sunce', water: 'Voda', spacing: 'Razmak' },
 		difficulty: { easy: 'Lako', medium: 'Srednje', hard: 'Zahtjevno' },
 		sun: { full: 'Puno sunca', partial: 'Polusjena', shade: 'Hlad' },

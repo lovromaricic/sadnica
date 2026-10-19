@@ -90,7 +90,7 @@
 				</ul>
 			{/if}
 			{#if inSeasonCount > 0}
-				<a class="btn btn-secondary btn-block see-all" href="{resolve('/biljke')}?sezona=1">
+				<a class="btn btn-secondary btn-block see-all" href="{resolve('/biljke')}?filtri=season">
 					{t.today.seeAll(inSeasonCount)}
 				</a>
 			{/if}

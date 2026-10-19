@@ -2,6 +2,7 @@
 	import { page } from '$app/state';
 	import { resolve } from '$app/paths';
 	import { NAV_ITEMS, isActive } from '../nav';
+	import { navContext } from '../navContext.svelte';
 	import { t } from '../i18n/hr';
 	import { store } from '../store.svelte';
 	import Icon from './Icon.svelte';
@@ -12,7 +13,7 @@
 	<Logo />
 	<nav aria-label={t.nav.main}>
 		{#each NAV_ITEMS as item (item.href)}
-			{@const active = isActive(item.href, page.route.id)}
+			{@const active = isActive(item.href, navContext.activeTab(page.route.id))}
 			<a href={resolve(item.href)} class:active aria-current={active ? 'page' : undefined}>
 				<Icon name={item.icon} size={20} />
 				{item.label}

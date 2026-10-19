@@ -7,6 +7,7 @@
 	import MobileNav from '#lib/components/MobileNav.svelte';
 	import OfflineBanner from '#lib/components/OfflineBanner.svelte';
 	import Toast from '#lib/components/Toast.svelte';
+	import { navContext } from '#lib/navContext.svelte.ts';
 	import { store } from '#lib/store.svelte.ts';
 	import type { LayoutProps } from './$types';
 
@@ -24,11 +25,13 @@
 	let scroller = $state<HTMLElement>();
 	const positions = new Map<string, number>();
 	beforeNavigate(({ from }) => {
-		if (from && scroller) positions.set(from.url.href, scroller.scrollTop);
+		if (from?.url && scroller) positions.set(from.url.href, scroller.scrollTop);
 	});
-	afterNavigate(({ to, type }) => {
+	afterNavigate(({ from, to, type }) => {
+		// On the first load `from` exists but has no url.
+		if (to?.url) navContext.update(to.route.id, to.url.pathname + to.url.search, from?.url ? from.url.pathname + from.url.search : null);
 		if (!scroller) return;
-		scroller.scrollTop = type === 'popstate' && to ? (positions.get(to.url.href) ?? 0) : 0;
+		scroller.scrollTop = type === 'popstate' && to?.url ? (positions.get(to.url.href) ?? 0) : 0;
 	});
 </script>
 
