@@ -334,5 +334,8 @@ beginner most often plants something that cannot work, so that case earns the qu
   (`src/lib/gardenWeather.ts`): gusts of 60 km/h or more, 30 °C or more (both within 3 days), rain of
   5 mm or more today or tomorrow, five warm dry days, soil under 10 °C in spring, a mild overcast calm
   day for planting out (March to October, not for balconies); then the typical frost-date reminder.
+- The card shows the most important item; when there are more, "Vidi sve savjete (n)" opens a sheet
+  with all of them in the same order (forecast frost, `allAdvice`, typical frost reminder) and the
+  next 7 days (sky, high and low, rain). No planting-day tip in a week of storms or heat.
 - Balcony users get pot versions of the rain and dry-spell advice. Wording stays modest
   ("najavljena je", "očekuje se"). Thresholds are round and cautious; worth a check by a gardener.

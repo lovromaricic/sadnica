@@ -400,6 +400,20 @@ export const t = {
 			const n = Math.round((Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(today.getFullYear(), today.getMonth(), today.getDate())) / 86_400_000);
 			return n <= 0 ? 'danas' : n === 1 ? 'sutra' : `u ${WEEKDAYS_ACC[date.getDay()]}`;
 		},
+		allTitle: 'Vrijeme za vrt',
+		count: (n: number) => `${n} ${n % 10 === 1 && n % 100 !== 11 ? 'savjet' : 'savjeta'}`,
+		seeAll: (n: number) => `Vidi sve savjete (${n})`,
+		weekTitle: 'Idućih 7 dana',
+		weekDay: 'Dan',
+		weekSky: 'Vrijeme',
+		weekTemp: 'Najviša i najniža',
+		weekRain: 'Kiša',
+		mm: (n: number) => `${n < 10 ? Math.round(n * 10) / 10 : Math.round(n)} mm`.replace('.', ','),
+		/** "Danas", "Sutra", "Čet 23." */
+		weekday: (date: Date, today: Date) => {
+			const n = Math.round((Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(today.getFullYear(), today.getMonth(), today.getDate())) / 86_400_000);
+			return n === 0 ? 'Danas' : n === 1 ? 'Sutra' : `${['Ned', 'Pon', 'Uto', 'Sri', 'Čet', 'Pet', 'Sub'][date.getDay()]} ${date.getDate()}.`;
+		},
 		/** One piece of garden advice; the wording stays modest because a forecast can be wrong. */
 		advice: {
 			wind: {

@@ -13,7 +13,9 @@
 	import { heroReason, timingText } from '#lib/timing.ts';
 	import { today } from '#lib/today.ts';
 	import { forecast } from '#lib/forecast.svelte.ts';
-	import { gardenAdvice, type Advice } from '#lib/gardenWeather.ts';
+	import { allAdvice, type Advice } from '#lib/gardenWeather.ts';
+	import Modal from '#lib/components/Modal.svelte';
+	import { toDate } from '#lib/weather.ts';
 	import type { IconName } from '#lib/components/Icon.svelte';
 
 	const desktop = new MediaQuery('min-width: 900px');
@@ -32,8 +34,8 @@
 	const outlook = $derived(forecast.outlook(today));
 	/** Frost worth acting on (drives "samo uz pokrov"): forecast frost or the typical period. */
 	const frostNear = $derived(outlook?.level === 'frost' || typicalFrost);
-	/** One more piece of garden advice from the forecast; frost always comes first. */
-	const advice = $derived(forecast.data ? gardenAdvice(forecast.data.days, today, { place: store.state.place }) : null);
+	/** Garden advice from the forecast, most important first; frost always leads. */
+	const advices = $derived(forecast.data ? allAdvice(forecast.data.days, today, { place: store.state.place }) : []);
 	const ADVICE_STYLE: Record<Advice['kind'], { icon: IconName; bg: string }> = {
 		wind: { icon: 'wind', bg: 'var(--sky)' },
 		heat: { icon: 'sun', bg: 'var(--peach)' },
@@ -42,6 +44,66 @@
 		coldSoil: { icon: 'ground', bg: 'var(--off)' },
 		plantingDay: { icon: 'sprout', bg: 'var(--mint)' }
 	};
+	interface WeatherItem {
+		key: string;
+		icon: IconName;
+		bg: string;
+		/** Frost: the dark card. */
+		urgent?: boolean;
+		title?: string;
+		text: string;
+		/** From the live forecast (shows the source line). */
+		live: boolean;
+	}
+	/** Everything worth knowing about the weather, most important first; the card shows the first. */
+	const weatherItems = $derived.by(() => {
+		const list: WeatherItem[] = [];
+		const forecastFrost = outlook && outlook.level !== 'none' && outlook.day && outlook.min !== undefined;
+		if (forecastFrost) {
+			const when = t.weather.when(outlook.day!, today);
+			const temp = t.weather.temp(outlook.min!);
+			const frost = outlook.level === 'frost';
+			list.push({
+				key: 'frost',
+				icon: 'snow',
+				bg: 'var(--lilac)',
+				urgent: frost,
+				title: frost ? t.weather.frostTitle : t.weather.coldTitle,
+				text: `${frost ? t.weather.frostText(when, temp) : t.weather.coldText(when, temp)} ${t.weather.action}`,
+				live: true
+			});
+		}
+		for (const a of advices) {
+			list.push({ key: a.kind, ...ADVICE_STYLE[a.kind], title: t.weather.advice[a.kind].title, text: adviceText(a), live: true });
+		}
+		// The typical frost dates come last: a real forecast is more precise.
+		if (typicalFrost && !forecastFrost) {
+			list.push(
+				outlook
+					? { key: 'typical', icon: 'snow', bg: 'var(--lilac)', text: t.weather.calmButTypical(rules.frost[region].text), live: false }
+					: {
+							key: 'typical',
+							icon: 'snow',
+							bg: 'var(--lilac)',
+							title: t.today.frostTitle,
+							text: `${rules.frost[region].text} ${t.today.frostAction}`,
+							live: false
+						}
+			);
+		}
+		return list;
+	});
+	let weatherOpen = $state(false);
+
+	/** The coming week at a glance, for the "see all" sheet. */
+	const week = $derived(
+		(forecast.data?.days ?? []).map((d) => {
+			const date = toDate(d.day);
+			const icon: IconName = (d.rain ?? 0) >= 1 ? 'rain' : (d.cloud ?? 0) >= 70 ? 'cloud' : 'sun';
+			return { ...d, label: t.weather.weekday(date, today), icon };
+		})
+	);
+
 	function adviceText(a: Advice): string {
 		const s = t.weather.advice;
 		const when = t.weather.day(a.day, today);
@@ -67,15 +129,13 @@
 	<title>{t.today.title} · {t.appName}</title>
 </svelte:head>
 
-{#snippet adviceCard(a: Advice)}
-	<aside class="alert advice" style:background={ADVICE_STYLE[a.kind].bg} aria-label={t.weather.advice[a.kind].title}>
-		<span class="alert-icon"><Icon name={ADVICE_STYLE[a.kind].icon} size={22} /></span>
-		<p>
-			<strong>{t.weather.advice[a.kind].title}</strong>
-			{adviceText(a)}
-			<span class="source">{t.weather.source}</span>
-		</p>
-	</aside>
+{#snippet weatherBody(item: WeatherItem)}
+	<span class="alert-icon"><Icon name={item.icon} size={22} /></span>
+	<p>
+		{#if item.title}<strong>{item.title}</strong>{/if}
+		{item.text}
+		{#if item.live}<span class="source">{t.weather.source}</span>{/if}
+	</p>
 {/snippet}
 
 <div class="page today">
@@ -84,35 +144,55 @@
 		<h1>{hero ? t.today.headline(accusative(hero.plant)) : balcony ? t.today.headlineNoneBalcony : t.today.headlineNone}</h1>
 	</header>
 
-	{#if outlook && outlook.level !== 'none' && outlook.day && outlook.min !== undefined}
-		{@const when = t.weather.when(outlook.day, today)}
-		{@const temp = t.weather.temp(outlook.min)}
-		<aside class="alert" class:urgent={outlook.level === 'frost'} aria-label={outlook.level === 'frost' ? t.weather.frostTitle : t.weather.coldTitle}>
-			<span class="alert-icon"><Icon name="snow" size={22} /></span>
-			<p>
-				<strong>{outlook.level === 'frost' ? t.weather.frostTitle : t.weather.coldTitle}</strong>
-				{outlook.level === 'frost' ? t.weather.frostText(when, temp) : t.weather.coldText(when, temp)}
-				{t.weather.action}
-				<span class="source">{t.weather.source}</span>
-			</p>
-		</aside>
-	{:else if advice}
-		<!-- With a real forecast and no frost in it, its advice beats the typical frost-date reminder. -->
-		{@render adviceCard(advice)}
-	{:else if typicalFrost}
-		<aside class="alert" aria-label={t.today.frostTitle}>
-			<span class="alert-icon"><Icon name="snow" size={22} /></span>
-			<p>
-				{#if outlook}
-					{t.weather.calmButTypical(rules.frost[region].text)}
-				{:else}
-					<strong>{t.today.frostTitle}</strong>
-					{rules.frost[region].text}
-					{t.today.frostAction}
-				{/if}
-			</p>
+	{#if weatherItems.length}
+		{@const first = weatherItems[0]}
+		<aside
+			class="alert"
+			class:urgent={first.urgent}
+			style:background={first.urgent ? undefined : first.bg}
+			aria-label={first.title ?? t.weather.allTitle}
+		>
+			{@render weatherBody(first)}
+			{#if weatherItems.length > 1}
+				<button type="button" class="see-all" aria-haspopup="dialog" onclick={() => (weatherOpen = true)}>
+					{t.weather.seeAll(weatherItems.length)}<Icon name="chevron" size={16} />
+				</button>
+			{/if}
 		</aside>
 	{/if}
+
+	<Modal bind:open={weatherOpen} label={t.weather.allTitle} value={t.weather.count(weatherItems.length)} color="var(--sky)">
+		<ul class="weather-list">
+			{#each weatherItems as item (item.key)}
+				<li class="alert" class:urgent={item.urgent} style:background={item.urgent ? undefined : item.bg}>
+					{@render weatherBody(item)}
+				</li>
+			{/each}
+		</ul>
+		{#if week.length}
+			<table class="week">
+				<caption>{t.weather.weekTitle}</caption>
+				<thead>
+					<tr>
+						<th scope="col">{t.weather.weekDay}</th>
+						<th scope="col"><span class="sr-only">{t.weather.weekSky}</span></th>
+						<th scope="col">{t.weather.weekTemp}</th>
+						<th scope="col">{t.weather.weekRain}</th>
+					</tr>
+				</thead>
+				<tbody>
+					{#each week as d (d.day)}
+						<tr>
+							<th scope="row">{d.label}</th>
+							<td class="sky"><Icon name={d.icon} size={20} /></td>
+							<td>{d.max !== undefined ? `${Math.round(d.max)}°` : '–'} <span class="low">{Math.round(d.min)}°</span></td>
+							<td>{(d.rain ?? 0) >= 0.5 ? t.weather.mm(d.rain!) : '–'}</td>
+						</tr>
+					{/each}
+				</tbody>
+			</table>
+		{/if}
+	</Modal>
 
 	<SunWidget />
 
@@ -213,8 +293,74 @@
 		border-radius: 50%;
 		background: rgb(255 255 255 / 0.6);
 	}
-	.alert.advice {
+	.alert:not(.urgent) {
 		color: var(--ink);
+	}
+	.alert {
+		flex-wrap: wrap;
+	}
+	.alert p {
+		flex: 1;
+		min-width: 0;
+	}
+	.see-all {
+		flex-basis: 100%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 4px;
+		min-height: 44px;
+		margin: -6px 0 -10px;
+		border: 0;
+		background: none;
+		color: inherit;
+		font: inherit;
+		font-size: 0.9375rem;
+		font-weight: 700;
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		cursor: pointer;
+	}
+	.weather-list {
+		display: grid;
+		gap: 10px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.week {
+		width: 100%;
+		margin-top: 6px;
+		border-collapse: collapse;
+		font-size: 0.9375rem;
+		color: var(--ink);
+	}
+	.week caption {
+		text-align: left;
+		font-weight: 700;
+		padding-bottom: 6px;
+	}
+	.week thead th {
+		font-size: 0.8125rem;
+		font-weight: 600;
+		color: var(--muted);
+		text-align: left;
+		padding: 4px 0;
+	}
+	.week tbody th {
+		text-align: left;
+		font-weight: 600;
+	}
+	.week td,
+	.week tbody th {
+		padding: 8px 0;
+		border-top: 1px solid var(--border);
+	}
+	.week .sky :global(svg) {
+		display: block;
+	}
+	.low {
+		color: var(--muted);
 	}
 	.alert.urgent {
 		background: var(--lilac-ink);

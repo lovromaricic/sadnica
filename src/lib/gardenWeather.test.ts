@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { gardenAdvice } from './gardenWeather';
+import { allAdvice, gardenAdvice } from './gardenWeather';
 import type { ForecastDay } from './weather';
 
 const d = (y: number, m: number, day: number) => new Date(y, m - 1, day);
@@ -60,5 +60,17 @@ describe('gardenAdvice', () => {
 	it('copes with an older cached forecast that only has minimums', () => {
 		const old = week().map(({ day, min }) => ({ day, min }));
 		expect(gardenAdvice(old, today, garden)).toBeNull();
+	});
+
+	it('lists everything that applies, most important first', () => {
+		const busy = week({ 0: { max: 31 }, 1: { gusts: 65, rain: 9, rainChance: 90 } });
+		expect(allAdvice(busy, today, garden).map((a) => a.kind)).toEqual(['wind', 'heat', 'rain']);
+		expect(gardenAdvice(busy, today, garden)?.kind).toBe('wind');
+		expect(allAdvice(week(), today, garden)).toEqual([]);
+	});
+
+	it('does not suggest a planting day in a week of storms or heat', () => {
+		const mixed = week({ 0: { gusts: 70 }, 2: { cloud: 85, rain: 0, max: 19, gusts: 15 } });
+		expect(allAdvice(mixed, today, garden).map((a) => a.kind)).toEqual(['wind']);
 	});
 });
