@@ -41,13 +41,16 @@ npm run dev:phone  # https na lokalnoj mreži, za provjeru sunca kamerom na mobi
 npm test           # testovi (sezone, pretraga, zadaci, spremanje, crteži sadnje)
 npm run validate   # provjera sadržaja u data/ prema shemi
 npm run build      # provjera sadržaja, zatim statična stranica u build/
+npm run build:hosting  # isto, za objavu u podmapi /sadnica/ (npr. www.northmagnetic.com/sadnica/)
 npm run preview    # posluži build/ lokalno
 npm run check      # provjera tipova
 npm run icons      # ponovno izradi ikone u static/icons
 ```
 
 Rezultat izgradnje je statična stranica (SvelteKit s adapter-static), pa se može postaviti na bilo
-koji statični hosting.
+koji statični hosting. Na hosting se kopira sadržaj mape `build/`, uključujući skrivene datoteke
+`.htaccess` (u Finderu ih prikazuje Cmd + Shift + .). One na Apacheu omogućuju adrese bez `.html` i
+prikazuju stranicu aplikacije "Ova stranica ne postoji" za krive adrese. Aplikacija treba https.
 
 ## Struktura
 

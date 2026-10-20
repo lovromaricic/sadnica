@@ -1,0 +1,3 @@
+# /biljke is a page (biljke.html) as well as this folder of plant pages: don't redirect it to /biljke/.
+# The rewrite rules from the folder above still apply.
+DirectorySlash Off

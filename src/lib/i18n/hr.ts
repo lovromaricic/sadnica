@@ -364,6 +364,13 @@ export const t = {
 
 	offline: 'Nisi na mreži. Sve radi i dalje, samo se promjene ne dijele nikamo.',
 	offlineClose: 'Zatvori obavijest',
+	error: {
+		title: 'Ova stranica ne postoji',
+		text: 'Možda je adresa krivo upisana. Na početnoj stranici je sve što aplikacija nudi.',
+		other: 'Nešto nije u redu',
+		otherText: 'Pokušaj ponovno ili se vrati na početnu stranicu.',
+		home: 'Natrag na Danas'
+	},
 	add: (name: string) => `Dodaj u moj vrt: ${name}`,
 	added: (name: string) => `${name} je već u vrtu`,
 

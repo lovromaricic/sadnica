@@ -13,7 +13,10 @@ export default defineConfig(({ mode }) => ({
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
 			// Fully static output: every route is prerendered as an app shell (see docs/decisions.md).
-			adapter: adapter({ strict: true })
+			// 404.html is the app shell for addresses that do not exist; it shows the app's error page.
+			adapter: adapter({ strict: true, fallback: '404.html' }),
+			// Served from a subfolder (e.g. /sadnica) when built with BASE_PATH; the root otherwise.
+			paths: { base: (process.env.BASE_PATH ?? '').replace(/\/$/, '') as '' | `/${string}` }
 		})
 	],
 	server: {
