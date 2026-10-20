@@ -319,13 +319,13 @@ beginner most often plants something that cannot work, so that case earns the qu
 
 ## Hosting in a subfolder
 
-- `npm run build:hosting` builds for `/sadnica/` (`BASE_PATH`); `npm run build` and the dev server
+- `npm run build:hosting` builds for `/labs/sadnica/` (`BASE_PATH`); `npm run build` and the dev server
   stay at the root. Pages use relative asset paths; `404.html` (the fallback shell for unknown
   addresses) uses absolute `/sadnica/` paths, so it works at any depth.
 - Apache: `static/.htaccess` maps `/biljke` to `biljke.html` and sends unknown addresses to
   `404.html`, where the app shows its own "Ova stranica ne postoji" page. `static/biljke/.htaccess`
   turns off Apache's slash redirect there, because `/biljke` is both a page and a folder. Tested with
-  a local Apache 2.4 under `/sadnica/`.
+  a local Apache 2.4 under `/labs/sadnica/`, below a copy of the `/labs/.htaccess` from the host (its `ErrorDocument 404 /labs/index.html` is harmless while the app's own rules are in place).
 
 ## Garden weather
 

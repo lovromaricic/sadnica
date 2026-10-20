@@ -8,7 +8,7 @@
     "dev:phone": "vite dev --host --mode phone",
     "validate": "vite-node scripts/validate-data.ts",
     "build": "npm run validate && vite build",
-    "build:hosting": "BASE_PATH=/sadnica npm run build",
+    "build:hosting": "BASE_PATH=/labs/sadnica npm run build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "test": "vitest run",
