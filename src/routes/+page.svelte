@@ -394,8 +394,11 @@
 		border-radius: var(--r-xl);
 		overflow: hidden;
 	}
+	/* "Preporuka tjedna": white on the lime card, lighter than the default dark label. */
 	.badge {
 		justify-self: start;
+		background: var(--white);
+		color: var(--ink);
 	}
 	.hero-art {
 		justify-self: center;
