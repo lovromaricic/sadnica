@@ -155,7 +155,7 @@
 			{@render weatherBody(first)}
 			{#if weatherItems.length > 1}
 				<button type="button" class="see-all" aria-haspopup="dialog" onclick={() => (weatherOpen = true)}>
-					{t.weather.seeAll(weatherItems.length)}<Icon name="chevron" size={16} />
+					{t.weather.seeAll(weatherItems.length)}
 				</button>
 			{/if}
 		</aside>
@@ -303,14 +303,14 @@
 		flex: 1;
 		min-width: 0;
 	}
+	/* Phones: under the text, right-aligned. Wider screens: on the same row, like "Vidi sve u sezoni". */
 	.see-all {
 		flex-basis: 100%;
 		display: inline-flex;
 		align-items: center;
 		justify-content: flex-end;
-		gap: 4px;
 		min-height: 44px;
-		margin: -6px 0 -10px;
+		margin: -10px 0 -12px;
 		border: 0;
 		background: none;
 		color: inherit;
@@ -521,6 +521,17 @@
 		padding: 0 6px;
 	}
 
+	@media (min-width: 700px) {
+		.alert {
+			flex-wrap: nowrap;
+			align-items: center;
+		}
+		.see-all {
+			flex: none;
+			margin: 0 4px 0 auto;
+			white-space: nowrap;
+		}
+	}
 	@media (min-width: 900px) {
 		.split {
 			grid-template-columns: 5fr 6fr;
