@@ -10,6 +10,12 @@ na hrvatskom, radi bez računa i bez interneta, a sve što upišeš ostaje samo 
   <img src="docs/screenshots/biljka-iphone.png" alt="Stranica biljke: češnjak s osnovnim podacima i upozorenjem za ljubimce" width="260">
 </p>
 
+
+
+https://github.com/user-attachments/assets/75b70080-6ee1-4e6e-90e2-2acf4f6d1848
+
+
+
 ## Što aplikacija radi
 
 - **Danas**: preporuka tjedna za tvoje mjesto i doba godine, što još stigneš posaditi i što dolazi
