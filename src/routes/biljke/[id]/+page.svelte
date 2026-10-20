@@ -365,7 +365,7 @@
 					<strong>{t.sun.boxTitle}</strong>
 					<p>{t.sun.boxText}</p>
 					<a class="sun-check-btn" href="{resolve('/sunce')}?plant={plant.id}">
-						<Icon name="sun" size={18} />{t.sun.boxCta}
+						<Icon name="camera" size={18} />{t.sun.boxCta}
 					</a>
 				</div>
 			{/if}
@@ -723,7 +723,8 @@
 		gap: 6px;
 		padding: 16px;
 		border-radius: var(--r-sm);
-		background: var(--lime);
+		/* Same yellow as the sun widget on Danas. */
+		background: var(--butter);
 		color: var(--ink);
 	}
 	.sun-check p {
