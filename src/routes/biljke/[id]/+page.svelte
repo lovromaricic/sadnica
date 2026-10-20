@@ -393,9 +393,14 @@
 	.back {
 		background: rgb(255 255 255 / 0.75);
 	}
-	.badge.muted {
+	/* White on the hero; out of season it fades, so "Sada" and "Nije sezona" still look different. */
+	.badge {
 		background: var(--white);
 		color: var(--ink);
+	}
+	.badge.muted {
+		background: rgb(255 255 255 / 0.5);
+		color: var(--muted-2);
 	}
 	.hero-art {
 		justify-self: center;
