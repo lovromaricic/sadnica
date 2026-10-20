@@ -138,7 +138,7 @@
 			{#if item.live}<span class="source">{t.weather.source}</span>{/if}
 		</p>
 		{#if more > 1}
-			<button type="button" class="see-all" aria-haspopup="dialog" onclick={() => (weatherOpen = true)}>
+			<button type="button" class="weather-more" aria-haspopup="dialog" onclick={() => (weatherOpen = true)}>
 				{t.weather.seeAll(more)}
 			</button>
 		{/if}
@@ -304,11 +304,13 @@
 		align-self: center;
 	}
 	/* Phones: right under the text. Wider screens: on the same row, like "Vidi sve u sezoni". */
-	.see-all {
-		display: inline-flex;
+	.weather-more {
+		/* A block, not inline: an inline button would add a line of text height below it. */
+		display: flex;
+		width: fit-content;
 		align-items: center;
 		min-height: 44px;
-		margin: -6px 0 -12px;
+		margin: -4px 0 -12px;
 		padding: 0;
 		border: 0;
 		background: none;
@@ -532,7 +534,7 @@
 		.alert-body p {
 			flex: 1;
 		}
-		.see-all {
+		.weather-more {
 			flex: none;
 			margin: 0 4px 0 auto;
 			white-space: nowrap;
