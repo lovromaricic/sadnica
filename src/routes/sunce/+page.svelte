@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import { goto, replaceState } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import { SvelteSet } from 'svelte/reactivity';
@@ -56,6 +56,20 @@
 		reason = cameraUnavailable();
 		return reason ? 'manual' : 'intro';
 	}
+
+	// Each step is a new screen within one page, so start it at the top instead of where the
+	// previous step was scrolled to (phones scroll the content area, desktop the window).
+	let shownStep: Step | null = null;
+	$effect(() => {
+		const current = step;
+		if (shownStep !== null && current !== shownStep) {
+			tick().then(() => {
+				document.querySelector('[data-scroller]')?.scrollTo(0, 0);
+				window.scrollTo(0, 0);
+			});
+		}
+		shownStep = current;
+	});
 
 	onMount(() => {
 		const id = new URLSearchParams(window.location.search).get('plant');
