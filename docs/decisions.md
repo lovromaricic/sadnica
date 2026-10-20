@@ -299,3 +299,11 @@ beginner most often plants something that cannot work, so that case earns the qu
 - Spacing labels of 100 cm or more are written in metres ("1,5 m") on the tile too, to match.
 - Texts avoid gender agreement on the plant where possible ("Presadnicu zakopaj…"); clove texts
   have a "zubac" and a "lukovica" variant; tree texts say "Voćke" for fruit and "Sadnice" otherwise.
+
+## Launch screen
+
+- iPhone: one PNG launch screen per screen size in `static/splash/` (lime background, round sprout
+  icon, "Sadnica"), linked with `apple-touch-startup-image` in `src/app.html`. They are rendered in
+  local Chrome with the app's font by `npm run splash`. They are left out of the offline cache,
+  because iOS reads them only when the app is added to the home screen.
+- Android builds its own splash from the manifest; its `background_color` is the same lime.

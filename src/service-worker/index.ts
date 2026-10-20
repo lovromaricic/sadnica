@@ -7,7 +7,8 @@ const APP_CACHE = `app-${version}`;
 const FONT_CACHE = 'fonts-v1';
 const ROOT = new URL('./', self.location.href).pathname;
 const PRECACHE = [ROOT, ...[...immutable, ...assets, ...prerendered].map((f) => f.path)].filter(
-	(path, i, all) => !path.endsWith('service-worker.js') && all.indexOf(path) === i
+	// Launch screens are read by iOS when the app is added to the home screen, not from this cache.
+	(path, i, all) => !path.endsWith('service-worker.js') && !path.includes('/splash/') && all.indexOf(path) === i
 );
 
 self.addEventListener('install', (event) => {
