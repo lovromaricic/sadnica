@@ -58,6 +58,7 @@ export const t = {
 		help: 'Odgovori na dva kratka pitanja i pokazat ćemo ti što možeš posaditi ovaj tjedan.',
 		cityQ: 'Gdje živiš?',
 		cityLabel: 'Grad ili mjesto',
+		cityPlaceholder: 'Upiši grad ili mjesto',
 		cityHint: 'Po mjestu biramo podneblje i datume sadnje.',
 		useLocation: 'Koristi moju lokaciju',
 		locating: 'Tražim lokaciju…',

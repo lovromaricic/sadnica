@@ -94,7 +94,7 @@
 				oninput={() => (locationNote = '')}
 				list="cities"
 				autocomplete="address-level2"
-				placeholder="Zagreb"
+				placeholder={t.onboarding.cityPlaceholder}
 				aria-describedby="city-hint"
 			/>
 		</label>
@@ -286,6 +286,11 @@
 		font-size: 1.125rem;
 		font-weight: 600;
 		min-height: 56px;
+	}
+	/* Clearly lighter than a typed city, so an empty field never looks filled in. */
+	.field input::placeholder {
+		color: #6b7a70;
+		font-weight: 500;
 	}
 	.panel .field {
 		background: var(--ground);
