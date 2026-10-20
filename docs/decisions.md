@@ -307,3 +307,11 @@ beginner most often plants something that cannot work, so that case earns the qu
   local Chrome with the app's font by `npm run splash`. They are left out of the offline cache,
   because iOS reads them only when the app is added to the home screen.
 - Android builds its own splash from the manifest; its `background_color` is the same lime.
+
+## Location from GPS
+
+- The place question has "Koristi moju lokaciju": one low-accuracy position on request, matched to
+  the nearest of the 41 known cities, which sets the region and the forecast location. The position
+  itself is neither stored nor sent; only the city is saved, as when typed by hand.
+- Farther than 25 km from every known city, the nearest one is still used and the note says how far
+  it is. A finer forecast for remote places (rounded own coordinates) is left for later.

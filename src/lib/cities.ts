@@ -76,3 +76,22 @@ export function coordsForCity(input: string, region: Region): { lat: number; lng
 	const city = findCity(input);
 	return city ? { lat: city.lat, lng: city.lng } : REGION_FALLBACK[region];
 }
+
+/** Distance between two points on Earth in km (haversine). */
+export function distanceKm(a: { lat: number; lng: number }, b: { lat: number; lng: number }): number {
+	const rad = Math.PI / 180;
+	const dLat = (b.lat - a.lat) * rad;
+	const dLng = (b.lng - a.lng) * rad;
+	const h = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * rad) * Math.cos(b.lat * rad) * Math.sin(dLng / 2) ** 2;
+	return 2 * 6371 * Math.asin(Math.sqrt(h));
+}
+
+/** The known city closest to a position, and how far it is. */
+export function nearestCity(pos: { lat: number; lng: number }): { city: City; km: number } {
+	let best = { city: CITIES[0], km: Infinity };
+	for (const city of CITIES) {
+		const km = distanceKm(pos, city);
+		if (km < best.km) best = { city, km };
+	}
+	return best;
+}

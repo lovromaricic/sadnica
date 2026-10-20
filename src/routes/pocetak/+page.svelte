@@ -5,7 +5,8 @@
 	import Icon, { type IconName } from '#lib/components/Icon.svelte';
 	import Logo from '#lib/components/Logo.svelte';
 	import PlantArt from '#lib/components/PlantArt.svelte';
-	import { CITY_NAMES, regionForCity } from '#lib/cities.ts';
+	import { CITY_NAMES, nearestCity, regionForCity } from '#lib/cities.ts';
+	import { canLocate, locate } from '#lib/location.ts';
 	import { plantsById } from '#lib/data/index.ts';
 	import { REGIONS } from '#lib/data/regions.ts';
 	import type { Region } from '#lib/data/schema.ts';
@@ -26,6 +27,25 @@
 	const LAST_STEP = 1;
 
 	const region = $derived(manualRegion ?? regionForCity(city));
+
+	/** Fills in the nearest known city from the phone's position, on request only. */
+	const locatable = canLocate();
+	let locating = $state(false);
+	let locationNote = $state('');
+	/** A city farther than this is still used, but the note says how far it is. */
+	const NEAR_KM = 25;
+	async function useLocation() {
+		locating = true;
+		locationNote = '';
+		const result = await locate();
+		locating = false;
+		if (result === 'denied') return (locationNote = t.onboarding.locationDenied);
+		if (result === 'unavailable') return (locationNote = t.onboarding.locationFailed);
+		const { city: found, km } = nearestCity(result);
+		city = found.name;
+		manualRegion = null;
+		locationNote = km <= NEAR_KM ? t.onboarding.locationFound(found.name) : t.onboarding.locationFar(found.name, Math.round(km));
+	}
 	const garlic = plantsById.get('cesnjak');
 
 	const PLACE_STYLE: Record<Place, { icon: IconName; bg: string }> = {
@@ -71,12 +91,19 @@
 			<input
 				type="text"
 				bind:value={city}
+				oninput={() => (locationNote = '')}
 				list="cities"
 				autocomplete="address-level2"
 				placeholder="Zagreb"
 				aria-describedby="city-hint"
 			/>
 		</label>
+		{#if locatable}
+			<button type="button" class="locate" onclick={useLocation} disabled={locating} aria-busy={locating}>
+				<Icon name="locate" size={18} />{locating ? t.onboarding.locating : t.onboarding.useLocation}
+			</button>
+		{/if}
+		{#if locationNote}<p class="location-note" role="status">{locationNote}</p>{/if}
 		<datalist id="cities">
 			{#each CITY_NAMES as name (name)}<option value={name}></option>{/each}
 		</datalist>
@@ -262,6 +289,31 @@
 	}
 	.panel .field {
 		background: var(--ground);
+	}
+	.locate {
+		justify-self: start;
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		min-height: 44px;
+		padding: 0 16px;
+		border: 2px solid var(--ink);
+		border-radius: 999px;
+		background: transparent;
+		color: var(--ink);
+		font: inherit;
+		font-weight: 700;
+		cursor: pointer;
+	}
+	.locate:disabled {
+		opacity: 0.7;
+		cursor: progress;
+	}
+	.location-note {
+		font-size: 0.9375rem;
+		font-weight: 600;
+		color: var(--ink);
+		padding-left: 6px;
 	}
 	.hint {
 		color: var(--muted);
