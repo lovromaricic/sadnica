@@ -129,13 +129,20 @@
 	<title>{t.today.title} · {t.appName}</title>
 </svelte:head>
 
-{#snippet weatherBody(item: WeatherItem)}
+{#snippet weatherBody(item: WeatherItem, more = 0)}
 	<span class="alert-icon"><Icon name={item.icon} size={22} /></span>
-	<p>
-		{#if item.title}<strong>{item.title}</strong>{/if}
-		{item.text}
-		{#if item.live}<span class="source">{t.weather.source}</span>{/if}
-	</p>
+	<div class="alert-body">
+		<p>
+			{#if item.title}<strong>{item.title}</strong>{/if}
+			{item.text}
+			{#if item.live}<span class="source">{t.weather.source}</span>{/if}
+		</p>
+		{#if more > 1}
+			<button type="button" class="see-all" aria-haspopup="dialog" onclick={() => (weatherOpen = true)}>
+				{t.weather.seeAll(more)}
+			</button>
+		{/if}
+	</div>
 {/snippet}
 
 <div class="page today">
@@ -152,12 +159,7 @@
 			style:background={first.urgent ? undefined : first.bg}
 			aria-label={first.title ?? t.weather.allTitle}
 		>
-			{@render weatherBody(first)}
-			{#if weatherItems.length > 1}
-				<button type="button" class="see-all" aria-haspopup="dialog" onclick={() => (weatherOpen = true)}>
-					{t.weather.seeAll(weatherItems.length)}
-				</button>
-			{/if}
+			{@render weatherBody(first, weatherItems.length)}
 		</aside>
 	{/if}
 
@@ -296,21 +298,18 @@
 	.alert:not(.urgent) {
 		color: var(--ink);
 	}
-	.alert {
-		flex-wrap: wrap;
-	}
-	.alert p {
+	.alert-body {
 		flex: 1;
 		min-width: 0;
+		align-self: center;
 	}
-	/* Phones: under the text, right-aligned. Wider screens: on the same row, like "Vidi sve u sezoni". */
+	/* Phones: right under the text. Wider screens: on the same row, like "Vidi sve u sezoni". */
 	.see-all {
-		flex-basis: 100%;
 		display: inline-flex;
 		align-items: center;
-		justify-content: flex-end;
 		min-height: 44px;
-		margin: -10px 0 -12px;
+		margin: -6px 0 -12px;
+		padding: 0;
 		border: 0;
 		background: none;
 		color: inherit;
@@ -523,8 +522,15 @@
 
 	@media (min-width: 700px) {
 		.alert {
-			flex-wrap: nowrap;
 			align-items: center;
+		}
+		.alert-body {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+		}
+		.alert-body p {
+			flex: 1;
 		}
 		.see-all {
 			flex: none;
