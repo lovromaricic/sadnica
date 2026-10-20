@@ -10,17 +10,38 @@ const sample = {
 };
 
 describe('forecast request', () => {
-	it('asks only for daily minimums at town-level precision', () => {
+	it('asks for the garden values at town-level precision', () => {
 		const url = new URL(forecastUrl(45.8132, 15.9775));
 		expect(url.origin).toBe('https://api.open-meteo.com');
 		expect(url.searchParams.get('latitude')).toBe('45.8');
 		expect(url.searchParams.get('longitude')).toBe('16');
-		expect(url.searchParams.get('daily')).toBe('temperature_2m_min');
+		expect(url.searchParams.get('daily')?.split(',')).toEqual(
+			expect.arrayContaining(['temperature_2m_min', 'temperature_2m_max', 'precipitation_sum', 'wind_gusts_10m_max'])
+		);
+		expect(url.searchParams.get('hourly')).toBe('soil_temperature_6cm');
 		expect(roundCoord(43.5081)).toBe(43.5);
 	});
 });
 
 describe('parseForecast', () => {
+	it('keeps rain, heat, wind and cloud, and averages soil temperature per day', () => {
+		const days = parseForecast({
+			daily: {
+				time: ['2026-04-10', '2026-04-11'],
+				temperature_2m_min: [4, 6],
+				temperature_2m_max: [16, null],
+				precipitation_sum: [0, 7.5],
+				precipitation_probability_max: [5, 90],
+				wind_gusts_10m_max: [20, 65],
+				cloud_cover_mean: [30, 95]
+			},
+			hourly: { time: ['2026-04-10T00:00', '2026-04-10T12:00', '2026-04-11T00:00'], soil_temperature_6cm: [6, 10, 9] }
+		});
+		expect(days?.[0]).toEqual({ day: '2026-04-10', min: 4, max: 16, rain: 0, rainChance: 5, gusts: 20, cloud: 30, soil: 8 });
+		// A missing value is simply left out.
+		expect(days?.[1]).toEqual({ day: '2026-04-11', min: 6, rain: 7.5, rainChance: 90, gusts: 65, cloud: 95, soil: 9 });
+	});
+
 	it('reads days and minimums and rejects anything else', () => {
 		expect(parseForecast(sample)?.[3]).toEqual({ day: '2026-10-22', min: 1.5 });
 		expect(parseForecast({ daily: { time: ['2026-10-19'], temperature_2m_min: [null] } })).toBeNull();

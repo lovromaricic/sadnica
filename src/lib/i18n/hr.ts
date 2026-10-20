@@ -394,7 +394,41 @@ export const t = {
 			const n = Math.round(c);
 			return `${n < 0 ? '−' : ''}${Math.abs(n)} °C`;
 		},
-		source: 'Prognoza: Open-Meteo'
+		source: 'Prognoza: Open-Meteo',
+		/** "danas", "sutra", "u subotu" */
+		day: (date: Date, today: Date) => {
+			const n = Math.round((Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(today.getFullYear(), today.getMonth(), today.getDate())) / 86_400_000);
+			return n <= 0 ? 'danas' : n === 1 ? 'sutra' : `u ${WEEKDAYS_ACC[date.getDay()]}`;
+		},
+		/** One piece of garden advice; the wording stays modest because a forecast can be wrong. */
+		advice: {
+			wind: {
+				title: 'Jak vjetar.',
+				text: (when: string, kmh: number) => `${cap(when)} su najavljeni udari vjetra do ${Math.round(kmh)} km/h. Poveži visoke biljke uz kolce i skloni lagane posude.`
+			},
+			heat: {
+				title: 'Vruće.',
+				text: (when: string, temp: string) => `${cap(when)} do ${temp}. Zalijevaj rano ujutro ili navečer, a mlade presadnice zasjeni.`
+			},
+			rain: {
+				title: 'Kiša.',
+				text: (when: string, mm: number) => `${cap(when)} je najavljena kiša, oko ${Math.round(mm)} mm. Gredice ne moraš zalijevati.`,
+				balcony: (when: string) => `${cap(when)} je najavljena kiša. Posude na otvorenom ne moraš zalijevati, a one pod krovom provjeri.`
+			},
+			dry: {
+				title: 'Suho i toplo.',
+				text: 'Idućih pet dana nije najavljena kiša. Zalij gredice temeljito, najbolje rano ujutro.',
+				balcony: 'Idućih pet dana nije najavljena kiša. Posude se brzo osuše, pa ih provjeravaj svaki dan.'
+			},
+			coldSoil: {
+				title: 'Zemlja je još hladna.',
+				text: (temp: string) => `Na dubini sjetve je oko ${temp}. Grah, krastavce i tikvice sij kad se zagrije na 10 °C.`
+			},
+			plantingDay: {
+				title: 'Dobar dan za sadnju.',
+				text: (when: string) => `${cap(when)} se očekuje oblačno i blago vrijeme, dobro za presađivanje.`
+			}
+		}
 	},
 	pets: {
 		label: {
@@ -468,9 +502,9 @@ export const t = {
 		saveBackup: 'Spremi kopiju vrta',
 		restoreBackup: 'Vrati iz kopije',
 		badFile: 'Ova datoteka nije kopija vrta iz aplikacije Sadnica.',
-		weatherTitle: 'Prognoza mraza',
-		weatherText: 'Upozori me na mraz prema stvarnoj prognozi za idućih 7 dana. Servisu Open-Meteo šalju se samo približne koordinate grada. Isključeno: koriste se uobičajeni datumi mraza.',
-		weatherToggle: 'Prognoza mraza',
+		weatherTitle: 'Prognoza za vrt',
+		weatherText: 'Savjeti prema stvarnoj prognozi za idućih 7 dana: mraz, vjetar, vrućina, kiša i temperatura zemlje. Servisu Open-Meteo šalju se samo približne koordinate grada. Isključeno: koriste se uobičajeni datumi mraza.',
+		weatherToggle: 'Prognoza za vrt',
 		on: 'Uključeno',
 		off: 'Isključeno',
 		dataTitle: 'Podaci',

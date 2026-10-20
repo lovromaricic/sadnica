@@ -2,7 +2,8 @@ import type { Region, Rules } from './data/schema';
 import { isFrostNear } from './season';
 import { cacheState, forecastUrl, frostOutlook, parseForecast, roundCoord, type Forecast, type FrostOutlook } from './weather';
 
-const KEY = 'sadnica:prognoza';
+// v2: the forecast gained rain, wind, heat and soil values.
+const KEY = 'sadnica:prognoza2';
 
 function readCache(): Forecast | null {
 	try {

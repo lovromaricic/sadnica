@@ -325,3 +325,14 @@ beginner most often plants something that cannot work, so that case earns the qu
   `404.html`, where the app shows its own "Ova stranica ne postoji" page. `static/biljke/.htaccess`
   turns off Apache's slash redirect there, because `/biljke` is both a page and a folder. Tested with
   a local Apache 2.4 under `/sadnica/`.
+
+## Garden weather
+
+- The same Open-Meteo request now also returns the daily high, rain (mm and chance), wind gusts,
+  cloud cover and hourly soil temperature at 6 cm (averaged per day). Cache key `sadnica:prognoza2`.
+- Danas shows one card, in this order: forecast frost or a cold night; then `gardenAdvice`
+  (`src/lib/gardenWeather.ts`): gusts of 60 km/h or more, 30 °C or more (both within 3 days), rain of
+  5 mm or more today or tomorrow, five warm dry days, soil under 10 °C in spring, a mild overcast calm
+  day for planting out (March to October, not for balconies); then the typical frost-date reminder.
+- Balcony users get pot versions of the rain and dry-spell advice. Wording stays modest
+  ("najavljena je", "očekuje se"). Thresholds are round and cautious; worth a check by a gardener.

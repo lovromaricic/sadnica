@@ -13,6 +13,8 @@
 	import { heroReason, timingText } from '#lib/timing.ts';
 	import { today } from '#lib/today.ts';
 	import { forecast } from '#lib/forecast.svelte.ts';
+	import { gardenAdvice, type Advice } from '#lib/gardenWeather.ts';
+	import type { IconName } from '#lib/components/Icon.svelte';
 
 	const desktop = new MediaQuery('min-width: 900px');
 	const region = $derived(store.state.region);
@@ -30,11 +32,51 @@
 	const outlook = $derived(forecast.outlook(today));
 	/** Frost worth acting on (drives "samo uz pokrov"): forecast frost or the typical period. */
 	const frostNear = $derived(outlook?.level === 'frost' || typicalFrost);
+	/** One more piece of garden advice from the forecast; frost always comes first. */
+	const advice = $derived(forecast.data ? gardenAdvice(forecast.data.days, today, { place: store.state.place }) : null);
+	const ADVICE_STYLE: Record<Advice['kind'], { icon: IconName; bg: string }> = {
+		wind: { icon: 'wind', bg: 'var(--sky)' },
+		heat: { icon: 'sun', bg: 'var(--peach)' },
+		rain: { icon: 'rain', bg: 'var(--sky)' },
+		dry: { icon: 'drop', bg: 'var(--apricot)' },
+		coldSoil: { icon: 'ground', bg: 'var(--off)' },
+		plantingDay: { icon: 'sprout', bg: 'var(--mint)' }
+	};
+	function adviceText(a: Advice): string {
+		const s = t.weather.advice;
+		const when = t.weather.day(a.day, today);
+		const pots = store.state.place === 'balcony';
+		switch (a.kind) {
+			case 'wind':
+				return s.wind.text(when, a.value);
+			case 'heat':
+				return s.heat.text(when, t.weather.temp(a.value));
+			case 'rain':
+				return pots ? s.rain.balcony(when) : s.rain.text(when, a.value);
+			case 'dry':
+				return pots ? s.dry.balcony : s.dry.text;
+			case 'coldSoil':
+				return s.coldSoil.text(t.weather.temp(a.value));
+			case 'plantingDay':
+				return s.plantingDay.text(when);
+		}
+	}
 </script>
 
 <svelte:head>
 	<title>{t.today.title} · {t.appName}</title>
 </svelte:head>
+
+{#snippet adviceCard(a: Advice)}
+	<aside class="alert advice" style:background={ADVICE_STYLE[a.kind].bg} aria-label={t.weather.advice[a.kind].title}>
+		<span class="alert-icon"><Icon name={ADVICE_STYLE[a.kind].icon} size={22} /></span>
+		<p>
+			<strong>{t.weather.advice[a.kind].title}</strong>
+			{adviceText(a)}
+			<span class="source">{t.weather.source}</span>
+		</p>
+	</aside>
+{/snippet}
 
 <div class="page today">
 	<header class="head">
@@ -54,6 +96,9 @@
 				<span class="source">{t.weather.source}</span>
 			</p>
 		</aside>
+	{:else if advice}
+		<!-- With a real forecast and no frost in it, its advice beats the typical frost-date reminder. -->
+		{@render adviceCard(advice)}
 	{:else if typicalFrost}
 		<aside class="alert" aria-label={t.today.frostTitle}>
 			<span class="alert-icon"><Icon name="snow" size={22} /></span>
@@ -167,6 +212,9 @@
 		flex: none;
 		border-radius: 50%;
 		background: rgb(255 255 255 / 0.6);
+	}
+	.alert.advice {
+		color: var(--ink);
 	}
 	.alert.urgent {
 		background: var(--lilac-ink);
