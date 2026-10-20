@@ -356,6 +356,7 @@ export const t = {
 	},
 
 	offline: 'Nisi na mreži. Sve radi i dalje, samo se promjene ne dijele nikamo.',
+	offlineClose: 'Zatvori obavijest',
 	add: (name: string) => `Dodaj u moj vrt: ${name}`,
 	added: (name: string) => `${name} je već u vrtu`,
 
