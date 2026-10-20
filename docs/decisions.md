@@ -166,7 +166,7 @@ beginner most often plants something that cannot work, so that case earns the qu
   `sunVerdict` strings were needed.
 - "Što ovdje uspijeva bolje" lists up to 3 plants whose sun need equals the measured level, then ones
   needing less; with the current 8 seed plants that is often fewer than 3, and none for full shade.
-- **QR code** (desktop only): in the Danas widget (opens `/sunce`) and on the desktop manual screen
+- **QR code** (desktop only): on the desktop manual screen of the sun check (no longer in the Danas widget, to keep Danas light)
   (opens `/sunce?plant=<id>`). It encodes the address the desktop is using, so in development open
   the desktop page via the Network address (`npm run dev:phone`), not `localhost`, or the phone
   cannot reach it. The encoder (`qrcode-generator`, no dependencies) loads only when a code is shown.
