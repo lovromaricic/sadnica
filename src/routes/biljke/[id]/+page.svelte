@@ -494,8 +494,10 @@
 		text-align: left;
 		transition: transform 0.15s ease;
 	}
-	.fact:hover {
-		transform: translateY(-2px);
+	@media (hover: hover) {
+		.fact:hover {
+			transform: translateY(-2px);
+		}
 	}
 	.i {
 		position: absolute;

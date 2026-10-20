@@ -36,15 +36,19 @@
 		background: var(--white);
 		transition: transform 0.15s ease;
 	}
-	.add:hover {
-		transform: scale(1.06);
+	@media (hover: hover) {
+		.add:hover {
+			transform: scale(1.06);
+		}
 	}
 	.added {
 		background: var(--ink);
 		color: var(--lime);
 		cursor: default;
 	}
-	.added:hover {
-		transform: none;
+	@media (hover: hover) {
+		.added:hover {
+			transform: none;
+		}
 	}
 </style>

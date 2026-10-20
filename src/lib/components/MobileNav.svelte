@@ -66,8 +66,10 @@
 			background-color 0.2s ease,
 			color 0.2s ease;
 	}
-	a:hover {
-		color: var(--white);
+	@media (hover: hover) {
+		a:hover {
+			color: var(--white);
+		}
 	}
 	a.active {
 		background: var(--lime);

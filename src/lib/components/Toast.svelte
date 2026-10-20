@@ -85,8 +85,10 @@
 		background: transparent;
 		color: var(--dark-muted);
 	}
-	.close:hover {
-		color: var(--white);
+	@media (hover: hover) {
+		.close:hover {
+			color: var(--white);
+		}
 	}
 	a:focus-visible,
 	.close:focus-visible {

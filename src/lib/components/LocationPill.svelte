@@ -27,8 +27,10 @@
 		text-decoration: none;
 		font-weight: 700;
 	}
-	.location:hover {
-		border-color: var(--ink);
+	@media (hover: hover) {
+		.location:hover {
+			border-color: var(--ink);
+		}
 	}
 	.compact {
 		min-height: 44px;

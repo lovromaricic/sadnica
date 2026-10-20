@@ -200,8 +200,10 @@
 		font-weight: 700;
 		font-size: 0.9375rem;
 	}
-	.advance:hover {
-		background: var(--lime);
+	@media (hover: hover) {
+		.advance:hover {
+			background: var(--lime);
+		}
 	}
 	.undo {
 		min-height: 44px;

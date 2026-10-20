@@ -510,8 +510,10 @@
 		background: var(--tile);
 		text-decoration: none;
 	}
-	.soon-tile:hover strong {
-		text-decoration: underline;
+	@media (hover: hover) {
+		.soon-tile:hover strong {
+			text-decoration: underline;
+		}
 	}
 	.month {
 		justify-self: start;

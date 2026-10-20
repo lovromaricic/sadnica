@@ -203,8 +203,10 @@
 		background: transparent;
 		color: var(--muted-2);
 	}
-	.delete:hover {
-		color: #b42318;
+	@media (hover: hover) {
+		.delete:hover {
+			color: #b42318;
+		}
 	}
 	.empty {
 		margin: 12px 4px 0;

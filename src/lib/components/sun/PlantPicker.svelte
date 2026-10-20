@@ -113,8 +113,10 @@
 		background: var(--tile);
 		text-align: left;
 	}
-	.tile:hover {
-		border-color: var(--ink);
+	@media (hover: hover) {
+		.tile:hover {
+			border-color: var(--ink);
+		}
 	}
 	.tile strong {
 		font-family: var(--font-head);

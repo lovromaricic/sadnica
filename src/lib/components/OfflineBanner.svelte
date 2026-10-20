@@ -64,7 +64,9 @@
 		color: var(--ink);
 		cursor: pointer;
 	}
-	.close:hover {
-		background: rgb(20 32 26 / 0.08);
+	@media (hover: hover) {
+		.close:hover {
+			background: rgb(20 32 26 / 0.08);
+		}
 	}
 </style>

@@ -157,15 +157,19 @@ svg {
 	background: var(--ink);
 	color: var(--white);
 }
-.btn-primary:hover {
-	background: var(--muted-2);
+@media (hover: hover) {
+	.btn-primary:hover {
+		background: var(--muted-2);
+	}
 }
 .btn-secondary {
 	background: transparent;
 	color: var(--ink);
 }
-.btn-secondary:hover {
-	background: rgb(20 32 26 / 0.06);
+@media (hover: hover) {
+	.btn-secondary:hover {
+		background: rgb(20 32 26 / 0.06);
+	}
 }
 .btn-block {
 	width: 100%;

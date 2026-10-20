@@ -365,8 +365,10 @@
 		font-weight: 700;
 		font-size: 0.875rem;
 	}
-	.advance:hover {
-		background: var(--lime);
+	@media (hover: hover) {
+		.advance:hover {
+			background: var(--lime);
+		}
 	}
 	.transfer-link {
 		justify-self: start;
@@ -393,9 +395,11 @@
 		font-size: 1.0625rem;
 		color: var(--muted-2);
 	}
-	.add-card:hover {
-		border-color: var(--ink);
-		color: var(--ink);
+	@media (hover: hover) {
+		.add-card:hover {
+			border-color: var(--ink);
+			color: var(--ink);
+		}
 	}
 	.add-icon {
 		display: grid;

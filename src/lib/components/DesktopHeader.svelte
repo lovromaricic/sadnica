@@ -57,8 +57,10 @@
 		text-decoration: none;
 		font-weight: 700;
 	}
-	nav a:hover {
-		color: var(--white);
+	@media (hover: hover) {
+		nav a:hover {
+			color: var(--white);
+		}
 	}
 	nav a.active {
 		background: var(--lime);

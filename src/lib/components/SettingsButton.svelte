@@ -20,7 +20,9 @@
 		border: 1px solid var(--border);
 		color: var(--ink);
 	}
-	.settings-btn:hover {
-		border-color: var(--ink);
+	@media (hover: hover) {
+		.settings-btn:hover {
+			border-color: var(--ink);
+		}
 	}
 </style>

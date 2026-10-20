@@ -317,8 +317,10 @@
 			border-radius: 14px;
 			font-size: 1rem;
 		}
-		.filter:hover {
-			background: rgb(255 255 255 / 0.5);
+		@media (hover: hover) {
+			.filter:hover {
+				background: rgb(255 255 255 / 0.5);
+			}
 		}
 		.filter[aria-pressed='true'] {
 			background: transparent;
