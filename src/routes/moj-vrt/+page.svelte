@@ -1,4 +1,5 @@
 <script lang="ts">
+	import GardenBedArt from '#lib/components/GardenBedArt.svelte';
 	import { resolve } from '$app/paths';
 	import GardenCalendar from '#lib/components/GardenCalendar.svelte';
 	import Icon from '#lib/components/Icon.svelte';
@@ -45,12 +46,12 @@
 
 	{#if items.length === 0}
 		<section class="empty lime">
-			<div class="empty-art" aria-hidden="true">
-				<Icon name="sprout" size={56} />
+			<div class="empty-art"><GardenBedArt /></div>
+			<div class="empty-text">
+				<h2>{t.garden.emptyTitle}</h2>
+				<p>{t.garden.emptyText}</p>
+				<a class="btn btn-primary" href={resolve('/biljke')}>{t.garden.emptyCta}</a>
 			</div>
-			<h2>{t.garden.emptyTitle}</h2>
-			<p>{t.garden.emptyText}</p>
-			<a class="btn btn-primary" href={resolve('/biljke')}>{t.garden.emptyCta}</a>
 		</section>
 	{:else}
 		<section class="tasks dark" aria-labelledby="tasks-title">
@@ -143,22 +144,22 @@
 		padding: 4px 4px 0;
 	}
 
+	/* Phones: the empty bed above the text. Desktop: text on the left, the bed on the right. */
 	.empty {
 		display: grid;
-		justify-items: start;
-		gap: 12px;
-		padding: 28px 24px;
+		gap: 8px;
+		padding: 20px 24px 28px;
 		border-radius: var(--r-xl);
 	}
 	.empty-art {
+		width: 100%;
+		max-width: 360px;
+		justify-self: center;
+	}
+	.empty-text {
 		display: grid;
-		place-items: center;
-		width: 88px;
-		height: 88px;
-		border-radius: 50%;
-		background: var(--ink);
-		color: var(--lime);
-		margin-bottom: 4px;
+		justify-items: start;
+		gap: 12px;
 	}
 	.empty p {
 		color: var(--muted-2);
@@ -407,7 +408,18 @@
 
 	@media (min-width: 900px) {
 		.empty {
-			padding: 48px;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: 'text art';
+			align-items: center;
+			column-gap: 32px;
+			padding: 40px 48px;
+		}
+		.empty-art {
+			grid-area: art;
+			max-width: 400px;
+		}
+		.empty-text {
+			grid-area: text;
 		}
 		.tasks {
 			padding: 32px;
