@@ -10,6 +10,7 @@
 		label,
 		value,
 		color = 'var(--lime)',
+		ink,
 		tip,
 		children
 	}: {
@@ -17,6 +18,8 @@
 		label: string;
 		value: string;
 		color?: string;
+		/** Header text colour, for a dark header (e.g. the red poison warning). */
+		ink?: string;
 		tip?: string;
 		children: Snippet;
 	} = $props();
@@ -80,7 +83,7 @@
 	<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions (Esc closes; the overlay is a mouse convenience) -->
 	<div class="overlay" {@attach portal} onclick={(e) => e.target === e.currentTarget && close()}>
 		<div class="dialog" role="dialog" aria-modal="true" aria-labelledby="{labelId} {titleId}" bind:this={dialog} {onkeydown} tabindex="-1">
-			<header style:background={color}>
+			<header style:background={color} style:color={ink} class:inked={!!ink}>
 				<div>
 					<p class="label" id={labelId}>{label}</p>
 					<h2 id={titleId}>{value}</h2>
@@ -145,6 +148,10 @@
 		font-weight: 700;
 		font-size: 0.9375rem;
 		color: var(--muted-2);
+	}
+	header.inked .label,
+	header.inked h2 {
+		color: inherit;
 	}
 	h2 {
 		font-size: 2rem;

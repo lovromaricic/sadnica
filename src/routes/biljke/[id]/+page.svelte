@@ -331,7 +331,14 @@
 	</div>
 
 	{#if pet}
-		<Modal bind:open={petOpen} label={t.pets.title} value={petLabel(pet)} color="var(--lilac)" tip={t.pets.source}>
+		<Modal
+			bind:open={petOpen}
+			label={t.pets.title}
+			value={petLabel(pet)}
+			color={pet.severity === 'serious' ? '#b42318' : 'var(--lilac)'}
+			ink={pet.severity === 'serious' ? 'var(--white)' : undefined}
+			tip={t.pets.source}
+		>
 			<p><strong>{t.pets.part}:</strong> {pet.part}</p>
 			<p><strong>{t.pets.signs}:</strong> {pet.signs}</p>
 			<p>{t.pets.advice}</p>
