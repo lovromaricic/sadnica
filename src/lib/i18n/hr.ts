@@ -176,7 +176,7 @@ export const t = {
 		addToGarden: 'Dodaj u moj vrt',
 		inGarden: 'U tvom je vrtu',
 		removeFromGarden: 'Makni iz vrta',
-		remind: 'Podsjeti me kad dođe vrijeme',
+		remind: 'Dodaj podsjetnik u kalendar',
 		remindDone: 'Podsjetnik je preuzet. Otvori datoteku da ga dodaš u kalendar.',
 		notFound: 'Ne znamo tu biljku.',
 		notFoundLink: 'Natrag na sve biljke'
