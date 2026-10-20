@@ -335,8 +335,8 @@
 			bind:open={petOpen}
 			label={t.pets.title}
 			value={petLabel(pet)}
-			color={pet.severity === 'serious' ? '#b42318' : 'var(--lilac)'}
-			ink={pet.severity === 'serious' ? 'var(--white)' : undefined}
+			color="#b42318"
+			ink="var(--white)"
 			tip={t.pets.source}
 		>
 			<p><strong>{t.pets.part}:</strong> {pet.part}</p>

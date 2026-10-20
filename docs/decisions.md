@@ -272,6 +272,7 @@ beginner most often plants something that cannot work, so that case earns the qu
 - Plant page: a quiet text link under the Latin name (red paw, underlined "Otrovno za pse i mačke", or the softer "Može naškoditi
   psima i mačkama" for mild risks) opening a popup with the dangerous parts, the signs of poisoning,
   "contact a vet" advice and the source. Safe and unchecked plants show nothing.
+- The popup has a red header (#b42318) with white text for every risk, mild or serious.
 - Catalogue: "Sigurno za ljubimce" shows only plants marked safe, never unchecked ones, because a
   wrong "safe" is worse than no label.
 
