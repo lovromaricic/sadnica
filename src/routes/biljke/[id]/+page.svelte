@@ -7,7 +7,7 @@
 	import { stageLabel } from '#lib/garden.ts';
 	import { petLabel, petRisk } from '#lib/pets.ts';
 	import GardenStage from '#lib/components/GardenStage.svelte';
-	import Icon from '#lib/components/Icon.svelte';
+	import Icon, { type IconName } from '#lib/components/Icon.svelte';
 	import Modal from '#lib/components/Modal.svelte';
 	import PlantingDiagram from '#lib/components/planting/PlantingDiagram.svelte';
 	import { headerLabel, headerValue, tipText } from '#lib/planting/content.ts';
@@ -38,6 +38,7 @@
 		spacing: 'var(--pink)'
 	};
 	const FACTS: Fact[] = ['difficulty', 'sun', 'water', 'spacing'];
+	const FACT_ICONS: Record<Fact, IconName> = { difficulty: 'gauge', sun: 'sun', water: 'drop', spacing: 'ruler' };
 
 	const plant = $derived(plantsById.get(data.id));
 	const region = $derived(store.state.region);
@@ -241,7 +242,8 @@
 							aria-haspopup="dialog"
 							onclick={() => openFactModal(f)}
 						>
-							<span class="i" aria-hidden="true">i</span>
+							<span class="fact-icon" aria-hidden="true"><Icon name={f === 'spacing' && potCm ? 'pot' : FACT_ICONS[f]} size={20} /></span>
+							<span class="fact-more" aria-hidden="true"><Icon name="chevron" size={16} /></span>
 							<span class="fact-label">{factLabel(f)}<span class="sr-only">:</span></span>
 							<span class="fact-value">{factValue(f)}</span>
 						</button>
@@ -484,7 +486,7 @@
 	.fact {
 		position: relative;
 		display: grid;
-		align-content: end;
+		align-content: start;
 		gap: 4px;
 		width: 100%;
 		min-height: 110px;
@@ -499,20 +501,23 @@
 			transform: translateY(-2px);
 		}
 	}
-	.i {
-		position: absolute;
-		top: 12px;
-		right: 12px;
+	/* Icon for the fact, and a small arrow that says the tile opens an explanation. */
+	.fact-icon {
 		display: grid;
 		place-items: center;
-		width: 28px;
-		height: 28px;
+		width: 36px;
+		height: 36px;
+		margin-bottom: 4px;
 		border-radius: 50%;
-		background: var(--ink);
-		color: var(--white);
-		font-family: var(--font-head);
-		font-weight: 800;
-		font-size: 0.9375rem;
+		background: rgb(255 255 255 / 0.7);
+		color: var(--ink);
+	}
+	.fact-more {
+		position: absolute;
+		top: 14px;
+		right: 12px;
+		display: grid;
+		color: var(--muted-2);
 	}
 	.fact-label {
 		font-size: 0.875rem;
