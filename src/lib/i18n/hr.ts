@@ -169,8 +169,12 @@ export const t = {
 		legendHarvest: 'Berba',
 		legendBloom: 'Cvatnja',
 		currentMonth: 'Ovaj mjesec',
-		monthCell: (month: string, sow: boolean, harvest: boolean, flower = false) =>
-			`${month}: ${[sow && 'sadnja', harvest && (flower ? 'cvatnja' : 'berba')].filter(Boolean).join(' i ') || 'ništa'}`,
+		monthCell: (month: string, sow: boolean, harvest: boolean, flower = false, protectedSow = false) =>
+			`${month}: ${[sow && (protectedSow ? 'sadnja u zatvorenom ili uz pokrov' : 'sadnja'), harvest && (flower ? 'cvatnja' : 'berba')].filter(Boolean).join(' i ') || 'ništa'}`,
+		rowSow: 'Sadnja',
+		rowHarvest: 'Berba',
+		rowBloom: 'Cvatnja',
+		legendProtected: 'U zatvorenom ili uz pokrov',
 		todayPerfect: (m: number) => `Danas je ${MONTHS[m - 1]}, savršeno vrijeme.`,
 		todayLate: (m: number, end: number) => `Danas je ${MONTHS[m - 1]}. Stigneš još do kraja ${MONTHS_GEN[end - 1]}.`,
 		todayCover: (m: number) => `Danas je ${MONTHS[m - 1]}. Sada samo uz pokrov od agrila.`,

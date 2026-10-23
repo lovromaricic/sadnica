@@ -1,4 +1,4 @@
-import type { Plant, Region } from './data/schema';
+import type { Plant, Region, SowWindow } from './data/schema';
 import { isHarvestMonth, isSowMonth } from './season';
 
 export interface CalendarCell {
@@ -24,4 +24,32 @@ export function calendarRows(plants: Plant[], region: Region, months: number[]) 
 			})
 		)
 	}));
+}
+
+/** Sowing in a month: not at all, outdoors, or only indoors or under fleece. */
+export type SowKind = 'none' | 'open' | 'protected';
+
+export interface StripMonth {
+	month: number;
+	sow: SowKind;
+	harvest: boolean;
+}
+
+/** A window that only works indoors (sown on a windowsill) or under fleece. */
+export function isProtectedWindow(w: SowWindow): boolean {
+	return !!w.needsCover || /zatvoren/i.test(w.note ?? '');
+}
+
+/**
+ * January to December for one plant: how it is sown and whether it is harvested. A month in both an
+ * open and a protected window counts as open.
+ */
+export function stripMonths(plant: Plant, region: Region): StripMonth[] {
+	const windows = plant.sow[region] ?? [];
+	return Array.from({ length: 12 }, (_, i) => {
+		const month = i + 1;
+		const hits = windows.filter((w) => isSowMonth([w], month));
+		const sow: SowKind = !hits.length ? 'none' : hits.some((w) => !isProtectedWindow(w)) ? 'open' : 'protected';
+		return { month, sow, harvest: isHarvestMonth(plant.harvest[region], month) };
+	});
 }

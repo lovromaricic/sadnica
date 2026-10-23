@@ -342,3 +342,12 @@ beginner most often plants something that cannot work, so that case earns the qu
   compete with the sun widget and the weekly pick; only a forecast frost keeps the dark card.
 - Balcony users get pot versions of the rain and dry-spell advice. Wording stays modest
   ("najavljena je", "očekuje se"). Thresholds are round and cautious; worth a check by a gardener.
+
+## Plant calendar
+
+- The plant page calendar keeps one cell per month under its name, with row labels ("Sadnja",
+  "Berba" or "Cvatnja"): left of the rows from 600 px, above them on phones so the months get the
+  full width. No letters in the cells; neighbouring months of the same kind join into one stretch.
+- Months that only work indoors or under fleece (a window with `needsCover` or a note with
+  "u zatvorenom", 10 plants) are pale and striped, and only then does the legend list them.
+  Notes like "Sadnice iz rasadnika" are normal windows. Screen readers get one line per month.
