@@ -196,7 +196,9 @@
 					</div>
 				</div>
 			{:else}
-				<button type="button" class="btn btn-secondary btn-block" onclick={remove}>{t.plant.removeFromGarden}</button>
+				<button type="button" class="btn btn-secondary btn-block" onclick={remove}>
+					<Icon name="trash" size={20} />{t.plant.removeFromGarden}
+				</button>
 			{/if}
 		{:else}
 			<button type="button" class="btn btn-primary btn-block" onclick={add}>
