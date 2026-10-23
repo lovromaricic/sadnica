@@ -36,18 +36,18 @@
 	const frostNear = $derived(outlook?.level === 'frost' || typicalFrost);
 	/** Garden advice from the forecast, most important first; frost always leads. */
 	const advices = $derived(forecast.data ? allAdvice(forecast.data.days, today, { place: store.state.place }) : []);
-	const ADVICE_STYLE: Record<Advice['kind'], { icon: IconName; bg: string }> = {
-		wind: { icon: 'wind', bg: 'var(--sky)' },
-		heat: { icon: 'sun', bg: 'var(--peach)' },
-		rain: { icon: 'rain', bg: 'var(--sky)' },
-		dry: { icon: 'drop', bg: 'var(--apricot)' },
-		coldSoil: { icon: 'ground', bg: 'var(--off)' },
-		plantingDay: { icon: 'sprout', bg: 'var(--mint)' }
+	/** Weather cards stay neutral (white, grey in the sheet); only a forecast frost is dark. */
+	const ADVICE_ICON: Record<Advice['kind'], IconName> = {
+		wind: 'wind',
+		heat: 'sun',
+		rain: 'rain',
+		dry: 'drop',
+		coldSoil: 'ground',
+		plantingDay: 'sprout'
 	};
 	interface WeatherItem {
 		key: string;
 		icon: IconName;
-		bg: string;
 		/** Frost: the dark card. */
 		urgent?: boolean;
 		title?: string;
@@ -66,7 +66,6 @@
 			list.push({
 				key: 'frost',
 				icon: 'snow',
-				bg: 'var(--lilac)',
 				urgent: frost,
 				title: frost ? t.weather.frostTitle : t.weather.coldTitle,
 				text: `${frost ? t.weather.frostText(when, temp) : t.weather.coldText(when, temp)} ${t.weather.action}`,
@@ -74,18 +73,17 @@
 			});
 		}
 		for (const a of advices) {
-			list.push({ key: a.kind, ...ADVICE_STYLE[a.kind], title: t.weather.advice[a.kind].title, text: adviceText(a), live: true });
+			list.push({ key: a.kind, icon: ADVICE_ICON[a.kind], title: t.weather.advice[a.kind].title, text: adviceText(a), live: true });
 		}
 		// The typical frost dates come last: a real forecast is more precise.
 		if (typicalFrost && !forecastFrost) {
 			list.push(
 				outlook
-					? { key: 'typical', icon: 'snow', bg: 'var(--lilac)', text: t.weather.calmButTypical(rules.frost[region].text), live: false }
+					? { key: 'typical', icon: 'snow', text: t.weather.calmButTypical(rules.frost[region].text), live: false }
 					: {
 							key: 'typical',
 							icon: 'snow',
-							bg: 'var(--lilac)',
-							title: t.today.frostTitle,
+										title: t.today.frostTitle,
 							text: `${rules.frost[region].text} ${t.today.frostAction}`,
 							live: false
 						}
@@ -156,17 +154,16 @@
 		<aside
 			class="alert"
 			class:urgent={first.urgent}
-			style:background={first.urgent ? undefined : first.bg}
 			aria-label={first.title ?? t.weather.allTitle}
 		>
 			{@render weatherBody(first, weatherItems.length)}
 		</aside>
 	{/if}
 
-	<Modal bind:open={weatherOpen} label={t.weather.allTitle} value={t.weather.count(weatherItems.length)} color="var(--sky)">
+	<Modal bind:open={weatherOpen} label={t.weather.allTitle} value={t.weather.count(weatherItems.length)} color="var(--ground)">
 		<ul class="weather-list">
 			{#each weatherItems as item (item.key)}
-				<li class="alert" class:urgent={item.urgent} style:background={item.urgent ? undefined : item.bg}>
+				<li class="alert" class:urgent={item.urgent}>
 					{@render weatherBody(item)}
 				</li>
 			{/each}
@@ -283,8 +280,11 @@
 		align-items: flex-start;
 		padding: 16px 18px;
 		border-radius: var(--r-md);
-		background: var(--lilac);
-		color: var(--lilac-ink);
+		background: var(--white);
+		color: var(--ink);
+	}
+	.weather-list .alert {
+		background: var(--ground);
 	}
 	.alert-icon {
 		display: grid;
@@ -293,7 +293,7 @@
 		height: 40px;
 		flex: none;
 		border-radius: 50%;
-		background: rgb(255 255 255 / 0.6);
+		background: var(--white);
 	}
 	.alert:not(.urgent) {
 		color: var(--ink);

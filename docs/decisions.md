@@ -338,5 +338,7 @@ beginner most often plants something that cannot work, so that case earns the qu
 - The card shows the most important item; when there are more, "Vidi sve savjete (n)" opens a sheet
   with all of them in the same order (forecast frost, `allAdvice`, typical frost reminder) and the
   next 7 days (sky, high and low, rain). No planting-day tip in a week of storms or heat.
+- Colours: weather cards are neutral (white on Danas, light grey in the sheet), so they don't
+  compete with the sun widget and the weekly pick; only a forecast frost keeps the dark card.
 - Balcony users get pot versions of the rain and dry-spell advice. Wording stays modest
   ("najavljena je", "očekuje se"). Thresholds are round and cautious; worth a check by a gardener.
