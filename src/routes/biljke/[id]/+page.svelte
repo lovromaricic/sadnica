@@ -183,10 +183,10 @@
 	<title>{plant?.name ?? t.plant.notFound} · {t.appName}</title>
 </svelte:head>
 
-{#snippet actions(where: string)}
+{#snippet actions(where: string, withStage: boolean)}
 	<div class="actions {where}">
 		{#if gardenItem && plant}
-			<GardenStage {plant} item={gardenItem} />
+			{#if withStage}<GardenStage {plant} item={gardenItem} />{/if}
 			{#if confirmRemove}
 				<div class="remove-confirm" role="alert">
 					<p>{t.log.removeConfirm}</p>
@@ -230,7 +230,7 @@
 				{/if}
 				<p class="summary">{plant.summary}</p>
 			</div>
-			{@render actions('desktop-only')}
+			{@render actions('desktop-only', true)}
 		</aside>
 
 		<div class="details">
@@ -258,6 +258,11 @@
 					</li>
 				{/each}
 			</ul>
+
+			<!-- Phones: the plant's garden status sits above the calendar, not at the bottom of the page. -->
+			{#if gardenItem}
+				<div class="mobile-only"><GardenStage {plant} item={gardenItem} /></div>
+			{/if}
 
 			<section class="when dark" aria-labelledby="when-title">
 				<h2 id="when-title">{t.plant.whenTitle}</h2>
@@ -336,7 +341,7 @@
 				</section>
 			{/if}
 
-			{@render actions('mobile-only')}
+			{@render actions('mobile-only', false)}
 			<p class="footnote">{t.today.footnote}</p>
 		</div>
 	</div>
