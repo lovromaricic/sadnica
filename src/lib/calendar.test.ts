@@ -10,13 +10,15 @@ describe('garden calendar', () => {
 
 	it('marks sowing and harvest months per plant and region', () => {
 		const [row] = calendarRows([plantsById.get('cesnjak')!], 'continental', monthsFrom(10));
-		const sow = row.cells.filter((c) => c.sow).map((c) => c.month);
+		const sow = row.cells.filter((c) => c.sow !== 'none').map((c) => c.month);
 		const harvest = row.cells.filter((c) => c.harvest).map((c) => c.month);
 		expect(sow).toEqual([10, 11]);
 		expect(harvest).toEqual([6, 7]);
 		// Lamb's lettuce is harvested across the new year.
 		const [mat] = calendarRows([plantsById.get('matovilac')!], 'continental', monthsFrom(10));
 		expect(mat.cells.filter((c) => c.harvest).map((c) => c.month)).toEqual([10, 11, 12, 1, 2, 3]);
+		// Its late sowing only works under fleece.
+		expect(mat.cells[0]).toMatchObject({ month: 10, sow: 'protected' });
 	});
 });
 

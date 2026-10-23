@@ -487,8 +487,8 @@ export const t = {
 		text: 'Što te čeka idućih 12 mjeseci, za tvoje mjesto.',
 		caption: 'Mjeseci sadnje i berbe za biljke u tvom vrtu, od ovog mjeseca nadalje',
 		plant: 'Biljka',
-		cell: (month: string, sow: boolean, harvest: boolean, flower = false) =>
-			`${month}: ${[sow && 'sadnja', harvest && (flower ? 'cvatnja' : 'berba')].filter(Boolean).join(' i ') || 'ništa'}`
+		cell: (month: string, sow: boolean, harvest: boolean, flower = false, protectedSow = false) =>
+			`${month}: ${[sow && (protectedSow ? 'sadnja u zatvorenom ili uz pokrov' : 'sadnja'), harvest && (flower ? 'cvatnja' : 'berba')].filter(Boolean).join(' i ') || 'ništa'}`
 	},
 	companions: {
 		badTitle: 'Pazi, loš susjed u vrtu',

@@ -9,6 +9,15 @@
 
 	const months = $derived(monthsFrom(month));
 	const rows = $derived(calendarRows(plants, region, months));
+	const anyProtected = $derived(rows.some((r) => r.cells.some((c) => c.sow === 'protected')));
+	const anyFlower = $derived(plants.some((p) => p.category === 'flower'));
+	const anyHarvest = $derived(plants.some((p) => p.category !== 'flower'));
+
+	type Cell = (typeof rows)[number]['cells'][number];
+	/** Neighbouring months of the same kind join into one stretch, as in the plant calendar. */
+	const sowKind = (c: Cell | undefined) => c?.sow ?? 'none';
+	const joinSow = (cells: Cell[], i: number, step: -1 | 1) => sowKind(cells[i]) !== 'none' && sowKind(cells[i + step]) === sowKind(cells[i]);
+	const joinHarvest = (cells: Cell[], i: number, step: -1 | 1) => !!cells[i]?.harvest && !!cells[i + step]?.harvest;
 </script>
 
 <section class="calendar dark" aria-labelledby="calendar-title">
@@ -39,10 +48,10 @@
 					</th>
 					{#each row.cells as cell, i (cell.month)}
 						<td role="cell" class:current={i === 0}>
-							<span class="sr-only">{t.calendar.cell(MONTHS[cell.month - 1], cell.sow, cell.harvest, row.plant.category === 'flower')}</span>
+							<span class="sr-only">{t.calendar.cell(MONTHS[cell.month - 1], cell.sow !== 'none', cell.harvest, row.plant.category === 'flower', cell.sow === 'protected')}</span>
 							<span class="cell" aria-hidden="true">
-								<span class="half sow" class:on={cell.sow}>{cell.sow ? 'S' : ''}</span>
-								<span class="half harvest" class:on={cell.harvest}>{cell.harvest ? (row.plant.category === 'flower' ? 'C' : 'B') : ''}</span>
+								<span class="half sow {cell.sow}" class:join-left={joinSow(row.cells, i, -1)} class:join-right={joinSow(row.cells, i, 1)}></span>
+								<span class="half harvest" class:on={cell.harvest} class:join-left={joinHarvest(row.cells, i, -1)} class:join-right={joinHarvest(row.cells, i, 1)}></span>
 							</span>
 						</td>
 					{/each}
@@ -51,9 +60,10 @@
 		</tbody>
 	</table>
 	<ul class="legend">
-		<li><span class="dot sow-dot">S</span>{t.plant.legendSow}</li>
-		<li><span class="dot harvest-dot">B</span>{t.plant.legendHarvest}</li>
-		{#if plants.some((p) => p.category === 'flower')}<li><span class="dot harvest-dot">C</span>{t.plant.legendBloom}</li>{/if}
+		<li><span class="swatch open"></span>{t.plant.legendSow}</li>
+		{#if anyProtected}<li><span class="swatch protected"></span>{t.plant.legendProtected}</li>{/if}
+		{#if anyHarvest}<li><span class="swatch harvest"></span>{t.plant.legendHarvest}</li>{/if}
+		{#if anyFlower}<li><span class="swatch harvest"></span>{t.plant.legendBloom}</li>{/if}
 	</ul>
 </section>
 
@@ -92,15 +102,17 @@
 	}
 	/* On phones the plant name sits on its own line above its months. */
 	tbody tr {
+		--col-gap: 2px;
 		display: grid;
 		grid-template-columns: repeat(12, minmax(0, 1fr));
-		gap: 2px;
+		gap: var(--col-gap);
 		margin-bottom: 8px;
 	}
 	thead tr {
+		--col-gap: 2px;
 		display: grid;
 		grid-template-columns: repeat(12, minmax(0, 1fr));
-		gap: 2px;
+		gap: var(--col-gap);
 	}
 	.name {
 		grid-column: 1 / -1;
@@ -131,24 +143,38 @@
 		border-radius: 6px;
 	}
 	.half {
-		display: grid;
-		place-items: center;
 		border-radius: 5px;
 		background: var(--dark-line);
-		font-size: 0.5625rem;
-		font-weight: 800;
-		color: var(--ink);
 	}
-	.sow.on {
+	.sow.open,
+	.swatch.open {
 		background: var(--lime);
 	}
-	.harvest.on {
+	.sow.protected,
+	.swatch.protected {
+		background-color: rgb(217 242 166 / 0.45);
+		background-image: repeating-linear-gradient(135deg, rgb(20 32 26 / 0.28) 0 3px, transparent 3px 6px);
+	}
+	.harvest.on,
+	.swatch.harvest {
 		background: var(--gold);
+	}
+	/* Joined months bridge the gap between columns (--col-gap) and lose their inner corners. */
+	.half.join-left {
+		margin-left: calc(var(--col-gap) / -2);
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+	.half.join-right {
+		margin-right: calc(var(--col-gap) / -2);
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
 	}
 	.legend {
 		list-style: none;
 		display: flex;
-		gap: 16px;
+		flex-wrap: wrap;
+		gap: 8px 16px;
 		margin: 8px 4px 0;
 		padding: 0;
 		font-size: 0.875rem;
@@ -159,21 +185,11 @@
 		align-items: center;
 		gap: 8px;
 	}
-	.dot {
-		display: grid;
-		place-items: center;
+	.swatch {
+		flex: none;
 		width: 22px;
-		height: 22px;
-		border-radius: 7px;
-		font-size: 0.6875rem;
-		font-weight: 800;
-		color: var(--ink);
-	}
-	.sow-dot {
-		background: var(--lime);
-	}
-	.harvest-dot {
-		background: var(--gold);
+		height: 12px;
+		border-radius: 4px;
 	}
 	@media (min-width: 900px) {
 		.calendar {
@@ -182,8 +198,8 @@
 		/* Desktop: name column on the left of each row. */
 		thead tr,
 		tbody tr {
+			--col-gap: 4px;
 			grid-template-columns: 180px repeat(12, minmax(0, 1fr));
-			gap: 4px;
 		}
 		thead th.sr-only {
 			position: static;
