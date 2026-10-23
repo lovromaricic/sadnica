@@ -44,7 +44,6 @@
 				class="cell {kind(m, row)}"
 				class:join-left={joins(i, row, -1)}
 				class:join-right={joins(i, row, 1)}
-				class:current={m.month === month}
 			></span>
 		{/each}
 	{/each}
@@ -74,8 +73,13 @@
 		color: var(--dark-muted);
 		letter-spacing: -0.02em;
 	}
+	/* The current month is a light pill on its name; the rows stay unmarked. */
 	.name.current {
-		color: var(--lime);
+		justify-self: center;
+		padding: 1px 6px;
+		border-radius: 999px;
+		background: var(--lime);
+		color: var(--ink);
 		font-weight: 800;
 	}
 	.label {
@@ -112,9 +116,6 @@
 		margin-right: 0;
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
-	}
-	.cell.current {
-		box-shadow: inset 0 0 0 2px var(--white);
 	}
 	.legend {
 		list-style: none;

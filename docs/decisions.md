@@ -351,5 +351,6 @@ beginner most often plants something that cannot work, so that case earns the qu
 - Months that only work indoors or under fleece (a window with `needsCover` or a note with
   "u zatvorenom", 10 plants) are pale and striped, and only then does the legend list them.
   Notes like "Sadnice iz rasadnika" are normal windows. Screen readers get one line per month.
+- The current month is a light pill on its name in both calendars; the rows stay unmarked.
 - The Moj vrt calendar uses the same style (no letters, joined months, striped protected months,
   legend items only for what the garden has).

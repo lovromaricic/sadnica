@@ -47,7 +47,7 @@
 						<span>{row.plant.name}</span>
 					</th>
 					{#each row.cells as cell, i (cell.month)}
-						<td role="cell" class:current={i === 0}>
+						<td role="cell">
 							<span class="sr-only">{t.calendar.cell(MONTHS[cell.month - 1], cell.sow !== 'none', cell.harvest, row.plant.category === 'flower', cell.sow === 'protected')}</span>
 							<span class="cell" aria-hidden="true">
 								<span class="half sow {cell.sow}" class:join-left={joinSow(row.cells, i, -1)} class:join-right={joinSow(row.cells, i, 1)}></span>
@@ -93,8 +93,12 @@
 		color: var(--dark-muted);
 		text-align: center;
 	}
-	thead th.current {
-		color: var(--lime);
+	/* The current month (always the first column) is a light pill on its name. */
+	thead th.current abbr {
+		padding: 1px 6px;
+		border-radius: 999px;
+		background: var(--lime);
+		color: var(--ink);
 		font-weight: 800;
 	}
 	abbr {
@@ -136,11 +140,6 @@
 		grid-template-rows: 1fr 1fr;
 		gap: 2px;
 		height: 34px;
-	}
-	td.current .cell {
-		outline: 2px solid var(--white);
-		outline-offset: 1px;
-		border-radius: 6px;
 	}
 	.half {
 		border-radius: 5px;
