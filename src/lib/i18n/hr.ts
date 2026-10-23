@@ -164,7 +164,9 @@ export const t = {
 		goodToKnow: 'Dobro je znati:',
 		understood: 'Razumijem',
 		close: 'Zatvori',
-		whenTitle: (cityLoc: string | undefined, city: string) => (cityLoc ? `Kada, u ${cityLoc}` : `Kada, za mjesto ${city}`),
+		whenTitle: 'Kalendar sadnje',
+		/** "Za Zagreb", "Za Rijeku"; a place we do not know: "Za mjesto Lovran". */
+		whenPlace: (known: boolean, place: string) => (known ? `Za ${place}` : `Za mjesto ${place}`),
 		legendSow: 'Sadnja ili sjetva',
 		legendHarvest: 'Berba',
 		legendBloom: 'Cvatnja',

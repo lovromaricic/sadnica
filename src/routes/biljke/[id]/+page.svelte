@@ -98,6 +98,12 @@
 		return { paragraphs: e.paragraphs, tip: e.tip };
 	});
 
+	/** "Za Zagreb" under the calendar heading. */
+	const placeLine = $derived.by(() => {
+		const known = findCity(city);
+		return t.plant.whenPlace(!!known, known ? (known.accusative ?? known.name) : city);
+	});
+
 	const factLabel = (f: Fact) => (f === 'spacing' && potCm ? t.plant.pot.label : t.plant.facts[f]);
 
 	// Garden spacing gets the animated planting diagram when the plant has one; pots keep the pot text.
@@ -252,7 +258,8 @@
 			</ul>
 
 			<section class="when dark" aria-labelledby="when-title">
-				<h2 id="when-title">{t.plant.whenTitle(findCity(city)?.locative, city)}</h2>
+				<h2 id="when-title">{t.plant.whenTitle}</h2>
+				<p class="when-place"><Icon name="pin" size={14} />{placeLine}</p>
 				<MonthStrip {plant} {region} {month} />
 				<p class="today-line">{todayLine}</p>
 				{#if season.window?.note && season.status !== 'off'}
@@ -537,7 +544,15 @@
 		border-radius: var(--r-xl);
 	}
 	.when h2 {
-		margin-bottom: 14px;
+		color: var(--white);
+	}
+	.when-place {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		margin: 2px 0 14px;
+		font-size: 0.875rem;
+		font-weight: 600;
 		color: var(--white);
 	}
 	.today-line {
