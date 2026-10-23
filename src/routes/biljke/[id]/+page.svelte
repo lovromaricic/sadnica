@@ -492,6 +492,10 @@
 		grid-template-columns: 1fr 1fr;
 		gap: 10px;
 	}
+	/* Every tile as tall as the tallest one in its row. */
+	.facts li {
+		display: flex;
+	}
 	.fact {
 		position: relative;
 		display: grid;
@@ -806,7 +810,11 @@
 			gap: 16px;
 		}
 		.facts {
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+		}
+		/* Four narrow tiles: a smaller value so "Puno sunca" stays on one line. */
+		.fact-value {
+			font-size: 1.125rem;
 		}
 		.when {
 			padding: 28px;
