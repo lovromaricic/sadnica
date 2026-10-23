@@ -54,7 +54,7 @@
 			</div>
 		</section>
 	{:else}
-		<section class="tasks dark" aria-labelledby="tasks-title">
+		<section class="tasks" aria-labelledby="tasks-title">
 			<div class="tasks-head">
 				<h2 id="tasks-title">{t.garden.tasksTitle}</h2>
 				{#if tasks.length}
@@ -167,9 +167,11 @@
 		max-width: 40ch;
 	}
 
+	/* White like the plant cards below; tasks are light grey rows. */
 	.tasks {
 		padding: 22px 16px;
 		border-radius: var(--r-xl);
+		background: var(--white);
 	}
 	.tasks-head {
 		display: flex;
@@ -180,11 +182,11 @@
 		padding: 0 4px 14px;
 	}
 	.tasks h2 {
-		color: var(--white);
+		color: var(--ink);
 	}
 	.progress-text,
 	.no-tasks {
-		color: var(--dark-muted);
+		color: var(--muted);
 		font-size: 0.9375rem;
 	}
 	.no-tasks {
@@ -204,15 +206,15 @@
 		width: 100%;
 		min-height: 56px;
 		padding: 10px 14px;
-		border: 1px solid var(--dark-line);
+		border: 0;
 		border-radius: var(--r-sm);
-		background: rgb(255 255 255 / 0.04);
-		color: var(--white);
+		background: var(--ground);
+		color: var(--ink);
 		text-align: left;
 		font-weight: 600;
 	}
 	.task:focus-visible {
-		outline-color: var(--lime);
+		outline-color: var(--focus);
 	}
 	.check {
 		display: grid;
@@ -221,16 +223,17 @@
 		height: 28px;
 		flex: none;
 		border-radius: 50%;
-		border: 2px solid var(--dark-muted);
+		border: 2px solid var(--muted);
+		background: var(--white);
 		color: transparent;
 	}
 	.task.done .check {
-		background: var(--lime);
-		border-color: var(--lime);
-		color: var(--ink);
+		background: var(--ink);
+		border-color: var(--ink);
+		color: var(--lime);
 	}
 	.task.done span:last-child {
-		color: var(--dark-muted);
+		color: var(--muted);
 		text-decoration: line-through;
 	}
 
