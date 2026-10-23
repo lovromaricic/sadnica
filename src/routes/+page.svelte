@@ -226,7 +226,7 @@
 				<h2 class="section-title">{t.today.more}</h2>
 				<ul class="rows">
 					{#each more as { plant, season } (plant.id)}
-						<li class="row" style:--tile={plant.illustration.bg}>
+						<li class="row">
 							<span class="row-art"><PlantArt art={plant.illustration} size={52} /></span>
 							<a class="row-text" href={resolve('/biljke/[id]', { id: plant.id })}>
 								<strong>{plant.name}</strong>
@@ -448,7 +448,8 @@
 		gap: 12px;
 		padding: 8px 10px 8px 8px;
 		border-radius: var(--r-md);
-		background: var(--tile);
+		/* Neutral like the weather sheet: the plant drawings carry the colour. */
+		background: var(--ground);
 	}
 	.row-art {
 		display: grid;
@@ -457,7 +458,7 @@
 		height: 60px;
 		flex: none;
 		border-radius: 20px;
-		background: rgb(255 255 255 / 0.55);
+		background: var(--white);
 	}
 	.row-text {
 		flex: 1;
