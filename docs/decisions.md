@@ -101,8 +101,8 @@ beginner most often plants something that cannot work, so that case earns the qu
 - Dates are corrected on the plant page ("Promijeni datum"). A day cannot be in the future or before
   the previous growing stage; the "Dodano" day does not limit the sowing day, since a plant can be
   added after it was sown.
-- Step check marks on a plant page are saved with the plant when it is in Moj vrt, otherwise they
-  last for the visit only.
+- Steps on a plant page can be ticked off only when the plant is in Moj vrt, where the ticks are
+  saved. For any other plant they are plain text: ticks that vanish on leaving looked like a bug.
 
 ## Smaller choices
 

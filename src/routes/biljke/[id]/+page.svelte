@@ -2,7 +2,6 @@
 	import { addToGarden, gardenPlants } from '#lib/gardenActions.ts';
 	import { gardenNeighbours, gardenPlantNamed, listNames } from '#lib/companions.ts';
 	import { resolve } from '$app/paths';
-	import { SvelteSet } from 'svelte/reactivity';
 	import GardenLog from '#lib/components/GardenLog.svelte';
 	import { stageLabel } from '#lib/garden.ts';
 	import { petLabel, petRisk } from '#lib/pets.ts';
@@ -52,15 +51,8 @@
 	const potCm = $derived(balcony && plant?.containers?.ok ? plant.containers.minPotCm : undefined);
 	const notForPots = $derived(balcony && plant?.containers?.ok === false);
 
-	// Steps are saved with the plant when it is in the garden, otherwise kept for this visit.
-	const localSteps = new SvelteSet<number>();
-	const stepDone = (i: number) => (gardenItem ? gardenItem.stepsDone.includes(i) : localSteps.has(i));
-	function toggleStep(i: number) {
-		if (!plant) return;
-		if (gardenItem) store.toggleStep(plant.id, i);
-		else if (localSteps.has(i)) localSteps.delete(i);
-		else localSteps.add(i);
-	}
+	// Steps can only be ticked off for a plant in the garden, where they are saved; otherwise they are plain text.
+	const stepDone = (i: number) => !!gardenItem?.stepsDone.includes(i);
 
 	let openFact = $state<Fact | null>(null);
 	let modalOpen = $state(false);
@@ -280,7 +272,7 @@
 					{#each plant.steps as step, i (i)}
 						{@const done = stepDone(i)}
 						<li>
-							<button type="button" class="step" class:done aria-pressed={done} onclick={() => toggleStep(i)}>
+							{#snippet content()}
 								<span class="num" aria-hidden="true">
 									{#if done}<Icon name="check" size={18} />{:else}{i + 1}{/if}
 								</span>
@@ -288,7 +280,14 @@
 									<strong>{step.title}</strong>
 									<span>{step.text}</span>
 								</span>
-							</button>
+							{/snippet}
+							{#if gardenItem}
+								<button type="button" class="step" class:done aria-pressed={done} onclick={() => store.toggleStep(plant.id, i)}>
+									{@render content()}
+								</button>
+							{:else}
+								<div class="step">{@render content()}</div>
+							{/if}
 						</li>
 					{/each}
 				</ol>
