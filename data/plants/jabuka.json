@@ -17,7 +17,7 @@
     "Za oprašivanje je dobro imati dvije različite sorte u blizini."
   ],
   "spacingTip": "patuljaste sorte stanu i u manji vrt.",
-  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 300, "rowSpacingCm": 400, "holeDepthCm": 50, "holeWidthCm": 60, "staked": true, "graftedAboveSoil": true, "note": "Razmak ovisi o podlozi: slabije podloge oko 3 m, bujnije 4 do 5 m." },
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 300, "rowSpacingCm": 400, "holeDepthCm": 60, "holeWidthCm": 60, "staked": true, "graftedAboveSoil": true, "note": "Razmak ovisi o podlozi: slabije podloge oko 3 m, bujnije 4 do 5 m." },
   "containers": { "ok": false, "note": "Za balkon je prevelika. Patuljaste sorte postoje, ali traže iskustvo." },
   "summary": "Najčešće voće u vrtu. Uz dvije sorte za oprašivanje rađa godinama.",
   "weeklyTip": "Prve dvije godine otkini cvjetove, stablo će brže ojačati.",
@@ -40,7 +40,7 @@
     { "title": "Crvljive jabuke", "signs": "U plodu je hodnik i ličinka.", "fix": "Jabučni savijač. Uklanjaj otpale plodove, a ljeti oko debla omotaj traku valovitog kartona. Svaka dva tjedna je skini i uništi." },
     { "title": "Tamne mrlje na listovima i plodovima", "signs": "Listovi i plodovi imaju tamne krastave mrlje.", "fix": "Krastavost. Pograbi i ukloni otpalo lišće u jesen i biraj otporne sorte." }
   ],
-  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Sjemenke, listovi i grančice. Najopasnije je uvelo lišće. Meso ploda nije opasno.", "signs": "Otežano disanje, jarko crvene desni i proširene zjenice, a u težim slučajevima šok." },
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Sjemenke, listovi i grančice. Najopasnije je uvelo lišće. Meso ploda nije opasno.", "signs": "Rijetko, i to nakon većih količina: otežano disanje, jarko crvene desni i proširene zjenice." },
   "neighbours": {
     "good": ["Neven", "Vlasac"],
     "bad": []

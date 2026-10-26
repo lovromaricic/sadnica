@@ -4,7 +4,7 @@
   "name": "Mrkva",
   "forms": { "nom": "mrkva", "gen": "mrkve", "acc": "mrkvu", "plural": false },
   "latin": "Daucus carota",
-  "aliases": ["mrkva", "mrkvica", "merlin", "šargarepa", "sargarepa", "carrot"],
+  "aliases": ["mrkva", "mrkvica", "šargarepa", "sargarepa", "carrot"],
   "category": "veg",
   "difficulty": "medium",
   "sun": "full",

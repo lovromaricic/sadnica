@@ -22,7 +22,7 @@
   "weeklyTip": "Za stolno grožđe biraj sorte otporne na bolesti.",
   "illustration": { "kind": "berry", "fill": "#6A3D9A", "stroke": "#2E1648", "bg": "#E6DBFF" },
   "sow": {
-    "continental": [{ "from": 10, "to": 11, "note": "Sadnice golog korijena." }, { "from": 3, "to": 4 }],
+    "continental": [{ "from": 10, "to": 11, "note": "Sadnice golog korijena. Mjesto cijepljenja preko zime lagano prekrij rahlom zemljom, a u proljeće je makni." }, { "from": 3, "to": 4 }],
     "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice golog korijena." }, { "from": 2, "to": 3 }]
   },
   "harvest": {

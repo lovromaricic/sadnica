@@ -17,7 +17,7 @@
     "Trešnja naraste u veliko stablo."
   ],
   "spacingTip": "većina sorti treba drugu sortu za oprašivanje.",
-  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 500, "rowSpacingCm": 600, "holeDepthCm": 50, "holeWidthCm": 60, "staked": true, "graftedAboveSoil": true },
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 500, "rowSpacingCm": 600, "holeDepthCm": 60, "holeWidthCm": 60, "staked": true, "graftedAboveSoil": true },
   "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
   "summary": "Prvo voće u sezoni. Stablo naraste veliko, a ptice obožavaju plodove.",
   "weeklyTip": "Mreža preko krošnje sačuva plodove od ptica.",
@@ -40,7 +40,7 @@
     { "title": "Crvi u trešnjama", "signs": "U plodovima su bijele ličinke.", "fix": "Trešnjina muha. Beri na vrijeme i postavi žute ljepljive ploče u svibnju." },
     { "title": "Plodovi pucaju", "signs": "Zreli plodovi napuknu nakon kiše.", "fix": "Biraj sorte otporne na pucanje i beri čim dozriju." }
   ],
-  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Koštice, listovi i grančice. Najopasnije je uvelo lišće. Meso ploda nije opasno.", "signs": "Otežano disanje, jarko crvene desni i proširene zjenice, a u težim slučajevima šok. Koštice mogu začepiti crijeva." },
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Koštice, listovi i grančice. Najopasnije je uvelo lišće. Meso ploda nije opasno.", "signs": "Rijetko, i to nakon većih količina: otežano disanje, jarko crvene desni i proširene zjenice. Koštice mogu začepiti crijeva." },
   "neighbours": {
     "good": ["Neven", "Vlasac"],
     "bad": []

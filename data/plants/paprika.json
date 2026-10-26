@@ -26,7 +26,7 @@
   },
   "harvest": {
     "continental": [{ "from": 7, "to": 10 }],
-    "adriatic": [{ "from": 7, "to": 10 }]
+    "adriatic": [{ "from": 7, "to": 11 }]
   },
   "steps": [
     { "title": "Kupi ili uzgoji presadnice", "text": "Zdrava presadnica je zbijena i tamnozelena." },
@@ -40,6 +40,6 @@
   ],
   "neighbours": {
     "good": ["Bosiljak", "Rajčica", "Luk"],
-    "bad": ["Komorač"]
+    "bad": ["Komorač", "Krumpir"]
   }
 }

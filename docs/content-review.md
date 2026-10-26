@@ -101,6 +101,23 @@ A fourth read (four reviewers, October 2026, pets checked against the ASPCA list
 - **Consistency and language**: Chinese cabbage rows, zinnia and calendula texts, "oreži",
   "svaka dva tjedna", trešnja and kukuruz phrasing.
 
+A fifth read (four reviewers by category, comparing similar plants; uncertain points then checked
+against Croatian and RHS sources) fixed:
+
+- **Consistency**: fruit tree holes are 60 cm deep everywhere, matching the steps; parsley and root
+  parsley sown 0.5 cm; pepper harvest and neighbours match; currant and blackberry first crop in year
+  2; blackberry canes cut back after planting.
+- **Dates**: kohlrabi sown in pots in March inland; coastal chard picked all year; root parsley dug
+  until December under mulch; broccoli's July window is planting out.
+- **Pests and problems**: Brussels sprout caterpillars and aphids, allium leaf miner on leek (a major
+  pest in Croatia, Hrčak study), asparagus beetle, pear rust from mostly ornamental junipers, bolted
+  onions do not store.
+- **Pets**: allium signs include fast breathing and dark urine; parsley only causes sun sensitivity in
+  larger amounts; stone fruit and apple signs say poisoning is rare.
+- **Other**: potatoes chitted 3–4 weeks; the graft of autumn-planted vines covered over winter;
+  shallot and chives warn next to green beans; names fixed (celeriac, black currant) and misleading
+  search words removed (merlin, celery, pepermint).
+
 Judgment calls left as they are (for the expert to decide):
 
 - Companion planting follows common folk lists; much of it is not well proven.
@@ -116,6 +133,12 @@ Judgment calls left as they are (for the expert to decide):
   says so).
 - Sunflower stays pet-safe: ASPCA's "Sunflower" entry names Helianthus angustifolius, not H. annuus.
   Eggplant and mandarin keep their mild warnings, borrowed from other Solanum and Citrus entries.
+- Broccoli stays a pot plant (RHS says pots work; one plant in at least 40 cm), melon on the coast
+  from April (whole months; the step says to wait for warm nights), dry beans 4 cm deep (bigger seed
+  than green beans), and "majčina dušica" stays a thyme search word (common usage, strictly wild thyme).
+- Stone fruit and apple stay "mild": cyanide poisoning is possible but rare from a garden tree.
+- Grapevine inland keeps an autumn window. The ministry leaflet gives 15 April to 15 May as the best
+  time and Gospodarski list prefers spring in colder areas; an expert may want spring only.
 
 ## Suggested order
 

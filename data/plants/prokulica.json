@@ -35,7 +35,7 @@
   ],
   "problems": [
     { "title": "Rastresite glavice", "signs": "Glavice su meke i otvorene.", "fix": "Zemlja je prerahla ili je bilo previše dušika. Čvrsto utisni biljke i ne pretjeruj s gnojem." },
-    { "title": "Biljka se prevrne", "signs": "Visoka stabljika polegne.", "fix": "Podupri je kolcem." }
+    { "title": "Gusjenice i lisne uši", "signs": "Rupe u listovima ili sivkaste uši među glavicama.", "fix": "Skupljaj gusjenice, uši isperi jakim mlazom vode, a mlade biljke prekrij mrežom." }
   ],
   "neighbours": {
     "good": ["Celer", "Luk", "Salata", "Kopar"],

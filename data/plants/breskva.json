@@ -16,7 +16,7 @@
     "Stabla sadi 4 m jedno od drugog.",
     "Breskva voli toplo, zaštićeno mjesto."
   ],
-  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 400, "rowSpacingCm": 500, "holeDepthCm": 50, "holeWidthCm": 60, "staked": true, "graftedAboveSoil": true },
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 400, "rowSpacingCm": 500, "holeDepthCm": 60, "holeWidthCm": 60, "staked": true, "graftedAboveSoil": true },
   "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
   "summary": "Sočni plodovi, ali traži brigu: godišnje orezivanje i zaštitu od kovrčavosti lista.",
   "weeklyTip": "Prskanje bakrom krajem zime štiti od kovrčavosti lista.",
@@ -39,7 +39,7 @@
     { "title": "Listovi se kovrčaju i crvene", "signs": "U proljeće su listovi naborani, crveni i otpadaju.", "fix": "Kovrčavost lista. Krajem zime, prije pupanja, poprskaj bakrom." },
     { "title": "Plodovi trunu na stablu", "signs": "Plodovi dobiju smeđe mrlje i trunu.", "fix": "Monilija. Uklanjaj trule plodove." }
   ],
-  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Koštice, listovi i grančice. Najopasnije je uvelo lišće. Meso ploda nije opasno.", "signs": "Otežano disanje, jarko crvene desni i proširene zjenice, a u težim slučajevima šok. Koštice mogu začepiti crijeva." },
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Koštice, listovi i grančice. Najopasnije je uvelo lišće. Meso ploda nije opasno.", "signs": "Rijetko, i to nakon većih količina: otežano disanje, jarko crvene desni i proširene zjenice. Koštice mogu začepiti crijeva." },
   "neighbours": {
     "good": ["Neven", "Vlasac"],
     "bad": []

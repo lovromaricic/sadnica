@@ -18,7 +18,7 @@
   "spacingTip": "beri vanjske listove, a srce ostavi da raste dalje.",
   "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 30, "thinToCm": 30, "tipKey": "beetClusters", "depthCm": 2 },
   "containers": { "ok": true, "minPotCm": 30, "note": "U većem loncu daje listove cijelo ljeto." },
-  "summary": "Jedna sjetva, berba cijelo ljeto i jesen. Podnosi i vrućinu i hladnoću.",
+  "summary": "Jedna sjetva, berba cijelo ljeto i jesen, a na obali i zimi. Podnosi i vrućinu i hladnoću.",
   "weeklyTip": "Ne beri više od trećine listova odjednom.",
   "illustration": { "kind": "leaf", "fill": "#3E8E41", "stroke": "#1E4A20", "bg": "#C9EEDB" },
   "sow": {
@@ -27,13 +27,13 @@
   },
   "harvest": {
     "continental": [{ "from": 6, "to": 11 }],
-    "adriatic": [{ "from": 5, "to": 12 }]
+    "adriatic": [{ "from": 1, "to": 12 }]
   },
   "steps": [
     { "title": "Posij 2 cm duboko", "text": "Sjemenke stavi 2 cm duboko, u redove 30 cm." },
     { "title": "Prorijedi", "text": "Iz svakog sjemena nikne nekoliko biljčica. Ostavi najjaču na svakih 30 cm." },
     { "title": "Zalijevaj u suši", "text": "Blitva podnosi vrućinu, ali u suši daje tvrđe listove." },
-    { "title": "Beri vanjske listove", "text": "Odreži ih pri dnu. Biljka daje nove do mraza." }
+    { "title": "Beri vanjske listove", "text": "Odreži ih pri dnu. Biljka daje nove do mraza, a na obali i preko zime." }
   ],
   "problems": [
     { "title": "Mrlje na listovima", "signs": "Okrugle smeđe mrlje s crvenim rubom.", "fix": "Otkini zahvaćene listove i zalijevaj zemlju, a ne lišće." },

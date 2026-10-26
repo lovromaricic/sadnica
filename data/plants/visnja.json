@@ -16,7 +16,7 @@
     "Stabla sadi 4 m jedno od drugog.",
     "Višnja je manja od trešnje. Većina sorti se sama oprašuje, maraska treba oprašivača."
   ],
-  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 400, "rowSpacingCm": 500, "holeDepthCm": 50, "holeWidthCm": 60, "staked": true, "graftedAboveSoil": true },
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 400, "rowSpacingCm": 500, "holeDepthCm": 60, "holeWidthCm": 60, "staked": true, "graftedAboveSoil": true },
   "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
   "summary": "Kiselkasti plodovi za sokove i kolače. Manje stablo, većina sorti se sama oprašuje.",
   "weeklyTip": "Višnja rađa na prošlogodišnjim granama, orezuj nakon berbe.",
@@ -39,7 +39,7 @@
     { "title": "Grane se suše nakon cvatnje", "signs": "Cvjetovi i mladice uvenu i posmeđe.", "fix": "Monilija. Izreži suhe grane do zdravog drva." },
     { "title": "Rupice na listovima", "signs": "Listovi izgledaju kao izbušeni.", "fix": "Šupljikavost lista. Ukloni otpalo lišće u jesen." }
   ],
-  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Koštice, listovi i grančice. Najopasnije je uvelo lišće. Meso ploda nije opasno.", "signs": "Otežano disanje, jarko crvene desni i proširene zjenice, a u težim slučajevima šok. Koštice mogu začepiti crijeva." },
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Koštice, listovi i grančice. Najopasnije je uvelo lišće. Meso ploda nije opasno.", "signs": "Rijetko, i to nakon većih količina: otežano disanje, jarko crvene desni i proširene zjenice. Koštice mogu začepiti crijeva." },
   "neighbours": {
     "good": ["Neven", "Vlasac"],
     "bad": []

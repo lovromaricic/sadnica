@@ -41,6 +41,6 @@
   ],
   "neighbours": {
     "good": ["Mrkva", "Krastavac", "Kukuruz"],
-    "bad": ["Luk", "Češnjak", "Poriluk"]
+    "bad": ["Luk", "Češnjak", "Poriluk", "Luk ljutika", "Vlasac"]
   }
 }

@@ -16,7 +16,7 @@
     "Stabla sadi 4 m jedno od drugog.",
     "Dunja naraste u manje stablo ili velik grm."
   ],
-  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 400, "rowSpacingCm": 500, "holeDepthCm": 50, "holeWidthCm": 60, "staked": true, "graftedAboveSoil": true },
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 400, "rowSpacingCm": 500, "holeDepthCm": 60, "holeWidthCm": 60, "staked": true, "graftedAboveSoil": true },
   "containers": { "ok": false, "note": "Treba prostor i dubok korijen." },
   "summary": "Mirisni plodovi za kompot i džem. Skromno stablo koje se samo oprašuje.",
   "weeklyTip": "Beri dunje kad požute i zamirišu, prije prvog mraza.",

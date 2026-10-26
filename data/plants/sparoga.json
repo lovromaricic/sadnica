@@ -38,7 +38,8 @@
   ],
   "problems": [
     { "title": "Tanki izbojci", "signs": "Šparoge su tanke kao olovka.", "fix": "Biljka je preslaba ili je prerano brana. Godinu dana ne beri i prihrani kompostom." },
-    { "title": "Korov preraste gredicu", "signs": "Gredicu zaraste trava.", "fix": "Malčiraj slamom, a korov čupaj rukom da ne ozlijediš korijenje." }
+    { "title": "Korov preraste gredicu", "signs": "Gredicu zaraste trava.", "fix": "Malčiraj slamom, a korov čupaj rukom da ne ozlijediš korijenje." },
+    { "title": "Kornjaši na stabljikama", "signs": "Ljeti su na zelenilu šareni kornjaši i sive ličinke, a stabljike ogole.", "fix": "Šparogina zlatica. Otresaj i skupljaj kornjaše i ličinke, a u jesen ukloni suhe stabljike." }
   ],
   "neighbours": {
     "good": ["Rajčica", "Peršin", "Bosiljak"],

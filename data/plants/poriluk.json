@@ -36,9 +36,10 @@
   ],
   "problems": [
     { "title": "Narančaste točkice na listovima", "signs": "Listovi imaju sitne narančaste mrlje.", "fix": "To je hrđa. Otkini zahvaćene listove i ne sadi poriluk pregusto." },
-    { "title": "Tanke stabljike", "signs": "Poriluk ostaje tanak.", "fix": "Treba mu hrane i vode. Pospi kompost i zalijevaj u suši." }
+    { "title": "Tanke stabljike", "signs": "Poriluk ostaje tanak.", "fix": "Treba mu hrane i vode. Pospi kompost i zalijevaj u suši." },
+    { "title": "Bijeli crvići u stabljici", "signs": "Nizovi sitnih bijelih točkica na listovima, a u stabljici ličinke i smeđe kukuljice.", "fix": "Lukov miner. U ožujku i travnju te u rujnu i listopadu prekrij poriluk gustom mrežom protiv insekata. Napadnute biljke iščupaj." }
   ],
-  "pets": { "dogs": true, "cats": true, "severity": "serious", "part": "Cijela biljka, sirova i kuhana, osobito lukovica.", "signs": "Povraćanje, proljev, slabost i blijede desni. Oštećenje krvi može se pokazati tek nakon nekoliko dana." },
+  "pets": { "dogs": true, "cats": true, "severity": "serious", "part": "Cijela biljka, sirova i kuhana, osobito bijeli dio.", "signs": "Povraćanje, proljev, slabost, blijede desni, ubrzano disanje i tamna ili crvenkasta mokraća. Oštećenje krvi može se pokazati tek nakon nekoliko dana." },
   "neighbours": {
     "good": ["Mrkva", "Celer", "Rajčica"],
     "bad": ["Grah", "Grašak"]

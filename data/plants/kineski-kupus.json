@@ -17,7 +17,7 @@
   "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 40, "thinToCm": 30, "depthCm": 1 },
   "containers": { "ok": true, "minPotCm": 30 },
   "summary": "Brzi kupus za kasno ljeto i jesen. Nježniji od običnog kupusa.",
-  "weeklyTip": "Sij ga tek krajem srpnja, u proljeće prebrzo ide u cvijet.",
+  "weeklyTip": "Sij ga od kraja srpnja, na obali u kolovozu i rujnu. U proljeće prebrzo ide u cvijet.",
   "illustration": { "kind": "cabbage", "fill": "#D7EBA8", "stroke": "#4C6B2A", "bg": "#C9EEDB" },
   "sow": {
     "continental": [{ "from": 7, "to": 8 }],

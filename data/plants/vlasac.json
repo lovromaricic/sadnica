@@ -37,7 +37,7 @@
     { "title": "Tanki, žuti listovi", "signs": "Vlasac je blijed i slab.", "fix": "Treba mu hrane ili je busen prestar. Dodaj kompost ili busen podijeli na manje." },
     { "title": "Lisne uši", "signs": "Sitni kukci na listovima.", "fix": "Isperi ih mlazom vode." }
   ],
-  "pets": { "dogs": true, "cats": true, "severity": "serious", "part": "Cijela biljka, sirova i kuhana, osobito lukovica.", "signs": "Povraćanje, proljev, slabost i blijede desni. Oštećenje krvi može se pokazati tek nakon nekoliko dana." },
+  "pets": { "dogs": true, "cats": true, "severity": "serious", "part": "Cijela biljka, sirova i kuhana, osobito lukovica.", "signs": "Povraćanje, proljev, slabost, blijede desni, ubrzano disanje i tamna ili crvenkasta mokraća. Oštećenje krvi može se pokazati tek nakon nekoliko dana." },
   "neighbours": {
     "good": ["Mrkva", "Rajčica"],
     "bad": ["Grah", "Grašak"]

@@ -4,7 +4,7 @@
   "name": "Metvica",
   "forms": { "nom": "metvica", "gen": "metvice", "acc": "metvicu", "plural": false },
   "latin": "Mentha spicata",
-  "aliases": ["metvica", "menta", "nana", "pepermint", "mint"],
+  "aliases": ["metvica", "menta", "nana", "mint"],
   "category": "herb",
   "difficulty": "easy",
   "sun": "partial",

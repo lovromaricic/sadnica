@@ -16,7 +16,7 @@
     "Stablo sadi 4 m od drugih stabala.",
     "Smokva se široko razgrana."
   ],
-  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 400, "rowSpacingCm": 500, "holeDepthCm": 50, "holeWidthCm": 60, "staked": false, "graftedAboveSoil": false, "note": "Smokva se obično uzgaja iz reznica, bez cijepljenja." },
+  "planting": { "method": "sapling", "reviewed": false, "spacingCm": 400, "rowSpacingCm": 500, "holeDepthCm": 60, "holeWidthCm": 60, "staked": false, "graftedAboveSoil": false, "note": "Smokva se obično uzgaja iz reznica, bez cijepljenja." },
   "containers": { "ok": true, "minPotCm": 50, "note": "Na kontinentu u velikoj posudi, zimi na hladnom mjestu bez mraza." },
   "summary": "Na obali raste gotovo sama. Na kontinentu uz topli zid ili u velikoj posudi.",
   "weeklyTip": "Na kontinentu je zimi zaštiti agrilom ili unesi posudu u garažu.",

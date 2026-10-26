@@ -10,7 +10,7 @@
   "sun": "full",
   "water": "medium",
   "rank": 300,
-  "perennial": { "yearsToFirstHarvest": 1 },
+  "perennial": { "yearsToFirstHarvest": 2 },
   "spacingText": "2,5 m",
   "spacingExplanation": [
     "Sadnice drži dva i pol metra jednu od druge, uz ogradu ili žicu.",
@@ -32,7 +32,7 @@
   },
   "steps": [
     { "title": "Kupi sadnicu bez trnja", "text": "Za vrt su najugodnije sorte bez trnja." },
-    { "title": "Posadi uz ogradu", "text": "Dva i pol metra razmaka." },
+    { "title": "Posadi uz ogradu", "text": "Dva i pol metra razmaka. Nakon sadnje izboje skrati na 20 do 25 cm." },
     { "title": "Veži izboje", "text": "Uz žicu ili ogradu, u lepezu." },
     { "title": "Orezuj nakon berbe", "text": "Izreži izboje koji su rodili." }
   ],

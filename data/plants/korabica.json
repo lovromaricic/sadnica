@@ -20,7 +20,7 @@
   "weeklyTip": "Beri gomolje veličine teniske loptice, veći postaju drvenasti.",
   "illustration": { "kind": "cabbage", "fill": "#C7E0A0", "stroke": "#4C6B2A", "bg": "#D3E9FF" },
   "sow": {
-    "continental": [{ "from": 3, "to": 5 }, { "from": 7, "to": 8 }],
+    "continental": [{ "from": 3, "to": 3, "note": "Sjetva u lončiće." }, { "from": 4, "to": 5 }, { "from": 7, "to": 8 }],
     "adriatic": [{ "from": 2, "to": 4 }, { "from": 8, "to": 10 }]
   },
   "harvest": {
