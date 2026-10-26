@@ -7,8 +7,14 @@ const APP_CACHE = `app-${version}`;
 const FONT_CACHE = 'fonts-v1';
 const ROOT = new URL('./', self.location.href).pathname;
 const PRECACHE = [ROOT, ...[...immutable, ...assets, ...prerendered].map((f) => f.path)].filter(
-	// Launch screens are read by iOS when the app is added to the home screen, not from this cache.
-	(path, i, all) => !path.endsWith('service-worker.js') && !path.includes('/splash/') && all.indexOf(path) === i
+	(path, i, all) =>
+		!path.endsWith('service-worker.js') &&
+		// Launch screens are read by iOS when the app is added to the home screen, not from this cache.
+		!/(^|\/)splash\//.test(path) &&
+		// Apache refuses hidden files like .htaccess (403), and one failed file would cancel the whole
+		// precache, leaving the app without offline support.
+		!/(^|\/)\./.test(path) &&
+		all.indexOf(path) === i
 );
 
 self.addEventListener('install', (event) => {
