@@ -15,7 +15,7 @@
     "Glavatice sadi 25 cm jednu od druge.",
     "Za rezanu salatu sij gušće i beri mlade listove."
   ],
-  "spacingTip": "sij malo svakih dva do tri tjedna, pa imaš salatu cijelu sezonu.",
+  "spacingTip": "sij malo svaka dva do tri tjedna, pa imaš salatu cijelu sezonu.",
   "planting": { "method": "transplant", "reviewed": false, "spacingCm": 25, "rowSpacingCm": 30, "depthMode": "same-level", "tipKey": "lettuce" },
   "containers": { "ok": true, "minPotCm": 20, "note": "Jedna glavatica po loncu ili više njih u koritu." },
   "summary": "Brzo raste i lako uspijeva. Bereš je već mjesec i pol nakon sadnje.",

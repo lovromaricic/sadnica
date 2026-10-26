@@ -83,6 +83,24 @@ A third read (three reviewers) checked the new planting diagram data and fixed:
 - **Tips**: clearer garlic, onion set, bulb, celery, lettuce, strawberry, blueberry and tree
   planting tips (container plants only need their roots loosened).
 
+A fourth read (four reviewers, October 2026, pets checked against the ASPCA lists) fixed:
+
+- **Pets**: lemon balm is non-toxic (ASPCA); pansy, blackberry, cosmos and blueberry are no longer
+  marked pet-safe because ASPCA does not list them; apple, apricot, cherry, sour cherry, plum and peach
+  now describe cyanide signs (breathing, red gums, dilated pupils) and warn that wilted leaves are the
+  most dangerous part.
+- **Missing warnings**: parsnip sap burns skin in sunlight; young kiwi inland needs winter protection;
+  field maize nearby makes sweet corn starchy.
+- **Dates**: inland onion sets September to October (winter varieties only); no autumn root parsley
+  sowing on the coast (it bolts); Brussels sprouts planted out May to June; asparagus cut into June
+  inland; kiwi picked in October inland.
+- **Advice**: raspberry fruit larvae (raspberry beetle, spotted-wing drosophila), copper for olive
+  peacock spot, gooseberry planted at pot depth, late-flowering apricots, shelling peas picked when
+  full, pumpkin sown in a soil and compost mound, savoy cabbage is "naborani" (not kale), "pak choi"
+  removed from Chinese cabbage.
+- **Consistency and language**: Chinese cabbage rows, zinnia and calendula texts, "oreži",
+  "svaka dva tjedna", trešnja and kukuruz phrasing.
+
 Judgment calls left as they are (for the expert to decide):
 
 - Companion planting follows common folk lists; much of it is not well proven.
@@ -96,6 +114,8 @@ Judgment calls left as they are (for the expert to decide):
 - Bay is spaced as a hedge (1 m), too tight for a single tree on the coast.
 - Olive inland is shown with a harvest window although the fruit rarely ripens in a pot (the summary
   says so).
+- Sunflower stays pet-safe: ASPCA's "Sunflower" entry names Helianthus angustifolius, not H. annuus.
+  Eggplant and mandarin keep their mild warnings, borrowed from other Solanum and Citrus entries.
 
 ## Suggested order
 

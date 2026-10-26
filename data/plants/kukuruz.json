@@ -30,13 +30,14 @@
   },
   "steps": [
     { "title": "Posij u blok", "text": "Sjemenke 4 cm duboko, u nekoliko kratkih redova." },
-    { "title": "Okopaj i zagrći", "text": "Kad je visok koljeno, nagrni malo zemlje oko stabljika." },
+    { "title": "Okopaj i zagrći", "text": "Kad naraste do koljena, nagrni malo zemlje oko stabljika." },
     { "title": "Zalijevaj u metličanju", "text": "Kad se pojave metlice i svila, treba najviše vode." },
     { "title": "Beri na vrijeme", "text": "Kad je svila smeđa, a zrno mliječno." }
   ],
   "problems": [
     { "title": "Klipovi nisu puni", "signs": "Zrna nedostaju na klipu.", "fix": "Slabo oprašivanje. Sij u blok, a ne u jedan red." },
-    { "title": "Ptice kljucaju sjeme", "signs": "Sjemenke su iskopane.", "fix": "Prekrij gredicu agrilom dok ne nikne." }
+    { "title": "Ptice kljucaju sjeme", "signs": "Sjemenke su iskopane.", "fix": "Prekrij gredicu agrilom dok ne nikne." },
+    { "title": "Zrna nisu slatka", "signs": "Zrna su tvrda i brašnasta.", "fix": "Oprašio ga je stočni kukuruz iz blizine. Sij šećerac ranije ili kasnije od susjeda, da ne cvatu u isto vrijeme." }
   ],
   "neighbours": {
     "good": ["Grah", "Bundeva", "Tikvica"],

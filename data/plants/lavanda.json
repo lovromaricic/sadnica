@@ -17,7 +17,7 @@
   "planting": { "method": "transplant", "reviewed": false, "spacingCm": 40, "rowSpacingCm": 50, "depthMode": "same-level" },
   "containers": { "ok": true, "minPotCm": 30, "note": "U loncu s dobrom drenažom." },
   "summary": "Mirisni mediteranski grm. Voli sunce i suho, a pčele ga obožavaju.",
-  "weeklyTip": "Nakon cvatnje je orezi, ali nikad do golog drva.",
+  "weeklyTip": "Nakon cvatnje je oreži, ali nikad do golog drva.",
   "illustration": { "kind": "sprig", "fill": "#9575CD", "stroke": "#4A2A7A", "bg": "#E6DBFF" },
   "sow": {
     "continental": [{ "from": 4, "to": 5, "note": "Sadnice iz rasadnika." }],

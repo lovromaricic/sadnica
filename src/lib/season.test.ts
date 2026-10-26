@@ -15,8 +15,9 @@ describe('getSeasonStatus: October in Zagreb (design sample)', () => {
 	const date = d(2026, 10, 19);
 	const status = (id: string) => getSeasonStatus(P(id), 'continental', date, rules);
 
-	it('garlic, shallot and onion sets are ideal now', () => {
-		for (const id of ['cesnjak', 'luk-ljutika', 'crveni-luk']) expect(status(id).status).toBe('now');
+	it('garlic and shallot are ideal now; onion sets close at the end of October', () => {
+		for (const id of ['cesnjak', 'luk-ljutika']) expect(status(id).status).toBe('now');
+		expect(status('crveni-luk').status).toBe('late');
 	});
 
 	it('broad bean waits for February inland but is sown now on the coast', () => {
@@ -143,7 +144,7 @@ describe('recommend', () => {
 	it('puts garlic first and cover-only plants last among annuals', () => {
 		const ids = recommend(items).map((i) => i.plant.id);
 		expect(ids[0]).toBe('cesnjak');
-		expect(ids.slice(0, 3).sort()).toEqual(['cesnjak', 'crveni-luk', 'luk-ljutika']);
+		expect(ids.slice(0, 2).sort()).toEqual(['cesnjak', 'luk-ljutika']);
 		const annuals = recommend(items).filter((i) => !i.plant.perennial).map((i) => i.plant.id);
 		expect(annuals.slice(-2).sort()).toEqual(['matovilac', 'spinat']);
 		expect(ids).not.toContain('rajcica');

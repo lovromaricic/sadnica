@@ -40,7 +40,7 @@
     { "title": "Crvljive jabuke", "signs": "U plodu je hodnik i ličinka.", "fix": "Jabučni savijač. Uklanjaj otpale plodove, a ljeti oko debla omotaj traku valovitog kartona. Svaka dva tjedna je skini i uništi." },
     { "title": "Tamne mrlje na listovima i plodovima", "signs": "Listovi i plodovi imaju tamne krastave mrlje.", "fix": "Krastavost. Pograbi i ukloni otpalo lišće u jesen i biraj otporne sorte." }
   ],
-  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Sjemenke, listovi i grančice. Meso ploda nije opasno.", "signs": "Povraćanje, a u većim količinama otežano disanje." },
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Sjemenke, listovi i grančice. Najopasnije je uvelo lišće. Meso ploda nije opasno.", "signs": "Otežano disanje, jarko crvene desni i proširene zjenice, a u težim slučajevima šok." },
   "neighbours": {
     "good": ["Neven", "Vlasac"],
     "bad": []

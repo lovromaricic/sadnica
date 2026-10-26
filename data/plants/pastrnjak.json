@@ -35,7 +35,8 @@
   ],
   "problems": [
     { "title": "Slabo niče", "signs": "Niklo je samo nekoliko biljaka.", "fix": "Sjeme brzo stari. Kupi svježe i sij gušće." },
-    { "title": "Tamne mrlje na vrhu korijena", "signs": "Gornji dio korijena trune.", "fix": "Ne ozljeđuj korijen pri okopavanju i sadi svake godine na drugo mjesto." }
+    { "title": "Tamne mrlje na vrhu korijena", "signs": "Gornji dio korijena trune.", "fix": "Ne ozljeđuj korijen pri okopavanju i sadi svake godine na drugo mjesto." },
+    { "title": "Mjehuri na koži", "signs": "Nakon rada oko biljaka na suncu koža pocrveni i dobije mjehure.", "fix": "Sok iz listova na suncu pali kožu. Pri prorjeđivanju i berbi nosi rukavice i duge rukave, a sok s kože odmah operi sapunom." }
   ],
   "neighbours": {
     "good": ["Luk", "Rotkvica"],

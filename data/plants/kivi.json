@@ -27,7 +27,7 @@
     "adriatic": [{ "from": 11, "to": 12, "note": "Sadnice u posudi." }, { "from": 2, "to": 3 }]
   },
   "harvest": {
-    "continental": [{ "from": 10, "to": 11 }],
+    "continental": [{ "from": 10, "to": 10 }],
     "adriatic": [{ "from": 10, "to": 11 }]
   },
   "steps": [
@@ -38,7 +38,8 @@
   ],
   "problems": [
     { "title": "Nema plodova", "signs": "Biljka cvjeta, ali ne rađa.", "fix": "Nedostaje muška biljka ili su obje istog spola. Posadi mušku biljku u blizini." },
-    { "title": "Mladice smrznute", "signs": "Mladi listovi posmeđe u proljeće.", "fix": "Kasni mraz. Prekrij mlade izboje agrilom u hladnim noćima." }
+    { "title": "Mladice smrznute", "signs": "Mladi listovi posmeđe u proljeće.", "fix": "Kasni mraz. Prekrij mlade izboje agrilom u hladnim noćima." },
+    { "title": "Biljka se smrzne zimi", "signs": "Nakon hladne zime mlada biljka se osuši do zemlje.", "fix": "Mlad kivi ne podnosi jake mrazeve. Na kontinentu ga sadi uz topli zid, a prvih zima deblo omotaj agrilom ili slamom." }
   ],
   "neighbours": {
     "good": ["Neven", "Vlasac"],

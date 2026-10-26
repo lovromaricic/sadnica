@@ -37,7 +37,7 @@
   ],
   "problems": [
     { "title": "Crvljivi plodovi", "signs": "Plodovi imaju rupice i otpadaju.", "fix": "Maslinina muha. Od srpnja objesi lovke s mamcem i beri malo ranije." },
-    { "title": "Okrugle mrlje na listovima", "signs": "Tamne okrugle mrlje, listovi otpadaju.", "fix": "Paunovo oko. Prorijedi krošnju i ukloni otpalo lišće." }
+    { "title": "Okrugle mrlje na listovima", "signs": "Tamne okrugle mrlje, listovi otpadaju.", "fix": "Paunovo oko. Prorijedi krošnju, ukloni otpalo lišće i poprskaj bakrenim pripravkom u jesen i ponovno krajem zime." }
   ],
   "neighbours": {
     "good": ["Neven", "Vlasac"],

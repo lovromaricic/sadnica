@@ -16,7 +16,7 @@
   ],
   "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 30, "thinToCm": 25, "depthCm": 1 },
   "containers": { "ok": true, "minPotCm": 20 },
-  "summary": "Narančasti cvjetovi od proljeća do mraza. Privlači korisne kukce, a latice su jestive.",
+  "summary": "Narančasti cvjetovi od kasnog proljeća do mraza. Privlači korisne kukce, a latice su jestive.",
   "weeklyTip": "Otkidaj precvale cvjetove, cvast će do mraza.",
   "illustration": { "kind": "flower", "fill": "#F57C00", "stroke": "#8A3A00", "bg": "#FFE2C2" },
   "sow": {

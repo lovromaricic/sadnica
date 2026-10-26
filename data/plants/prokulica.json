@@ -20,7 +20,7 @@
   "weeklyTip": "Početkom jeseni otkini vrh biljke, glavice će brže narasti.",
   "illustration": { "kind": "cabbage", "fill": "#7FB05A", "stroke": "#2F5A22", "bg": "#D3E9FF" },
   "sow": {
-    "continental": [{ "from": 4, "to": 5 }],
+    "continental": [{ "from": 5, "to": 6 }],
     "adriatic": [{ "from": 5, "to": 6 }]
   },
   "harvest": {

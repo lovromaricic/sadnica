@@ -22,7 +22,7 @@
   "weeklyTip": "Arpadžik posadi tako da mu vrh malo viri iz zemlje.",
   "illustration": { "kind": "bulb", "fill": "#C8545E", "stroke": "#6B1E2A", "bg": "#FAD9CC" },
   "sow": {
-    "continental": [{ "from": 10, "to": 11, "note": "Zimski arpadžik." }, { "from": 3, "to": 4 }],
+    "continental": [{ "from": 9, "to": 10, "note": "Samo zimske sorte arpadžika." }, { "from": 3, "to": 4 }],
     "adriatic": [{ "from": 10, "to": 11 }, { "from": 2, "to": 3 }]
   },
   "harvest": {

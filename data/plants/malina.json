@@ -37,7 +37,7 @@
     { "title": "Orezuj", "text": "Ljetne sorte: nakon berbe izreži izboje koji su rodili. Jesenske: krajem zime sve izboje skrati do zemlje." }
   ],
   "problems": [
-    { "title": "Crvi u plodovima", "signs": "U plodovima su sitne ličinke.", "fix": "Malinina muha. Beri redovito i uklanjaj prezrele plodove." },
+    { "title": "Crvi u plodovima", "signs": "U plodovima su sitne ličinke.", "fix": "Najčešće malinina buba ili azijska voćna mušica. Beri redovito, odmah uklanjaj prezrele i trule plodove, a zemlju ispod grmova u jesen plitko prekopaj." },
     { "title": "Izboji se suše", "signs": "Mladi izboji venu odozgo.", "fix": "Gljivična bolest. Izreži zahvaćene izboje i ne sadi pregusto." }
   ],
   "neighbours": {

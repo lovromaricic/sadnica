@@ -36,10 +36,10 @@
     { "title": "Orezuj nakon berbe", "text": "Ljeti, kad rane brže zacjeljuju." }
   ],
   "problems": [
-    { "title": "Nema plodova", "signs": "Stablo cvjeta, ali ne rađa.", "fix": "Proljetni mraz uništio je cvjetove. Biraj kasnije sorte i zaštićeno mjesto." },
+    { "title": "Nema plodova", "signs": "Stablo cvjeta, ali ne rađa.", "fix": "Proljetni mraz uništio je cvjetove. Biraj sorte koje kasnije cvjetaju i zaštićeno mjesto." },
     { "title": "Grane se naglo osuše", "signs": "Cijela grana uvene usred ljeta.", "fix": "Apopleksija marelice. Izreži suhu granu do zdravog drva." }
   ],
-  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Koštice, listovi i grančice. Meso ploda nije opasno.", "signs": "Povraćanje, a u većim količinama otežano disanje. Koštice mogu začepiti crijeva." },
+  "pets": { "dogs": true, "cats": true, "severity": "mild", "part": "Koštice, listovi i grančice. Najopasnije je uvelo lišće. Meso ploda nije opasno.", "signs": "Otežano disanje, jarko crvene desni i proširene zjenice, a u težim slučajevima šok. Koštice mogu začepiti crijeva." },
   "neighbours": {
     "good": ["Neven", "Vlasac"],
     "bad": []

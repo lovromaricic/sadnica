@@ -12,11 +12,11 @@
   "spacingText": "45 cm",
   "spacingExplanation": [
     "Presadnice sadi 45 cm jednu od druge.",
-    "Kovrčave glavice se šire."
+    "Naborane glavice se šire."
   ],
   "planting": { "method": "transplant", "reviewed": false, "spacingCm": 45, "rowSpacingCm": 60, "depthCm": 5, "depthMode": "to-first-leaves" },
   "containers": { "ok": false },
-  "summary": "Kovrčavi zimski kupus. Mraz mu ne smeta, čak postaje slađi.",
+  "summary": "Naborani zimski kupus. Mraz mu ne smeta, čak postaje slađi.",
   "weeklyTip": "Kelj možeš ostaviti u vrtu i brati ga po potrebi cijelu zimu.",
   "illustration": { "kind": "cabbage", "fill": "#8CBF6A", "stroke": "#2F5A22", "bg": "#C9EEDB" },
   "sow": {

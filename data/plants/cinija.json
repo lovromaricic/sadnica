@@ -17,7 +17,7 @@
   "planting": { "method": "row-seed", "reviewed": false, "rowSpacingCm": 30, "thinToCm": 30, "note": "Može se i uzgojiti iz presadnica.", "depthCm": 1 },
   "containers": { "ok": true, "minPotCm": 20 },
   "summary": "Šareni cvjetovi cijelo ljeto. Što ih više režeš za vazu, to više cvjeta.",
-  "weeklyTip": "Sij je izravno u svibnju, ne voli presađivanje.",
+  "weeklyTip": "Sij je izravno kad prođu mrazevi, presađivanje slabo podnosi.",
   "illustration": { "kind": "flower", "fill": "#EC407A", "stroke": "#7A1040", "bg": "#FFD9DE" },
   "sow": {
     "continental": [{ "from": 5, "to": 6 }],
