@@ -252,6 +252,10 @@ beginner most often plants something that cannot work, so that case earns the qu
   flower, sprig, corn, tuber, stalk) in the same style; colours are per plant.
 - **Recommendation order** gained a rule: plants in their prime rank before "Još stigneš" ones.
   With a big catalogue, the plant closing soonest (rocket in October) otherwise became the hero.
+- **Plant of the week rotates.** The best four outdoor plants in their prime take turns, one per
+  calendar week (changing on Monday), so "Ovaj tjedan sadimo …" does not sit on garlic for its whole
+  eight-week season. Indoor and fleece-only windows stay out of the rotation (no "this week we plant
+  tomatoes" in February); without any outdoor plant in its prime, the first pick is the hero as before.
 - All plant data still ships in one chunk (about 39 KB gzipped). Load per page if it grows a lot.
 - Vitest's persistent module cache (`fsModuleCache`) is off: it served a stale plant list to tests
   after new data files were added.

@@ -112,6 +112,11 @@ export function isHarvestMonth(windows: HarvestWindow[] | undefined, month: numb
 }
 
 /** Is the given month a sowing month? */
+/** A window that only works indoors (sown on a windowsill) or under fleece. */
+export function isProtectedWindow(w: SowWindow): boolean {
+	return !!w.needsCover || /zatvoren/i.test(w.note ?? '');
+}
+
 export function isSowMonth(windows: SowWindow[] | undefined, month: number): boolean {
 	return (windows ?? []).some((w) => monthInWindow(month, w));
 }
@@ -172,10 +177,26 @@ export function recommend(items: PlantWithSeason[], place?: Place): PlantWithSea
 		);
 }
 
-/** The plant of the week: the first pick, but never one that does not suit a pot for balcony gardeners. */
-export function heroPick(picks: PlantWithSeason[], place?: Place): PlantWithSeason | undefined {
+/** How many of the best plants take turns as the plant of the week. */
+export const HERO_ROTATION = 4;
+/** A Monday, so the plant of the week changes on Mondays. */
+const ROTATION_START = new Date(2024, 0, 1);
+
+/**
+ * The plant of the week, never one that does not suit a pot for balcony gardeners. With a date, the
+ * best few plants in their prime take turns week by week, so the pick does not sit on one plant for
+ * its whole season. Without outdoor plants in their prime it is simply the first pick.
+ */
+export function heroPick(picks: PlantWithSeason[], place?: Place, date?: Date): PlantWithSeason | undefined {
 	// Trees and bushes are a long project, not "this week's" pick for a beginner.
-	return picks.find((p) => !p.plant.perennial && (place !== 'balcony' || potFriendly(p.plant)));
+	const eligible = picks.filter((p) => !p.plant.perennial && (place !== 'balcony' || potFriendly(p.plant)));
+	// Indoor sowing (tomatoes in February) is not what "this week we plant" promises.
+	const prime = eligible
+		.filter((p) => p.season.status === 'now' && !(p.season.window && isProtectedWindow(p.season.window)))
+		.slice(0, HERO_ROTATION);
+	if (!date || prime.length === 0) return eligible[0];
+	const week = Math.floor(daysBetween(ROTATION_START, date) / 7);
+	return prime[week % prime.length];
 }
 
 /** Plants whose next window opens soon, soonest first. */

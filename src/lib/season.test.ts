@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { Plant, Rules } from './data/schema';
-import { getSeasonStatus, heroPick, isFrostNear, recommend, upcoming, withSeason } from './season';
+import { getSeasonStatus, HERO_ROTATION, heroPick, isFrostNear, recommend, upcoming, withSeason } from './season';
 import { plants, plantsById, rules } from './data';
 
 const d = (y: number, m: number, day: number) => new Date(y, m - 1, day);
@@ -213,5 +213,35 @@ describe('recommend for balcony gardeners', () => {
 		expect(heroPick(recommend(onlyBob, 'garden'), 'garden')?.plant.id).toBe('bob');
 		expect(heroPick(recommend(items, 'balcony'), 'balcony')?.plant.id).toBe('cesnjak');
 		expect(heroPick([], 'balcony')).toBeUndefined();
+	});
+});
+
+describe('heroPick: plant of the week', () => {
+	const pick = (date: Date, region: 'continental' | 'adriatic' = 'continental') =>
+		heroPick(recommend(withSeason(plants, region, date, rules)), undefined, date)?.plant.id;
+
+	it('takes turns among the best plants in their prime, one per week', () => {
+		const weeks = [d(2026, 10, 12), d(2026, 10, 19), d(2026, 10, 26), d(2026, 11, 2)].map((date) => pick(date));
+		expect(new Set(weeks).size).toBeGreaterThan(1);
+		for (const id of weeks) expect(P(id!).perennial).toBeUndefined();
+		const prime = recommend(withSeason(plants, 'continental', d(2026, 10, 19), rules))
+			.filter((p) => p.season.status === 'now')
+			.slice(0, HERO_ROTATION)
+			.map((p) => p.plant.id);
+		expect(prime).toContain(pick(d(2026, 10, 19)));
+	});
+
+	it('keeps the same plant from Monday to Sunday', () => {
+		const monday = pick(d(2026, 10, 26));
+		for (let day = 27; day <= 31; day++) expect(pick(d(2026, 10, day))).toBe(monday);
+		expect(pick(d(2026, 11, 1))).toBe(monday);
+	});
+
+	it('never picks indoor sowing, so February inland stays on broad bean', () => {
+		for (const day of [2, 9, 16, 23]) expect(pick(d(2026, 2, day))).toBe('bob');
+	});
+
+	it('picks nothing when nothing can be planted', () => {
+		expect(pick(d(2026, 12, 21))).toBeUndefined();
 	});
 });

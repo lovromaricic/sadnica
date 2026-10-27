@@ -1,5 +1,5 @@
 import type { Plant, Region, SowWindow } from './data/schema';
-import { isHarvestMonth, isSowMonth } from './season';
+import { isHarvestMonth, isProtectedWindow, isSowMonth } from './season';
 
 /** The next 12 months, starting with `startMonth` (1-12). */
 export function monthsFrom(startMonth: number): number[] {
@@ -15,10 +15,7 @@ export interface StripMonth {
 	harvest: boolean;
 }
 
-/** A window that only works indoors (sown on a windowsill) or under fleece. */
-export function isProtectedWindow(w: SowWindow): boolean {
-	return !!w.needsCover || /zatvoren/i.test(w.note ?? '');
-}
+export { isProtectedWindow } from './season';
 
 /**
  * January to December for one plant: how it is sown and whether it is harvested. A month in both an

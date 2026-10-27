@@ -23,7 +23,7 @@
 	const items = $derived(withSeason(plants, region, today, rules));
 	const balcony = $derived(store.state.place === 'balcony');
 	const picks = $derived(recommend(items, store.state.place));
-	const hero = $derived(heroPick(picks, store.state.place));
+	const hero = $derived(heroPick(picks, store.state.place, today));
 	const more = $derived(picks.filter((p) => p !== hero).slice(0, 4));
 	const soon = $derived(upcoming(items).slice(0, 2));
 	// Balcony gardeners see all pot plants in season; the catalogue opens with the same filters.
