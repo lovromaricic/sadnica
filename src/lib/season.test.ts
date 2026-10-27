@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { Plant, Rules } from './data/schema';
-import { getSeasonStatus, HERO_ROTATION, heroPick, isFrostNear, recommend, upcoming, withSeason } from './season';
+import { getSeasonStatus, heroPick, isEasyFruitBush, isFrostNear, recommend, upcoming, withSeason } from './season';
 import { plants, plantsById, rules } from './data';
 
 const d = (y: number, m: number, day: number) => new Date(y, m - 1, day);
@@ -220,15 +220,24 @@ describe('heroPick: plant of the week', () => {
 	const pick = (date: Date, region: 'continental' | 'adriatic' = 'continental') =>
 		heroPick(recommend(withSeason(plants, region, date, rules)), undefined, date)?.plant.id;
 
-	it('takes turns among the best plants in their prime, one per week', () => {
-		const weeks = [d(2026, 10, 12), d(2026, 10, 19), d(2026, 10, 26), d(2026, 11, 2)].map((date) => pick(date));
-		expect(new Set(weeks).size).toBeGreaterThan(1);
-		for (const id of weeks) expect(P(id!).perennial).toBeUndefined();
-		const prime = recommend(withSeason(plants, 'continental', d(2026, 10, 19), rules))
-			.filter((p) => p.season.status === 'now')
-			.slice(0, HERO_ROTATION)
-			.map((p) => p.plant.id);
-		expect(prime).toContain(pick(d(2026, 10, 19)));
+	it('takes turns among quick crops and easy fruit bushes, one per week', () => {
+		const weeks = [12, 19, 26].map((day) => pick(d(2026, 10, day))).concat([2, 9].map((day) => pick(d(2026, 11, day))));
+		expect(new Set(weeks).size).toBe(weeks.length);
+		for (const id of weeks) expect(!P(id!).perennial || isEasyFruitBush(P(id!))).toBe(true);
+		expect(weeks).toContain('cesnjak');
+		expect(weeks.some((id) => P(id!).perennial)).toBe(true);
+	});
+
+	it('keeps rotating in the last weeks of the season', () => {
+		const november = [16, 23, 30].map((day) => pick(d(2026, 11, day)));
+		expect(new Set(november).size).toBe(3);
+	});
+
+	it('never picks a fruit tree', () => {
+		for (let day = 1; day <= 30; day++) {
+			const id = pick(d(2026, 11, day))!;
+			expect(!P(id).perennial || isEasyFruitBush(P(id))).toBe(true);
+		}
 	});
 
 	it('keeps the same plant from Monday to Sunday', () => {

@@ -243,7 +243,7 @@ beginner most often plants something that cannot work, so that case earns the qu
 - 42 vegetables, 13 herbs, 20 fruits, 10 flowers. Generated content, every file `reviewed: false`.
   Sowing/planting and harvest windows are given for both regions; asparagus, artichoke, bay laurel,
   berry bushes and fruit trees are `perennial` with years to first harvest.
-- **Perennials**: never the Danas hero (also `rank: 300` for trees), "Posađeno" instead of
+- **Perennials**: never the Danas hero except easy fruit bushes (also `rank: 300` for trees), "Posađeno" instead of
   "Posijano", "Prvi plodovi za oko N godine" instead of a harvest month, and no harvest task until
   marked ready. Citrus and olive are pot-only on the continent.
 - **Flowers** use their `harvest` windows as flowering months: the calendars show "C – Cvatnja", a
@@ -252,10 +252,13 @@ beginner most often plants something that cannot work, so that case earns the qu
   flower, sprig, corn, tuber, stalk) in the same style; colours are per plant.
 - **Recommendation order** gained a rule: plants in their prime rank before "Još stigneš" ones.
   With a big catalogue, the plant closing soonest (rocket in October) otherwise became the hero.
-- **Plant of the week rotates.** The best four outdoor plants in their prime take turns, one per
-  calendar week (changing on Monday), so "Ovaj tjedan sadimo …" does not sit on garlic for its whole
-  eight-week season. Indoor and fleece-only windows stay out of the rotation (no "this week we plant
-  tomatoes" in February); without any outdoor plant in its prime, the first pick is the hero as before.
+- **Plant of the week rotates.** Outdoor plants take turns, one per calendar week (changing on
+  Monday), so "Ovaj tjedan sadimo …" does not sit on garlic for its whole eight-week season. The pool
+  is the best four quick crops plus the easy fruit bushes (raspberry, blackberry, currant, gooseberry),
+  which are best planted in autumn and spring and fruit within a year or two; fruit trees stay out.
+  Plants in their prime rotate first; when none is, those in their last weeks rotate instead (late
+  November inland). Indoor and fleece-only windows stay out (no "this week we plant tomatoes" in
+  February); with no outdoor plant in season, the first pick is the hero as before.
 - All plant data still ships in one chunk (about 39 KB gzipped). Load per page if it grows a lot.
 - Vitest's persistent module cache (`fsModuleCache`) is off: it served a stale plant list to tests
   after new data files were added.

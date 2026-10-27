@@ -177,26 +177,38 @@ export function recommend(items: PlantWithSeason[], place?: Place): PlantWithSea
 		);
 }
 
-/** How many of the best plants take turns as the plant of the week. */
+/** How many of the best quick crops take turns as the plant of the week (easy fruit bushes join them). */
 export const HERO_ROTATION = 4;
 /** A Monday, so the plant of the week changes on Mondays. */
 const ROTATION_START = new Date(2024, 0, 1);
 
+/** Raspberries, currants and the like: easy for a beginner and fruiting within a year or two. */
+export function isEasyFruitBush(plant: Plant): boolean {
+	const form = plant.planting && 'form' in plant.planting ? plant.planting.form : undefined;
+	return plant.category === 'fruit' && plant.difficulty === 'easy' && (form === 'bush' || form === 'cane');
+}
+
 /**
- * The plant of the week, never one that does not suit a pot for balcony gardeners. With a date, the
- * best few plants in their prime take turns week by week, so the pick does not sit on one plant for
- * its whole season. Without outdoor plants in their prime it is simply the first pick.
+ * The plant of the week, never one that does not suit a pot for balcony gardeners. With a date,
+ * outdoor plants take turns week by week, so the pick does not sit on one plant for its whole season:
+ * the best few quick crops plus the easy fruit bushes, those in their prime first, otherwise those in
+ * their last weeks. Without any outdoor plant in season it is simply the first pick.
  */
 export function heroPick(picks: PlantWithSeason[], place?: Place, date?: Date): PlantWithSeason | undefined {
-	// Trees and bushes are a long project, not "this week's" pick for a beginner.
-	const eligible = picks.filter((p) => !p.plant.perennial && (place !== 'balcony' || potFriendly(p.plant)));
+	// Trees are a long project, not "this week's" pick for a beginner; easy fruit bushes are not.
+	const eligible = picks.filter(
+		(p) => (!p.plant.perennial || isEasyFruitBush(p.plant)) && (place !== 'balcony' || potFriendly(p.plant))
+	);
 	// Indoor sowing (tomatoes in February) is not what "this week we plant" promises.
-	const prime = eligible
-		.filter((p) => p.season.status === 'now' && !(p.season.window && isProtectedWindow(p.season.window)))
-		.slice(0, HERO_ROTATION);
-	if (!date || prime.length === 0) return eligible[0];
+	const outdoor = eligible.filter((p) => !(p.season.window && isProtectedWindow(p.season.window)));
+	const rotation = (status: SeasonStatus) => {
+		const now = outdoor.filter((p) => p.season.status === status);
+		return [...now.filter((p) => !p.plant.perennial).slice(0, HERO_ROTATION), ...now.filter((p) => p.plant.perennial)];
+	};
+	const pool = rotation('now').length ? rotation('now') : rotation('late');
+	if (!date || pool.length === 0) return eligible[0];
 	const week = Math.floor(daysBetween(ROTATION_START, date) / 7);
-	return prime[week % prime.length];
+	return pool[week % pool.length];
 }
 
 /** Plants whose next window opens soon, soonest first. */
